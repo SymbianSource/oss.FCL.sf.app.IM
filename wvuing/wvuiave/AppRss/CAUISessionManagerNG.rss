@@ -1,0 +1,56 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource file for UI Session Manager
+*
+*/
+
+
+// no other lists found
+RESOURCE TBUF r_qtn_chat_no_lists { buf = qtn_chat_no_lists; }
+
+// fetching contacts
+RESOURCE TBUF r_qtn_chat_fetching_contact_lists
+    {
+    buf = qtn_chat_fetching_contact_lists;
+    }
+
+RESOURCE TBUF r_qtn_chat_fetching_contact_lists_failed
+    {
+    buf = qtn_chat_fetching_contact_lists_failed;
+    }
+
+// password storing
+// "save password?"
+RESOURCE TBUF r_qtn_chat_login_save_pw
+    {
+    buf = qtn_chat_login_save_pw;
+    }
+
+// "Save username and password?"
+RESOURCE TBUF r_qtn_chat_login_save_username_pw
+    {
+    buf = qtn_chat_login_save_username_pw;
+    }
+
+// application launch query
+// "Activate application launch login type?"
+RESOURCE TBUF r_qtn_chat_login_activate_applaunch
+    {
+    buf = qtn_chat_login_activate_applaunch;
+    }
+
+// General processing note
+RESOURCE TBUF r_qtn_gen_note_processing { buf = qtn_gen_note_processing; }
+    
+// End of File

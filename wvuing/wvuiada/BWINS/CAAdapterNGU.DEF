@@ -1,0 +1,5 @@
+EXPORTS
+	?CreateImpsFactoryL@@YAPAVMCAImpsFactory@@XZ @ 1 NONAME ; class MCAImpsFactory * CreateImpsFactoryL(void)
+	?CurrentImpsFactoryInstance@@YAPAVMCAImpsFactory@@XZ @ 2 NONAME ; class MCAImpsFactory * CurrentImpsFactoryInstance(void)
+	?ReleaseAdapterL@@YAXXZ @ 3 NONAME ; void ReleaseAdapterL(void)
+

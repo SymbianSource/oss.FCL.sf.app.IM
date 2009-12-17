@@ -1,0 +1,6 @@
+EXPORTS
+	AttributeListsManagerL__22PEngListLibraryFactoryRC18CPEngSessionSlotId @ 1 NONAME R3UNUSED ; PEngListLibraryFactory::AttributeListsManagerL(CPEngSessionSlotId const &)
+	AttributeListsTransactionManagerLC__22PEngListLibraryFactoryRC18CPEngSessionSlotId @ 2 NONAME R3UNUSED ; PEngListLibraryFactory::AttributeListsTransactionManagerLC(CPEngSessionSlotId const &)
+	ContactListManagerL__22PEngListLibraryFactoryRC18CPEngSessionSlotId @ 3 NONAME R3UNUSED ; PEngListLibraryFactory::ContactListManagerL(CPEngSessionSlotId const &)
+	ContactListTransactionManagerLC__22PEngListLibraryFactoryRC18CPEngSessionSlotId @ 4 NONAME R3UNUSED ; PEngListLibraryFactory::ContactListTransactionManagerLC(CPEngSessionSlotId const &)
+

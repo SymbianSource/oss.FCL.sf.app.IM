@@ -1,0 +1,99 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This is project specification file for the WV Engine dll.
+*     
+*
+*/
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+#include "../../inc/impsvariant.h"
+
+TARGET impseng.dll
+TARGETTYPE  dll
+UID  0x1000008d 0x101F468C
+CAPABILITY  CAP_GENERAL_DLL
+VENDORID    VID_DEFAULT 
+
+SYSTEMINCLUDE   ../../../im_pub/im_api/inc
+SYSTEMINCLUDE   ../../../im_pub/im_application_launch_api/inc
+// ***********************
+// WV ENGINE DLL
+// ***********************
+SOURCEPATH ../src
+// core
+//SOURCE impsengdll.cpp
+SOURCE impsserver.cpp
+SOURCE impssession.cpp
+SOURCE impssubsession.cpp
+SOURCE impssendreceive.cpp
+SOURCE impstimer.cpp
+SOURCE impssrvutils.cpp
+SOURCE impsactivecirmonitor.cpp
+SOURCE impsactiveconnmonitor.cpp
+SOURCE impsalivemanager.cpp
+SOURCE impscspsession.cpp
+SOURCE impspropertyobserver.cpp
+SOURCE impstoffobserver.cpp
+SOURCE impstidqueue.cpp
+// data
+SOURCE impsdigestbytes.cpp
+SOURCE impssdatautils.cpp
+SOURCE impsorphans.cpp
+SOURCE impsapplauncherproxy.cpp
+
+// *************************************
+// INCLUDE PATHS
+// *************************************
+USERINCLUDE ../inc ../../inc ../../datautils/inc ../../enginc
+
+SYSTEMINCLUDE   ../../../inc
+APP_LAYER_SYSTEMINCLUDE
+
+// *************************************
+// LIBRARIES
+// *************************************
+LIBRARY euser.lib
+LIBRARY efsrv.lib
+LIBRARY bafl.lib
+LIBRARY apparc.lib
+LIBRARY imut.lib
+LIBRARY hash.lib
+
+LIBRARY impsutils.lib
+LIBRARY impsdatautils.lib
+LIBRARY impsmessage.lib  
+
+LIBRARY msgconnmanager.lib
+LIBRARY impsdatachannel.lib
+LIBRARY centralrepository.lib
+LIBRARY ecom.lib
+
+// *************************************
+// OTHER STUFF
+// *************************************
+
+EPOCHEAPSIZE 0x1000 0x200000
+
+#if defined( ARMCC )
+DEFFILE ../eabi/ 
+#elif defined( WINSCW )
+DEFFILE       ../def/winscw.def
+#elif defined ( WINS )
+DEFFILE       ../def/wins.def
+#else // MARM
+DEFFILE       ../def/marm.def
+#endif

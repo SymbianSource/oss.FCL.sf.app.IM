@@ -1,0 +1,86 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Compatibility variation resource file 
+*                of chat application
+*
+*/
+
+
+//----------------------------------------------------
+// VARIATION
+// You can do resource-file based variation by setting the following number
+// resources as you wish.
+//
+// ----------------------------------------------------
+// Following resources are needed to preserve 
+// 3.0 compatibility.
+// ----------------------------------------------------
+
+//r_audio_filelist_model_enabled
+//------------------------------
+//value = 0, Brandable tones are not defined and default tone list is used
+//value = 1, Brandable tones are used and tone list is configured by customer
+//see r_audio_filelist_model
+RESOURCE NUMBER_INT32 r_audio_filelist_model_enabled  { value = 0; }
+
+//r_audio_filelist_model
+//------------------------------
+//If customer specific tones are specifed, this resource structure must be filled
+//here are instructions:
+//
+// RESOURCE FILELISTMODEL r_test_filelist_model
+// {
+// sorting_criteria = EAlphaAscending;
+// directories =
+//     {
+//         //directories can add one or more, separated with ","
+//         LBUF { txt = "c:\\nokia\\sounds\\simple\\"; },
+//         LBUF { txt = "c:\\someother\\directory\\"}
+//     };
+// wildcards =
+//     {
+//         LBUF { txt = "*.wav"; },
+//         LBUF { txt = "*.mid"; }
+//     };
+// max_file_size = KFLDNoSizeFiltering;
+// }
+
+#include <filelistmodel.rh>
+#include <pathconfiguration.hrh>
+RESOURCE FILELISTMODEL r_audio_filelist_model
+    {
+    sorting_criteria = EAlphaAscending;
+    directories =
+        {
+        LBUF { txt = text_rom_root_path text_digital_sounds_path; },
+        LBUF { txt = text_phone_memory_root_path text_digital_sounds_path; },
+        LBUF { txt = text_memory_card_root_path text_digital_sounds_path; }
+        };
+    mimetypes =
+        {
+        LBUF { txt = "application/vnd.nokia.ringing-tone"; },
+        LBUF { txt = "audio/*"; }
+        };
+
+    // ..but do not show these.
+    exclusivemimetypes =
+        {
+        LBUF { txt = "audio/mpegurl"; },
+        LBUF { txt = "audio/x-pn-realaudio-plugin"; }
+        };
+    max_file_size = KFLDNoSizeFiltering;
+    }
+    
+//end of file
+

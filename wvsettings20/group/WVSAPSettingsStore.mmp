@@ -1,0 +1,100 @@
+/*
+* Copyright (c) 2003 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  WVSAPSettingsStore.dll project definition file.
+*
+*/
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+#include "WVSAPSettingsStoreUIDs.h"
+#include "IMPSSAPSettingsStoreDebugDefinitionMacros.h"
+
+TARGET                  wvsapsettingsstore.dll
+TARGETTYPE              dll
+UID                     KStaticInterfaceDllUid2 KWVSAPSettingsStoreUid3
+CAPABILITY		CAP_GENERAL_DLL
+VENDORID		VID_DEFAULT
+
+DEFFILE			WVSAPSettingsStore2.def
+
+USERINCLUDE             ../Group
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE           ../IMPSInc
+SYSTEMINCLUDE             ../../im_plat/wv_sap_settings_api/inc
+
+SOURCEPATH              ../IMPSSrc
+
+//SAP container
+SOURCE                  CIMPSSAPSettings.cpp
+SOURCE                  CIMPSSAPSettingsBody.cpp
+SOURCE                  CIMPSSAPSettingsList.cpp
+SOURCE                  CIMPSSAPSettingsListItem.cpp
+SOURCE                  TIMPSSAPSettingsListItemNameKey.cpp
+SOURCE                  IMPSSAPProtectionHandler.cpp
+
+//Generic key-value pair implementation
+SOURCE                  CIMPSSAPKeyValuePair.cpp
+SOURCE                  CIMPSSAPLookupKeyValuePair.cpp
+SOURCE                  CIMPSSAPKeyValuePairs.cpp
+
+//Storage
+SOURCE                  CIMPSSAPSettingsStore.cpp
+
+SOURCE                  IMPSSAPObjectHandler.cpp
+SOURCE                  IMPSSAPSerializer.cpp
+
+//CenRep 
+SOURCE					CIMPSSAPCenRep.cpp
+SOURCE					RIMPSReleaseArray.cpp
+
+//Encryption & decryption passwords has been removed
+//401-1808 - Ease of Instant Messaging SERVER customization 
+//Removed CIMPSSAPSecurer.cpp from mmp
+
+//Notifier
+SOURCE					CIMPSSAPNotifier.cpp
+SOURCE					TIMPSObserverTypePair.cpp
+
+SOURCE					TIMPSCenRepOperations.cpp
+
+SOURCEPATH				../IMPSCommonSrc
+
+//Panic
+SOURCE					IMPSSAPSettingsStorePanic.cpp
+					
+USERINCLUDE             ../IMPSInc
+USERINCLUDE             ../IMPSCommonInc
+USERINCLUDE             ../IMPSCommonSrc
+
+LIBRARY					centralrepository.lib // central repository	
+LIBRARY                 euser.lib             // basic things
+LIBRARY                 estor.lib             // RReadStream
+LIBRARY					etelmm.lib            // RMobilePhone
+LIBRARY					etel.lib			  // RTelServer
+LIBRARY					commdb.lib 			  // Accesses the communications database
+
+//Encryption & decryption passwords has been removed
+//401-1808 - Ease of Instant Messaging SERVER customization 
+//Removed cryptography.lib (3DES) from mmp
+
+
+#if defined (SSS_DEBUG_OUTPUT_TO_FILE)
+LIBRARY flogger.lib
+#endif
+
+//  End of File
+

@@ -1,0 +1,104 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*     This class is a part of the standard application framework.
+*     The application gets instantiated starting from this class.
+*     Provides a factory method for instantiating the document object.
+*
+*/
+#ifndef __CHATNG_IBY__
+#define __CHATNG_IBY__
+
+#ifdef __IM
+
+#ifdef __CHATNG
+ 
+S60_APP_EXE(ChatNG)
+S60_APP_BITMAP(ChatNG)
+S60_APP_AIF_ICONS(ChatNG)
+
+// Application registration resource, published to \import\apps folder
+// to support SIS upgrading of IM
+data=\EPOC32\DATA\Z\private\10003a3f\apps\ChatNG_reg.RSC	private\10003a3f\import\apps\ChatNG_reg.RSC
+
+// Service Settings UI
+file=ABI_DIR\BUILD_DIR\wvservicesettingsuing.dll          SHARED_LIB_DIR\wvservicesettingsuing.dll
+
+// Multi CSP Connection UI
+file=ABI_DIR\BUILD_DIR\impsconnectionuing.dll             SHARED_LIB_DIR\impsconnectionuing.dll
+
+// Application engine
+file=ABI_DIR\BUILD_DIR\caengineng.dll             SHARED_LIB_DIR\caengineng.dll
+
+// Adapter
+file=ABI_DIR\BUILD_DIR\caadapterng.dll            SHARED_LIB_DIR\caadapterng.dll
+
+// storage manager
+file=ABI_DIR\BUILD_DIR\castorageng.DLL            SHARED_LIB_DIR\castorageng.DLL
+
+// presence
+file=ABI_DIR\BUILD_DIR\capresenceng.DLL           SHARED_LIB_DIR\capresenceng.DLL
+
+// Variation
+file=ABI_DIR\BUILD_DIR\alternatorng.dll           SHARED_LIB_DIR\alternatorng.dll
+file=ABI_DIR\BUILD_DIR\caloggerng.DLL             SHARED_LIB_DIR\caloggerng.DLL
+
+// audio manager
+file=ABI_DIR\BUILD_DIR\caaudiomanagerng.dll           SHARED_LIB_DIR\caaudiomanagerng.dll
+
+// ImUtils
+file=ABI_DIR\BUILD_DIR\imutilsng.dll           SHARED_LIB_DIR\imutilsng.dll
+
+// command utils
+file=ABI_DIR\BUILD_DIR\cacommandutilsng.dll           SHARED_LIB_DIR\cacommandutilsng.dll
+
+// process manager
+file=ABI_DIR\BUILD_DIR\wvuiprocessng.dll           SHARED_LIB_DIR\wvuiprocessng.dll
+
+// Version file
+data=ZPRIVATE\101F4673\IMVersion.txt			private\101F4673\IMVersion.txt
+
+// Resource version file
+
+data=DATAZ_\system\install\IMNGResourceVersion.sis	system\install\IMNGResourceVersion.sis
+
+// Chat stub SIS, provides support for SIS upgrading
+
+data=DATAZ_\system\install\ChatStubNG.sis				system\install\ChatStubNG.sis
+
+// IM launcher plugin
+ECOM_PLUGIN(imlauncherng.dll,102824CC.rsc)
+
+//IMPSAlwaysOnlinePlugin Plugin
+ECOM_PLUGIN( pengaopluginng.dll, 10282E12.rsc )
+
+#ifdef __PEN_SUPPORT
+	// IM indicator plugin
+	ECOM_PLUGIN(imindicatorpluginng.dll,102823BD.rsc)
+#endif
+
+//backup registration file for service settings
+data=ZPRIVATE\10282E14\backup_registration.xml	private\10282E14\backup_registration.xml
+
+// backup registration file
+data=ZPRIVATE\101F4673\backup_registration.xml	private\101F4673\backup_registration.xml
+
+// variation file for wvuipresence
+data=DATAZ_\RESOURCE_FILES_DIR\WVUIPresenceVariationNG.rsc    RESOURCE_FILES_DIR\WVUIPresenceVariationNG.rsc
+
+
+#endif // __CHATNG
+#endif // __IM
+
+#endif // __CHATNG_IBY__

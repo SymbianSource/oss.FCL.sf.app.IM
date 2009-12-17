@@ -1,0 +1,45 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Guides image creation process for Presence Engine
+*
+*/
+
+
+#ifndef __Presence_Engine_IBY__
+#define __Presence_Engine_IBY__
+
+#include <bldvariant.hrh>
+#ifdef __PRESENCE
+
+//Presence Engine v2 servers
+file=ABI_DIR\BUILD_DIR\PENGSERVER2.EXE		PROGRAMS_DIR\PENGSERVER2.EXE
+file=ABI_DIR\BUILD_DIR\PENGSTORSERV.EXE		PROGRAMS_DIR\PENGSTORSERV.EXE
+
+//Other Presence Engine v2 components
+file=ABI_DIR\BUILD_DIR\PENGCLIENT2.DLL		SHARED_LIB_DIR\PENGCLIENT2.DLL
+file=ABI_DIR\BUILD_DIR\PENGSTORMAN2.DLL		SHARED_LIB_DIR\PENGSTORMAN2.DLL
+file=ABI_DIR\BUILD_DIR\PENGCOREUTILSLIB2.DLL	SHARED_LIB_DIR\PENGCOREUTILSLIB2.DLL
+file=ABI_DIR\BUILD_DIR\PENGTRAADAP2.DLL		SHARED_LIB_DIR\PENGTRAADAP2.DLL
+file=ABI_DIR\BUILD_DIR\PENGPARSER2.DLL		SHARED_LIB_DIR\PENGPARSER2.DLL
+file=ABI_DIR\BUILD_DIR\PENGATTRLIB2.DLL		SHARED_LIB_DIR\PENGATTRLIB2.DLL
+file=ABI_DIR\BUILD_DIR\PENGLISTLIB2.DLL		SHARED_LIB_DIR\PENGLISTLIB2.DLL
+file=ABI_DIR\BUILD_DIR\PENGMANAGER2.DLL		SHARED_LIB_DIR\PENGMANAGER2.DLL
+
+
+data=ZPRIVATE\101F8843\backup_registration.xml	private\101F8843\backup_registration.xml	
+
+
+#endif //__PRESENCE
+
+#endif //__Presence_Engine_IBY__

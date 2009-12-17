@@ -1,0 +1,1207 @@
+/*
+* Copyright (c) 2003 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource file of settings
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    WCSV
+
+#include <IMPSCommonUING.loc>
+
+#include <eikon.rh>
+#include "eikon.rsg"
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.mbg>
+#include <avkon.loc>
+#include <MceSettings.loc>
+#include <uikon.hrh>
+#include "cwvsettingsui.hrh"
+#include "impscommonuibuilddefinitions.h"
+
+//  CONSTANTS  
+//#define ?constant   ?value
+
+
+//  MACROS  
+//#define ?macro
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="wvsettingsview"; }
+
+
+//SETTINGS VIEW STARTS HERE
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_general_menu
+//    Items for general menu
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_wvsettingsview_general_menu
+{
+    items=
+    {
+		MENU_ITEM { command=EWVSettingsViewCmdHelp; txt = qtn_options_help; },
+		MENU_ITEM { command=EWVSettingsViewCmdExit; txt = qtn_options_exit; }
+    };
+}
+
+// SERVER SETTINGS
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_servsettings_dlg
+//    Settings dialog
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_wvsettingsview_servsettings_dlg
+	{
+	buttons = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+	flags = EEikDialogFlagWait | EEikDialogFlagNoDrag
+			| EEikDialogFlagCbaButtons | EEikDialogFlagNoTitleBar
+			| EEikDlgItemCtlMinSizeOrLess	
+			| EEikDialogFlagFillAppClientRect;
+	items=
+		{
+		DLG_LINE
+			{
+			type = EAknCtSettingListBox;
+			id = EWVSettingsViewControlIdServSettings;
+			itemflags = EEikDlgItemTakesEnterKey 
+						| EEikDlgItemOfferAllHotKeys 
+						| EEikDlgItemCtlMinSizeOrLess 
+						| EEikDialogFlagFillAppClientRect;	
+			control = LISTBOX
+				{
+				flags = EAknListBoxSelectionList;
+				};
+			}
+		};
+	}
+                
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_servsettings_menubar
+//    Menubar
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_wvsettingsview_servsettings_menubar
+	{
+	titles=
+		{
+		MENU_TITLE { menu_pane = r_wvsettingsview_general_menu; },
+		MENU_TITLE { menu_pane = r_wvsettingsview_servsettings_menupane; }
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_servsettings_menupane
+//    Menupane
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_wvsettingsview_servsettings_menupane
+	{
+	items=
+		{
+		MENU_ITEM { command = EWVSettingsViewServSetChange; txt = qtn_chat_set_serv_change; },
+		MENU_ITEM { command = EWVSettingsViewServSetOpen; txt = qtn_chat_set_serv_open; },
+		MENU_ITEM { command = EWVSettingsViewSettingsEdit; txt = qtn_chat_set_serv_change; }
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    Strings for service settings dialog
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_setting_preferences_title { buf=qtn_chat_setting_preferences; }
+
+RESOURCE TBUF r_wvsettingsview_setting_editserver_title { buf=qtn_chat_setting_editserver; }
+RESOURCE TBUF r_wvsettingsview_setting_serverinuse_title { buf=qtn_chat_setting_serverinuse; }
+
+RESOURCE TBUF r_wvsettingsview_setting_conf_server_title { buf = qtn_chat_setting_conf_server; }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_server
+//    Settings page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_wvsettingsview_setting_conf_server
+	{
+	type = EEikCtEdwin;
+	editor_resource_id = r_wvsettingsview_setting_conf_server_editor;
+                  softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+                  
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_server_editor
+//    Editor
+//
+//----------------------------------------------------
+//
+RESOURCE EDWIN r_wvsettingsview_setting_conf_server_editor
+	{
+	flags     = 0x00010000;// ENoLineOrParaBreaks(for not accepting the Enter key)
+	width     = 9;
+	lines     = 5;
+	maxlength = 30;
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_wvuid_title
+//    Title for settings page
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_setting_conf_wvuid_title { buf = qtn_chat_setting_conf_wvuid; }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_wvuid
+//    Settings page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_wvsettingsview_setting_conf_wvuid
+	{
+	label = qtn_chat_setting_conf_wvuid;
+	type = EEikCtEdwin;
+	editor_resource_id = r_wvsettingsview_setting_conf_wvuid_editor;
+                  softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_wvuid_editor
+//    Editor
+//
+//----------------------------------------------------
+//
+RESOURCE EDWIN r_wvsettingsview_setting_conf_wvuid_editor
+	{
+	flags     = 0;
+	avkon_flags = EAknEditorFlagLatinInputModesOnly;
+	width     = 9;
+	lines     = 5;
+	maxlength = 50;
+	default_case = EAknEditorLowerCase;
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_pw_title
+//    Password editor title
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_setting_conf_pw_title { buf = qtn_chat_setting_conf_pw; }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_pw
+//    Settings page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_wvsettingsview_setting_conf_pw
+	{
+	label = qtn_chat_setting_conf_pw;
+	type = EEikCtSecretEd;
+	editor_resource_id = r_wvsettingsview_setting_conf_pw_editor;
+                  softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_pw_editor
+//    Password editor
+//
+//----------------------------------------------------
+//
+RESOURCE SECRETED r_wvsettingsview_setting_conf_pw_editor
+	{
+ 	num_letters=50;
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_url_title
+//    URL editor title
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_setting_conf_url_title { buf = qtn_chat_setting_conf_url; }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_url
+//    Setting page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_wvsettingsview_setting_conf_url
+	{
+	type = EEikCtEdwin;
+	editor_resource_id = r_wvsettingsview_setting_conf_url_editor;
+                  softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_url_editor
+//    URL editor
+//
+//----------------------------------------------------
+//
+RESOURCE EDWIN r_wvsettingsview_setting_conf_url_editor
+	{
+	flags     = 0;
+	avkon_flags = EAknEditorFlagLatinInputModesOnly;
+	width     = 9;
+	lines     = 5;
+	maxlength = 255;
+	default_case = EAknEditorLowerCase;
+    special_character_table = R_AVKON_URL_SPECIAL_CHARACTER_TABLE_DIALOG;
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_sap_title
+//    SAP settings page title
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_setting_conf_sap_title { buf = qtn_chat_setting_conf_sap; }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_sap
+//    Settings page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_wvsettingsview_setting_conf_sap
+	{
+	type = EEikCtEdwin;
+	editor_resource_id = r_wvsettingsview_setting_conf_editor;
+                  softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_setting_conf_editor
+//    Editor
+//
+//----------------------------------------------------
+//
+RESOURCE EDWIN r_wvsettingsview_setting_conf_editor
+	{
+	flags = 0;
+	width = 9;
+	lines = 5;
+	maxlength = 100;
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_server_list_dlg
+//    Server list dialog
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_wvsettingsview_server_list_dlg
+    {
+    flags = EEikDialogFlagWait | EEikDialogFlagNoDrag
+			| EEikDialogFlagCbaButtons | EEikDialogFlagNoTitleBar
+			| EEikDialogFlagFillAppClientRect | EEikDialogFlagNotifyEsc;
+    buttons = r_wvsettingsview_softkeys_options_back__edit;
+    items =
+		{
+		DLG_LINE
+			{
+			type = EAknCtSingleListBox;
+			id = EWVSettingsViewControlIdServerList;
+			itemflags = EEikDlgItemCtlMinSizeOrLess;	
+			control = LISTBOX
+				{
+				flags = EAknListBoxSelectionList;
+				};
+			}
+		};
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_serverlist_menubar
+//    Server list menubar
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_wvsettingsview_serverlist_menubar
+	{
+	titles=
+		{
+		MENU_TITLE { menu_pane = r_wvsettingsview_general_menu; },
+		MENU_TITLE { menu_pane = r_wvsettingsview_serverlist_menupane; }
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_serverlist_menupane
+//    Server list menupane
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_wvsettingsview_serverlist_menupane
+	{
+	items=
+		{
+		MENU_ITEM { command = EWVSettingsViewServerlistEdit; txt = qtn_chat_serverlist_om_edit; },
+		MENU_ITEM { command = EWVSettingsViewServerlistNew; txt = qtn_chat_serverlist_om_new; },
+		MENU_ITEM { command = EWVSettingsViewServerlistDelete; txt = qtn_chat_serverlist_del; }
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_serverlist_noserv
+//    No server string
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_serverlist_noserv { buf = qtn_chat_serverlist_noserv; }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_serverinuse_noserv
+//    Define new server string
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_serverinuse_noserv { buf = qtn_chat_sett_new_server; }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_serverlist_setting_page
+//    Server list settings page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_wvsettingsview_serverlist_setting_page
+    {
+	label = qtn_chat_setting_serverinuse;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_wvsettingsview_serverlist_setting_list;
+   softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_serverlist_setting_page_forced
+//    Server list settings page with only ok key
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_wvsettingsview_serverlist_setting_page_forced
+    {
+    
+	label = qtn_chat_setting_serverinuse;
+	softkey_resource = R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_wvsettingsview_serverlist_setting_list;
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_serverlist_setting_list
+//    Popup setting list
+//
+//----------------------------------------------------
+//
+RESOURCE POPUP_SETTING_LIST r_wvsettingsview_serverlist_setting_list
+    {
+    flags = EAknPopupSettingListFlagInitialised;
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_defnewserver_dlg
+//    Define new server dialog
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_wvsettingsview_defnewserver_dlg
+	{
+	buttons = r_wvsettingsview_softkeys_options_back__change;
+	flags = EEikDialogFlagWait | EEikDialogFlagNoDrag
+			| EEikDialogFlagCbaButtons | EEikDialogFlagNoTitleBar
+			| EEikDialogFlagFillAppClientRect;
+	items=
+		{
+		DLG_LINE
+			{
+			type = EAknCtSettingListBox;
+			id = EWVSettingsViewControlIdDefNewServer;
+			itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys | EEikDlgItemCtlMinSizeOrLess;
+			control = LISTBOX
+				{
+				flags = EAknListBoxSelectionList;
+				};
+			}
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_defnewserver_menubar
+//    Define new server menubar
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_wvsettingsview_defnewserver_menubar
+	{
+	titles=
+		{
+		MENU_TITLE { menu_pane = r_wvsettingsview_general_menu; },
+		MENU_TITLE { menu_pane = r_wvsettingsview_defnewserver_menupane; }
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_defnewserver_menupane
+//    Define new server menupane
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_wvsettingsview_defnewserver_menupane
+	{
+	items=
+		{
+		MENU_ITEM { command = EWVSettingsViewDefNewServerChange; txt = qtn_chat_def_server_change;}
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    Strings for define new server dialog
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF RSC_WVSETTINGSVIEW_SERVER_DELETE_CONFIRMATION { buf = qtn_query_common_conf_delete; }
+RESOURCE TBUF RSC_WVSETTINGSVIEW_COMPUL_QUERY			{ buf = qtn_chat_sett_compul_query; }
+RESOURCE TBUF RSC_WVSETTINGSVIEW_SETT_NEW_SERVER				{ buf = qtn_chat_setting_title; }
+RESOURCE TBUF RSC_WVSETTINGSVIEW_SERVERLIST_TITLE				{ buf = qtn_chat_serverlist_title; }
+RESOURCE TBUF RSC_WVSETTINGSVIEW_SERVERLIST_QUEST_D			{ buf = qtn_chat_serverlist_quest_d; }
+RESOURCE TBUF RSC_WVSETTINGSVIEW_SERVERLIST_QUEST_DEL			{ buf = qtn_chat_serverlist_quest_del; }
+RESOURCE TBUF RSC_WVSETTINGSVIEW_DEFAULT_SERVERNAME		{ buf = qtn_chat_def_server_na; }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_confirmation_query
+//    Deletion confirmation query
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_wvsettingsview_confirmation_query
+	{
+	flags=EGeneralQueryFlags;
+	buttons=R_AVKON_SOFTKEYS_YES_NO__YES;
+    items=
+		{
+		DLG_LINE
+			{
+			type=EAknCtQuery;
+			id=EGeneralQuery;
+			control= AVERELL_CONFIRMATION_QUERY 
+				{ 
+					layout = EConfirmationQueryLayout;
+				};
+			}
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    qtn_selec_setting_compulsory
+//    Compulsory settings string
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_select_setting_compulsory { buf = qtn_selec_setting_compulsory ;}
+
+// ADDED FROM chatlistview.rss
+//----------------------------------------------------
+//   
+//    r_delete_confirmation_query
+//    Delete confirmation query dialog
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_delete_confirmation_query
+	{
+	flags=EGeneralQueryFlags;
+	buttons=R_AVKON_SOFTKEYS_YES_NO__YES;
+    items=
+		{
+		DLG_LINE
+			{
+			type=EAknCtQuery;
+			id=EGeneralQuery;
+			control= AVERELL_CONFIRMATION_QUERY 
+				{ 
+					layout = EConfirmationQueryLayout;
+				};
+			}
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_active_connection_confirmation_query
+//    Connection closing confirmation query
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_active_connection_confirmation_query
+	{
+	flags=EGeneralQueryFlags;
+	buttons=R_AVKON_SOFTKEYS_YES_NO__YES;
+    items=
+		{
+		DLG_LINE
+			{
+			type=EAknCtQuery;
+			id=EGeneralQuery;
+			control= AVERELL_CONFIRMATION_QUERY 
+				{ 
+					layout = EConfirmationQueryLayout;
+				};
+			}
+		};
+	}
+
+// Application branding additions
+RESOURCE TBUF r_qtn_wvsettingsview_brand_server_info	{ buf = qtn_chat_brand_server_info; }
+RESOURCE TBUF r_qtn_wvsettingsview_brand_server_delnote { buf = qtn_chat_brand_server_delnote; }
+
+
+// SERVER SETTINGS
+
+// Login type settings
+
+//----------------------------------------------------
+//   
+//    Login type strings
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_setting_pec_logintype_title { buf=qtn_chat_setting_peclogin; }
+RESOURCE TBUF r_wvsettingsview_setting_im_logintype_title { buf=qtn_chat_setting_chatlogin; }
+
+//----------------------------------------------------
+//   
+//    Memory selection type strings
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_setting_memory_selection_type { buf=qtn_chat_settings_memory; }
+
+//----------------------------------------------------
+//   
+//    Memory selection type strings
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_setting_memory_selection_drive { buf=qtn_chat_settings_memory_drive; }
+
+
+//----------------------------------------------------
+//
+//    Manual login type activated
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_manual_activated { buf = qtn_chat_manual_activated; }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_set_login
+//    Set login type settings page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_wvsettingsview_set_login
+	{
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_wvsettingsview_set_login_control;
+	softkey_resource   = r_wvsettingsview_softkeys_ok_back__ok;
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_set_login_control
+//    Popup setting list
+//
+//----------------------------------------------------
+//
+RESOURCE POPUP_SETTING_LIST r_wvsettingsview_set_login_control
+	{
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_set_pec_login_texts
+//    Popup setting texts for PEC
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_wvsettingsview_set_pec_login_texts
+	{
+	setting_texts_resource = r_wvsettingsview_set_pec_login_items;
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_set_im_login_texts
+//    Popup setting texts for IM
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_wvsettingsview_set_im_login_texts
+	{
+	setting_texts_resource = r_wvsettingsview_set_im_login_items;
+	}
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_set_im_login_texts_without_autologin
+//    Popup setting texts for IM
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_wvsettingsview_set_im_login_texts_without_autologin
+	{
+	setting_texts_resource = r_wvsettingsview_set_im_login_items_without_autologin;
+	}	
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_set_pec_login_items
+//    Popup setting items for PEC
+//
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_wvsettingsview_set_pec_login_items
+	{
+	items=
+		{
+		AVKON_ENUMERATED_TEXT { value = 3; text = qtn_dyc_set_log_auto; },
+		AVKON_ENUMERATED_TEXT { value = 4; text = qtn_dyc_set_log_auto_home; },
+		AVKON_ENUMERATED_TEXT { value = 2; text = qtn_dyc_set_log_manu; },
+		AVKON_ENUMERATED_TEXT { value = 1; text = qtn_chat_setting_showlist; }		
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_set_im_login_items
+//    Popup setting items for IM
+//
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_wvsettingsview_set_im_login_items
+	{
+	items=
+		{
+		AVKON_ENUMERATED_TEXT { value = 3; text = qtn_dyc_set_log_auto; },
+		AVKON_ENUMERATED_TEXT { value = 4; text = qtn_dyc_set_log_auto_home; },
+		AVKON_ENUMERATED_TEXT { value = 2; text = qtn_dyc_set_log_manu; },
+		AVKON_ENUMERATED_TEXT { value = 1; text = qtn_chat_setting_showlist; }
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_set_im_login_items_without_autologin
+//    Popup setting items for IM
+//
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_wvsettingsview_set_im_login_items_without_autologin
+	{
+	items=
+		{		
+		AVKON_ENUMERATED_TEXT { value = 2; text = qtn_dyc_set_log_manu; },
+		AVKON_ENUMERATED_TEXT { value = 1; text = qtn_chat_setting_showlist; }
+		};
+	}
+
+ 
+//----------------------------------------------------
+//
+//   r_wvsettingsview_cannot_activate_query
+//
+//----------------------------------------------------
+RESOURCE TBUF r_wvsettingsview_cannot_activate_query { buf = qtn_chat_cannot_activate_query; }
+
+//----------------------------------------------------
+//   
+//    r_force_login_confirmation_query
+//    Connection closing confirmation query
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_force_login_confirmation_query
+	{
+    flags=EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_YES_NO__YES;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVERELL_CONFIRMATION_QUERY 
+                { 
+                layout = EConfirmationQueryLayout;
+                };
+            }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_error_note_template
+//    Error note template
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_wvsettingsview_error_note_template
+	{
+	flags = EAknErrorNoteFlags | EEikDialogFlagWait;
+	buttons=R_AVKON_SOFTKEYS_EMPTY;
+    items=
+		{
+		DLG_LINE
+			{
+			type = EAknCtNote;
+			id = EGeneralNote;
+			control= AVERELL_NOTE 
+				{ 
+					layout = EGeneralLayout;
+                    animation = R_QGN_NOTE_ERROR_ANIM;
+				};
+			}
+		};
+	}
+
+
+//----------------------------------------------------
+//   
+//    r_setting_app_listbox
+//    Settings listbox
+//
+//----------------------------------------------------
+//
+RESOURCE LISTBOX r_setting_app_listbox 
+	{
+	flags = EEikListBoxMultipleSelection;
+	}
+
+//----------------------------------------------------
+//   
+//    Strings for scheduling settings
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_wvsettingsview_error_wrong_wvid   	{ buf = qtn_chat_error_wrong_wvid; }
+RESOURCE TBUF r_wvsettingsview_error_information_missing   	{ buf = qtn_chat_setting_fillserver; }
+RESOURCE TBUF r_wvsettingsview_error_id_password_missing   	{ buf = qtn_chat_consetnotfilled; }
+RESOURCE TBUF r_wvsettingsview_error_id_active_connection  	{ buf = qtn_chat_cannot_edit_active_settings; }
+RESOURCE TBUF r_wvsettingsview_setting_pec_conn_seldays	{ buf = qtn_mce_settings_always_seldays; }
+RESOURCE TBUF r_wvsettingsview_setting_pec_conn_alldays	{ buf = qtn_mce_settings_always_alldays; }
+RESOURCE TBUF r_wvsettingsview_setting_pec_conn_alldays_title	{ buf = qtn_chat_settings_always_days; }
+RESOURCE TBUF r_wvsettingsview_setting_pec_conn_allhours_title	{ buf = qtn_chat_settings_always_hours; }
+RESOURCE TBUF r_wvsettingsview_setting_pec_conn_allhours	{ buf = qtn_mce_settings_always_allhours; }
+RESOURCE TBUF r_wvsettingsview_setting_pec_conn_selected_hours	{ buf = qtn_mce_settings_always_between2; }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_set_scheduling
+//    Scheduling setting page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_wvsettingsview_set_scheduling
+	{ 
+	label= qtn_chat_settings_always_days;
+	softkey_resource = r_wvsettingsview_softkeys_ok_cancel__mark;
+	type =  EAknSetListBox;
+ 	editor_resource_id= r_setting_app_listbox;
+	}
+
+
+// ---------------------------------------------------------
+//
+//    r_wvsettingsview_conn_hours_query
+//	  Connection hours query
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_wvsettingsview_conn_hours_query
+        {
+        flags=EGeneralQueryFlags;
+        buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+        items=
+            {
+            DLG_LINE
+                {
+                type=EAknCtMultilineQuery;
+                id=EMultilineFirstLine;
+                control = AVKON_DATA_QUERY
+                        {
+                        layout = EMultiDataFirstTimeEd;
+                        label = qtn_mce_settings_always_from;
+ 						control = TIME_EDITOR
+							{
+							minTime= TIME {minute=0;hour=0;};
+							maxTime= TIME {minute=59;hour=23;};
+							flags=EEikTimeWithoutSecondsField;
+							};
+                        };
+                },
+            DLG_LINE
+                {
+                type=EAknCtMultilineQuery;
+                id=EMultilineSecondLine;
+                control= AVKON_DATA_QUERY
+                        {
+                        layout = EMultiDataSecondTimeEd;
+                        label = qtn_mce_settings_always_to;
+ 						control = TIME_EDITOR
+							{
+							minTime= TIME {minute=0;hour=0;};
+							maxTime= TIME {minute=59;hour=23;};
+							flags=EEikTimeWithoutSecondsField;
+							};
+                        };
+                }
+            };
+        }
+
+//----------------------------------------------------
+//   
+//    r_qtn_chat_login_ongoing_note
+//    Login ongoing note text
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_qtn_chat_login_ongoing_note          { buf = qtn_chat_login_ongoing_note; }
+
+
+// ---------------------------------------------------------
+//
+//    r_server_to_login_listquery
+//
+// ---------------------------------------------------------
+//
+RESOURCE AVKON_LIST_QUERY r_server_to_login_listquery
+    {
+    flags = EGeneralQueryFlags;
+    softkeys = R_AVKON_SOFTKEYS_SELECT_CANCEL__SELECT;
+    items =
+        {
+        AVKON_LIST_QUERY_DLG_LINE
+            {
+            control = AVKON_LIST_QUERY_CONTROL
+                {
+                listtype = EAknCtSinglePopupMenuListBox;
+                listbox = AVKON_LIST_QUERY_LIST
+                    {
+                    };
+                heading = qtn_chat_log_selectservice;
+                };
+            }
+        };
+    }
+
+
+// ---------------------------------------------------------
+//
+//    r_server_to_login_listquery_graphic
+//
+// ---------------------------------------------------------
+//
+RESOURCE AVKON_LIST_QUERY r_server_to_login_listquery_graphic
+    {
+    flags = EGeneralQueryFlags;
+    softkeys = R_AVKON_SOFTKEYS_SELECT_CANCEL__SELECT;
+    items =
+        {
+        AVKON_LIST_QUERY_DLG_LINE
+            {
+            control = AVKON_LIST_QUERY_CONTROL
+                {
+                listtype = EAknCtSingleGraphicPopupMenuListBox;
+                listbox = AVKON_LIST_QUERY_LIST
+                    {
+                    };
+                heading = qtn_chat_log_selectservice;
+                };
+            }
+        };
+    }
+
+// CBA RESOURCES
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_softkeys_options_back__open
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_wvsettingsview_softkeys_options_back__open
+    {
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeyOpen; txt = qtn_msk_open; }
+        };
+    }
+    
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_softkeys_options_back__change
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_wvsettingsview_softkeys_options_back__change
+    {
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeyEdit; txt = qtn_msk_change; }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_softkeys_options_back__change2
+//    MSK: Change text, Open cmd id
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_wvsettingsview_softkeys_options_back__change2
+    {
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeyOpen; txt = qtn_msk_change; }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_softkeys_options_back__edit
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_wvsettingsview_softkeys_options_back__edit
+    {
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeyEdit; txt = qtn_msk_edit; }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_softkeys_options_back__empty
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_wvsettingsview_softkeys_options_back__empty
+    {
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_softkeys_ok_back__ok
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_wvsettingsview_softkeys_ok_back__ok
+    {
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_softkeys_ok_cancel__mark
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_wvsettingsview_softkeys_ok_cancel__mark
+    {
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EAknSoftkeySelect; txt = text_softkey_mark; }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_softkeys_ok_cancel__unmark
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_wvsettingsview_softkeys_ok_cancel__unmark
+    {
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EAknSoftkeySelect; txt = text_softkey_unmark; }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_softkeys_empty_cancel__mark
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_wvsettingsview_softkeys_empty_cancel__mark
+    {
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EAknSoftkeySelect; txt = text_softkey_mark; }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_wvsettingsview_message_query_dialog
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_wvsettingsview_message_query_dialog
+    {
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow | EEikDialogFlagNoTitleBar;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+                {
+                label = "";
+                headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+                {
+                message = "";
+                };
+            }
+        };
+    }
+
+// Save password disclaimer strings
+RESOURCE TBUF r_chat_save_pw_warning { buf = qtn_chat_save_pw_warning; }
+RESOURCE TBUF r_chat_save_pw_warning_heading { buf = qtn_chat_save_pw_warning_heading; }
+
+//newly added resources 27.02.2007
+
+RESOURCE TBUF r_qtn_chat_discon_other_because_scheduling_new { buf = qtn_chat_discon_other_because_scheduling_new; }
+RESOURCE TBUF r_qtn_chat_scheduled_to_be_closed_new { buf = qtn_chat_scheduled_to_be_closed_new; }
+RESOURCE TBUF r_qtn_chat_delete_community { buf = qtn_chat_delete_community; }
+RESOURCE TBUF r_qtn_chat_multidrive_ok { buf = text_softkey_ok; }
+
+//----------------------------------------------------
+//
+//    r_qtn_chat_settings_phone_memory
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_qtn_chat_settings_phone_memory           
+    { 
+    buf = qtn_mce_sett_mem_device;
+    }
+
+//----------------------------------------------------
+//
+//    r_qtn_chat_settings_memory_card
+//
+//----------------------------------------------------
+//    
+RESOURCE TBUF r_qtn_chat_settings_memory_card           
+    { 
+    buf = qtn_mce_sett_mem_memory_card;
+    }                    
+// resource variation file
+#include "PAppVariationNG.rss"
+
+// End of File

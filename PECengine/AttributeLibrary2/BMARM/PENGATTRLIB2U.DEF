@@ -1,0 +1,14 @@
+EXPORTS
+	__DbgTransFactRefCount__18PEngAttrLibFactoryRC18CPEngSessionSlotIdRi @ 1 NONAME R3UNUSED ; PEngAttrLibFactory::__DbgTransFactRefCount(CPEngSessionSlotId const &, int &)
+	AttributeManagerInstanceL__18PEngAttrLibFactoryRC18CPEngSessionSlotId @ 2 NONAME R3UNUSED ; PEngAttrLibFactory::AttributeManagerInstanceL(CPEngSessionSlotId const &)
+	AttributeTransEnvInstanceLC__18PEngAttrLibFactoryRC18CPEngSessionSlotId @ 3 NONAME R3UNUSED ; PEngAttrLibFactory::AttributeTransEnvInstanceLC(CPEngSessionSlotId const &)
+	AttributeTransEnvInstanceL__18PEngAttrLibFactoryRC18CPEngSessionSlotId @ 4 NONAME R3UNUSED ; PEngAttrLibFactory::AttributeTransEnvInstanceL(CPEngSessionSlotId const &)
+	AttributeTransFactoryInstanceLC__18PEngAttrLibFactoryRC18CPEngSessionSlotId @ 5 NONAME R3UNUSED ; PEngAttrLibFactory::AttributeTransFactoryInstanceLC(CPEngSessionSlotId const &)
+	AttributeTransFactoryInstanceL__18PEngAttrLibFactoryRC18CPEngSessionSlotId @ 6 NONAME R3UNUSED ; PEngAttrLibFactory::AttributeTransFactoryInstanceL(CPEngSessionSlotId const &)
+	CreateAttrFetchProcessorL__FR24MPEngPresenceAttrManagerRC12MDesC16ArrayGt6TArray1ZUlRC7TDesC16i17TPEngWVCspVersion @ 7 NONAME ; CreateAttrFetchProcessorL(MPEngPresenceAttrManager &, MDesC16Array const &, TArray<unsigned long>, TDesC16 const &, int, TPEngWVCspVersion)
+	SelectVersionL__16PEngWVCspVersion @ 8 NONAME R3UNUSED ; PEngWVCspVersion::SelectVersionL(void)
+	__DbgAttrManRefCount__18PEngAttrLibFactoryRC18CPEngSessionSlotIdRi @ 9 NONAME R3UNUSED ; PEngAttrLibFactory::__DbgAttrManRefCount(CPEngSessionSlotId const &, int &)
+	__DbgObjectCounts__18PEngAttrLibFactoryRiN31 @ 10 NONAME ; PEngAttrLibFactory::__DbgObjectCounts(int &, int &, int &, int &)
+	__DbgTransEnvRefCount__18PEngAttrLibFactoryRC18CPEngSessionSlotIdRi @ 11 NONAME R3UNUSED ; PEngAttrLibFactory::__DbgTransEnvRefCount(CPEngSessionSlotId const &, int &)
+	AttributeManagerInstanceLC__18PEngAttrLibFactoryRC18CPEngSessionSlotId @ 12 NONAME R3UNUSED ; PEngAttrLibFactory::AttributeManagerInstanceLC(CPEngSessionSlotId const &)
+

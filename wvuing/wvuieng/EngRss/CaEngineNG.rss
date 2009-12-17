@@ -1,0 +1,58 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This is the engine resource file.
+*
+*/
+
+//  RESOURCE IDENTIFIER
+NAME    CAEN // 4 letter ID
+
+//  INCLUDES
+#include <eikon.rh>
+#include <ChatClientNG.loc>
+
+RESOURCE RSS_SIGNATURE { }
+
+// System messages/////////////////////////////////////////////////////////////
+// Join message
+RESOURCE TBUF r_system_message_join	{ buf = qtn_chat_sysnote_joined;      }
+// New welcome message
+RESOURCE TBUF r_system_message_welcome_text  { buf = qtn_chat_sysnote_welcome_text; }
+// Topic message
+RESOURCE TBUF r_system_message_topic_text  { buf = qtn_chat_sysnote_topic_text; }
+// Leave message
+RESOURCE TBUF r_system_message_leave 	{ buf = qtn_chat_sysnote_leave;       }
+// Topic message  
+RESOURCE TBUF r_system_message_topic 	{ buf = qtn_chat_sysnote_topic;       }
+// Private messaging on
+RESOURCE TBUF r_system_message_privat_on { buf = qtn_chat_sysnote_privames_on; }
+// Private messaging off
+RESOURCE TBUF r_system_message_privat_off { buf = qtn_chat_sysnote_privames_off; }
+// Date changed
+RESOURCE TBUF r_system_message_date_change { buf = qtn_chat_message_list_date; }
+				
+// ////////////////////////////////////////////////////////////////////////////
+
+// History files default name ( logging )//////////////////////////////////////
+RESOURCE TBUF r_chatclient_history_msg_separator{ buf = qtn_chat_msg_separator; }
+///////////////////////////////////////////////////////////////////////////////
+
+// Failed message//////////////////////////////////////////////////////////////
+RESOURCE TBUF r_chatclient_message_failed 	{ buf = qtn_chat_message_failed; }
+///////////////////////////////////////////////////////////////////////////////
+
+// Media file//////////////////////////////////////////////////////////////////
+RESOURCE TBUF r_qtn_chat_log_media_file   { buf = qtn_chat_log_media_file; }
+///////////////////////////////////////////////////////////////////////////////
+// End of File

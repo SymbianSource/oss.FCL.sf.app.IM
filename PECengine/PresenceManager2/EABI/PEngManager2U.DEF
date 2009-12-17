@@ -1,0 +1,263 @@
+EXPORTS
+	_ZN19CPEngNWSessionSlot221OpenNWPresenceSessionERK14CWVSAPSettingsR32MPEngNWSessionOperationObserver2 @ 1 NONAME
+	_ZN19CPEngNWSessionSlot222CloseNWPresenceSessionER32MPEngNWSessionOperationObserver2 @ 2 NONAME
+	_ZN19CPEngNWSessionSlot227CancelOpenNWPresenceSessionEv @ 3 NONAME
+	_ZN19CPEngNWSessionSlot227ForceCloseNWPresenceSessionER32MPEngNWSessionOperationObserver2 @ 4 NONAME
+	_ZN19CPEngNWSessionSlot228CancelCloseNWPresenceSessionEv @ 5 NONAME
+	_ZN19CPEngNWSessionSlot230OpenNWPresenceSessionOwnershipEv @ 6 NONAME
+	_ZN19CPEngNWSessionSlot231CloseNWPresenceSessionOwnershipEv @ 7 NONAME
+	_ZN19CPEngNWSessionSlot231StoreNWPresenceSessionOwnershipERK7TDesC16 @ 8 NONAME
+	_ZN19CPEngNWSessionSlot233RestoreNWPresenceSessionOwnershipERK7TDesC16 @ 9 NONAME
+	_ZN19CPEngNWSessionSlot24NewLERK21CPEngNWSessionSlotID2i @ 10 NONAME
+	_ZN19CPEngNWSessionSlot25NewLCERK21CPEngNWSessionSlotID2i @ 11 NONAME
+	_ZN19CPEngNWSessionSlot29GetOptionEjjR5TDes8 @ 12 NONAME
+	_ZN20CPEngAttributeStore217StoreOwnAttributeER23MPEngPresenceAttrModel2i @ 13 NONAME
+	_ZN20CPEngAttributeStore218UnLockOwnAttributeER23MPEngPresenceAttrModel2 @ 14 NONAME
+	_ZN20CPEngAttributeStore222GetAndLockOwnAttributeEmRP23MPEngPresenceAttrModel2 @ 15 NONAME
+	_ZN20CPEngAttributeStore24NewLERK21CPEngNWSessionSlotID2i @ 16 NONAME
+	_ZN20CPEngAttributeStore25NewLCERK21CPEngNWSessionSlotID2i @ 17 NONAME
+	_ZN20CPEngSearchCriteria210SetSearchLEiRK7TDesC16 @ 18 NONAME
+	_ZN20CPEngSearchCriteria24NewLEv @ 19 NONAME
+	_ZN20CPEngSearchCriteria25NewLCEv @ 20 NONAME
+	_ZN21CPEngNWSessionSlotID210SetUserIdLERK7TDesC16 @ 21 NONAME
+	_ZN21CPEngNWSessionSlotID217SetAppIdMatchAnyLEv @ 22 NONAME
+	_ZN21CPEngNWSessionSlotID218SetServiceAddressLERK7TDesC16 @ 23 NONAME
+	_ZN21CPEngNWSessionSlotID218SetUserIdMatchAnyLEv @ 24 NONAME
+	_ZN21CPEngNWSessionSlotID226SetServiceAddressMatchAnyLEv @ 25 NONAME
+	_ZN21CPEngNWSessionSlotID24NewLEv @ 26 NONAME
+	_ZN21CPEngNWSessionSlotID25NewLCEv @ 27 NONAME
+	_ZN21CPEngNWSessionSlotID27SetAllLERK7TDesC16S2_S2_ @ 28 NONAME
+	_ZN21CPEngNWSessionSlotID27UnPackLERK6TDesC8 @ 29 NONAME
+	_ZN21CPEngNWSessionSlotID29SetAppIdLERK7TDesC16 @ 30 NONAME
+	_ZN22CPEngContactListStore212ContactListLERK7TDesC16 @ 31 NONAME
+	_ZN22CPEngContactListStore218CreateContactListLERK7TDesC16R28TPEngContactListBaseSettings @ 32 NONAME
+	_ZN22CPEngContactListStore218DeleteContactListLERK7TDesC16 @ 33 NONAME
+	_ZN22CPEngContactListStore218ReleaseContactListERK7TDesC16 @ 34 NONAME
+	_ZN22CPEngContactListStore222ContactListPropertiesLERK7TDesC16 @ 35 NONAME
+	_ZN22CPEngContactListStore224SetAsDefaultContactListLERK7TDesC16 @ 36 NONAME
+	_ZN22CPEngContactListStore234ReleaseUnknownContactListFromStoreERK7TDesC16 @ 37 NONAME
+	_ZN22CPEngContactListStore24NewLERK21CPEngNWSessionSlotID2i @ 38 NONAME
+	_ZN22CPEngContactListStore25NewLCERK21CPEngNWSessionSlotID2i @ 39 NONAME
+	_ZN22CPEngPresenceNotifier211AddObserverER22MPEngPresenceObserver2 @ 40 NONAME
+	_ZN22CPEngPresenceNotifier214RemoveObserverER22MPEngPresenceObserver2 @ 41 NONAME
+	_ZN22CPEngPresenceNotifier218TrackedPresenceIDsEv @ 42 NONAME
+	_ZN22CPEngPresenceNotifier23AddERK7TDesC16RK6TArrayImE @ 43 NONAME
+	_ZN22CPEngPresenceNotifier24NewLERK21CPEngNWSessionSlotID2i @ 44 NONAME
+	_ZN22CPEngPresenceNotifier24StopEv @ 45 NONAME
+	_ZN22CPEngPresenceNotifier25NewLCERK21CPEngNWSessionSlotID2i @ 46 NONAME
+	_ZN22CPEngPresenceNotifier25StartERK12MDesC16ArrayRK6TArrayImE @ 47 NONAME
+	_ZN22CPEngPresenceNotifier25StartERK17MPEngContactList220TPEngContactListViewRK6TArrayImE @ 48 NONAME
+	_ZN22CPEngPresenceNotifier25StartERK7TDesC16RK6TArrayImE @ 49 NONAME
+	_ZN22CPEngPresenceNotifier26RemoveERK7TDesC16 @ 50 NONAME
+	_ZN22CPEngPresenceNotifier26RemoveEm @ 51 NONAME
+	_ZN23CPEngSearchTransaction217SearchFromNetworkER13RPointerArrayI20CPEngSearchCriteria2EiR31MPEngSearchTransactionObserver2 @ 52 NONAME
+	_ZN23CPEngSearchTransaction217SearchFromNetworkERP20CPEngSearchCriteria2iR31MPEngSearchTransactionObserver2 @ 53 NONAME
+	_ZN23CPEngSearchTransaction221StopSearchFromNetworkEv @ 54 NONAME
+	_ZN23CPEngSearchTransaction225ContinueSearchFromNetworkEi @ 55 NONAME
+	_ZN23CPEngSearchTransaction24NewLERK21CPEngNWSessionSlotID2i @ 56 NONAME
+	_ZN23CPEngSearchTransaction25NewLCERK21CPEngNWSessionSlotID2i @ 57 NONAME
+	_ZN23CPEngTrackedPresenceID220NextChangedAttributeEv @ 58 NONAME
+	_ZN23CPEngTrackedPresenceID220NextTrackedAttributeEv @ 59 NONAME
+	_ZN23CPEngTrackedPresenceID220ResetChangedIteratorEv @ 60 NONAME
+	_ZN23CPEngTrackedPresenceID220ResetTrackedIteratorEv @ 61 NONAME
+	_ZN23CPEngTrackedPresenceID221FirstChangedAttributeEv @ 62 NONAME
+	_ZN23CPEngTrackedPresenceID221FirstTrackedAttributeEv @ 63 NONAME
+	_ZN24CPEngAttributeListStore224GetAttributeListForUserLERK7TDesC1623TPEngAttributeListsSet2 @ 64 NONAME
+	_ZN24CPEngAttributeListStore224GetDefaultAttributeListLE23TPEngAttributeListsSet2 @ 65 NONAME
+	_ZN24CPEngAttributeListStore225CreateEmptyAttributeListLEv @ 66 NONAME
+	_ZN24CPEngAttributeListStore226AttachAttributeListToUserLERK7TDesC16R19MPEngAttributeList2 @ 67 NONAME
+	_ZN24CPEngAttributeListStore226SetAsDefaultAttributeListLER19MPEngAttributeList2 @ 68 NONAME
+	_ZN24CPEngAttributeListStore227DeleteDefaultAttributeListLEv @ 69 NONAME
+	_ZN24CPEngAttributeListStore228DeleteAttributeListFromUserLERK7TDesC16 @ 70 NONAME
+	_ZN24CPEngAttributeListStore231GetAttributeListForContactListLERK7TDesC1623TPEngAttributeListsSet2 @ 71 NONAME
+	_ZN24CPEngAttributeListStore233AttachAttributeListToContactListLERK7TDesC16R19MPEngAttributeList2 @ 72 NONAME
+	_ZN24CPEngAttributeListStore235DeleteAttributeListFromContactListLERK7TDesC16 @ 73 NONAME
+	_ZN24CPEngAttributeListStore24NewLERK21CPEngNWSessionSlotID2i @ 74 NONAME
+	_ZN24CPEngAttributeListStore25NewLCERK21CPEngNWSessionSlotID2i @ 75 NONAME
+	_ZN24CPEngTrackedPresenceIDs220ResetChangedIteratorEv @ 76 NONAME
+	_ZN24CPEngTrackedPresenceIDs220ResetTrackedIteratorEv @ 77 NONAME
+	_ZN24CPEngTrackedPresenceIDs221NextChangedPresenceIDEv @ 78 NONAME
+	_ZN24CPEngTrackedPresenceIDs221NextTrackedPresenceIDEv @ 79 NONAME
+	_ZN24CPEngTrackedPresenceIDs222FirstChangedPresenceIDEv @ 80 NONAME
+	_ZN24CPEngTrackedPresenceIDs222FirstTrackedPresenceIDEv @ 81 NONAME
+	_ZN25CPEngContactListNotifier211AddObserverER25MPEngContactListObserver2 @ 82 NONAME
+	_ZN25CPEngContactListNotifier214RemoveObserverER25MPEngContactListObserver2 @ 83 NONAME
+	_ZN25CPEngContactListNotifier23AddERK7TDesC16 @ 84 NONAME
+	_ZN25CPEngContactListNotifier24NewLERK21CPEngNWSessionSlotID2i @ 85 NONAME
+	_ZN25CPEngContactListNotifier24StopEv @ 86 NONAME
+	_ZN25CPEngContactListNotifier25NewLCERK21CPEngNWSessionSlotID2i @ 87 NONAME
+	_ZN25CPEngContactListNotifier25StartERK12MDesC16Array @ 88 NONAME
+	_ZN25CPEngContactListNotifier25StartERK7TDesC16 @ 89 NONAME
+	_ZN25CPEngContactListNotifier26RemoveERK7TDesC16 @ 90 NONAME
+	_ZN26CPEngAttributeTransaction220GetFetchedAttributesER13RPointerArrayI23MPEngPresenceAttrModel2E @ 91 NONAME
+	_ZN26CPEngAttributeTransaction221CancelFetchAttributesEv @ 92 NONAME
+	_ZN26CPEngAttributeTransaction222FetchAttributesToCacheERK12MDesC16ArrayRK6TArrayImER34MPEngAttributeTransactionObserver2i @ 93 NONAME
+	_ZN26CPEngAttributeTransaction222FetchAttributesToCacheERK7TDesC16RK6TArrayImER34MPEngAttributeTransactionObserver2i @ 94 NONAME
+	_ZN26CPEngAttributeTransaction224FetchAttributesToObjectsERK7TDesC16RK6TArrayImER34MPEngAttributeTransactionObserver2 @ 95 NONAME
+	_ZN26CPEngAttributeTransaction226CancelPublishOwnAttributesEv @ 96 NONAME
+	_ZN26CPEngAttributeTransaction228PublishAndUnLockOwnAttributeERP23MPEngPresenceAttrModel2R34MPEngAttributeTransactionObserver2 @ 97 NONAME
+	_ZN26CPEngAttributeTransaction229PublishAndUnLockOwnAttributesER13RPointerArrayI23MPEngPresenceAttrModel2ER34MPEngAttributeTransactionObserver2 @ 98 NONAME
+	_ZN26CPEngAttributeTransaction24NewLERK21CPEngNWSessionSlotID2i @ 99 NONAME
+	_ZN26CPEngAttributeTransaction25NewLCERK21CPEngNWSessionSlotID2i @ 100 NONAME
+	_ZN26CPEngNWSessionSlotManager219CreateNWSessionSlotERK21CPEngNWSessionSlotID2 @ 101 NONAME
+	_ZN26CPEngNWSessionSlotManager219RemoveNWSessionSlotERK21CPEngNWSessionSlotID2 @ 102 NONAME
+	_ZN26CPEngNWSessionSlotManager24NewLEi @ 103 NONAME
+	_ZN26CPEngNWSessionSlotManager25NewLCEi @ 104 NONAME
+	_ZN27CPEngNWSessionSlotNotifier211AddObserverER27MPEngNWSessionSlotObserver2 @ 105 NONAME
+	_ZN27CPEngNWSessionSlotNotifier214RemoveObserverER27MPEngNWSessionSlotObserver2 @ 106 NONAME
+	_ZN27CPEngNWSessionSlotNotifier233PushNWSessionSlotStateToObserversERK21CPEngNWSessionSlotID2 @ 107 NONAME
+	_ZN27CPEngNWSessionSlotNotifier24NewLEi @ 108 NONAME
+	_ZN27CPEngNWSessionSlotNotifier24StopEv @ 109 NONAME
+	_ZN27CPEngNWSessionSlotNotifier25NewLCEi @ 110 NONAME
+	_ZN27CPEngNWSessionSlotNotifier25StartERK21CPEngNWSessionSlotID2 @ 111 NONAME
+	_ZN27CPEngNWSessionSlotNotifier25StartERK6TArrayI23TPEngNWSessionSlotEventE @ 112 NONAME
+	_ZN27CPEngNWSessionSlotNotifier25StartEv @ 113 NONAME
+	_ZN28CPEngContactListTransaction218PublishContactListERK7TDesC16R36MPEngContactListTransactionObserver2 @ 114 NONAME
+	_ZN28CPEngContactListTransaction219PublishContactListsERK12MDesC16ArrayR36MPEngContactListTransactionObserver2 @ 115 NONAME
+	_ZN28CPEngContactListTransaction222SynchronizeContactListERK7TDesC16R36MPEngContactListTransactionObserver2 @ 116 NONAME
+	_ZN28CPEngContactListTransaction223SynchronizeContactListsERK12MDesC16ArrayR36MPEngContactListTransactionObserver2 @ 117 NONAME
+	_ZN28CPEngContactListTransaction224CancelContactListPubSyncEv @ 118 NONAME
+	_ZN28CPEngContactListTransaction227BaseSynchronizeContactListsER36MPEngContactListTransactionObserver2 @ 119 NONAME
+	_ZN28CPEngContactListTransaction233CancelBaseSynchronizeContactListsEv @ 120 NONAME
+	_ZN28CPEngContactListTransaction24NewLERK21CPEngNWSessionSlotID2i @ 121 NONAME
+	_ZN28CPEngContactListTransaction25NewLCERK21CPEngNWSessionSlotID2i @ 122 NONAME
+	_ZN30CPEngAttributeListTransaction221PublishAttributeListsER38MPEngAttributeListTransactionObserver2 @ 123 NONAME
+	_ZN30CPEngAttributeListTransaction227CancelPublishAttributeListsEv @ 124 NONAME
+	_ZN30CPEngAttributeListTransaction24NewLERK21CPEngNWSessionSlotID2i @ 125 NONAME
+	_ZN30CPEngAttributeListTransaction25NewLCERK21CPEngNWSessionSlotID2i @ 126 NONAME
+	_ZN30PEngContactItemExtensionCodec216PackContactIdsLCERK15CContactIdArray @ 127 NONAME
+	_ZN30PEngContactItemExtensionCodec217UnpackContactIdsLERK6TDesC8R15CContactIdArray @ 128 NONAME
+	_ZNK18CPEngSearchResult211UserResultsEv @ 129 NONAME
+	_ZNK18CPEngSearchResult215SearchCompletedEv @ 130 NONAME
+	_ZNK18CPEngSearchResult217ContinuationIndexEv @ 131 NONAME
+	_ZNK18CPEngSearchResult220CurrentFindingsCountEv @ 132 NONAME
+	_ZNK19CPEngNWSessionSlot218GetNWSessionSlotIDER21CPEngNWSessionSlotID2 @ 133 NONAME
+	_ZNK19CPEngNWSessionSlot221GetNWSessionSlotStateER23TPEngNWSessionSlotState @ 134 NONAME
+	_ZNK19CPEngNWSessionSlot223GetNWPresenceSessionSapER14CWVSAPSettings @ 135 NONAME
+	_ZNK19CPEngNWSessionSlot229IsOpenNWPresenceSessionActiveEv @ 136 NONAME
+	_ZNK19CPEngNWSessionSlot230IsCloseNWPresenceSessionActiveEv @ 137 NONAME
+	_ZNK20CPEngAttributeStore215GetOwnAttributeEmRP23MPEngPresenceAttrModel2 @ 138 NONAME
+	_ZNK20CPEngAttributeStore218GetCachedAttributeERK7TDesC16mRP23MPEngPresenceAttrModel2 @ 139 NONAME
+	_ZNK20CPEngAttributeStore221OwnAttributeAvailableEm @ 140 NONAME
+	_ZNK20CPEngAttributeStore222AttributeTypeSupportedEm @ 141 NONAME
+	_ZNK20CPEngSearchCriteria211SearchValueEv @ 142 NONAME
+	_ZNK20CPEngSearchCriteria27ElementEv @ 143 NONAME
+	_ZNK21CPEngNWSessionSlotID211IsAppIdWildEv @ 144 NONAME
+	_ZNK21CPEngNWSessionSlotID211MatchFullIdERKS_ @ 145 NONAME
+	_ZNK21CPEngNWSessionSlotID212IsUserIdWildEv @ 146 NONAME
+	_ZNK21CPEngNWSessionSlotID213MatchBasePartERKS_ @ 147 NONAME
+	_ZNK21CPEngNWSessionSlotID214MatchAppIdPartERKS_ @ 148 NONAME
+	_ZNK21CPEngNWSessionSlotID214ServiceAddressEv @ 149 NONAME
+	_ZNK21CPEngNWSessionSlotID220IsServiceAddressWildEv @ 150 NONAME
+	_ZNK21CPEngNWSessionSlotID25AppIdEv @ 151 NONAME
+	_ZNK21CPEngNWSessionSlotID25PackLEv @ 152 NONAME
+	_ZNK21CPEngNWSessionSlotID26CloneLEv @ 153 NONAME
+	_ZNK21CPEngNWSessionSlotID26IsWildEv @ 154 NONAME
+	_ZNK21CPEngNWSessionSlotID26PackLCEv @ 155 NONAME
+	_ZNK21CPEngNWSessionSlotID26UserIdEv @ 156 NONAME
+	_ZNK22CPEngContactListStore216AllContactListsLEv @ 157 NONAME
+	_ZNK22CPEngContactListStore219ActiveContactListsLEv @ 158 NONAME
+	_ZNK22CPEngContactListStore219NativeContactListsLEv @ 159 NONAME
+	_ZNK22CPEngContactListStore225SynchronizedContactListsLEv @ 160 NONAME
+	_ZNK22CPEngContactListStore226UnknownServerContactListsLEv @ 161 NONAME
+	_ZNK22CPEngPresenceNotifier218TrackedPresenceIDsEv @ 162 NONAME
+	_ZNK22CPEngPresenceNotifier28IsActiveEv @ 163 NONAME
+	_ZNK23CPEngSearchTransaction225IsSearchFromNetworkActiveEv @ 164 NONAME
+	_ZNK23CPEngTrackedPresenceID210PresenceIDEv @ 165 NONAME
+	_ZNK24CPEngNWSessionSlotEvent211EventDesc16Ev @ 166 NONAME
+	_ZNK24CPEngNWSessionSlotEvent215NWSessionSlotIDEv @ 167 NONAME
+	_ZNK24CPEngNWSessionSlotEvent218NWSessionSlotStateEv @ 168 NONAME
+	_ZNK24CPEngNWSessionSlotEvent25EventEv @ 169 NONAME
+	_ZNK24CPEngNWSessionSlotEvent27CloneLCEv @ 170 NONAME
+	_ZNK24CPEngNWSessionSlotEvent28EventIntEv @ 171 NONAME
+	_ZNK24CPEngTrackedPresenceIDs223TrackedPresenceIDsCountEv @ 172 NONAME
+	_ZNK25CPEngContactListNotifier28IsActiveEv @ 173 NONAME
+	_ZNK26CPEngAttributeTransaction223IsFetchAttributesActiveEv @ 174 NONAME
+	_ZNK26CPEngAttributeTransaction228IsPublishOwnAttributesActiveEv @ 175 NONAME
+	_ZNK26CPEngNWSessionSlotManager217GetNWSessionSlotsER13RPointerArrayI21CPEngNWSessionSlotID2E @ 176 NONAME
+	_ZNK26CPEngNWSessionSlotManager217GetNWSessionSlotsER13RPointerArrayI21CPEngNWSessionSlotID2ERKS1_23TPEngNWSessionSlotState @ 177 NONAME
+	_ZNK26CPEngNWSessionSlotManager219ExistsNWSessionSlotERK21CPEngNWSessionSlotID2 @ 178 NONAME
+	_ZNK27CPEngNWSessionSlotNotifier221GetNWSessionSlotStateERK21CPEngNWSessionSlotID2R23TPEngNWSessionSlotState @ 179 NONAME
+	_ZNK27CPEngNWSessionSlotNotifier28IsActiveEv @ 180 NONAME
+	_ZNK28CPEngContactListTransaction226IsContactListPubSyncActiveEv @ 181 NONAME
+	_ZNK28CPEngContactListTransaction235IsBaseSynchronizeContactListsActiveEv @ 182 NONAME
+	_ZNK30CPEngAttributeListTransaction229IsPublishAttributeListsActiveEv @ 183 NONAME
+	_ZTI18CPEngSearchResult2 @ 184 NONAME ; #<TI>#
+	_ZTI19CPEngNWSessionSlot2 @ 185 NONAME ; #<TI>#
+	_ZTI20CPEngAttributeStore2 @ 186 NONAME ; #<TI>#
+	_ZTI20CPEngSearchCriteria2 @ 187 NONAME ; #<TI>#
+	_ZTI21CPEngNWSessionSlotID2 @ 188 NONAME ; #<TI>#
+	_ZTI22CPEngContactListStore2 @ 189 NONAME ; #<TI>#
+	_ZTI22CPEngPresenceNotifier2 @ 190 NONAME ; #<TI>#
+	_ZTI23CPEngSearchTransaction2 @ 191 NONAME ; #<TI>#
+	_ZTI23CPEngTrackedPresenceID2 @ 192 NONAME ; #<TI>#
+	_ZTI24CPEngAttributeListStore2 @ 193 NONAME ; #<TI>#
+	_ZTI24CPEngNWSessionSlotEvent2 @ 194 NONAME ; #<TI>#
+	_ZTI24CPEngTrackedPresenceIDs2 @ 195 NONAME ; #<TI>#
+	_ZTI25CPEngContactListNotifier2 @ 196 NONAME ; #<TI>#
+	_ZTI26CPEngAttributeTransaction2 @ 197 NONAME ; #<TI>#
+	_ZTI26CPEngNWSessionSlotManager2 @ 198 NONAME ; #<TI>#
+	_ZTI27CPEngNWSessionSlotNotifier2 @ 199 NONAME ; #<TI>#
+	_ZTI28CPEngContactListTransaction2 @ 200 NONAME ; #<TI>#
+	_ZTI28CPEngNWSessionSlotEvent2Copy @ 201 NONAME ; #<TI>#
+	_ZTI30CPEngAttributeListTransaction2 @ 202 NONAME ; #<TI>#
+	_ZTV18CPEngSearchResult2 @ 203 NONAME ; #<VT>#
+	_ZTV19CPEngNWSessionSlot2 @ 204 NONAME ; #<VT>#
+	_ZTV20CPEngAttributeStore2 @ 205 NONAME ; #<VT>#
+	_ZTV20CPEngSearchCriteria2 @ 206 NONAME ; #<VT>#
+	_ZTV21CPEngNWSessionSlotID2 @ 207 NONAME ; #<VT>#
+	_ZTV22CPEngContactListStore2 @ 208 NONAME ; #<VT>#
+	_ZTV22CPEngPresenceNotifier2 @ 209 NONAME ; #<VT>#
+	_ZTV23CPEngSearchTransaction2 @ 210 NONAME ; #<VT>#
+	_ZTV23CPEngTrackedPresenceID2 @ 211 NONAME ; #<VT>#
+	_ZTV24CPEngAttributeListStore2 @ 212 NONAME ; #<VT>#
+	_ZTV24CPEngNWSessionSlotEvent2 @ 213 NONAME ; #<VT>#
+	_ZTV24CPEngTrackedPresenceIDs2 @ 214 NONAME ; #<VT>#
+	_ZTV25CPEngContactListNotifier2 @ 215 NONAME ; #<VT>#
+	_ZTV26CPEngAttributeTransaction2 @ 216 NONAME ; #<VT>#
+	_ZTV26CPEngNWSessionSlotManager2 @ 217 NONAME ; #<VT>#
+	_ZTV27CPEngNWSessionSlotNotifier2 @ 218 NONAME ; #<VT>#
+	_ZTV28CPEngContactListTransaction2 @ 219 NONAME ; #<VT>#
+	_ZTV28CPEngNWSessionSlotEvent2Copy @ 220 NONAME ; #<VT>#
+	_ZTV30CPEngAttributeListTransaction2 @ 221 NONAME ; #<VT>#
+	_ZN22CPEngPresenceNotifier26UpdateERK12MDesC16Array @ 222 NONAME
+	_ZN22CPEngPresenceNotifier26UpdateERK17MPEngContactList220TPEngContactListView @ 223 NONAME
+	_ZN19CPEngNWSessionSlot221OpenNWPresenceSessionERK16CIMPSSAPSettingsR32MPEngNWSessionOperationObserver2 @ 224 NONAME
+	_ZNK19CPEngNWSessionSlot223GetNWPresenceSessionSapER16CIMPSSAPSettings @ 225 NONAME
+	_ZN19CPEngReactAuthStore16AuthorizationReqEi @ 226 NONAME
+	_ZN19CPEngReactAuthStore23PendingAuthorizationReqEi @ 227 NONAME
+	_ZN19CPEngReactAuthStore30GetAndLockAuthorizationRespondERP25MPEngAuthorizationRespond @ 228 NONAME
+	_ZN19CPEngReactAuthStore4NewLERK21CPEngNWSessionSlotID2i @ 229 NONAME
+	_ZN19CPEngReactAuthStore5NewLCERK21CPEngNWSessionSlotID2i @ 230 NONAME
+	_ZN22CPEngReactAuthNotifier11AddObserverER22MPEngReactAuthObserver @ 231 NONAME
+	_ZN22CPEngReactAuthNotifier14RemoveObserverER22MPEngReactAuthObserver @ 232 NONAME
+	_ZN22CPEngReactAuthNotifier4NewLERK21CPEngNWSessionSlotID2i @ 233 NONAME
+	_ZN22CPEngReactAuthNotifier4StopEv @ 234 NONAME
+	_ZN22CPEngReactAuthNotifier5NewLCERK21CPEngNWSessionSlotID2i @ 235 NONAME
+	_ZN22CPEngReactAuthNotifier5StartEi @ 236 NONAME
+	_ZN25CPEngReactAuthTransaction24PublishReactAuthRespondsERP25MPEngAuthorizationRespondR33MPEngReactAuthTransactionObserver @ 237 NONAME
+	_ZN25CPEngReactAuthTransaction30CancelPublishReactAuthRespondsEv @ 238 NONAME
+	_ZN25CPEngReactAuthTransaction4NewLERK21CPEngNWSessionSlotID2i @ 239 NONAME
+	_ZN25CPEngReactAuthTransaction5NewLCERK21CPEngNWSessionSlotID2i @ 240 NONAME
+	_ZNK19CPEngReactAuthStore21AuthorizationReqCountEv @ 241 NONAME
+	_ZNK19CPEngReactAuthStore22RespondedAuthorizationEi @ 242 NONAME
+	_ZNK19CPEngReactAuthStore25ServerDeniedAuthorizationEi @ 243 NONAME
+	_ZNK19CPEngReactAuthStore27RespondedAuthorizationCountEv @ 244 NONAME
+	_ZNK19CPEngReactAuthStore28PendingAuthorizationReqCountEv @ 245 NONAME
+	_ZNK19CPEngReactAuthStore30ServerDeniedAuthorizationCountEv @ 246 NONAME
+	_ZNK22CPEngReactAuthNotifier8IsActiveEv @ 247 NONAME
+	_ZNK24CPEngNWSessionSlotEvent215CSPSessionStateEv @ 248 NONAME
+	_ZNK25CPEngReactAuthTransaction32IsPublishReactAuthRespondsActiveEv @ 249 NONAME
+	_ZTI19CPEngReactAuthStore @ 250 NONAME ; #<TI>#
+	_ZTI22CPEngReactAuthNotifier @ 251 NONAME ; #<TI>#
+	_ZTI25CPEngAuthorizationRespond @ 252 NONAME ; #<TI>#
+	_ZTI25CPEngReactAuthTransaction @ 253 NONAME ; #<TI>#
+	_ZTV19CPEngReactAuthStore @ 254 NONAME ; #<VT>#
+	_ZTV22CPEngReactAuthNotifier @ 255 NONAME ; #<VT>#
+	_ZTV25CPEngAuthorizationRespond @ 256 NONAME ; #<VT>#
+	_ZTV25CPEngReactAuthTransaction @ 257 NONAME ; #<VT>#
+	_ZN22CPEngContactListStore222ChangeContactListTypeLERK7TDesC1620TPEngContactListType @ 258 NONAME
+	_ZN20CPEngAttributeStore220StoreCachedAttributeER23MPEngPresenceAttrModel2i @ 259 NONAME
+	_ZN20CPEngAttributeStore225GetAndLockCachedAttributeERK7TDesC16mRP23MPEngPresenceAttrModel2 @ 260 NONAME
+	_ZN28CPEngContactListTransaction227BaseSynchronizeContactListsER36MPEngContactListTransactionObserver2i @ 261 NONAME
+

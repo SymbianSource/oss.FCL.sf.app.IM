@@ -1,0 +1,97 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Presence Core Utils Library 2 project definition.
+*
+*/
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+#include        "../../Group/PEngUIDs2.h"
+#include        "../../Group/PEngConfig.h"
+
+
+TARGET          PEngCoreUtilsLib2.dll
+TARGETTYPE      dll
+UID             KStaticInterfaceDllUid2 KPEngCoreUtilsLibrary2Uid3
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+
+
+
+//Shared parts
+SOURCEPATH      ../Src
+SOURCE          CPEngSessionSlotId.cpp
+SOURCE          CPEngSessionSlotEvent.cpp
+SOURCE          CPEngSessionSlotState.cpp
+SOURCE          CPEngDetailedResultEntry.cpp
+SOURCE          CPEngTransactionStatus.cpp
+SOURCE          CPEngDataResultEntry.cpp
+SOURCE          PEngLogger.cpp
+
+
+
+// Server utils
+SOURCEPATH      ../SrvSrc
+SOURCE          PEngMessagePacker.cpp
+SOURCE          RPEngMessage.cpp
+SOURCE          PEngServerStarter.cpp
+SOURCE          TPEngServerParams.cpp
+
+
+//System folders
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   ../../IncApi
+SYSTEMINCLUDE   ../../IncPresenceModel
+//Relative system include for groupcommunications/inc
+
+SYSTEMINCLUDE   ../../../inc
+
+
+
+//Internal folders
+USERINCLUDE     ../Inc
+USERINCLUDE     ../Src
+USERINCLUDE     ../SrvInc
+USERINCLUDE     ../SrvSrc
+USERINCLUDE     ../../TransactionFramework2/Inc
+USERINCLUDE     ../../Group
+
+
+
+LIBRARY         euser.lib
+LIBRARY         estor.lib
+LIBRARY         bafl.lib
+LIBRARY         efsrv.lib
+#ifdef PENG_DEBUG_OUTPUT_TO_FILE
+LIBRARY         flogger.lib
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

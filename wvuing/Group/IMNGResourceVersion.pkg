@@ -1,0 +1,35 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: Package file
+;
+; Package file that defines IM resource file version in ROM.
+; Brand packages should be depending on this exact version, 
+; so we can prevent installation of incompatible brand packages.
+;
+; To create SIS stub: makesis -s IMResourceVersion.pkg
+; Copy SIS to: z:\system\install\IMResourceVersion.SIS (exported automatically)
+;
+
+; Language
+&EN
+
+; Header of SIS stub defining resource version 0.11
+; ==================================================
+#{"IM resource file version"}, (0x10207290),   0,0,11
+
+; Localised VendorID
+%{"Nokia"}
+
+; VendorID
+:"Nokia"

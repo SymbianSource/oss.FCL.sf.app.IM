@@ -1,0 +1,126 @@
+/*
+* Copyright (c) 2003 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  WVServiceSettingsUI.dll project definition file.
+*
+*/
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+#include "../../Inc/IMPSCommonUIProjectDefinitionMacros.h"
+#include "../../Inc/impscommonuibuilddefinitions.h"
+#include "../../Inc/ChatNGCommonUIDs.h"
+
+CAPABILITY CAP_GENERAL_DLL
+TARGET                  wvservicesettingsuing.dll
+TARGETTYPE              dll
+UID                     KWVSERVICESETINGDLLUID2 KWVSERVICESETINGDLLUID3
+VENDORID				VID_DEFAULT
+
+SOURCEPATH              ../Src
+
+SOURCE          CWVSettingsUIServersArray.cpp
+SOURCE			CWVSettingsUITlsHolder.cpp
+SOURCE			CWVSettingsUIDefineNewServerDialog.cpp
+SOURCE			CWVSettingsUIServerListDialog.cpp
+SOURCE			CWVSettingsUIServerSelector.cpp
+SOURCE			CWVSettingsUIDialogTitlePaneHandler.cpp
+SOURCE			CWVSettingsUIDialogImp.cpp
+SOURCE			CWVSettingsUIDialog.cpp
+SOURCE			CWVSettingsUICheckboxSettingPage.cpp
+SOURCE			CWVSettingsUISettingItemCreator.cpp
+SOURCE			CWVSettingsUISettingItemEditor.cpp
+SOURCE          cwvsettingsuseridsettingpage.cpp
+
+SOURCEPATH		../SharedDataSrc
+
+SOURCE			CIMPSSharedDataFactoryBoth.cpp
+SOURCE			CIMPSCenrepHandler.cpp
+SOURCE			CIMPSPubSubHandler.cpp
+SOURCE			CIMPSSystemNotifierPubSub.cpp
+SOURCE			CIMPSPropertyObserver.cpp
+SOURCE			CIMPSCenrepObserver.cpp
+
+USERINCLUDE             ../Group
+USERINCLUDE             ../Inc
+USERINCLUDE             ../Src
+USERINCLUDE             ../SharedDataSrc
+USERINCLUDE		../../Group
+USERINCLUDE		../../Inc
+USERINCLUDE		../../IMPSConnectionUI/Inc
+USERINCLUDE		../../IMPSConnectionUI/Group
+USERINCLUDE             ../CenRepPubSubInc
+USERINCLUDE             ../../cenrep
+USERINCLUDE 		../../loc
+
+USERINCLUDE		../../wvuiave/AppInc/
+
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE       ../../../inc   // ADO inc folder
+SYSTEMINCLUDE   ../../../im_pub/im_api/inc
+SYSTEMINCLUDE   ../../../im_pub/im_application_launch_api/inc
+SYSTEMINCLUDE   ../../../im_plat/wv_sap_settings_api/inc
+
+
+START RESOURCE		../Group/CWVSettingsUING.rss
+HEADER
+TARGETPATH  RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+
+START RESOURCE			../../IMPSConnectionUI/Group/IMConnectionUIVariationNG.rss
+HEADER
+TARGETPATH  RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+LIBRARY         euser.lib
+LIBRARY         avkon.lib
+LIBRARY         eikcore.lib
+LIBRARY         eikdlg.lib
+LIBRARY         cone.lib
+LIBRARY         eikcoctl.lib
+LIBRARY         bafl.lib
+LIBRARY         WVSAPSettingsStore.lib
+LIBRARY         commonengine.lib
+LIBRARY         CommonDialogs.lib
+LIBRARY         efsrv.lib
+LIBRARY 		commdb.lib  //commDb
+LIBRARY 		apengine.lib  //AP engine
+LIBRARY			apsettingshandlerui.lib
+LIBRARY			eikctl.lib
+LIBRARY     	featmgr.lib
+LIBRARY 		hlplch.lib 
+LIBRARY			impsconnectionuing.lib
+
+LIBRARY			egul.lib	// CGulIcon
+LIBRARY			aknskins.lib // Skinned icons
+
+LIBRARY			centralrepository.lib
+LIBRARY         sysutil.lib // For low disk handling
+
+LIBRARY         aknicon.lib
+LIBRARY			platformenv.lib //pathinfo
+LIBRARY 		alwaysonlinemanagerclient.lib
+LIBRARY         PEngManager2.lib
+
+#ifdef IMPSCUI_DEBUG_OUTPUT_TO_FILE
+LIBRARY                 flogger.lib
+#endif //IMPSCUI_DEBUG_OUTPUT_TO_FILE
+
+DEFFILE WVServiceSettingsUi.DEF
+
+
+//  End of File
+

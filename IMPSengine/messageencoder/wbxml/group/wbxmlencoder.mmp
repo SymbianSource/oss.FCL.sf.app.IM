@@ -1,0 +1,59 @@
+/*
+* Copyright (c) 2001-2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:Project specification file of impsmessage.dll
+*
+*/
+
+#include <platform_paths.hrh>
+
+APP_LAYER_SYSTEMINCLUDE
+
+TARGET       impsmessage.dll
+TARGETTYPE   dll
+UID          0x1000008D 0x101F468E
+CAPABILITY   CAP_GENERAL_DLL
+
+SYSTEMINCLUDE  /epoc32/include/libc
+
+
+USERINCLUDE   ../../../inc ../../../enginc ../../../datautils/inc ../../wbxml/inc
+USERINCLUDE   ../../dictionary
+SYSTEMINCLUDE   ../../../../inc	//ADO-specific include directory
+SYSTEMINCLUDE   ../../../../im_pub/im_api/inc
+SYSTEMINCLUDE   ../../../../im_pub/im_application_launch_api/inc
+
+SOURCEPATH    ../src
+SOURCE        ImpsEncodeWbXml.cpp
+SOURCE        ImpsDecodeWbXml.cpp
+SOURCE        ImpsWbXmlData.cpp
+//SOURCE        ImpsXmlDll.cpp
+SOURCE        ImpsXmlUtils.cpp
+
+SOURCEPATH    ../../dictionary
+SOURCE        imps_1_1_dict.c
+SOURCE		  imps_1_2_dict.c
+
+LIBRARY       charconv.lib
+LIBRARY       CXmlParser.lib
+LIBRARY       euser.lib 
+LIBRARY       estlib.lib
+LIBRARY       impsdatautils.lib
+
+#if defined( ARMCC )
+DEFFILE ../eabi/ 
+#elif defined ( WINSCW )
+deffile ../BWINSCW/ 
+#elif defined (WINS )
+deffile ../BWINS/ 
+#endif

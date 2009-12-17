@@ -1,0 +1,84 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This file contains declarations for resources of IM variation.
+ *                This file can be included in C++ or resource file.
+ *
+*/
+
+ 
+#ifndef WVUIPRESENCEVARIATION_HRH
+#define WVUIPRESENCEVARIATION_HRH
+
+// used in STRUCT IM_ATTRIBUTE_ARRAY as 'state' value
+enum TIMStateValues
+    {
+    EIMStateAvailable = 100,
+    EIMStateAway,
+    EIMStateInvisible,
+    EIMStateOffline,
+    EIMStateBusy
+    };
+
+// used in STRUCT IM_ATTRIBUTE as 'attribute' value
+enum TIMAttributeValues
+    {
+    EIMOnlineAttr = 200,
+    EIMUserAvailabilityAttr,
+    EIMCommCapAttr,
+    EIMStatusTextAttr
+    };
+
+// used in STRUCT IM_ATTRIBUTE as 'qualifier' value
+enum TIMQualifierValues
+    {
+    EIMQualifierFalse = 300,
+    EIMQualifierTrue
+    };
+
+// used in STRUCT IM_ATTRIBUTE as 'value' value when 'attribute' equals to EIMOnlineAttr
+enum TIMOnlineAttrValues
+    {
+    // controlled by server, so client can't change this
+    EIMOnlineNoChange = 400,
+    EIMOnlineTrue,
+    EIMOnlineFalse
+    };
+
+// used in STRUCT IM_ATTRIBUTE as 'value' value when 'attribute' equals to EIMUserAvailabilityAttr
+enum TIMUserAvailabilityAttrValues
+    {
+    EIMUserAvailabilityNoChange = 500,
+    EIMUserAvailabilityNotAvailable,
+    EIMUserAvailabilityDiscreet,
+    EIMUserAvailabilityAvailable
+    };
+
+// used in STRUCT IM_ATTRIBUTE as 'value' value when 'attribute' equals to EIMCommCapAttr
+enum TIMCommCapAttrValues
+    {
+    EIMCommCapNoChange = 600,
+    EIMCommCapClosed,
+    EIMCommCapOpen
+    };
+    
+// used in STRUCT IM_ATTRIBUTE as 'value' value when 'attribute' equals to EIMStatusTextAttr
+enum TIMStatusTextAttrValues
+	{
+	// status text value is controlled by UI
+	EIMStatusTextNoChange = 700
+    };
+
+#endif	// WVUIPRESENCEVARIATION_HRH
+
+// End of file

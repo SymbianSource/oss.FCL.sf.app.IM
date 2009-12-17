@@ -1,0 +1,59 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ConnectionUi resources.
+*
+*/
+
+#ifndef __CCnUiCommon_HRH
+#define __CCnUiCommon_HRH
+
+//  CONSTANTS
+
+/**
+ * Control IDs.
+ *
+ * NOTE! Control IDs can't start from zero.
+ */
+enum TControlIds
+    {
+    EGeneralWaitNoteId = 1,
+    ETOURichEditorId
+    };
+
+enum TIMPSCommonUIMenuCommands
+    {
+    EIMPSCommonUIFindMenuPlaceHolder = 1,
+    EIMPSCommonUITOUContinue
+    };
+
+/**
+ * Client group remote UI query messages.
+ *
+ * Enumeration defining different client group confirmation 
+ * queries and their responses.
+ */
+enum TCnUiRemoteUiMessages
+    {
+    ERemoteCancelAllActivity = KErrCancel,
+    ERemoteQueryAccepted = ETrue,
+    ERemoteQueryDeclined = EFalse,
+    
+    ECGQActiveConnectionScheduledClose = 100,                  ///<Client Group Query
+    ECGQActiveConnectionSuppressForScheduledConnection = 101   ///<Client Group Query
+    };
+
+#endif  //__CCnUiCommon_HRH
+
+//  End of File
+

@@ -1,0 +1,5 @@
+EXPORTS
+	_ZN19CWVSettingsUIDialog4NewLEv @ 1 NONAME
+	_ZTI19CWVSettingsUIDialog @ 2 NONAME ; #<TI>#
+	_ZTV19CWVSettingsUIDialog @ 3 NONAME ; #<VT>#
+

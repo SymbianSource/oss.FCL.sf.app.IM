@@ -1,0 +1,3 @@
+EXPORTS
+	?NewImpsSenderL@@YAPAVMImpsSender@@AAVMImpsDataReceiver@@AAVMMsgConnManager@@ABVTDesC8@@@Z @ 1 NONAME ; class MImpsSender * NewImpsSenderL(class MImpsDataReceiver &, class MMsgConnManager &, class TDesC8 const &)
+

@@ -1,0 +1,46 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Build information file for project Presence Adaptation
+*
+*/
+
+
+#include <platform_paths.hrh>
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+// exporting iby file
+../impsplugin/rom/impsplugin12.iby                CORE_APP_LAYER_IBY_EXPORT_PATH(impsplugin12.iby)
+
+
+// exporting loc file
+../impsplugin/loc/imps12plugin.loc                APP_LAYER_LOC_EXPORT_PATH(imps12plugin.loc)
+
+// Helper macros for declaring exports
+
+PRJ_MMPFILES
+
+//Parser for Adaptation
+../Parser2/Group/AdapParser.mmp
+
+//IMPS Plugin
+../impsplugin/group/impsplugin.mmp
+
+
+PRJ_TESTMMPFILES
+
+PRJ_TESTEXPORTS
+

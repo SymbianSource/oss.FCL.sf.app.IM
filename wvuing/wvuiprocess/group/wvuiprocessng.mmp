@@ -1,0 +1,183 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for chat application.
+*
+*/
+
+
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include "../../inc/ChatNGCommonUIDs.h"
+
+CAPABILITY CAP_GENERAL_DLL
+TARGET			wvuiprocessng.dll
+TARGETTYPE		dll
+UID				KWVUIPROCESSUIDS1 KWVUIPROCESSUIDS2 
+VENDORID	VID_DEFAULT
+
+
+
+LANGUAGE_IDS
+SOURCEPATH		../Src
+
+SOURCE			CCALoginPC.cpp
+SOURCE			CCAMainViewArrayPC.cpp
+SOURCE          CCAProcessManager.cpp
+SOURCE			CCAArrayItemPC.cpp
+SOURCE			CCASettingsPC.cpp
+SOURCE			CCAConversationPC.cpp
+SOURCE			CCASingletonPC.CPP
+SOURCE			CCAProcessManagerFactory.CPP
+SOURCE			CCAContactEditPC.cpp
+SOURCE          CCABlockingPC.cpp
+SOURCE          CCAServerContactsArrayPC.cpp
+SOURCE 			CCASearchDataPC.cpp
+SOURCE 			CCASearchInterfacePC.cpp
+SOURCE          CCAPCUtils.cpp
+SOURCE			ccareactiveauthpc.cpp
+SOURCE			IMMessageUtilsPC.cpp
+SOURCE 			CCARecordedChatsPC.cpp
+SOURCE			CCARecordedChatsArrayPC.cpp
+SOURCE			CCAMessageFlowHandlerPC.cpp
+SOURCE          CCAInvitationPC.cpp
+SOURCE			CCAConversationMessage.cpp
+SOURCE          ccagrouppc.cpp
+SOURCE          ccainviteeditorpc.cpp
+SOURCE			CCAGlobalNotificationObserverPC.cpp
+SOURCE			CCAOpenChatsPC.cpp
+SOURCE			CCAGroupUtilsPC.cpp
+SOURCE			CCAChatInfoArrayPC.cpp
+SOURCE			CCAGroupPropertiesPC.cpp
+SOURCE 			CCAApplicationNGPC.cpp
+SOURCE			CCAGroupListArrayPC.cpp
+
+
+SOURCEPATH       ../../Utils
+SOURCE          CAUtils.cpp
+
+USERINCLUDE		../Inc
+USERINCLUDE		.
+
+SYSTEMINCLUDE   ../../../inc	//ADO-specific include directory
+
+SYSTEMINCLUDE   ../../../im_pub/im_api/inc
+SYSTEMINCLUDE   ../../../im_pub/im_application_launch_api/inc
+SYSTEMINCLUDE   ../../../im_plat/wv_sap_settings_api/inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+USERINCLUDE 	../../wvuistorage/inc
+USERINCLUDE 	../../wvuipresence/inc
+
+USERINCLUDE 	../../wvuieng/EngInc 
+USERINCLUDE 	../../wvlogger/Inc
+USERINCLUDE 	../../Inc
+USERINCLUDE 	../../Group
+USERINCLUDE 	../../wvuiada/inc
+USERINCLUDE 	../../Utils
+USERINCLUDE 	../../wvuiave/AppInc
+
+USERINCLUDE		../../wvuiave/AppSrc
+USERINCLUDE		../../WVCommandUtils/Inc
+
+USERINCLUDE 	../../ImUtils/inc
+USERINCLUDE 	../../cenrep
+
+
+#include		"../../Inc/ImpsBuildDefinitions.h"
+#ifdef _ENABLE_DEBUG_PRINT
+    MACRO   CHAT_ENABLE_DEBUG_PRINT         
+    #ifdef _ENABLE_FILE_DEBUG
+        MACRO   CHAT_DEBUG_OUTPUT_TO_FILE     
+	LIBRARY			flogger.lib
+    #endif // _ENABLE_FILE_DEBUG
+#endif // _ENABLE_DEBUG_PRINT
+
+LIBRARY     hlplch.lib 
+
+LIBRARY     euser.lib 
+LIBRARY     apparc.lib 
+LIBRARY     cone.lib 
+LIBRARY     eikcore.lib 
+LIBRARY     fbscli.lib 
+LIBRARY     eikcoctl.lib 
+LIBRARY     eikdlg.lib 
+LIBRARY     avkon.lib 
+LIBRARY     bafl.lib 
+LIBRARY     eikctl.lib 
+LIBRARY     egul.lib 
+LIBRARY     uiklaf.lib
+LIBRARY     aknlayout.lib
+LIBRARY     aknnotify.lib
+LIBRARY     caengineng.lib 
+LIBRARY     gdi.lib 
+LIBRARY     estor.lib 
+LIBRARY     ws32.lib
+LIBRARY     form.lib // CTextView
+LIBRARY     etext.lib // CRichText
+
+LIBRARY     commonengine.lib
+
+LIBRARY     wvsapsettingsstore.lib
+LIBRARY     Impsutils.lib
+LIBRARY     IMPSClient.lib
+LIBRARY     castorageng.lib
+LIBRARY     capresenceng.lib
+LIBRARY     impsconnectionuing.lib    // for presence login
+LIBRARY     ProfileEng.lib
+LIBRARY     featmgr.lib
+LIBRARY     sendui.lib              // for sending recorded chats via MTMs
+
+LIBRARY     wvservicesettingsuing.lib
+LIBRARY     alwaysonlinemanagerclient.lib // RAlwaysOnlineClientSession
+
+LIBRARY     NewService.lib      // NewFileService
+LIBRARY     servicehandler.lib  // CAiwGenericParamList
+LIBRARY     PlatformEnv.lib
+
+LIBRARY     AknLayout2.lib
+LIBRARY     AknLayout2Scalable.lib
+
+LIBRARY     caf.lib
+
+// VARIATION
+
+LIBRARY AknSkins.lib    
+LIBRARY efsrv.lib   
+LIBRARY alternatorng.lib
+
+LIBRARY sysutil.lib
+LIBRARY apgrfx.lib // for CCAAudioManager
+LIBRARY mediaclientaudio.lib // for CCAAudioManager
+LIBRARY apmime.lib // for CCAAudioManager
+LIBRARY aknicon.lib //avkon icons
+LIBRARY InetProtUtil.lib
+LIBRARY imageconversion.lib // Image decoding and encoding
+
+LIBRARY centralrepository.lib
+LIBRARY CenRepNotifHandler.lib
+
+LIBRARY pbkeng.lib              // for Phonebook contact engine
+LIBRARY pbkview.lib             // for Phonebook single entry fetch
+LIBRARY CommonUi.lib    // CFindItemMenu
+LIBRARY MGFetch.lib // MGFetch
+LIBRARY filelist.lib //filelist dialog, needed for tone setting item
+
+LIBRARY EikCoCtlLaf.lib
+
+LIBRARY PEngManager2.lib
+
+LIBRARY HWRMVibraClient.lib
+LIBRARY imutilsng.lib

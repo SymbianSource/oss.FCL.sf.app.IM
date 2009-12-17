@@ -1,0 +1,83 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Storage management for IM
+*
+*/
+
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include "../../inc/ChatNGCommonUIDs.h"
+
+CAPABILITY CAP_GENERAL_DLL
+TARGET          castorageng.dll
+TARGETTYPE      dll
+UID             KWVUISTORAGEUIDS1 KWVUISTORAGEUIDS2
+VENDORID	VID_DEFAULT
+
+#include "../../Inc/impsbuilddefinitions.h"
+
+SOURCEPATH  ../../Utils
+SOURCE      CAUtils.cpp
+
+SOURCEPATH      ../src
+
+SOURCE		CCAStorageManager.cpp
+SOURCE      CCAContact.cpp
+SOURCE      CCAContactList.cpp
+SOURCE      CCAContactSorter.cpp
+
+SOURCE		CCAStorageManagerFactory.cpp
+SOURCE          CCAGroup.cpp
+SOURCE          CCAStorage.cpp
+SOURCE		CCAGroupStorage.cpp
+SOURCE      CCARefreshTimer.cpp
+
+// RESOURCE        resource_file
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../src
+USERINCLUDE     ../../Inc
+USERINCLUDE     ../../Group
+USERINCLUDE     ../../Utils
+
+SYSTEMINCLUDE   ../../../inc	//ADO-specific include directory
+
+SYSTEMINCLUDE   ../../../im_pub/im_api/inc
+SYSTEMINCLUDE   ../../../im_pub/im_application_launch_api/inc
+SYSTEMINCLUDE   ../../../im_plat/wv_sap_settings_api/inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+LIBRARY		euser.lib
+LIBRARY		estor.lib
+LIBRARY		efsrv.lib 
+LIBRARY		edbms.lib 
+LIBRARY		bafl.lib
+LIBRARY		sysutil.lib
+LIBRARY     inetprotutil.lib // for escapeutils used in CAUtils.cpp
+
+LANGUAGE_IDS
+
+
+#ifdef _ENABLE_DEBUG_PRINT
+    MACRO   CHAT_ENABLE_DEBUG_PRINT         
+    #ifdef _ENABLE_FILE_DEBUG
+        MACRO   CHAT_DEBUG_OUTPUT_TO_FILE     
+        LIBRARY		flogger.lib
+    #endif
+#endif
+
+// EXPORTUNFROZEN
+

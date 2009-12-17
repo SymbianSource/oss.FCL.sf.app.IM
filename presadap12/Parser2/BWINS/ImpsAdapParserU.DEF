@@ -1,0 +1,9 @@
+EXPORTS
+	?CreateXMLParserL@@YAPAVMPEngXMLParser@@XZ @ 1 NONAME ; class MPEngXMLParser * CreateXMLParserL(void)
+	?CreateXMLParserLC@@YAPAVMPEngXMLParser@@XZ @ 2 NONAME ; class MPEngXMLParser * CreateXMLParserLC(void)
+	?CreateXmlSerializerL@@YAPAVMPEngXMLSerializer@@AAVTDes8@@@Z @ 3 NONAME ; class MPEngXMLSerializer * CreateXmlSerializerL(class TDes8 &)
+	?CreateXmlSerializerLC@@YAPAVMPEngXMLSerializer@@AAVTDes8@@@Z @ 4 NONAME ; class MPEngXMLSerializer * CreateXmlSerializerLC(class TDes8 &)
+	?NewL@CPEngXmlSerializer@@SAPAV1@AAVTDes8@@@Z @ 5 NONAME ; class CPEngXmlSerializer * CPEngXmlSerializer::NewL(class TDes8 &)
+	?NewLC@CPEngXMLParser@@SAPAV1@XZ @ 6 NONAME ; class CPEngXMLParser * CPEngXMLParser::NewLC(void)
+	?NewLC@CPEngXmlSerializer@@SAPAV1@AAVTDes8@@@Z @ 7 NONAME ; class CPEngXmlSerializer * CPEngXmlSerializer::NewLC(class TDes8 &)
+

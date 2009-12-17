@@ -1,0 +1,126 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*	 This file provides the information required for building the
+*    whole WV Engine.
+*
+*/
+
+
+//#include "../inc/impsvariant.h"
+
+// To get the APP_LAYER_PUBLIC_EXPORT_PATH and APP_LAYER_PLATFORM_EXPORT_PATH macro definitions
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+PRJ_PLATFORMS
+// specify the platforms your component needs to be built for here
+// defaults to WINS MARM so you can ignore this if you just build these
+DEFAULT
+
+PRJ_EXPORTS
+// Specify the source file followed by its destination here
+// copy will be used to copy the source file to its destination
+../conf/wvengine.confml                      APP_LAYER_CONFML(wvengine.confml)
+../conf/wvengine_101FB0DA.crml		 		 APP_LAYER_CRML(wvengine_101FB0DA.crml)
+../conf/wvengine_101FB0D8.crml		 		 APP_LAYER_CRML(wvengine_101FB0D8.crml)
+
+
+// iby file
+../rom/impseng.iby                CORE_APP_LAYER_IBY_EXPORT_PATH(impseng.iby)
+// Variation data
+../inc/WvEngineVariant.hrh                            	|../../inc/WvEngineVariant.hrh
+../inc/wvengineInternalCRKeys.h                       	|../../inc/wvengineInternalCRKeys.h
+
+// WV Engine IF
+../wvotaparser/inc/wvsettings.h                         |../../inc/wvsettings.h
+../inc/ImpsAccessCli.h                                  |../../inc/ImpsAccessCli.h
+../inc/ImpsClient.h                                     |../../inc/ImpsClient.h     
+../inc/impsconst.h                                      |../../inc/impsconst.h      
+../inc/impserrors.h                                     |../../inc/impserrors.h     
+../inc/impsfundamental.h                                |../../inc/impsfundamental.h
+../inc/ImpsFundCli.h                                    |../../inc/ImpsFundCli.h
+../inc/ImpsFundCli.inl                                  |../../inc/ImpsFundCli.inl
+../inc/ImpsFundFields.inl                               |../../inc/ImpsFundFields.inl    
+../inc/ImpsGroupCli.h                                   |../../inc/ImpsGroupCli.h   
+../inc/ImpsGroupProps.h                                 |../../inc/ImpsGroupProps.h 
+../inc/ImpsImCli.h                                      |../../inc/ImpsImCli.h      
+../inc/ImpsServices.h                                   |../../inc/ImpsServices.h
+../inc/Impsdetailed.h                                   |../../inc/Impsdetailed.h 
+../inc/impspurecli.h                                    |../../inc/impspurecli.h
+../inc/impspresence.h                                   |../../inc/impspresence.h
+
+
+// Optional ini file for r&d only
+../installation/wvengine.ini                            /epoc32/wins/c/system/data/wvengine.ini
+../installation/wvengine.ini                            /epoc32/winscw/c/system/data/wvengine.ini
+
+// Open API + Launcher exports
+
+// from Symbian
+
+// backup registry file
+../CenRep/backup_registration.xml               z:/private/101FB0D4/backup_registration.xml
+
+PRJ_MMPFILES
+// Specify the .mmp files required for building the important component
+// releasables. Note that you should specify any .mmp files for test
+// programs further down the file.
+//
+// Specify "tidy" if the component you need to build doesn't need to be
+// released to the rest of the company
+// specify "ignore" if the MMP file exists but should be
+// ignored.
+
+../utils/group/impsutils.mmp
+../datautils/group/impsdatautils.mmp 
+../client/group/impsclient.mmp
+
+// Open API + Launcher
+../imapi/group/imclient.mmp
+../imlauncher/group/imlauncher.mmp
+
+../ImpsDataChannel/group/ImpsDataChannel.mmp
+../ImpsIpCirWatcher/group/ImpsIpCirWatcher.mmp
+
+// #endif
+
+
+../messageencoder/wbxml/group/wbxmlencoder.mmp
+../engsrv/group/impseng.mmp
+../engsrv/group/impsengmain.mmp
+
+../impswatcher/group/impspushhandler.mmp
+
+
+// OTA parser
+../wvotaparser/group/wvotaparser.mmp
+
+
+PRJ_TESTMMPFILES
+
+//Anumeha
+//#include "../tsrc/public/Imlauncher_SDK_APIs/basic/group/bld.inf"
+
+//Imlauncher SDK APIs Stif test cases
+
+//imlaunchertimerprocess
+//../tsrc/public/Imlauncher_SDK_APIs/basic/Imlaunchertimerprocess/group/timertool.mmp
+//imlaunchertestplugin
+//../tsrc/public/Imlauncher_SDK_APIs/basic/imlaunchertestplugin/group/imlaunchertestplugin.mmp
+//imlaunchertestcases
+//../tsrc/public/Imlauncher_SDK_APIs/basic/imlaunchertest/group/imlaunchertest.mmp
+
+
+// End of File

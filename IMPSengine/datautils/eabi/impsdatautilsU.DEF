@@ -1,0 +1,148 @@
+EXPORTS
+	_Z11impsServicePK12CImpsVariant16TImpsMessageType @ 1 NONAME
+	_ZN11CImpsFields10SessionIdLEv @ 2 NONAME
+	_ZN11CImpsFields12SessionTypeLEv @ 3 NONAME
+	_ZN11CImpsFields13SetSessionIdLERK7TDesC16 @ 4 NONAME
+	_ZN11CImpsFields15ResponseStatusLEv @ 5 NONAME
+	_ZN11CImpsFields15SetSessionTypeLE16TImpsSessionType @ 6 NONAME
+	_ZN11CImpsFields4NewLEv @ 7 NONAME
+	_ZN11CImpsFields4TidLEv @ 8 NONAME
+	_ZN11CImpsFields5PollLEv @ 9 NONAME
+	_ZN11CImpsFields5ResetEv @ 10 NONAME
+	_ZN11CImpsFields7SetTidLERK7TDesC16 @ 11 NONAME
+	_ZN11CImpsFieldsD0Ev @ 12 NONAME
+	_ZN11CImpsFieldsD1Ev @ 13 NONAME
+	_ZN11CImpsFieldsD2Ev @ 14 NONAME
+	_ZN12CImpsVariant5NewLCEv @ 15 NONAME
+	_ZN14TImpsDataUtils10GetSenderLEP8MImpsKeyP17MImpsDataAccessorR7TPtrC16S5_ @ 16 NONAME
+	_ZN14TImpsDataUtils10SetSenderLEP8MImpsKeyP17MImpsDataAccessorPK7TDesC16S6_ @ 17 NONAME
+	_ZN14TImpsDataUtils13CopyNewUsersLER17MImpsDataAccessorS1_ @ 18 NONAME
+	_ZN14TImpsDataUtils13GetSessionIDLEP17MImpsDataAccessorR7TPtrC16 @ 19 NONAME
+	_ZN14TImpsDataUtils13SetSessionIDLEP17MImpsDataAccessorRK7TDesC16 @ 20 NONAME
+	_ZN14TImpsDataUtils14CopyLeftUsersLER17MImpsDataAccessorS1_ @ 21 NONAME
+	_ZN14TImpsDataUtils15CreateClientIdLEP8MImpsKeyP17MImpsDataAccessorRK7TDesC16 @ 22 NONAME
+	_ZN14TImpsDataUtils15GetContentDataLEP8MImpsKeyP17MImpsDataAccessorR7TPtrC16 @ 23 NONAME
+	_ZN14TImpsDataUtils15GetContentTypeLEP17MImpsDataAccessorR7TPtrC16 @ 24 NONAME
+	_ZN14TImpsDataUtils15GetMessageTypeLEP17MImpsDataAccessor @ 25 NONAME
+	_ZN14TImpsDataUtils15GetSessionTypeLEP17MImpsDataAccessorR16TImpsSessionType @ 26 NONAME
+	_ZN14TImpsDataUtils15SetContentDataLEP8MImpsKeyP17MImpsDataAccessorRK7TDesC16 @ 27 NONAME
+	_ZN14TImpsDataUtils15SetSessionTypeLEP17MImpsDataAccessor16TImpsSessionType @ 28 NONAME
+	_ZN14TImpsDataUtils16GetNewMessageIdLEP8MImpsKeyP17MImpsDataAccessorR7TPtrC16 @ 29 NONAME
+	_ZN14TImpsDataUtils16GetResultStatusLEP8MImpsKeyP17MImpsDataAccessorRi @ 30 NONAME
+	_ZN14TImpsDataUtils16SetResultStatusLEP8MImpsKeyP17MImpsDataAccessori @ 31 NONAME
+	_ZN14TImpsDataUtils17GetTransactionIDLEP17MImpsDataAccessorR7TPtrC16 @ 32 NONAME
+	_ZN14TImpsDataUtils17SetTransactionIDLEP17MImpsDataAccessorRK7TDesC16 @ 33 NONAME
+	_ZN14TImpsDataUtils18CopyOwnPropertiesLER17MImpsDataAccessorS1_ @ 34 NONAME
+	_ZN14TImpsDataUtils18GetCenRepIntValueLE4TUidm @ 35 NONAME
+	_ZN14TImpsDataUtils19AddValuesFromArrayLEP8MImpsKeyPK12TImpsContenti @ 36 NONAME
+	_ZN14TImpsDataUtils19GetCenRepRealValueLE4TUidm @ 37 NONAME
+	_ZN14TImpsDataUtils20CopyGroupPropertiesLER17MImpsDataAccessorS1_ @ 38 NONAME
+	_ZN14TImpsDataUtils21SetBinaryContentDataLEP8MImpsKeyP17MImpsDataAccessorRK6TDesC8 @ 39 NONAME
+	_ZN14TImpsDataUtils8GetPollLEP8MImpsKeyP17MImpsDataAccessorRi @ 40 NONAME
+	_ZN14TImpsDataUtilsC1Ev @ 41 NONAME
+	_ZN14TImpsDataUtilsC2Ev @ 42 NONAME
+	_ZN16CImpsSettingFile4NewLER3RFs @ 43 NONAME
+	_ZN16CImpsSettingFile5OpenLER7TDesC16 @ 44 NONAME
+	_ZN16CImpsSettingFile9KeyValueLERK6TDesC8 @ 45 NONAME
+	_ZN16CImpsSettingFileD0Ev @ 46 NONAME
+	_ZN16CImpsSettingFileD1Ev @ 47 NONAME
+	_ZN16CImpsSettingFileD2Ev @ 48 NONAME
+	_ZN17CImpsClientLogger3LogE11TRefByValueIK7TDesC16Ez @ 49 NONAME
+	_ZN17CImpsDataAccessor4NewLEP11CImpsFields @ 50 NONAME
+	_ZN17CImpsDataAccessor5NewLCEP11CImpsFields @ 51 NONAME
+	_ZN17CImpsDataAccessorD0Ev @ 52 NONAME
+	_ZN17CImpsDataAccessorD1Ev @ 53 NONAME
+	_ZN17CImpsDataAccessorD2Ev @ 54 NONAME
+	_ZN17TImpsDataAccessor10StoreDescLEP8MImpsKey7TPtrC16 @ 55 NONAME
+	_ZN17TImpsDataAccessor11RestoreExtLEP8MImpsKeyRP6TDesC8S4_ @ 56 NONAME
+	_ZN17TImpsDataAccessor11StoreDesc8LEP8MImpsKey6TPtrC8 @ 57 NONAME
+	_ZN17TImpsDataAccessor11StoreEmptyLEP8MImpsKey @ 58 NONAME
+	_ZN17TImpsDataAccessor12RestoreDescLEP8MImpsKeyRP7TDesC16 @ 59 NONAME
+	_ZN17TImpsDataAccessor13RestoreDesc8LEP8MImpsKeyRP6TDesC8 @ 60 NONAME
+	_ZN17TImpsDataAccessor13RestoreEmptyLEP8MImpsKey @ 61 NONAME
+	_ZN17TImpsDataAccessor13SetImpsFieldsEP11CImpsFields @ 62 NONAME
+	_ZN17TImpsDataAccessor13StoreBooleanLEP8MImpsKeyi @ 63 NONAME
+	_ZN17TImpsDataAccessor13StoreIntegerLEP8MImpsKeyi @ 64 NONAME
+	_ZN17TImpsDataAccessor15RestoreBooleanLEP8MImpsKeyRi @ 65 NONAME
+	_ZN17TImpsDataAccessor15RestoreIntegerLEP8MImpsKeyRi @ 66 NONAME
+	_ZN17TImpsDataAccessor7NewKeyLEv @ 67 NONAME
+	_ZN17TImpsDataAccessor8KeyTypeLEP8MImpsKey @ 68 NONAME
+	_ZN17TImpsDataAccessor9CopyDataLER17MImpsDataAccessorP8MImpsKey @ 69 NONAME
+	_ZN17TImpsDataAccessor9StoreExtLEP8MImpsKey6TPtrC8S2_ @ 70 NONAME
+	_ZN17TImpsDataAccessorC1EP11CImpsFields @ 71 NONAME
+	_ZN17TImpsDataAccessorC1Ev @ 72 NONAME
+	_ZN17TImpsDataAccessorC2EP11CImpsFields @ 73 NONAME
+	_ZN17TImpsDataAccessorC2Ev @ 74 NONAME
+	_ZN17TImpsDataAccessorD0Ev @ 75 NONAME
+	_ZN17TImpsDataAccessorD1Ev @ 76 NONAME
+	_ZN17TImpsDataAccessorD2Ev @ 77 NONAME
+	_ZN17TImpsPackedEntity10PackEntityERK11CImpsFields @ 78 NONAME
+	_ZN17TImpsPackedEntity11DoPackArrayERPKhPK12MDesC16Array @ 79 NONAME
+	_ZN17TImpsPackedEntity13UnpackEntityLER11CImpsFields @ 80 NONAME
+	_ZN17TImpsPackedEntity14DoUnpackArrayLERPKhP12CDesC16Array @ 81 NONAME
+	_ZN17TImpsPackedEntityC1ERP6HBufC8 @ 82 NONAME
+	_ZN17TImpsPackedEntityC2ERP6HBufC8 @ 83 NONAME
+	_ZN17TImpsSessionIdentC1ERK7TDesC16S2_S2_ @ 84 NONAME
+	_ZN17TImpsSessionIdentC2ERK7TDesC16S2_S2_ @ 85 NONAME
+	_ZN24CImpsCommonGroupPropsInt13SetNbrOfUsersEi @ 86 NONAME
+	_ZN24CImpsCommonGroupPropsInt4NewLEv @ 87 NONAME
+	_ZN24CImpsCommonGroupPropsInt5ResetEv @ 88 NONAME
+	_ZN24CImpsCommonGroupPropsInt9SetPublicE17TImpsPropertyBool @ 89 NONAME
+	_ZN25CImpsPrivateGroupPropsInt13SetPrivilegesE15TImpsGroupUsers @ 90 NONAME
+	_ZN25CImpsPrivateGroupPropsInt4NewLEv @ 91 NONAME
+	_ZN25CImpsPrivateGroupPropsInt5ResetEv @ 92 NONAME
+	_ZN25CImpsPrivateGroupPropsInt9SetMemberE17TImpsPropertyBool @ 93 NONAME
+	_ZN8CImpsKey4NewLEv @ 94 NONAME
+	_ZN8CImpsKey5NewLCEv @ 95 NONAME
+	_ZN8CImpsKeyD0Ev @ 96 NONAME
+	_ZN8CImpsKeyD1Ev @ 97 NONAME
+	_ZN8CImpsKeyD2Ev @ 98 NONAME
+	_ZNK11CImpsFields4SizeEv @ 99 NONAME
+	_ZNK12CImpsVariant19IsFeatureSupportedLE13TImpsVariants @ 100 NONAME
+	_ZNK17TImpsDataAccessor13GetImpsFieldsEv @ 101 NONAME
+	_ZNK17TImpsDataAccessor15GetTransactionLEiP11CImpsFields @ 102 NONAME
+	_ZNK17TImpsDataAccessor18NbrOfTransactionsLEv @ 103 NONAME
+	_ZNK17TImpsDataAccessor19RestoreAlternativeLEPK8MImpsKeyRiS3_R12TImpsKeyType @ 104 NONAME
+	_ZNK17TImpsDataAccessor21CheckBranchExistenceLEPK8MImpsKey @ 105 NONAME
+	_ZTI11CImpsFields @ 106 NONAME ; #<TI>#
+	_ZTI12CImpsElement @ 107 NONAME ; #<TI>#
+	_ZTI12CImpsVariant @ 108 NONAME ; #<TI>#
+	_ZTI16CImpsSettingFile @ 109 NONAME ; #<TI>#
+	_ZTI17CImpsDataAccessor @ 110 NONAME ; #<TI>#
+	_ZTI17TImpsDataAccessor @ 111 NONAME ; #<TI>#
+	_ZTI24CImpsCommonGroupPropsInt @ 112 NONAME ; #<TI>#
+	_ZTI25CImpsPrivateGroupPropsInt @ 113 NONAME ; #<TI>#
+	_ZTI8CImpsKey @ 114 NONAME ; #<TI>#
+	_ZTI9CImpsData @ 115 NONAME ; #<TI>#
+	_ZTV11CImpsFields @ 116 NONAME ; #<VT>#
+	_ZTV12CImpsElement @ 117 NONAME ; #<VT>#
+	_ZTV12CImpsVariant @ 118 NONAME ; #<VT>#
+	_ZTV16CImpsSettingFile @ 119 NONAME ; #<VT>#
+	_ZTV17CImpsDataAccessor @ 120 NONAME ; #<VT>#
+	_ZTV17TImpsDataAccessor @ 121 NONAME ; #<VT>#
+	_ZTV24CImpsCommonGroupPropsInt @ 122 NONAME ; #<VT>#
+	_ZTV25CImpsPrivateGroupPropsInt @ 123 NONAME ; #<VT>#
+	_ZTV8CImpsKey @ 124 NONAME ; #<VT>#
+	_ZTV9CImpsData @ 125 NONAME ; #<VT>#
+	_ZThn4_N17TImpsDataAccessor10StoreDescLEP8MImpsKey7TPtrC16 @ 126 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor11RestoreExtLEP8MImpsKeyRP6TDesC8S4_ @ 127 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor11StoreDesc8LEP8MImpsKey6TPtrC8 @ 128 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor11StoreEmptyLEP8MImpsKey @ 129 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor12RestoreDescLEP8MImpsKeyRP7TDesC16 @ 130 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor13RestoreDesc8LEP8MImpsKeyRP6TDesC8 @ 131 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor13RestoreEmptyLEP8MImpsKey @ 132 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor13StoreBooleanLEP8MImpsKeyi @ 133 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor13StoreIntegerLEP8MImpsKeyi @ 134 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor15RestoreBooleanLEP8MImpsKeyRi @ 135 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor15RestoreIntegerLEP8MImpsKeyRi @ 136 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor7NewKeyLEv @ 137 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor8KeyTypeLEP8MImpsKey @ 138 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor9CopyDataLER17MImpsDataAccessorP8MImpsKey @ 139 NONAME ; #<thunk>#
+	_ZThn4_N17TImpsDataAccessor9StoreExtLEP8MImpsKey6TPtrC8S2_ @ 140 NONAME ; #<thunk>#
+	_ZThn4_N8CImpsKeyD0Ev @ 141 NONAME ; #<thunk>#
+	_ZThn4_N8CImpsKeyD1Ev @ 142 NONAME ; #<thunk>#
+	_ZThn4_NK17TImpsDataAccessor13GetImpsFieldsEv @ 143 NONAME ; #<thunk>#
+	_ZThn4_NK17TImpsDataAccessor19RestoreAlternativeLEPK8MImpsKeyRiS3_R12TImpsKeyType @ 144 NONAME ; #<thunk>#
+	_ZThn4_NK17TImpsDataAccessor21CheckBranchExistenceLEPK8MImpsKey @ 145 NONAME ; #<thunk>#
+	_ZN14TImpsDataUtils19GetContentDataTypeLEP17MImpsDataAccessori @ 146 NONAME
+

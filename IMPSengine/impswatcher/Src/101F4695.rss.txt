@@ -1,0 +1,62 @@
+/*
+* ==============================================================================
+*  Name        : 101F4695.RSS
+*  Part of     : WV Engine / impspushhandler
+*  Description : Resource file needed by ECOM framework
+*  Version     : 
+*
+*  Copyright © 2002, 2003 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation. All rights are reserved. Copying, 
+*  including reproducing, storing, adapting or translating, any 
+*  or all of this material requires the prior written consent of 
+*  Nokia Corporation. This material also contains confidential 
+*  information which may not be disclosed to others without the 
+*  prior written consent of Nokia Corporation.
+* ==============================================================================
+*/
+
+//  RESOURCE IDENTIFIER
+NAME    IMPS
+
+//  INCLUDES
+#include <ecom\RegistryInfo.rh>
+
+//  RESOURCE DEFINITIONS 
+// -----------------------------------------------------------------------------
+//   
+// ImpsPushHandlerInformation
+// This data structure specifies mappings and information needed by
+// the ECOM framework.
+// The Application id used in Wireless Village CIR is 0x0a. See default_data keyword
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE REGISTRY_INFO ImpsPushHandlerInformation
+    {
+    // impspushhandler.dll's uid3)
+    dll_uid = 0x101F4695;
+    interfaces = 
+        {
+        INTERFACE_INFO
+            {
+            // KUidPushHandlerBase - CPushHandlerBase UID
+            interface_uid = 0x101F3E5A;
+            implementations = 
+                {
+                IMPLEMENTATION_INFO
+                    {
+                    // CImpsPushHandler's implementationUID
+                    implementation_uid = 0x101F4696;
+                    version_no = 1;
+                    display_name = "CIMPSPushHandler||Implements a WAP Push IMPS Application Handler Plug-in||Copyright © 2003 Nokia Ltd. All rights reserved.";
+                    default_data = "x-wap-application:wv.ua||0x0000000a";
+                    opaque_data = "";
+                    }
+                };
+            }
+        };
+    }
+           
+// End of File

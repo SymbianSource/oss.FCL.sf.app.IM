@@ -1,0 +1,6 @@
+EXPORTS
+	?AccessHandlerL@PEngTransferAdapter@@SAPAVMPEngAccessHandler@@ABVCPEngSessionSlotId@@@Z @ 1 NONAME ; class MPEngAccessHandler * PEngTransferAdapter::AccessHandlerL(class CPEngSessionSlotId const &)
+	?PackLoginDataL@PEngLoginDataCodec@@SAPAVHBufC8@@ABVCIMPSSAPSettings@@@Z @ 2 NONAME ; class HBufC8 * PEngLoginDataCodec::PackLoginDataL(class CIMPSSAPSettings const &)
+	?PureDataHandlerL@PEngTransferAdapter@@SAPAVMPEngPureDataHandler@@ABVCPEngSessionSlotId@@@Z @ 3 NONAME ; class MPEngPureDataHandler * PEngTransferAdapter::PureDataHandlerL(class CPEngSessionSlotId const &)
+	?UnPackLoginDataL@PEngLoginDataCodec@@SAXABVTDesC8@@AAVCIMPSSAPSettings@@@Z @ 4 NONAME ; void PEngLoginDataCodec::UnPackLoginDataL(class TDesC8 const &, class CIMPSSAPSettings &)
+

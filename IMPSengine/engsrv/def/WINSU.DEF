@@ -1,0 +1,4 @@
+EXPORTS
+	?ThreadFunction@@YAHPAX@Z @ 1 NONAME ; int __cdecl ThreadFunction(void *)
+	?ThreadStart@CImpsServer@@SAHAAVTImpsSignal@@@Z @ 2 NONAME ; public: static int __cdecl CImpsServer::ThreadStart(class TImpsSignal &)
+

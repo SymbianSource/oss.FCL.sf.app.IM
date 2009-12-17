@@ -1,0 +1,55 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  IMPSSAPSettingsStore build definition.
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+
+// Helper macros for declaring exports
+//export path for 2.0
+#define IMPSSAPSTORE_EXPORT(header) ../IMPSInc/##header APP_LAYER_PLATFORM_EXPORT_PATH(##header)
+
+// Platforms
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+../Conf/wvsettings20.confml                      APP_LAYER_CONFML(wvsettings20.confml)
+../Conf/wvsettings20_101F884D.crml		 		 APP_LAYER_CRML(wvsettings20_101f884d.crml)
+../Conf/wvsettings20_101F884C.crml		 		 APP_LAYER_CRML(wvsettings20_101f884c.crml)
+
+// iby file
+../ROM/wvsapsettingsstore.iby                CORE_APP_LAYER_IBY_EXPORT_PATH(wvsapsettingsstore.iby)
+
+//// IMPS
+
+//Common defs
+
+//SAP
+
+//Storage
+
+
+// SAPSettingsStore
+PRJ_MMPFILES
+
+WVSAPSettingsStore.mmp
+
+//  End of File
+
+

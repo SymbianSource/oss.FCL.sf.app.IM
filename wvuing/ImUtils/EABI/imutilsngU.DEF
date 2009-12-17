@@ -1,0 +1,70 @@
+EXPORTS
+	_ZN11CCAWaitNote10ConstructLERK7TDesC16iiP19MCAWaitNoteObserver @ 1 NONAME
+	_ZN11CCAWaitNote11SetObserverEP19MCAWaitNoteObserver @ 2 NONAME
+	_ZN11CCAWaitNote13DismissDialogEv @ 3 NONAME
+	_ZN11CCAWaitNote13ShowWaitNoteLEiiiP19MCAWaitNoteObserver @ 4 NONAME
+	_ZN11CCAWaitNote14ShowWaitNoteLCERK7TDesC16iiP19MCAWaitNoteObserver @ 5 NONAME
+	_ZN11CCAWaitNote14ShowWaitNoteLCEiiiP19MCAWaitNoteObserver @ 6 NONAME
+	_ZN11CCAWaitNote16DialogDismissedLEi @ 7 NONAME
+	_ZN12CAArrayUtils12AppendArrayLERK12CDesC16ArrayRS0_ @ 8 NONAME
+	_ZN12CAArrayUtils12CloneArrayLCERK12MDesC16Array @ 9 NONAME
+	_ZN12CAArrayUtils12CreateDiffLCERK12CDesC16ArrayS2_ @ 10 NONAME
+	_ZN12CAArrayUtils13DeleteIfFoundER12CDesC16ArrayRK7TDesC16 @ 11 NONAME
+	_ZN12CAArrayUtils15SetSelectionsLCERK12CDesC16ArrayS2_ @ 12 NONAME
+	_ZN12CAArrayUtils17AppendIfNotFoundLER12CDesC16ArrayRK7TDesC16 @ 13 NONAME
+	_ZN12IMNoteMapper9ShowNoteLEiRK7TDesC16 @ 14 NONAME
+	_ZN13IMDialogUtils17DisplayErrorNoteLERK7TDesC16i @ 15 NONAME
+	_ZN13IMDialogUtils17DisplayErrorNoteLEi @ 16 NONAME
+	_ZN13IMDialogUtils17DisplayPopupListLEP12MDesC16Arrayi31TListBoxModelItemArrayOwnershipi @ 17 NONAME
+	_ZN13IMDialogUtils18DisplayNoteDialogLERK7TDesC16iRKN14CAknNoteDialog8TTimeoutE @ 18 NONAME
+	_ZN13IMDialogUtils18DisplayNoteDialogLEi @ 19 NONAME
+	_ZN13IMDialogUtils19DisplayQueryDialogLEiRK7TDesC16 @ 20 NONAME
+	_ZN13IMDialogUtils19DisplayQueryDialogLEii @ 21 NONAME
+	_ZN13IMDialogUtils23DisplayInformationNoteLERK7TDesC16 @ 22 NONAME
+	_ZN13IMDialogUtils23DisplayInformationNoteLEiRK7TDesC16 @ 23 NONAME
+	_ZN13IMDialogUtils23DisplayListQueryDialogLEP9CArrayFixIiEP12MDesC16ArrayiS2_RK7TDesC16S7_ @ 24 NONAME
+	_ZN13IMDialogUtils23DisplayListQueryDialogLEPiP12MDesC16ArrayiRK7TDesC16S5_ii @ 25 NONAME
+	_ZN13IMDialogUtils23DisplayTextQueryDialogLER6TDes16iiiiNS_12TLeftSoftkeyENS_21TInitialSelectionModeEi @ 26 NONAME
+	_ZN13IMDialogUtils24DisplayConfirmationNoteLEi @ 27 NONAME
+	_ZN13IMDialogUtils26DisplayMessageQueryDialogLEiRK7TDesC16S2_i @ 28 NONAME
+	_ZN13IMDialogUtils29DisplayErrorConfirmationNoteLERK7TDesC16 @ 29 NONAME
+	_ZN13IMDialogUtils29DisplayErrorConfirmationNoteLEi @ 30 NONAME
+	_ZN13IMDialogUtils30MultiselectionListQueryDialogLERK12MDesC16ArrayRK7TDesC16 @ 31 NONAME
+	_ZN13IMDialogUtils31DisplayYesNoConfirmationDialogLERK7TDesC16 @ 32 NONAME
+	_ZN13IMDialogUtils31DisplayYesNoConfirmationDialogLEi @ 33 NONAME
+	_ZN18CCATextQueryDialog14OfferKeyEventLERK9TKeyEvent10TEventCode @ 34 NONAME
+	_ZN18CCATextQueryDialog18UpdateLeftSoftKeyLEv @ 35 NONAME
+	_ZN18CCATextQueryDialog4NewLER6TDes16RKN15CAknQueryDialog5TToneEii @ 36 NONAME
+	_ZN18CCATextQueryDialog9OkToExitLEi @ 37 NONAME
+	_ZN18CCATextQueryDialogC1ER6TDes16RKN15CAknQueryDialog5TToneEii @ 38 NONAME
+	_ZN18CCATextQueryDialogC2ER6TDes16RKN15CAknQueryDialog5TToneEii @ 39 NONAME
+	_ZN18CCATextQueryDialogD0Ev @ 40 NONAME
+	_ZN18CCATextQueryDialogD1Ev @ 41 NONAME
+	_ZN18CCATextQueryDialogD2Ev @ 42 NONAME
+	_ZN7IMUtils10UpdateIconERP8CGulIconS1_ @ 43 NONAME
+	_ZN7IMUtils11LaunchHelpLERK7TDesC16 @ 44 NONAME
+	_ZN7IMUtils11NeutralFindERK12MDesC16ArrayRK7TDesC16 @ 45 NONAME
+	_ZN7IMUtils12AddMenuItemLEiR12CEikMenuPaneiii @ 46 NONAME
+	_ZN7IMUtils12MaxMsgLengthEv @ 47 NONAME
+	_ZN7IMUtils14FileProtectedLERK4TBufILi256EE @ 48 NONAME
+	_ZN7IMUtils17ContentProtectedLERK6TDesC8 @ 49 NONAME
+	_ZN7IMUtils17IntResourceValueLEi @ 50 NONAME
+	_ZN7IMUtils20IgnoreOfflineStatusLERK7TDesC16 @ 51 NONAME
+	_ZN7IMUtils24WVSettingsChatLoginValueEv @ 52 NONAME
+	_ZN7IMUtils27CombineStringFromResourceLCEii @ 53 NONAME
+	_ZN7IMUtils27FFSSpaceBelowCriticalLevelLEii @ 54 NONAME
+	_ZN7IMUtils28PopulateFormattedOnlineListLERK12MDesC16ArrayR12CDesC16Array @ 55 NONAME
+	_ZN7IMUtils6CRKeyLE4TUidm @ 56 NONAME
+	_ZN7IMUtils7SetIconER8CGulIconS1_ @ 57 NONAME
+	_ZTI11CCAWaitNote @ 58 NONAME ; #<TI>#
+	_ZTI18CCATextQueryDialog @ 59 NONAME ; #<TI>#
+	_ZTV11CCAWaitNote @ 60 NONAME ; #<VT>#
+	_ZTV18CCATextQueryDialog @ 61 NONAME ; #<VT>#
+	_ZThn4_N11CCAWaitNote16DialogDismissedLEi @ 62 NONAME ; #<thunk>#
+	_ZN7IMUtils14InitializeLibLEv @ 63 NONAME
+	_ZN7IMUtils15UnInitializeLibEv @ 64 NONAME
+	_ZN7IMUtils24IntResourceValueFromRssLEi @ 65 NONAME
+	_ZTI15CIMUtilsTlsData @ 66 NONAME ; #<TI>#
+	_ZTV15CIMUtilsTlsData @ 67 NONAME ; #<VT>#
+	_ZN13IMDialogUtils17DisplayPopupListLERiP12MDesC16ArrayRK7TDesC1631TListBoxModelItemArrayOwnershipi @ 68 NONAME
+

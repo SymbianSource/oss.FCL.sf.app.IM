@@ -1,0 +1,153 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Localization strings for O IM requirements
+*
+*/
+
+
+// LOCALISATION STRINGS
+
+//d: Text to be shown when user is not registered with Windows Live account on handset.
+//l: popup_info_list_pane_t2/opt1
+//r: 3.2
+#define qtn_note_wap_orange "In order to use Messenger on your Orange handset, you need to have an Orange Messenger by Windows Live account. If you do not have an account, you may select 'Register' to obtain one.  Otherwise, please chose 'Ignore’."
+
+//d: LSK for WAP registration popup
+//l: control_pane_t1
+//r: 3.2
+#define qtn_lsk_wap_reg_orange "Register"
+
+//d: RSK for WAP registration popup
+//l: control_pane_t1/opt7 
+//r: 3.2
+#define qtn_rsk_wap_ignore_orange "Ignore"
+
+//d: Text to be shown when is detected.
+//l: popup_info_list_pane_t2/opt1
+//r: 3.2
+#define qtn_note_roaming_orange "Your phone is roaming. Data charges for the use of Orange Messenger by Windows Live may be higher. Do you wish to continue?"
+
+//d: Heading of the warning popup
+//l: heading_pane_t1
+//r: 3.2
+#define qtn_note_title_roaming_orange "Warning"
+
+//d: Heading of the wap registration popup
+//l: heading_pane_t1
+//r: 3.2
+#define qtn_note_title_wap_orange "Welcome"
+
+//d: RSK for terms and condition popup
+//l: control_pane_t1/opt7 
+//r: 3.2
+#define qtn_im_refuse_rsk_register "Refuse"
+
+//d: LSK for terms and condition popup
+//l: control_pane_t1/opt7 
+//r: 3.2
+#define qtn_im_agree_lsk_register "Agree"
+
+//d: Popup shown for terms and condition 
+//l: popup_info_list_pane_t2/opt1
+//r: 3.2
+#define qtn_note_terms_wap_orange  "This is your first use of Orange Messenger by Windows Live from your mobile. By clicking on 'Agree' you will confirm that when you subscribed to this service from Orange World or from the website www.orange.co.uk/communicate/owl you have read and accepted the terms of use."
+
+//d: Heading of the terms and condition popup
+//l: heading_pane_t1
+//r: 3.2
+#define qtn_note_title_terms_wap_orange "Terms and conditions"
+
+//d:Sign-on menu item in options menu
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_im_register_sign_option     "Sign-on"
+
+//d:Register menu item in options menu
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_im_register_login_option     "Register"
+
+//d:Text to be shown as Title in Templates list
+//l:heading_pane_t1
+//r:3.2
+//
+#define qtn_chat_template_title "Select Template:"
+
+//d:Text to be shown as Menu Item in Chat View
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_chat_conv_insert_Template "Insert Template"
+
+//d:Text to be shown at Position 1 in Templates list
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_chat_template_1 "Hi there!"
+
+//d:Text to be shown at Position 2 in Templates list
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_chat_template_2 "Are you available?"
+
+//d:Text to be shown at Position 3 in Templates list
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_chat_template_3 "Where are you?"
+
+//d:Text to be shown at Position 4 in Templates list
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_chat_template_4 "What are you doing?"
+
+//d:Text to be shown at Position 5 in Templates list
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_chat_template_5 "I have to go"
+
+//d:Text to be shown at Position 6 in Templates list
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_chat_template_6 "I am driving"
+
+//d:Text to be shown at Position 7 in Templates list
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_chat_template_7 "Give me a call when you have time"
+
+//d:Text to be shown at Position 8 in Templates list
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_chat_template_8 "Can I call you?"
+
+//d:Text to be shown at Position 9 in Templates list
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_chat_template_9 "I will talk later"
+
+//d:Text to be shown at Position 10 in Templates list
+//l:list_single_pane_t1_cp2
+//r:3.2
+//
+#define qtn_chat_template_10 "How are you?"

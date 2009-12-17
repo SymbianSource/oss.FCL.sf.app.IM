@@ -1,0 +1,142 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Project specification file of UI engine
+*
+*/
+// CAEngineNG.mmp
+// 
+CAPABILITY CAP_GENERAL_DLL
+
+#include <data_caging_paths.hrh>
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include "../../inc/ChatNGCommonUIDs.h"
+
+TARGET                  caengineng.dll
+TARGETTYPE				dll
+UID                     KWVUIENGINEIDS1 KWVUIENGINEIDS2
+
+VENDORID	VID_DEFAULT
+
+START RESOURCE		../EngRss/CaEngineNG.rss
+HEADER
+TARGETPATH	RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+
+SOURCEPATH      ../../Utils
+SOURCE          CAUtils.cpp
+
+SOURCEPATH		../EngSrc
+
+SOURCE          CCAContactListModel.cpp
+//SOURCE			CCABufferMemoryHandler.cpp
+SOURCE			CCAChatContainer.cpp
+SOURCE			CCAMessageContainer.cpp
+SOURCE			CCAMessageCreator.cpp
+SOURCE			CCAMessageHandler.cpp
+SOURCE          CCAMessageBase.cpp
+SOURCE			CCAContentMessage.cpp
+SOURCE			CCATextMessage.cpp
+SOURCE          CAMessageUtil.cpp
+
+SOURCE          CCAEngine.cpp           // Interface class to UI
+SOURCE			CCABlockingManager.cpp
+SOURCE			CCAGroupManager.cpp
+SOURCE			CCALoggerHeadersInterface.cpp
+SOURCE			TCALoggerMessageFactory.cpp
+SOURCE			CCAStorageObserver.cpp
+SOURCE			CCALoggerMessageHeader.cpp
+SOURCE			CCAInviteManager.cpp
+SOURCE			CCAInvitation.cpp
+SOURCE			CCAInviteTracker.cpp
+SOURCE			CCARequestMapper.cpp
+
+SOURCE          CCAGroupWrapper.cpp
+
+SOURCE          CCAEngineDll.cpp        // Entry point to the engine
+SOURCE			CCAErrorData.cpp
+SOURCE          CCASearchData.cpp
+SOURCE          CCASearchManager.cpp
+SOURCE			CCAInvitationRequest.cpp
+SOURCE			CCAPartialSuccessData.cpp
+SOURCE			CCASettingsManager.cpp
+SOURCE			CCARequest.cpp
+SOURCE			CCABackgroundTask.cpp
+SOURCE          CCAAccessManager.cpp
+SOURCE          CCAImageLoader.cpp
+
+SOURCE          ccasyncchecker.cpp
+
+SOURCE          wvengutils.cpp
+
+SYSTEMINCLUDE   ../../../inc	//ADO-specific include directory
+
+SYSTEMINCLUDE   ../../../im_pub/im_api/inc
+SYSTEMINCLUDE   ../../../im_pub/im_application_launch_api/inc
+SYSTEMINCLUDE   ../../../im_plat/wv_sap_settings_api/inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+// SOURCEPATH  ../CenRepSrc
+SOURCE ../CenRepSrc/CCASDCRVariator.cpp
+USERINCLUDE ../../cenrep
+USERINCLUDE ../CenRepSrc
+LIBRARY     centralrepository.lib
+
+USERINCLUDE     ../EngSrc
+USERINCLUDE     ../EngInc
+USERINCLUDE		../../Inc
+USERINCLUDE		../../Group
+USERINCLUDE		../../Utils
+USERINCLUDE		../../wvuiada/inc
+USERINCLUDE		../../wvlogger/inc
+
+USERINCLUDE 	../../wvuistorage/inc
+USERINCLUDE 	../../wvuipresence/inc
+
+USERINCLUDE 	../../loc
+
+#include		"../../Inc/ImpsBuildDefinitions.h"
+#ifdef _ENABLE_DEBUG_PRINT
+    MACRO   CHAT_ENABLE_DEBUG_PRINT         
+    #ifdef _ENABLE_FILE_DEBUG
+        MACRO   CHAT_DEBUG_OUTPUT_TO_FILE     
+	LIBRARY			flogger.lib
+    #endif // _ENABLE_FILE_DEBUG
+#endif // _ENABLE_DEBUG_PRINT
+
+
+// common libraries
+LIBRARY 		commonengine.lib    // StringLoader
+LIBRARY			bafl.lib            // Desc arrays
+LIBRARY			cone.lib            // Coe env
+LIBRARY         euser.lib           // Common usage.
+LIBRARY			estor.lib  		    // For stream usage
+LIBRARY			caadapterng.lib       // Adapter for wv-engine access
+LIBRARY			Impsutils.lib       // Imps Utils. Properties etc.
+LIBRARY			castorageng.lib       // Local storage.
+LIBRARY			capresenceng.lib      // Presence access
+LIBRARY			caloggerng.lib        // Message logging.
+LIBRARY         charconv.lib        // unicode -> utf8
+LIBRARY         imageconversion.lib // Image decoding and encoding
+LIBRARY         fbscli.lib          // CFBsBitmap
+LIBRARY			EFSRV.LIB			// fileserver
+LIBRARY         BitmapTransforms.lib// Image scaling.
+LIBRARY         inetprotutil.lib // for escapeutils used in CAUtils.cpp
+LIBRARY         hal.lib             // HAL
+LIBRARY         WVSAPSettingsStore.lib // sap settings store
+//EXPORTUNFROZEN

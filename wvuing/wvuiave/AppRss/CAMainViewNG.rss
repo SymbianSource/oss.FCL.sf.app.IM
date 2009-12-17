@@ -1,0 +1,399 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Main view's resource file
+*
+*/
+
+
+//----------------------------------------------------
+//
+//    r_chatclient_mainview
+//    View-resource definition for main-view
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_chatclient_mainview
+    {
+    hotkeys = r_chatclient_hotkeys;
+    menubar = r_chatclient_menubar_mainview;
+    cba = r_chat_softkeys_options_exit__open;
+    }
+
+//----------------------------------------------------
+//
+//    r_chatclient_menubar_mainview
+//    Menubar definition for main-view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_chatclient_menubar_mainview
+{
+    titles=
+    {
+        MENU_TITLE { menu_pane=r_chatclient_general_menu; },
+        MENU_TITLE { menu_pane=r_chatclient_mainview_menu; }
+    };
+}
+
+//----------------------------------------------------
+//
+//    r_chatclient_mainview_menu
+//    Items for menupane in mainview
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_chatclient_mainview_menu
+{
+    items=
+    {
+        MENU_ITEM { command=EChatClientMainViewCmdOpen; txt = qtn_chat_main_om_open; },
+        MENU_ITEM { command=EChatClientMainViewCmdChangeStatus; txt = qtn_chat_friend_change_status; },
+        MENU_ITEM { command=EChatClientMainViewCmdLogin; txt = qtn_chat_main_om_login; },
+        MENU_ITEM { command=EChatClientMainViewCmdLogout; txt = qtn_chat_main_om_logout; },
+        MENU_ITEM { command=EChatClientMainViewSettings; txt = qtn_chat_settings; }
+    };
+}
+
+//----------------------------------------------------
+//
+//    r_mainview_list
+//    Items in main-view listbox, , initial state
+//
+//----------------------------------------------------
+//
+RESOURCE ARRAY r_mainview_list
+    {
+    items=
+        {
+        LBUF{ txt = qtn_chat_clist_ibox ;},
+        LBUF{ txt = qtn_chat_main_friends;},
+        LBUF{ txt = qtn_chat_main_chatlist;},
+        LBUF{ txt = qtn_chat_recorded_chats;}
+        };
+    }
+
+RESOURCE TBUF r_chat_status_changed_automatic { buf = qtn_chat_status_changed_automatic; }
+
+// Own status change
+RESOURCE TBUF r_chat_change_own_online { buf = qtn_chat_change_own_online; }
+RESOURCE TBUF r_chat_change_own_away { buf = qtn_chat_change_own_away; }
+RESOURCE TBUF r_chat_change_own_busy { buf = qtn_chat_change_own_busy; }
+RESOURCE TBUF r_chat_change_own_appear_offline { buf = qtn_chat_change_own_appear_offline; }
+RESOURCE TBUF r_chat_enter_status_message { buf = qtn_chat_change_status_message; }
+RESOURCE TBUF r_chat_change_message_changing { buf = qtn_chat_change_message_changing; }
+RESOURCE TBUF r_chat_change_message_changed { buf = qtn_chat_change_message_changed; }
+RESOURCE TBUF r_chat_change_message_not_changed { buf = qtn_chat_change_message_not_changed; }
+RESOURCE TBUF r_chat_change_message_failed { buf = qtn_chat_change_message_failed; }
+
+RESOURCE DIALOG r_chatclient_enter_status_message_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                    layout = EDataLayout;
+                    //label = "--";
+                    control=EDWIN
+                        {
+                        flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                        maxlength=40;
+                        width=16;
+                        lines=4;
+                        default_case = EAknEditorLowerCase;
+                        };
+                };
+            }
+        };
+    }
+
+RESOURCE AVKON_LIST_QUERY r_chat_status_change_dlg
+    {
+    softkeys = R_AVKON_SOFTKEYS_SELECT_CANCEL__SELECT;
+    items =
+    {
+    AVKON_LIST_QUERY_DLG_LINE
+        {
+        control = AVKON_LIST_QUERY_CONTROL
+            {
+            listtype = EAknCtSingleGraphicPopupMenuListBox;
+            listbox = AVKON_LIST_QUERY_LIST;
+            heading = qtn_chat_change_own_status;
+            };
+        }
+    };
+    }
+    
+    
+///own data menu option
+RESOURCE TBUF r_qtn_chat_friend_own_options { buf = qtn_chat_friend_own_options; }
+
+
+//--------------------------------------------------
+//
+//
+//   Items in singlelist-view's own options submenu
+//
+//--------------------------------------------------
+
+RESOURCE MENU_PANE r_qtn_chat_friend_own_options_submenu
+{
+    items=
+    {
+    MENU_ITEM { command=EChatClientSingleListViewCmdChangeMessage; txt = qtn_chat_friend_change_message; },
+    MENU_ITEM { command=EChatClientSingleListViewCmdDetails; txt = qtn_chat_friend_contact_details; },
+    MENU_ITEM { command=EChatClientSingleListViewCmdOwnEdit; txt = qtn_chat_friend_contact_edit; }    
+    };
+}
+
+//--------------------------------------------------
+//
+//
+//   Items in singlelist-view when focus is on contact item
+//
+//--------------------------------------------------
+
+RESOURCE MENU_PANE r_qtn_chat_friend_edit_options_submenu
+{
+    items=
+    {
+    MENU_ITEM { command=EChatClientSingleListViewCmdDetails; txt = qtn_chat_friend_om_details; } ,
+    MENU_ITEM { command=EChatClientSingleListViewCmdEdit; txt = qtn_chat_friend_om_edit; } ,    
+    MENU_ITEM { command=EChatClientSingleListViewCmdDelete; txt = qtn_chat_friend_om_del; } ,   
+    MENU_ITEM { command=EChatClientSingleListViewCmdMove; txt = qtn_chat_contact_move; },
+    MENU_ITEM { command=EChatClientFriendsListViewCmdAddWatch; txt = qtn_chat_friend_om_watch; },
+    MENU_ITEM { command=EChatClientFriendsListViewCmdRemoveWatch; txt = qtn_chat_friend_om_offwa; }
+       
+    };
+}
+
+
+//--------------------------------------------------
+//
+//
+//   Items in singlelist-view's create new submenu
+//
+//--------------------------------------------------
+
+RESOURCE MENU_PANE r_qtn_chat_friend_om_crnew_submenu
+{
+    items=
+    {
+    MENU_ITEM { command=EChatClientFriendsListViewCmdAddFromPb; txt = qtn_chat_add_from_pb; },
+    MENU_ITEM { command=EChatClientFriendsListViewCmdAddManually; txt = qtn_chat_friends_addmanually; },
+    MENU_ITEM { command=EChatClientFriendsListViewCmdAddFromSrv; txt = qtn_chat_search_contact; }
+    };
+}
+
+RESOURCE TBUF r_qtn_chat_friend_saved_conversations { buf = qtn_chat_friend_saved_conversations; }
+
+
+//--------------------------------------------------
+//
+//
+//   Items in singlelist-view when focus is on Conversation item
+//
+//--------------------------------------------------
+
+RESOURCE MENU_BAR r_chat_menubar_conversation_chatlist
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane=r_chatclient_general_menu; },
+        MENU_TITLE { menu_pane=r_chat_menubar_private_chatlist_menu; }
+        };
+    }
+
+//----------------------------------------------------
+//
+//    r_chatclient_mainview_menu
+//    Items for menupane in mainview
+//
+//----------------------------------------------------
+//
+RESOURCE TBUF r_chat_menubar_conversation_chatlist_menu_open { buf = qtn_chat_om_conv_open; }
+
+RESOURCE TBUF r_chat_menubar_conversation_chatlist_menu_delete { buf = qtn_chat_conv_list_delete; }
+
+RESOURCE TBUF r_chat_menubar_conversation_chatlist_menu_addtofriends { buf = qtn_chat_om_addfriends; }
+
+RESOURCE TBUF r_chat_menubar_conversation_chatlist_menu_closeconvers { buf = qtn_chat_om_close_conv; }
+
+RESOURCE TBUF r_chat_menubar_conversation_chatlist_menu_newconvers { buf = qtn_chat_om_new_convers; }
+/*RESOURCE MENU_PANE r_chat_menubar_conversation_chatlist_menu
+    {
+    items=
+        {
+        MENU_ITEM { command=EChatPrivateListCmdOpen; txt = qtn_chat_om_conv_open; },
+        MENU_ITEM { command=EChatPrivateListCmdAddToFriends; txt = qtn_chat_om_addfriends; },
+        MENU_ITEM { command=EChatPrivateListCmdCloseConvers; txt = qtn_chat_om_close_conv; },
+        MENU_ITEM { command=EChatPrivateListCmdNewConvers; cascade = r_chat_conversation_chatlist_sm_new_conversation; txt = qtn_chat_om_new_convers; },
+       // MENU_ITEM { command=EChatPrivateListCmdBlockOpt; cascade = r_chat_conversation_chatlist_sm_block; txt = qtn_chat_friend_om_imsg_set; },
+       // MENU_ITEM { command=EChatClientMainViewCmdLogin; txt = qtn_chat_main_om_login; },
+        //MENU_ITEM { command=EChatClientMainViewCmdLogout; txt = qtn_chat_main_om_logout; },
+       // MENU_ITEM { command=EChatPrivateListCmdSettings; txt = qtn_chat_settings; }
+        };
+    }
+
+*/
+RESOURCE MENU_PANE r_chat_conversation_chatlist_sm_new_conversation
+{
+    items =
+    {
+        
+	MENU_ITEM
+		{
+		command = EChatPrivateListWriteNewConvers;
+		txt     = qtn_im_p2p_recip_write;
+		},
+    MENU_ITEM
+	    {
+	    command = EChatPrivateListCmdSelectRecipient;
+	    txt     = qtn_chat_opt_new_conversation;
+	    }            
+    };
+}
+
+RESOURCE MENU_PANE r_chat_conversation_chatlist_sm_block
+    {
+    items =
+        {
+        MENU_ITEM
+            {
+            command = EChatPrivateListBlock;
+            txt = qtn_chat_friend_om_block;
+            },
+
+        MENU_ITEM
+            {
+            command = EChatPrivateListBlockEnter;
+            txt = qtn_chat_friend_block_enter;
+            },
+
+        MENU_ITEM
+            {
+            command = EChatPrivateListBlockShow;
+            txt = qtn_chat_friend_block_showl;
+            },
+
+        MENU_ITEM
+            {
+            command = EChatPrivateListUnblock;
+            txt = qtn_chat_friend_block_unblock;
+            }
+
+        };
+    }
+
+
+///New Chat menu option
+RESOURCE TBUF r_qtn_chat_opt_new_chat { buf = qtn_chat_opt_new_chat; }
+
+//--------------------------------------------------
+//
+//
+//   Items in singlelist-view's New Chat submenu
+//
+//--------------------------------------------------
+
+RESOURCE MENU_PANE r_chat_friend_new_chat_submenu
+{
+    items=
+    {
+         
+	MENU_ITEM
+		{
+		command = EChatPrivateListWriteNewConvers;
+		txt     = qtn_im_p2p_recip_write;
+		},
+    MENU_ITEM
+	    {
+	    command = EChatPrivateListCmdSelectRecipient;
+	    txt     = qtn_chat_opt_new_conversation;
+	    },
+	MENU_ITEM 
+        { 
+        command = EChatClientSingleListViewCmdSearchContact;
+        txt = qtn_chat_opt_new_conv_searchcontact; 
+        },    
+    MENU_ITEM 		
+        { 
+        command = EChatClientSingleListViewCmdCreateGrp;
+        txt = qtn_chat_opt_new_conv_creategroup; 
+        },
+    MENU_ITEM 
+        { 
+        command = EChatClientSingleListViewCmdSearchGrp;
+        txt = qtn_chat_opt_new_conv_searchgroup; 
+        },
+    MENU_ITEM
+        { 
+        command = EChatClientSingleListViewCmdEnterGrpID;
+        txt = qtn_chat_opt_new_conv_entergroup; 
+        }
+    };
+}
+
+//**************************************************************//
+//Group Related Options for if focus is on a group item
+
+
+//----------------------------------------------------
+//   
+//    r_chatclient_chatlist_view_menu
+//    Items for menupane in chatlist-view
+//
+//----------------------------------------------------
+//
+
+
+RESOURCE TBUF r_qtn_chat_clist_om_open { buf = qtn_chat_clist_om_open; }
+
+RESOURCE TBUF r_qtn_chat_friend_join_group { buf = qtn_chat_friend_join_group; }
+
+RESOURCE TBUF r_qtn_chat_clist_om_cgr { buf = qtn_chat_clist_om_cgr; }
+
+RESOURCE TBUF r_qtn_chat_clist_cgr_sm_leave { buf = qtn_chat_clist_cgr_sm_leave; }
+
+RESOURCE TBUF r_qtn_chat_contacts_open_group_conv { buf = qtn_chat_contacts_open_group_conv; }
+
+RESOURCE MENU_PANE r_chat_group_options_submenu
+{
+	items=
+	{
+		MENU_ITEM { command = EChatClientSingleListViewCmdGroupEdit;
+					txt = qtn_chat_clist_cgr_sm_pedit;
+				  },
+		MENU_ITEM { command = EChatClientSingleListViewCmdGroupFavor;
+					txt = qtn_chat_om_save_favor;
+				  },
+		MENU_ITEM { command = EChatClientSingleListViewCmdGroupRmv;
+					txt = qtn_chat_clist_cgr_sm_rmv;
+				  },
+		MENU_ITEM { command = EChatClientSingleListViewCmdGroupPart;
+					txt = qtn_chat_clist_cgr_sm_part;
+				  },
+		MENU_ITEM { command = EChatClientSingleListViewCmdGroupInfo;
+					txt = qtn_chat_clist_cgr_sm_info;
+				  }			
+	};
+}
+
+//**************************************************************//
+// End of File

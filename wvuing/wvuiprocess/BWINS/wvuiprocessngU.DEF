@@ -1,0 +1,42 @@
+EXPORTS
+	??1CCAProcessManager@@UAE@XZ @ 1 NONAME ; CCAProcessManager::~CCAProcessManager(void)
+	?CloneMessageL@IMMessageUtilsPC@@SAPAVMCAConversationMessage@@ABV2@@Z @ 2 NONAME ; class MCAConversationMessage * IMMessageUtilsPC::CloneMessageL(class MCAConversationMessage const &)
+	?CreateBufLC@CCAPCUtils@@SAPAVHBufC16@@ABVCDesC16Array@@H@Z @ 3 NONAME ; class HBufC16 * CCAPCUtils::CreateBufLC(class CDesC16Array const &, int)
+	?CreateInstanceL@IMMessageUtilsPC@@SAPAVMCAMessageFlowHandlerPC@@AAVMCAMessageContainer@@AAVMCAConversationPC@@H@Z @ 4 NONAME ; class MCAMessageFlowHandlerPC * IMMessageUtilsPC::CreateInstanceL(class MCAMessageContainer &, class MCAConversationPC &, int)
+	?CreateInstanceL@IMMessageUtilsPC@@SAPAVMCAMessageFlowHandlerPC@@AAVMCAMessageContainer@@AAVMCAGroupPC@@H@Z @ 5 NONAME ; class MCAMessageFlowHandlerPC * IMMessageUtilsPC::CreateInstanceL(class MCAMessageContainer &, class MCAGroupPC &, int)
+	?CreateInstanceL@IMMessageUtilsPC@@SAPAVMCAMessageFlowHandlerPC@@AAVMCAMessageContainer@@AAVMCARecordedChatsPC@@H@Z @ 6 NONAME ; class MCAMessageFlowHandlerPC * IMMessageUtilsPC::CreateInstanceL(class MCAMessageContainer &, class MCARecordedChatsPC &, int)
+	?CreateInviteEditorPCL@CCAProcessManager@@UAEPAVMCAInviteEditorPC@@XZ @ 7 NONAME ; class MCAInviteEditorPC * CCAProcessManager::CreateInviteEditorPCL(void)
+	?CreateOpenChatsPCL@CCAProcessManager@@UAEPAVMCAOpenChatsPC@@ABV?$RPointerArray@VMCAArrayItemPC@@@@@Z @ 8 NONAME ; class MCAOpenChatsPC * CCAProcessManager::CreateOpenChatsPCL(class RPointerArray<class MCAArrayItemPC> const &)
+	?DisplayId@CCAPCUtils@@SA?AVTPtrC16@@ABVTDesC16@@H@Z @ 9 NONAME ; class TPtrC16 CCAPCUtils::DisplayId(class TDesC16 const &, int)
+	?FinalizeEngineConstructionL@CCAProcessManager@@UAEXXZ @ 10 NONAME ; void CCAProcessManager::FinalizeEngineConstructionL(void)
+	?GetApplicationNGPC@CCAProcessManager@@UBEPAVMCAApplicationNGPC@@XZ @ 11 NONAME ; class MCAApplicationNGPC * CCAProcessManager::GetApplicationNGPC(void) const
+	?GetArrayInterface@CCALoginPC@@QBEPAVMCAMainViewArrayPC@@XZ @ 12 NONAME ; class MCAMainViewArrayPC * CCALoginPC::GetArrayInterface(void) const
+	?GetArrayInterface@CCAProcessManager@@UBEPAVMCAMainViewArrayPC@@XZ @ 13 NONAME ; class MCAMainViewArrayPC * CCAProcessManager::GetArrayInterface(void) const
+	?GetBlockingInterface@CCAProcessManager@@UBEPAVMCABlockingPC@@XZ @ 14 NONAME ; class MCABlockingPC * CCAProcessManager::GetBlockingInterface(void) const
+	?GetContactEditInterface@CCAProcessManager@@UBEPAVMCAContactEditPC@@XZ @ 15 NONAME ; class MCAContactEditPC * CCAProcessManager::GetContactEditInterface(void) const
+	?GetConversationInterface@CCAProcessManager@@UBEPAVMCAConversationPC@@XZ @ 16 NONAME ; class MCAConversationPC * CCAProcessManager::GetConversationInterface(void) const
+	?GetEngine@CCAProcessManager@@UBEPAVCCAEngine@@XZ @ 17 NONAME ; class CCAEngine * CCAProcessManager::GetEngine(void) const
+	?GetErrorCodeL@CCAPCUtils@@SAHH@Z @ 18 NONAME ; int CCAPCUtils::GetErrorCodeL(int)
+	?GetGlobalNotificationInterface@CCAProcessManager@@UBEPAVMCAGlobalNotificationObserverPC@@XZ @ 19 NONAME ; class MCAGlobalNotificationObserverPC * CCAProcessManager::GetGlobalNotificationInterface(void) const
+	?GetGroupInterface@CCAProcessManager@@UBEPAVMCAGroupPC@@XZ @ 20 NONAME ; class MCAGroupPC * CCAProcessManager::GetGroupInterface(void) const
+	?GetGroupPropertiesPC@CCAProcessManager@@UBEPAVMCAGroupPropertiesPC@@XZ @ 21 NONAME ; class MCAGroupPropertiesPC * CCAProcessManager::GetGroupPropertiesPC(void) const
+	?GetGroupUtilsInterface@CCAProcessManager@@UBEPAVMCAGroupUtilsPC@@XZ @ 22 NONAME ; class MCAGroupUtilsPC * CCAProcessManager::GetGroupUtilsInterface(void) const
+	?GetInvitationsInterface@CCAProcessManager@@UBEPAVMCAInvitationPC@@XZ @ 23 NONAME ; class MCAInvitationPC * CCAProcessManager::GetInvitationsInterface(void) const
+	?GetLogInInterface@CCAProcessManager@@UBEPAVMCALoginPC@@XZ @ 24 NONAME ; class MCALoginPC * CCAProcessManager::GetLogInInterface(void) const
+	?GetProcessManager@CCAProcessManagerFactory@@QAEPAVMCAProcessManager@@XZ @ 25 NONAME ; class MCAProcessManager * CCAProcessManagerFactory::GetProcessManager(void)
+	?GetReactiveAuthInterface@CCAProcessManager@@UBEPAVMCAReactiveAuthPC@@XZ @ 26 NONAME ; class MCAReactiveAuthPC * CCAProcessManager::GetReactiveAuthInterface(void) const
+	?GetRecordedChatsArrayPC@CCAProcessManager@@UBEPAVMCARecordedChatsArrayPC@@XZ @ 27 NONAME ; class MCARecordedChatsArrayPC * CCAProcessManager::GetRecordedChatsArrayPC(void) const
+	?GetRecordedChatsPC@CCAProcessManager@@UBEPAVMCARecordedChatsPC@@XZ @ 28 NONAME ; class MCARecordedChatsPC * CCAProcessManager::GetRecordedChatsPC(void) const
+	?GetSearchDataInterface@CCAProcessManager@@UBEPAVMCASearchDataPC@@XZ @ 29 NONAME ; class MCASearchDataPC * CCAProcessManager::GetSearchDataInterface(void) const
+	?GetSearchInterface@CCAProcessManager@@UBEPAVMCASearchInterfacePC@@XZ @ 30 NONAME ; class MCASearchInterfacePC * CCAProcessManager::GetSearchInterface(void) const
+	?GetSettingsInterface@CCAProcessManager@@UBEPAVMCASettingsPC@@XZ @ 31 NONAME ; class MCASettingsPC * CCAProcessManager::GetSettingsInterface(void) const
+	?InstanceL@CCAProcessManagerFactory@@SAPAV1@XZ @ 32 NONAME ; class CCAProcessManagerFactory * CCAProcessManagerFactory::InstanceL(void)
+	?NewL@CCAProcessManager@@SAPAV1@XZ @ 33 NONAME ; class CCAProcessManager * CCAProcessManager::NewL(void)
+	?PartialSucessCountL@CCAPCUtils@@SAHXZ @ 34 NONAME ; int CCAPCUtils::PartialSucessCountL(void)
+	?ReleaseResources@CCAProcessManagerFactory@@SAXXZ @ 35 NONAME ; void CCAProcessManagerFactory::ReleaseResources(void)
+	?RemoveDuplicateWVIds@CCAPCUtils@@SAXAAVCDesC16Array@@@Z @ 36 NONAME ; void CCAPCUtils::RemoveDuplicateWVIds(class CDesC16Array &)
+	?SendFileL@IMMessageUtilsPC@@SAXAAVMCAConversationPC@@PBVMDesC16Array@@HABVTDesC16@@ABVTDesC8@@32221@Z @ 37 NONAME ; void IMMessageUtilsPC::SendFileL(class MCAConversationPC &, class MDesC16Array const *, int, class TDesC16 const &, class TDesC8 const &, class TDesC8 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class MDesC16Array const *)
+	?SendFileL@IMMessageUtilsPC@@SAXAAVMCAGroupPC@@PBVMDesC16Array@@HABVTDesC16@@ABVTDesC8@@32221@Z @ 38 NONAME ; void IMMessageUtilsPC::SendFileL(class MCAGroupPC &, class MDesC16Array const *, int, class TDesC16 const &, class TDesC8 const &, class TDesC8 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class MDesC16Array const *)
+	?SendMessageL@IMMessageUtilsPC@@SAHABVMCAConversationMessage@@ABVTDesC16@@AAVMCAConversationPC@@PBVMDesC16Array@@11113@Z @ 39 NONAME ; int IMMessageUtilsPC::SendMessageL(class MCAConversationMessage const &, class TDesC16 const &, class MCAConversationPC &, class MDesC16Array const *, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class MDesC16Array const *)
+	?SendMessageL@IMMessageUtilsPC@@SAHABVMCAConversationMessage@@ABVTDesC16@@AAVMCAGroupPC@@PBVMDesC16Array@@11113@Z @ 40 NONAME ; int IMMessageUtilsPC::SendMessageL(class MCAConversationMessage const &, class TDesC16 const &, class MCAGroupPC &, class MDesC16Array const *, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class TDesC16 const &, class MDesC16Array const *)
+

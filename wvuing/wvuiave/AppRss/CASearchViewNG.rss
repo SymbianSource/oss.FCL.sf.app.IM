@@ -1,0 +1,434 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Search view's resource file
+*
+*/
+
+
+#include <avkon.loc>
+
+//SEARCH STARTS
+//----------------------------------------------------
+//
+//    r_chatclient_search_view
+//    View-resource definition for search view
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_chatclient_search_view
+    {
+    hotkeys=r_chatclient_hotkeys;
+    menubar=r_chatclient_menubar_search_view;
+    cba = r_chat_softkeys_options_back__contextoptions;
+    }
+
+//----------------------------------------------------
+//
+//    r_chatclient_menubar_search_view
+//    Menubar definition for search view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_chatclient_menubar_search_view
+{
+    titles=
+    {
+        MENU_TITLE { menu_pane=r_chatclient_general_menu; },
+        MENU_TITLE { menu_pane=r_chatclient_search_view_menu; }
+    };
+}
+
+//----------------------------------------------------
+//
+//    r_chatclient_search_view_menu
+//    Items for menupane in search view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_chatclient_search_view_menu
+{
+    items=
+    {
+       
+        MENU_ITEM { command = EChatClientSearchMore;
+                    txt = qtn_chat_search_om_more;
+                  },
+        MENU_ITEM { command = EChatClientSearchPrev;
+                    txt = qtn_chat_search_om_prev;
+                  },
+        
+        MENU_ITEM { command = EChatClientSearchAddFriends;
+                    txt = qtn_chat_om_addfriends;
+                  },
+        MENU_ITEM { command = EChatClientSearchStartConversation;
+                    txt = qtn_chat_friend_om_sendi;
+                  },          
+        MENU_ITEM { command = EChatClientSearchInvite;
+                    txt = qtn_chat_om_invite;
+                  },
+
+        MENU_ITEM { command = EChatClientSearchBlockOpt;
+                    cascade = r_chatclient_search_block_submenu;
+                    txt = qtn_chat_friend_om_imsg_set;
+                  },
+
+        MENU_ITEM { command = EChatClientSearchJoin;
+                    txt = qtn_chat_om_join;
+                  },
+
+        MENU_ITEM { command = EChatClientSearchFavor;
+                    txt = qtn_chat_om_save_favor;
+                  },
+        
+        MENU_ITEM { command = EChatClientSearchNew;
+                    txt = qtn_chat_search_om_new;
+                  }
+
+
+    };
+}
+
+//----------------------------------------------------
+//
+//    r_chatclient_search_view_context_menu
+//    Items for context menupane in search view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_chatclient_search_view_context_menu
+{
+    items=
+    {
+        
+        
+        // Contact search specific options
+        MENU_ITEM { command = EChatClientSearchAddFriends;          txt = qtn_chat_om_addfriends; },
+        MENU_ITEM { command = EChatClientSearchStartConversation;   txt = qtn_chat_friend_om_sendi; },
+        MENU_ITEM { command = EChatClientSearchInvite;              txt = qtn_chat_om_invite; },
+        // Group search specific options
+        MENU_ITEM { command = EChatClientSearchJoin;                txt = qtn_chat_om_join; },
+        MENU_ITEM { command = EChatClientSearchFavor;               txt = qtn_chat_om_save_favor; },
+        
+        MENU_ITEM { command = EChatClientSearchNew;                 txt = qtn_chat_search_om_new; }
+    };
+}
+RESOURCE MENU_PANE r_chatclient_search_block_submenu
+{
+    items=
+    {
+        MENU_ITEM { command=EChatClientSearchBlock; txt = qtn_chat_friend_om_block;},
+        MENU_ITEM { command=EChatClientSearchBlockEnter; txt = qtn_chat_friend_block_enter; },
+        MENU_ITEM { command=EChatClientSearchBlockShow; txt = qtn_chat_friend_block_showl; }
+    };
+}
+
+RESOURCE MENU_BAR r_search_view_popup_menu_bar
+{
+    titles=
+    {
+        MENU_TITLE { menu_pane=r_chatclient_search_view_context_menu; }
+
+    };
+}
+
+RESOURCE AVKON_LIST_QUERY r_chatclient_search_criteria
+    {
+    items =
+    {
+    AVKON_LIST_QUERY_DLG_LINE
+        {
+        control = AVKON_LIST_QUERY_CONTROL
+        {
+        listtype = EAknCtSinglePopupMenuListBox;
+        listbox = AVKON_LIST_QUERY_LIST;
+        heading = " ";
+        };
+        }
+    };
+    }
+
+RESOURCE TBUF r_chatclient_search_criteria_user_heading { buf = qtn_chat_search_criteria_prtx; }
+
+RESOURCE DIALOG r_chatclient_search_string_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                    layout = EDataLayout;
+                    label = qtn_chat_search_data_prtx;
+                    control=EDWIN
+                        {
+                        flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                        maxlength=50;
+                        width=16;
+                        lines=1;
+                        default_case = EAknEditorLowerCase;
+                        };
+                };
+            }
+        };
+    }
+
+// searching for entries which must be text-directionality neutral
+RESOURCE DIALOG r_chatclient_search_string_query_ah_neutral
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                layout = EDataLayout;
+                label = qtn_chat_search_data_prtx;
+                control=EDWIN
+                    {
+                    flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                    maxlength=50;
+                    width=16;
+                    lines=1;
+                    default_case = EAknEditorLowerCase;
+                    avkon_flags = EAknEditorFlagLatinInputModesOnly;
+                    };
+                };
+            }
+        };
+    }
+
+// Searching for WVID, also text-directionality neutral.
+// In IM 2.1 has to be the same as r_chatclient_search_string_query_ah_neutral
+// to avoid branching the container file.
+RESOURCE DIALOG r_chatclient_search_wvid_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                layout = EDataLayout;
+                label = qtn_im_prtx_write_recip;
+                control=EDWIN
+                    {
+                    flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                    maxlength=50;
+                    width=16;
+                    lines=1;
+                    default_case = EAknEditorLowerCase;
+                    avkon_flags = EAknEditorFlagLatinInputModesOnly;
+                    };
+                };
+            }
+        };
+    }
+
+// numeric input mode r_chatclient_search_wvid_query
+RESOURCE DIALOG r_chatclient_search_wvid_query2
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                layout = EDataLayout;
+                label = qtn_im_prtx_write_recip;
+                control=EDWIN
+                    {
+                    flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                    maxlength=50;
+                    width=16;
+                    lines=1;
+                    default_case = EAknEditorLowerCase;
+                    avkon_flags = EAknEditorFlagLatinInputModesOnly;
+                    default_input_mode = EAknEditorNumericInputMode;
+                    };
+                };
+            }
+        };
+    }
+
+//This resource defines searching for mobilephonenumbers
+RESOURCE DIALOG r_chatclient_search_mobnmb_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                    layout =EPhoneLayout;
+                    label = qtn_chat_search_data_prtx;
+                    control=EDWIN
+                        {
+                        flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                        maxlength=50;
+                        width=16;
+                        lines=1;
+                        numeric_keymap = EAknEditorFixedDiallingNumberModeKeymap;
+                        };
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_chatclient_search_name_query
+    {
+    flags=EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        { 
+        // Change the order of first name and last name for Chinese(PRC,HK,TW) and Japanese product.
+        #if( defined( __CHINESE ) || defined( __JAPANESE ) )
+        DLG_LINE
+            {
+            type=EAknCtMultilineQuery;
+            id=EMultilineFirstLine;
+            control = AVKON_DATA_QUERY
+                {
+                    layout = EMultiDataFirstEdwin;
+                    label = qtn_chat_dq_search_name_prt2;
+                    control = EDWIN
+                        {
+                        flags=0;
+                        width=5;
+                        lines=1;
+                        maxlength=50;
+                        };
+                };
+            },
+        DLG_LINE
+            {
+            type=EAknCtMultilineQuery;
+            id=EMultilineSecondLine;
+            control= AVKON_DATA_QUERY
+                {
+                    layout = EMultiDataSecondEdwin;
+                    label = qtn_chat_dq_search_name_prt1;
+                    control=EDWIN
+                        {
+                        flags=0;
+                        width=5;
+                        lines=1;
+                        maxlength=50;
+                        };
+                };
+            }
+        #else
+        DLG_LINE
+            {
+            type=EAknCtMultilineQuery;
+            id=EMultilineFirstLine;
+            control = AVKON_DATA_QUERY
+                {
+                    layout = EMultiDataFirstEdwin;
+                    label = qtn_chat_dq_search_name_prt1;
+                    control = EDWIN
+                        {
+                        flags=0;
+                        width=5;
+                        lines=1;
+                        maxlength=50;
+                        };
+                };
+            },
+        DLG_LINE
+            {
+            type=EAknCtMultilineQuery;
+            id=EMultilineSecondLine;
+            control= AVKON_DATA_QUERY
+                {
+                    layout = EMultiDataSecondEdwin;
+                    label = qtn_chat_dq_search_name_prt2;
+                    control=EDWIN
+                        {
+                        flags=0;
+                        width=5;
+                        lines=1;
+                        maxlength=50;
+                        };
+                };
+            }
+        #endif       
+        };
+    }
+
+
+RESOURCE TBUF r_qtn_chat_wnote_searching { buf = qtn_chat_wnote_searching; }
+
+
+RESOURCE TBUF r_searchview_user_online { buf = qtn_chat_search_user_online; }
+RESOURCE TBUF r_searchview_user_offline { buf = qtn_chat_search_user_offline; }
+RESOURCE TBUF r_qtn_chat_search_not_supported { buf = qtn_chat_search_not_supported; }
+
+RESOURCE AVKON_LIST_QUERY r_searchview_select_invite_group_dlg
+    {
+    items =
+    {
+    AVKON_LIST_QUERY_DLG_LINE
+        {
+        control = AVKON_LIST_QUERY_CONTROL
+        {
+        listtype = EAknCtSinglePopupMenuListBox;
+        listbox = AVKON_LIST_QUERY_LIST
+            {
+
+            };
+        heading = qtn_chat_search_invite_heading;
+        };
+        }
+    };
+    }
+
+// avkon loc string
+RESOURCE TBUF r_qtn_chat_searchview_processing { buf = qtn_gen_note_processing; }
+
+RESOURCE TBUF r_qtn_chat_empty_search { buf = qtn_chat_empty_search; }
+
+RESOURCE TBUF r_qtn_chat_search_criter_grp_name { buf = qtn_chat_search_criter_grp_name; }
+RESOURCE TBUF r_qtn_chat_search_criter_grp_topic{ buf = qtn_chat_search_criter_grp_topic; }
+RESOURCE TBUF r_qtn_chat_search_criter_grp_user{ buf = qtn_chat_search_criter_grp_user; }
+
+RESOURCE TBUF r_qtn_chat_search_criter_user_name { buf = qtn_chat_search_criter_user_name; }
+RESOURCE TBUF r_qtn_chat_search_criter_user_wv { buf = qtn_chat_search_criter_user_wv; }
+RESOURCE TBUF r_qtn_chat_search_criter_user_puh { buf = qtn_chat_search_criter_user_puh; }
+RESOURCE TBUF r_qtn_chat_search_criter_user_email { buf = qtn_chat_search_criter_user_email; }
+
+RESOURCE TBUF r_qtn_chat_empty_search_primary { buf = qtn_chat_empty_search_primary; }
+
+
+// End of file
+

@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2003 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Resource file of Presence Engine AO plugin
+*
+*/
+
+//  RESOURCE IDENTIFIER
+NAME    AOPL
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.loc>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.hrh>
+#include <avkon.mbg>
+#include <IMPSCommonUiNG.loc>
+
+//  RESOURCE DEFINITIONS
+// ---------------------------------------------------------
+//
+//    Signature definition, a must-be in an external resource file.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//
+//    Presence Always Online Plugin Ui note text
+//
+// ---------------------------------------------------------
+//
+
+RESOURCE LBUF r_qtn_chat_incor_usernames_nocon	{ txt = qtn_chat_incor_usernames_nocon; }
+
+//change this
+RESOURCE TBUF r_qtn_chat_reconnect_failed
+    {
+    buf = qtn_chat_reconnect_failed;
+    }
+// localization rss file
+#include "orange_roaming.rss"

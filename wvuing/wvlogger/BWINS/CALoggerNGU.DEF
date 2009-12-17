@@ -1,0 +1,5 @@
+EXPORTS
+	?ReadInstanceL@CALoggerManagerFactory@@SAPAVMCALoggerReadInterface@@PAVMCALoggerMessageFactory@@H@Z @ 1 NONAME ; class MCALoggerReadInterface * CALoggerManagerFactory::ReadInstanceL(class MCALoggerMessageFactory *, int)
+	?ReleaseInstanceL@CALoggerManagerFactory@@SAXXZ @ 2 NONAME ; void CALoggerManagerFactory::ReleaseInstanceL(void)
+	?WriteInstanceL@CALoggerManagerFactory@@SAPAVMCALoggerWriteInterface@@PAVMCALoggerMessageFactory@@@Z @ 3 NONAME ; class MCALoggerWriteInterface * CALoggerManagerFactory::WriteInstanceL(class MCALoggerMessageFactory *)
+

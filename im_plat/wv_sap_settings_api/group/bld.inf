@@ -1,0 +1,32 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  File that exports the files belonging to 
+:                WV SAP Settings API
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+
+../inc/IMPSSAPSettings.h     APP_LAYER_PLATFORM_EXPORT_PATH(impssapsettings.h)
+../inc/CIMPSSAPSettingsList.h     APP_LAYER_PLATFORM_EXPORT_PATH(cimpssapsettingslist.h)
+../inc/CIMPSSAPSettings.h     APP_LAYER_PLATFORM_EXPORT_PATH(cimpssapsettings.h)
+../inc/MIMPSSAPObserver.h     APP_LAYER_PLATFORM_EXPORT_PATH(mimpssapobserver.h)
+../inc/CIMPSSAPSettingsListItem.h     APP_LAYER_PLATFORM_EXPORT_PATH(cimpssapsettingslistitem.h)
+../inc/CIMPSSAPSettingsStore.h     APP_LAYER_PLATFORM_EXPORT_PATH(cimpssapsettingsstore.h)

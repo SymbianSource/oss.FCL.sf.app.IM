@@ -1,0 +1,51 @@
+/*
+* Copyright (c) 2005-2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource variation file for PAppConnectionUi
+ *
+*/
+
+ 
+ 
+//----------------------------------------------------
+// VARIATION
+// You can do resource-file based variation by setting the following number
+// resources as you wish.
+//
+// RSC_CHAT_VARIATION_IMPSCU_SHOW_WAP_REGISTRATION_QUERY
+// ----------------------------------------------------
+// Enable WAP registration query (1) or disable it (0) before login query.
+//
+// Values are:
+//  0: WAP registration query is not shown
+//  1: WAP registration query is not shown
+//
+// By default this is disabled (0).
+// ----------------------------------------------------
+//
+RESOURCE NUMBER_INT32 RSC_CHAT_VARIATION_IMPSCU_SHOW_WAP_REGISTRATION_QUERY { value = 0; }
+
+
+// RSC_CHAT_VARIATION_IMPSCU_ROAMING_WARNING
+// ----------------------------------------------------
+// Enable (1) or disable (0) warning message option
+// when  is detected.
+//
+// Values are:
+//  0: Warning message is not shown
+//  1: Warning message is shown
+//
+// By default this is disabled (0).
+// ----------------------------------------------------
+//
+RESOURCE NUMBER_INT32 RSC_CHAT_VARIATION_IMPSCU_ROAMING_WARNING { value = 0; }

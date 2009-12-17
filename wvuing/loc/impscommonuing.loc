@@ -1,0 +1,801 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  This is a localisation file for Presence application and
+*                other PEC UI components.
+*
+*/
+
+
+
+/**
+* CONTENTS:
+*
+* ConnectionUI:
+*  - Login data query
+*  - Notes
+*  - Queries
+*  - Error notes
+*
+* 
+* qtn_dyc_note_logged_in_ok
+*
+*/
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+// LOC strings implemented in PresenceConnectionUI
+// ***********************************************
+//
+/////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////
+// Originally from PEC specification
+/////////////////////////////////////////////////////////////////////////
+
+//d:Following confirmation query is asked when exiting from
+//d:presence application and the active network connection
+//d:was opened manually.
+//l:popup_note_window
+//
+#define qtn_dyc_query_exit_conn_close   "Close connection to the network?"
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+// LOC strings implemented in IM Application (chatclient.loc)
+// **********************************************************
+//
+/////////////////////////////////////////////////////////////////////////
+
+// d:Softkey label, when scrolling of messages is stopped
+// l:control_pane_t1/opt7
+//
+#define qtn_chat_sk_continue                    "Continue"
+
+/////////////////////////////////////////////////////////////////////////
+// Pure connection UI ones.
+/////////////////////////////////////////////////////////////////////////
+
+
+//d:Username prompt text for login data query.
+//l:popup_query_data_window
+//
+#define qtn_chat_login_data_prompt      "Enter user ID"
+
+
+//d:Password prompt text for login data query.
+//l:popup_query_data_window
+//
+#define qtn_chat_login_code_prompt      "Enter password"
+
+
+//d:If login failed due wrong username or password,
+//d:following errornote is shown.
+//l:popup_note_window
+//
+#define qtn_chat_login_passer_note       "Please check your username and password and try again."
+
+
+//d:Waitnote text shown when doing logout.
+//l:popup_note_wait_window
+//
+#define qtn_chat_wait_disconnect         "Disconnecting from service"
+
+
+//d:Error note shown when selected network server doesn't
+//d:support required Presence / Chat features.
+//l:popup_note_window
+//
+#define qtn_chat_info_not_sup_con        "Unable to login. Not enough functions supported by the service provider"
+
+
+//d:Error note shown when the network server settings are missing
+//d:some compulsory settings and thus login can't be done.
+//l:popup_note_window
+//
+#define qtn_chat_sett_comp_miss          "Unable to login. Compulsory settings are missing"
+
+
+//d:Error note shown when the user account from the network
+//d:server is closed after too many unsuccesfull connection
+//d:tries.
+//l:popup_note_window
+//
+#define qtn_chat_login_account_lost      "Username and password incorrect. Contact your service provider."
+
+
+//d:Information note shown when the connection to presence / chat service
+//d:is succesfully done.
+//l:popup_note_window
+//
+#define qtn_chat_login_ok                "Logged in succesfully."
+
+
+//d:Following confirmation query is asked to drop the existing Chat
+//d:connection. Query is asked when there is already a Chat
+//d:connection and user want's login with Presence to different
+//d:service.
+//d:%U is the name of server to connect.
+//l:popup_note_window
+//
+#define qtn_chat_setting_con_to_pec      "Log out from current Chat service and connect Presence to %U"
+
+
+//d:Waitnote with following text is shown
+//d:when reconnecting Chat back to previously
+//d:dropped connection.
+//d:%U is the name of server to connect.
+//l:popup_note_wait_window
+//
+#define qtn_chat_setting_con_to_pec2    "Reconnecting Chat application to %U"
+
+
+//d:Following confirmation query is asked to drop the existing Presence
+//d:connection. Query is asked when there is already a Presence
+//d:connection and user want's login with chat to different
+//d:service.
+//d:%U is the name of server to connect.
+//l:popup_note_window
+//
+#define qtn_chat_setting_con_to_chat    "Log out from current Presence service and connect Chat to %U"
+
+
+//d:Waitnote with following text is shown
+//d:when reconnecting Presence back to previously
+//d:dropped connection.
+//d:%U is the name of server to connect.
+//l:popup_note_wait_window
+//
+#define qtn_chat_setting_con_to_chat2   "Reconnecting Presence application to %U"
+
+
+//d:Prompt text for list query for selecting
+//d:the network server to login.
+//l:heading_pane_t1
+//
+#define qtn_chat_log_selectservice      "Select service:"
+
+
+//d:Confirmation note shown after the presence is
+//d:succesfully disconnected from the service.
+//l:popup_note_window
+//
+#define qtn_dyc_disconnected_conf       "Presence disconnected."
+
+
+//d:Confirmation note shown after the Instant Messaging
+//d:is succesfully disconnected from the service.
+//l:popup_note_window
+//
+#define qtn_chat_disconnected_conf      "Chat disconnected."
+
+
+//d:Information note shown when the server
+//d:disconnects the client.
+//l:popup_note_window
+//
+#define qtn_chat_server_disconnected_client     "Server has disconnected the client."
+
+
+//d:Information note shown when there is already a login operation
+//d:ongoing to certain server and user tries start another login operation.
+//d:%U is the server name to where the login is already going on.
+//l:popup_note_window
+//
+#define qtn_chat_login_ongoing_note     "Login to %U is ongoing."
+
+
+//d:Confirmation note shown when user cancels
+//d:the login operation.
+//l:popup_note_window
+//
+#define qtn_chat_loging_canceled        "Login canceled."
+
+
+//d:Waitnote shown when connecting to presence service.
+//d:%U is the server name where to login is tried.
+//l:popup_note_wait_window
+//
+#define qtn_pec_con_to_server           "Connecting Presence to service %U"
+
+
+//d:Waitnote shown when connecting the Instant
+//d:Messaging application to the IM service.
+//d:%U is the server name where to login is tried.
+//l:popup_note_wait_window
+//
+#define qtn_chat_con_to_server          "Connecting Chat to service %U"
+
+
+//d:Error note for Always Online connection errors.
+//d:User can see more detailed error note by selecting
+//d:"Details".
+//d:%U is the server name where connection closed.
+//l:popup_note_window
+//
+#define qtn_chat_autom_con_failed       "Connection to service %U disconnected."
+
+
+//d:Information note shown after user performs a manual
+//d:logout from always online connection.
+//l:popup_note_window
+//
+#define qtn_chat_automatic_conn_on      "Disconnected. Application will be automatically connected according loging type setting."
+
+
+//d:Confirmation note shown if the automatic login fails because of
+//d:incorrect server settings or password.
+//d:%U is the server name where to login is tried.
+//l:popup_note_window
+//
+#define qtn_chat_incor_usernames_nocon  "Username and password are incorrect of missing. Connection to server %U cannot be established. Check server settings."
+
+
+// d: Confirmation query shown when the active connection should be
+// d: automaticly closed by scheduling in 30 seconds. If user accepts
+// d: the query or doesn't react in 30 seconds, connection is closed.
+// l: popup_note_window
+//
+#define qtn_chat_scheduled_to_be_closed     "Connection will be disconnected automatically in 30 seconds. OK?"
+
+
+// d: Confirmation query shown when the active connection is about to close in
+// d: 30 seconds because a connection to a different server is scheduled.
+// d: If user accepts the query or doesn't react in 30 seconds to it, connection is closed.
+// d: %U is the server name where to new connection should be established.
+// l: popup_note_window
+//
+#define qtn_chat_discon_other_because_scheduling "Automatic connection to server %U is set to be established. Disconnect the current connection?"
+
+
+// d: Label for wait note
+// d: Note is displayed when system is fetching contact lists and contacts from server
+// l: popup_note_wait_window
+// r: 3.0
+//
+#define qtn_chat_fetching_contact_lists             "Fetching contact lists"
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+// LOC strings implemented in ServiceSettingsUI
+// ***********************************************
+//
+/////////////////////////////////////////////////////////////////////////
+
+// d: Settings item title
+// d: Title for Chat setting link-item
+// l: list_setting_pane_t1
+//
+#define qtn_chat_setting_preferences            "Preferences"
+
+// d: Settings item title
+// d: Title for IM servers-list link-item
+// l: list_setting_pane_t1
+//
+#define qtn_chat_setting_editserver             "Servers"
+
+// d: Settings item title
+// d: Title for current server link-item
+// l: list_setting_pane_t1
+//
+#define qtn_chat_setting_serverinuse            "Server in use"
+
+// d: Setting item title
+// d: Title for presence login type link-item
+// l: list_setting_pane_t1
+//
+#define qtn_chat_setting_peclogin           "Presence login type"
+
+// d: Setting item title
+// d: Title for chat login type link-item
+// l: list_setting_pane_t1
+//
+#define qtn_chat_setting_chatlogin          "Chat login type"
+
+
+#ifdef RD_MULTIPLE_DRIVE
+
+// d: Setting item value
+// d: Value for save chats item in multiple drive support
+// l: list_setting_pane_t1
+#define qtn_chat_settings_memory          "Save chats to"
+
+
+// d: Setting item value
+// d: Value for memory drive not availble in multidrive case
+// l: popup_note_window
+
+#define qtn_chat_saved_not_available          "Selected memory drive not available"
+
+#endif // RD_MULTIPLE_DRIVE
+
+
+
+// d: Setting item value
+// d: Value for save chats type field
+// l: list_set_graphic_pane_t1
+//
+#define qtn_chat_setting_showlist           "Manual connection"
+
+// d: Setting item value
+// d: Value for application launch-login type field
+// l: list_set_graphic_pane_t1
+//
+#define qtn_dyc_set_log_manu                "Application launch"
+
+// d: Setting item value
+// d: Value for always online in home network-login type field
+// l: list_set_graphic_pane_t1
+//
+#define qtn_dyc_set_log_auto_home           "Always in home network"
+
+// d: Setting item value
+// d: Value for always online-login type field
+// l: list_set_graphic_pane_t1
+//
+#define qtn_dyc_set_log_auto                "Always online"
+
+// d: Command in Options Menu
+// d: Command is used to change currently focused setting item value
+// l: list_single_pane_t1_cp2
+//
+#define qtn_chat_set_serv_change            "Change"
+
+// d: Command in Options Menu
+// d: Command is used to open currently focused server detail-view
+// l: list_single_pane_t1_cp2
+//
+#define qtn_chat_set_serv_open              "Open"
+
+// d: Empty listbox text
+// d: Text is showd in listbox if there is no data available
+// l: main_list_empty_pane
+//
+#define qtn_chat_serverlist_noserv          "no Chat servers defined"
+
+// d: Label in confirmation note
+// d: Used when user initiated some action that requires at least 1 IM server -> asks if new one should be defined
+// l: popup_note_window
+//
+#define qtn_chat_sett_new_server            "No Chat server defined. Define new server?"
+
+// d: Setting item value
+// d: Default value for new IM-server name field
+// l: list_setting_pane_t1
+//
+#define qtn_chat_setting_conf_server            "Server name"
+
+// d: Setting item label
+// d: Setting item label for "Service access point" item
+// l: list_setting_pane_t1
+//
+#define qtn_chat_setting_conf_sap           "Service access point"
+
+// d: Information note label.
+// d: Used when trying to change protected server settings
+// l: popup_note_window
+//
+#define qtn_chat_brand_server_info              "Protected setting cannot be changed."
+
+// d: Information note label.
+// d: Used when trying to delete protected server
+// l: popup_note_window
+//
+#define qtn_chat_brand_server_delnote           "Protected server settings cannot be deleted."
+
+// d: Setting item label
+// d: Setting item label for "URL" item
+// l: list_setting_pane_t1
+//
+#define qtn_chat_setting_conf_url           "URL"
+
+// d: Setting item label
+// d: Setting item label for "user's WV ID" item
+// l: list_setting_pane_t1
+//
+#define qtn_chat_setting_conf_wvuid         "WV user ID"
+
+// d: Setting item label
+// d: Setting item label for "user's password" item
+// l: list_setting_pane_t1
+//
+#define qtn_chat_setting_conf_pw            "Password"
+
+// d: Title of "Settings" view
+// l: title_pane_t2/opt12
+// r: 3.2
+#define qtn_chat_setting_title                  "Settings"
+
+// d: Title of "Server list" view
+// l: title_pane_t2/opt12
+#define qtn_chat_serverlist_title           "Chat servers"
+
+// d: Command in Options Menu
+// d: Command is used to edit currently focused server
+// l: list_single_pane_t1_cp2
+//
+#define qtn_chat_serverlist_om_edit         "Edit"
+
+// d: Command in Options Menu
+// d: Command is used to open create new server view
+// l: list_single_pane_t1_cp2
+//
+#define qtn_chat_serverlist_om_new          "Define new server"
+
+// d: Command in Options Menu
+// d: Command is used to ask the deletion of currently focused server
+// l: list_single_pane_t1_cp2
+//
+#define qtn_chat_serverlist_del             "Delete"
+
+// d: Command in Options Menu
+// d: Command name for "Change"
+// l: list_single_pane_t1_cp2
+//
+#define qtn_chat_def_server_change          "Change"
+
+// d: Label in confirmation note
+// d: Used when user tries to save server without giving all needed data
+// l: popup_note_window
+//
+#define qtn_chat_sett_compul_query          "The service doesn't work because all compulsory settings aren't filled. Delete it?"
+
+// d: Setting item value
+// d: Default value for new IM-server name field
+// l: list_set_graphic_pane_t1
+//
+#define qtn_chat_def_server_na              "New chat server"
+
+// d: Label in confirmation note
+// d: Used when user tries to delete currently used server
+// l: popup_note_window
+//
+#define qtn_chat_serverlist_quest_d         "Server is in use. Are you sure to delete it?"
+
+// d: Title for radio button query
+// d: Query is a list of servers that user must choose one
+// l: heading_pane_t1
+//
+#define qtn_chat_serverlist_prtx_sel            "Server in use:"
+
+// d: Label in confirmation note
+// d: Used when user tries to delete the only server that system has
+// l: popup_note_window
+//
+#define qtn_chat_serverlist_quest_del           "Chat server is the only one. Are you sure to delete it?"
+
+// d: Error note label.
+// d: Used when user id or password is missing from a server and Always automatic or always in home network login type is selected
+// l: popup_note_window
+//
+#define qtn_chat_setting_fillserver             "Fill in the username and password of the server in use to be able to select automatic connection."
+
+// d: Error note label.
+// d: Used when Always automatic or always in home network login type is selected and user tries to remove user id or password
+// l: popup_note_window
+//
+#define qtn_chat_consetnotfilled        "Username and password needed for 'Always online' and 'Always in home network' connections. Change Login type setting first."
+
+// d: Error note label.
+// d: Used when user tries to edit settings of a server to which we are logged in to
+// l: popup_note_window
+//
+#define qtn_chat_cannot_edit_active_settings    "Disconnect the connection to be able to edit settings?"
+
+// d: Setting item value
+// d: Value for scheduled connection time field
+// l: list_set_graphic_pane_t1
+//´
+#define qtn_mce_settings_always_allhours    "All day"
+
+// d: Setting item value
+// d: Value for scheduled connection time field
+// l: list_set_graphic_pane_t1
+//
+#define qtn_mce_settings_always_alldays     "All"
+
+// d: Setting item value
+// d: Value for scheduled connection time field
+// l: list_set_graphic_pane_t1
+//
+#define qtn_mce_settings_always_between2    "%0U - %1U"
+
+
+// d: Setting item value
+// d: Value for scheduled connection time field
+// l: list_set_graphic_pane_t1 
+//
+#define qtn_mce_settings_always_seldays     "Selected days"
+
+// d: Label in data query
+// d: Used to ask online times from user in scheduled connections
+// l: popup_query_data_window
+//
+#define qtn_mce_settings_always_to      "To:"
+
+// d: Label in data query
+// d: Used to ask online times from user in scheduled connections
+// l: popup_query_data_window
+//
+#define qtn_mce_settings_always_from        "From:"
+
+// d: Settings item title
+// d: Title for Connection days setting item
+// l: list_setting_pane_t1
+//
+#define qtn_chat_settings_always_days       "Connection days"
+
+// d: Settings item title
+// d: Title for Connection hours setting item
+// l: list_setting_pane_t1
+//
+#define qtn_chat_settings_always_hours      "Connection hours"
+
+// d: Information note about manual login type activation
+// l: popup_note_window
+// w:
+// r: 3.1u
+//
+#define qtn_chat_manual_activated        "Manual login type activated"
+
+// d: Confirmation query when changing login type automatic to a server to which user has not logged in before
+// d: %U is replaced by the name of the server
+// l: popup_note_window
+// w:
+// r: 3.1u
+//
+#define qtn_chat_cannot_activate_query        "You need to login first before activating this login type to %U. Login now?"
+
+/////////////////////////////////////////////////////////////////////////
+// WV ID search
+/////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// Notify Services **** errors
+/////////////////////////////////////////////////////////////////////////
+
+//d:Error note shown if the terminal tries to request something
+//d:that is not supported by the server.
+//l:popup_note_window
+//
+#define qtn_chat_error_service_err          "Error in service"
+
+
+//d:Error note shown when the server is unable to handle request
+//d:due to temporary overloading or maintenance of the server.
+//l:popup_note_window
+//
+#define qtn_chat_error_serv_busy            "Temporary server error."
+
+
+//d:Error note shown when the server doesn’t support
+//d:the requested version. The user can’t do anything.
+//l:popup_note_window
+//
+#define qtn_chat_error_gen_error            "Server error."
+
+
+
+
+//d:Error note shown when the server kicks user
+//d:out from the server for some reason.
+//d:Shown also when the connection can't be
+//d:established in certain time.
+//l:popup_note_window
+//
+#define qtn_chat_login_conerror_note            "No connection to service. Try again later."
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// Notify Services **** information notes
+/////////////////////////////////////////////////////////////////////////
+
+//d:Information note shown when user is unknown or the
+//d:entered user id is not valid.
+//d:%U stands for the entered or saved wv user id.
+//l:popup_note_window
+//
+#define qtn_chat_error_wrong_wvid           "Incorrect wv user ID:%U.\n Check user id and try again."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// Notify Services **** wait notes
+/////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// Always online plugin global notes
+/////////////////////////////////////////////////////////////////////////
+
+
+//d:Global confirmation query for reconnecting continuation
+//l:popup_note_window
+//
+#define qtn_chat_reconnect_failed         "No connection to server %U for long time. Continue connecting?"
+
+
+/////////////////////////////////////////////////////////////////////////
+// Domain selection query
+/////////////////////////////////////////////////////////////////////////
+
+// d: Heading for list query
+// d: Heading for domain selection query
+// l: heading_pane_t1
+// w:
+// r: 3.1u
+//
+#define qtn_chat_login_select_domain    "Select domain:"
+
+// d:
+// d: List query item
+// l: list_single_pane_t1_cp2
+// w:
+// r: 3.1u
+//
+#define qtn_chat_login_select_domain_other "Other"
+
+
+/////////////////////////////////////////////////////////////////////////
+// Terms of Use
+/////////////////////////////////////////////////////////////////////////
+
+// d: Title of Terms of use -dialog
+// l: title_pane_t2/opt12
+// w:
+// r: 3.1u
+//
+#define qtn_chat_tou_title  "Terms of use"
+
+// d: Body text for a dialog
+// d: Content of Terms of use -dialog
+// l: popup_note_window
+// w:
+// r: 3.1u
+//
+#define qtn_chat_login_tou_message  "This is the Terms of use message."
+
+// d: Heading of a list query
+// d: For accepting or declining the Terms of use
+// l: heading_pane_t1
+// w:
+// r: 3.1u
+//
+#define qtn_chat_login_tou_query  "Terms of use"
+
+// d: List query item
+// d:  For declining Terms of use
+// l: list_single_pane_t1_cp2
+// w:
+// r: 3.1u
+//
+#define qtn_chat_login_tou_decline  "I decline"
+
+// d: List query item
+// d: For accepting Terms of use
+// l: list_single_pane_t1_cp2
+// w:
+// r: 3.1u
+//
+#define qtn_chat_login_tou_accept   "I accept"
+
+// d: Label for confirmation note
+// d: Confirmation is shown when user cancels the Terms of use -query
+// l: popup_note_window
+//
+#define qtn_chat_cancel_termsofuse  "Cannot connect the service without accepting Terms of use. Cancel anyway?"
+
+
+// ---[ UI ]---
+
+// d: Message query
+// d: Dialog body text, shown when user saves password
+// d: By default this is empty
+// l: popup_info_list_pane_t1
+// w:
+// r: 3.1
+//
+#define qtn_chat_save_pw_warning        ""
+
+// d: Note heading for qtn_chat_save_pw_warning
+// l: heading_pane_t1
+// w:
+// r: 3.1
+//
+#define qtn_chat_save_pw_warning_heading        "Warning"
+
+
+// d: Label in confirmation note
+// d: Is asked when user is connected to one community and 
+// d: another community is scheduled 
+// d: %0u is replaced by cureeently connected community
+// d: %1u is replaced by Scheduled community name
+// l: popup_note_window
+// r: 3.2
+#define     qtn_chat_discon_other_because_scheduling_new    "Automatic connection to %0U is set to be established.Disconnect %1U?"
+
+
+// d: Label in confirmation note
+// d: asked when, according to the scheduling setting, the connection should
+// d: be closed automatically after 30 seconds
+// d: %u is replaced by cureeently connected community
+// l: popup_note_window
+// r: 3.2
+#define     qtn_chat_scheduled_to_be_closed_new            "According settings connection to %U should be disconnected now. Disconnect?"
+
+
+// d: Label in confirmation note
+// d: Is asked when user deletes a community
+// d: %u is replaced by  community name 
+// l: popup_note_window
+// r: 3.2
+#define     qtn_chat_delete_community                      "All your contacts, conversations and groups are deleted. Delete %U anyway?"
+
+
+
+
+
+
+
+// End of File

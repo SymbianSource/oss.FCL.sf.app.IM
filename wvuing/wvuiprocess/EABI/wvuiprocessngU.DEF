@@ -1,0 +1,141 @@
+EXPORTS
+	_ZN10CCAPCUtils11CreateBufLCERK12CDesC16Arrayi @ 1 NONAME
+	_ZN10CCAPCUtils13GetErrorCodeLEi @ 2 NONAME
+	_ZN10CCAPCUtils19PartialSucessCountLEv @ 3 NONAME
+	_ZN10CCAPCUtils20RemoveDuplicateWVIdsER12CDesC16Array @ 4 NONAME
+	_ZN10CCAPCUtils9DisplayIdERK7TDesC16i @ 5 NONAME
+	_ZN16IMMessageUtilsPC12SendMessageLERK22MCAConversationMessageRK7TDesC16R10MCAGroupPCPK12MDesC16ArrayS5_S5_S5_S5_SA_ @ 6 NONAME
+	_ZN16IMMessageUtilsPC12SendMessageLERK22MCAConversationMessageRK7TDesC16R17MCAConversationPCPK12MDesC16ArrayS5_S5_S5_S5_SA_ @ 7 NONAME
+	_ZN16IMMessageUtilsPC13CloneMessageLERK22MCAConversationMessage @ 8 NONAME
+	_ZN16IMMessageUtilsPC15CreateInstanceLER19MCAMessageContainerR10MCAGroupPCi @ 9 NONAME
+	_ZN16IMMessageUtilsPC15CreateInstanceLER19MCAMessageContainerR17MCAConversationPCi @ 10 NONAME
+	_ZN16IMMessageUtilsPC15CreateInstanceLER19MCAMessageContainerR18MCARecordedChatsPCi @ 11 NONAME
+	_ZN16IMMessageUtilsPC9SendFileLER10MCAGroupPCPK12MDesC16ArrayiRK7TDesC16RK6TDesC8SA_S7_S7_S7_S4_ @ 12 NONAME
+	_ZN16IMMessageUtilsPC9SendFileLER17MCAConversationPCPK12MDesC16ArrayiRK7TDesC16RK6TDesC8SA_S7_S7_S7_S4_ @ 13 NONAME
+	_ZN17CCAProcessManager18CreateOpenChatsPCLERK13RPointerArrayI14MCAArrayItemPCE @ 14 NONAME
+	_ZN17CCAProcessManager21CreateInviteEditorPCLEv @ 15 NONAME
+	_ZN17CCAProcessManager27FinalizeEngineConstructionLEv @ 16 NONAME
+	_ZN17CCAProcessManager4NewLEv @ 17 NONAME
+	_ZN17CCAProcessManagerD0Ev @ 18 NONAME
+	_ZN17CCAProcessManagerD1Ev @ 19 NONAME
+	_ZN17CCAProcessManagerD2Ev @ 20 NONAME
+	_ZN24CCAProcessManagerFactory16ReleaseResourcesEv @ 21 NONAME
+	_ZN24CCAProcessManagerFactory17GetProcessManagerEv @ 22 NONAME
+	_ZN24CCAProcessManagerFactory9InstanceLEv @ 23 NONAME
+	_ZNK10CCALoginPC17GetArrayInterfaceEv @ 24 NONAME
+	_ZNK17CCAProcessManager17GetArrayInterfaceEv @ 25 NONAME
+	_ZNK17CCAProcessManager17GetGroupInterfaceEv @ 26 NONAME
+	_ZNK17CCAProcessManager17GetLogInInterfaceEv @ 27 NONAME
+	_ZNK17CCAProcessManager18GetApplicationNGPCEv @ 28 NONAME
+	_ZNK17CCAProcessManager18GetRecordedChatsPCEv @ 29 NONAME
+	_ZNK17CCAProcessManager18GetSearchInterfaceEv @ 30 NONAME
+	_ZNK17CCAProcessManager20GetBlockingInterfaceEv @ 31 NONAME
+	_ZNK17CCAProcessManager20GetGroupPropertiesPCEv @ 32 NONAME
+	_ZNK17CCAProcessManager20GetSettingsInterfaceEv @ 33 NONAME
+	_ZNK17CCAProcessManager22GetGroupUtilsInterfaceEv @ 34 NONAME
+	_ZNK17CCAProcessManager22GetSearchDataInterfaceEv @ 35 NONAME
+	_ZNK17CCAProcessManager23GetContactEditInterfaceEv @ 36 NONAME
+	_ZNK17CCAProcessManager23GetInvitationsInterfaceEv @ 37 NONAME
+	_ZNK17CCAProcessManager23GetRecordedChatsArrayPCEv @ 38 NONAME
+	_ZNK17CCAProcessManager24GetConversationInterfaceEv @ 39 NONAME
+	_ZNK17CCAProcessManager24GetReactiveAuthInterfaceEv @ 40 NONAME
+	_ZNK17CCAProcessManager30GetGlobalNotificationInterfaceEv @ 41 NONAME
+	_ZNK17CCAProcessManager9GetEngineEv @ 42 NONAME
+	_ZTI10CCAGroupPC @ 43 NONAME ; #<TI>#
+	_ZTI10CCALoginPC @ 44 NONAME ; #<TI>#
+	_ZTI13CCABlockingPC @ 45 NONAME ; #<TI>#
+	_ZTI13CCASettingsPC @ 46 NONAME ; #<TI>#
+	_ZTI14CCAGroupItemPC @ 47 NONAME ; #<TI>#
+	_ZTI14CCAOpenChatsPC @ 48 NONAME ; #<TI>#
+	_ZTI15CCAGroupUtilsPC @ 49 NONAME ; #<TI>#
+	_ZTI15CCAInvitationPC @ 50 NONAME ; #<TI>#
+	_ZTI15CCAInviteItemPC @ 51 NONAME ; #<TI>#
+	_ZTI15CCASearchDataPC @ 52 NONAME ; #<TI>#
+	_ZTI16CCAChatInfoArray @ 53 NONAME ; #<TI>#
+	_ZTI16CCAContactEditPC @ 54 NONAME ; #<TI>#
+	_ZTI16CCAContactItemPC @ 55 NONAME ; #<TI>#
+	_ZTI16CCAOwnDataItemPC @ 56 NONAME ; #<TI>#
+	_ZTI17CCAConversationPC @ 57 NONAME ; #<TI>#
+	_ZTI17CCAInviteEditorPC @ 58 NONAME ; #<TI>#
+	_ZTI17CCAProcessManager @ 59 NONAME ; #<TI>#
+	_ZTI17CCAReactiveAuthPC @ 60 NONAME ; #<TI>#
+	_ZTI18CCAApplicationNGPC @ 61 NONAME ; #<TI>#
+	_ZTI18CCAMainViewArrayPC @ 62 NONAME ; #<TI>#
+	_ZTI18CCARecordedChatsPC @ 63 NONAME ; #<TI>#
+	_ZTI19CCAGroupListArrayPC @ 64 NONAME ; #<TI>#
+	_ZTI20CCAContactListItemPC @ 65 NONAME ; #<TI>#
+	_ZTI20CCAGroupPropertiesPC @ 66 NONAME ; #<TI>#
+	_ZTI20CCASearchInterfacePC @ 67 NONAME ; #<TI>#
+	_ZTI21CCAConversationItemPC @ 68 NONAME ; #<TI>#
+	_ZTI22CCAConversationMessage @ 69 NONAME ; #<TI>#
+	_ZTI22CCAOpenChatsListItemPC @ 70 NONAME ; #<TI>#
+	_ZTI23CCAMessageFlowHandlerPC @ 71 NONAME ; #<TI>#
+	_ZTI23CCARecordedChatsArrayPC @ 72 NONAME ; #<TI>#
+	_ZTI24CCAProcessManagerFactory @ 73 NONAME ; #<TI>#
+	_ZTI24CCAServerContactsArrayPC @ 74 NONAME ; #<TI>#
+	_ZTI31CCAGlobalNotificationObserverPC @ 75 NONAME ; #<TI>#
+	_ZTV10CCAGroupPC @ 76 NONAME ; #<VT>#
+	_ZTV10CCALoginPC @ 77 NONAME ; #<VT>#
+	_ZTV13CCABlockingPC @ 78 NONAME ; #<VT>#
+	_ZTV13CCASettingsPC @ 79 NONAME ; #<VT>#
+	_ZTV14CCAGroupItemPC @ 80 NONAME ; #<VT>#
+	_ZTV14CCAOpenChatsPC @ 81 NONAME ; #<VT>#
+	_ZTV15CCAGroupUtilsPC @ 82 NONAME ; #<VT>#
+	_ZTV15CCAInvitationPC @ 83 NONAME ; #<VT>#
+	_ZTV15CCAInviteItemPC @ 84 NONAME ; #<VT>#
+	_ZTV15CCASearchDataPC @ 85 NONAME ; #<VT>#
+	_ZTV16CCAChatInfoArray @ 86 NONAME ; #<VT>#
+	_ZTV16CCAContactEditPC @ 87 NONAME ; #<VT>#
+	_ZTV16CCAContactItemPC @ 88 NONAME ; #<VT>#
+	_ZTV16CCAOwnDataItemPC @ 89 NONAME ; #<VT>#
+	_ZTV17CCAConversationPC @ 90 NONAME ; #<VT>#
+	_ZTV17CCAInviteEditorPC @ 91 NONAME ; #<VT>#
+	_ZTV17CCAProcessManager @ 92 NONAME ; #<VT>#
+	_ZTV17CCAReactiveAuthPC @ 93 NONAME ; #<VT>#
+	_ZTV18CCAApplicationNGPC @ 94 NONAME ; #<VT>#
+	_ZTV18CCAMainViewArrayPC @ 95 NONAME ; #<VT>#
+	_ZTV18CCARecordedChatsPC @ 96 NONAME ; #<VT>#
+	_ZTV19CCAGroupListArrayPC @ 97 NONAME ; #<VT>#
+	_ZTV20CCAContactListItemPC @ 98 NONAME ; #<VT>#
+	_ZTV20CCAGroupPropertiesPC @ 99 NONAME ; #<VT>#
+	_ZTV20CCASearchInterfacePC @ 100 NONAME ; #<VT>#
+	_ZTV21CCAConversationItemPC @ 101 NONAME ; #<VT>#
+	_ZTV22CCAConversationMessage @ 102 NONAME ; #<VT>#
+	_ZTV22CCAOpenChatsListItemPC @ 103 NONAME ; #<VT>#
+	_ZTV23CCAMessageFlowHandlerPC @ 104 NONAME ; #<VT>#
+	_ZTV23CCARecordedChatsArrayPC @ 105 NONAME ; #<VT>#
+	_ZTV24CCAProcessManagerFactory @ 106 NONAME ; #<VT>#
+	_ZTV24CCAServerContactsArrayPC @ 107 NONAME ; #<VT>#
+	_ZTV31CCAGlobalNotificationObserverPC @ 108 NONAME ; #<VT>#
+	_ZThn12_N17CCAProcessManagerD0Ev @ 109 NONAME ; #<thunk>#
+	_ZThn12_N17CCAProcessManagerD1Ev @ 110 NONAME ; #<thunk>#
+	_ZThn16_N17CCAProcessManagerD0Ev @ 111 NONAME ; #<thunk>#
+	_ZThn16_N17CCAProcessManagerD1Ev @ 112 NONAME ; #<thunk>#
+	_ZThn20_N17CCAProcessManager18CreateOpenChatsPCLERK13RPointerArrayI14MCAArrayItemPCE @ 113 NONAME ; #<thunk>#
+	_ZThn20_N17CCAProcessManager21CreateInviteEditorPCLEv @ 114 NONAME ; #<thunk>#
+	_ZThn20_N17CCAProcessManager27FinalizeEngineConstructionLEv @ 115 NONAME ; #<thunk>#
+	_ZThn20_N17CCAProcessManagerD0Ev @ 116 NONAME ; #<thunk>#
+	_ZThn20_N17CCAProcessManagerD1Ev @ 117 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager17GetArrayInterfaceEv @ 118 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager17GetGroupInterfaceEv @ 119 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager17GetLogInInterfaceEv @ 120 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager18GetApplicationNGPCEv @ 121 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager18GetRecordedChatsPCEv @ 122 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager18GetSearchInterfaceEv @ 123 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager20GetBlockingInterfaceEv @ 124 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager20GetGroupPropertiesPCEv @ 125 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager20GetSettingsInterfaceEv @ 126 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager22GetGroupUtilsInterfaceEv @ 127 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager22GetSearchDataInterfaceEv @ 128 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager23GetContactEditInterfaceEv @ 129 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager23GetInvitationsInterfaceEv @ 130 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager23GetRecordedChatsArrayPCEv @ 131 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager24GetConversationInterfaceEv @ 132 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager24GetReactiveAuthInterfaceEv @ 133 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager30GetGlobalNotificationInterfaceEv @ 134 NONAME ; #<thunk>#
+	_ZThn20_NK17CCAProcessManager9GetEngineEv @ 135 NONAME ; #<thunk>#
+	_ZThn4_N17CCAProcessManagerD0Ev @ 136 NONAME ; #<thunk>#
+	_ZThn4_N17CCAProcessManagerD1Ev @ 137 NONAME ; #<thunk>#
+	_ZThn8_N17CCAProcessManagerD0Ev @ 138 NONAME ; #<thunk>#
+	_ZThn8_N17CCAProcessManagerD1Ev @ 139 NONAME ; #<thunk>#
+

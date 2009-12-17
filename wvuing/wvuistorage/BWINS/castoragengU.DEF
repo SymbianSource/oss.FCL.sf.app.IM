@@ -1,0 +1,38 @@
+EXPORTS
+	??1CCAGroup@@UAE@XZ @ 1 NONAME ; CCAGroup::~CCAGroup(void)
+	?AddMembersLocallyL@CCAGroup@@UAEXABVMDesC16Array@@@Z @ 2 NONAME ; void CCAGroup::AddMembersLocallyL(class MDesC16Array const &)
+	?AddParticipantL@CCAGroup@@UAEXABVMDesC16Array@@@Z @ 3 NONAME ; void CCAGroup::AddParticipantL(class MDesC16Array const &)
+	?ContactListInterfaceL@CCAStorageManagerFactory@@SAPAVMCAStoredContacts@@XZ @ 4 NONAME ; class MCAStoredContacts * CCAStorageManagerFactory::ContactListInterfaceL(void)
+	?ExternalizeL@CCAGroup@@UBEXAAVRWriteStream@@@Z @ 5 NONAME ; void CCAGroup::ExternalizeL(class RWriteStream &) const
+	?GetMembersL@CCAGroup@@UBEXAAVCDesC16Array@@@Z @ 6 NONAME ; void CCAGroup::GetMembersL(class CDesC16Array &) const
+	?GetParticipantsL@CCAGroup@@UBEXAAVCDesC16Array@@@Z @ 7 NONAME ; void CCAGroup::GetParticipantsL(class CDesC16Array &) const
+	?GroupId@CCAGroup@@UBEABVTDesC16@@XZ @ 8 NONAME ; class TDesC16 const & CCAGroup::GroupId(void) const
+	?GroupListInterfaceL@CCAStorageManagerFactory@@SAPAVMCAStoredGroups@@XZ @ 9 NONAME ; class MCAStoredGroups * CCAStorageManagerFactory::GroupListInterfaceL(void)
+	?GroupName@CCAGroup@@UBEABVTDesC16@@XZ @ 10 NONAME ; class TDesC16 const & CCAGroup::GroupName(void) const
+	?InternalizeL@CCAGroup@@UAEXAAVRReadStream@@@Z @ 11 NONAME ; void CCAGroup::InternalizeL(class RReadStream &)
+	?IsAdmin@CCAGroup@@UBEHXZ @ 12 NONAME ; int CCAGroup::IsAdmin(void) const
+	?IsJoined@CCAGroup@@UBEHXZ @ 13 NONAME ; int CCAGroup::IsJoined(void) const
+	?IsOwnGroup@CCAGroup@@UBEHXZ @ 14 NONAME ; int CCAGroup::IsOwnGroup(void) const
+	?IsVisible@CCAGroup@@UBEHXZ @ 15 NONAME ; int CCAGroup::IsVisible(void) const
+	?MaximalSize@CCAGroup@@UBEJXZ @ 16 NONAME ; long CCAGroup::MaximalSize(void) const
+	?NewL@CCAGroup@@SAPAV1@PAVCCAStorage@@PAVMCAStoredGroupsObserver@@@Z @ 17 NONAME ; class CCAGroup * CCAGroup::NewL(class CCAStorage *, class MCAStoredGroupsObserver *)
+	?NewL@CCAStorageManager@@SAPAV1@XZ @ 18 NONAME ; class CCAStorageManager * CCAStorageManager::NewL(void)
+	?NumParticipants@CCAGroup@@UBEHXZ @ 19 NONAME ; int CCAGroup::NumParticipants(void) const
+	?ReleaseL@CCAStorageManagerFactory@@SAXXZ @ 20 NONAME ; void CCAStorageManagerFactory::ReleaseL(void)
+	?RemoveMembersLocally@CCAGroup@@UAEXABVMDesC16Array@@@Z @ 21 NONAME ; void CCAGroup::RemoveMembersLocally(class MDesC16Array const &)
+	?RemoveParticipantL@CCAGroup@@UAEXABVMDesC16Array@@@Z @ 22 NONAME ; void CCAGroup::RemoveParticipantL(class MDesC16Array const &)
+	?ResetMembersLocally@CCAGroup@@UAEXXZ @ 23 NONAME ; void CCAGroup::ResetMembersLocally(void)
+	?ResetParticipantsL@CCAGroup@@UAEXXZ @ 24 NONAME ; void CCAGroup::ResetParticipantsL(void)
+	?SaveChangesL@CCAGroup@@UAEXXZ @ 25 NONAME ; void CCAGroup::SaveChangesL(void)
+	?Server@CCAGroup@@UBEABVTDesC16@@XZ @ 26 NONAME ; class TDesC16 const & CCAGroup::Server(void) const
+	?SetAdmin@CCAGroup@@UAEXH@Z @ 27 NONAME ; void CCAGroup::SetAdmin(int)
+	?SetGroupIdL@CCAGroup@@UAEXABVTDesC16@@@Z @ 28 NONAME ; void CCAGroup::SetGroupIdL(class TDesC16 const &)
+	?SetGroupNameL@CCAGroup@@UAEXABVTDesC16@@@Z @ 29 NONAME ; void CCAGroup::SetGroupNameL(class TDesC16 const &)
+	?SetJoined@CCAGroup@@UAEXH@Z @ 30 NONAME ; void CCAGroup::SetJoined(int)
+	?SetOwnGroup@CCAGroup@@UAEXH@Z @ 31 NONAME ; void CCAGroup::SetOwnGroup(int)
+	?SetServerL@CCAGroup@@UAEXABVTDesC16@@@Z @ 32 NONAME ; void CCAGroup::SetServerL(class TDesC16 const &)
+	?SetStorageType@CCAGroup@@UAEXW4TCAStorageType@TStorageManagerGlobals@@@Z @ 33 NONAME ; void CCAGroup::SetStorageType(enum TStorageManagerGlobals::TCAStorageType)
+	?SetVisible@CCAGroup@@UAEXH@Z @ 34 NONAME ; void CCAGroup::SetVisible(int)
+	?StorageType@CCAGroup@@UBE?AW4TCAStorageType@TStorageManagerGlobals@@XZ @ 35 NONAME ; enum TStorageManagerGlobals::TCAStorageType CCAGroup::StorageType(void) const
+	?Version@CCAGroup@@UBEJXZ @ 36 NONAME ; long CCAGroup::Version(void) const
+

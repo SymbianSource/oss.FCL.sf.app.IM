@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition SYSTEM "sysdef_1_4_0.dtd" [
+  <!ENTITY layer_real_source_path "sf/app/im" >
+]>
+
+<SystemDefinition name="im" schema="1.4.0">
+  <systemModel>
+    <layer name="app_layer">
+      <module name="im">
+        <unit unitID="impp.im" mrp="" bldFile="&layer_real_source_path;/group" name="im" />
+      </module>
+    </layer>
+  </systemModel>
+</SystemDefinition>

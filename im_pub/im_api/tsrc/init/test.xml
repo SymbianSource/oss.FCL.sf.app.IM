@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<test>
+    <id>1</id>
+    <name>Binary Compatibility IM</name>
+    <target>
+        <device rank="none" alias="DEFAULT">
+            <property name="HARNESS" value="STIF" />
+            <property name="TYPE" value="Ariane" />
+        </device>
+    </target>
+    <plan id="1.1" name="BC Test Plan" harness="STIF" enabled="true" passrate="100">
+        <session id="1.1.1" name="session" harness="STIF" enabled="true" passrate="100">
+            <set id="1.1.1.1" name="set" harness="STIF" enabled="true" passrate="100">
+                <target>
+                    <device rank="master" alias="DEFAULT"/>
+                </target>
+                <case id="1.1.1.1.1" name="Test Case 1" harness="STIF" enabled="true" passrate="100">
+                		<flash target-alias="DEFAULT" images="ATS3Drop/images/ariane_SriKumar_20071015_111305_rnd.fpsx" />
+                    <flash target-alias="DEFAULT" images="ATS3Drop/images/ariane_SriKumar_20071015_111305_rnd_udaerase.fpsx" />
+                		<step id="1.1.1.1.1.1" name="Install testmodule DLL" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>install</command>
+                        <params>
+                        	  <param type="binary"/>
+                            <param src="IMApiTest.dll"/>
+                            <param dst="c:\sys\bin\IMApiTest.dll"/>
+                            <param component-path="ATS3Drop"/>
+                        </params> 
+                    </step> 
+                    <step id="1.1.1.1.1.2" name="Install testscript file" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>install</command>
+		                    <params>
+		                        <param src="TestFramework.ini"/>
+		                        <param dst="c:\testframework\TestFramework.ini"/>
+		                        <param component-path="ATS3Drop"/>
+		                    </params> 
+                    </step>  
+                    <step id="1.1.1.1.1.2" name="Install testscript file" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>install</command>
+		                    <params>
+		                        <param src="imapitest.ini"/>
+		                        <param dst="c:\testframework\imapitest.ini"/>
+		                        <param component-path="ATS3Drop"/>
+		                    </params> 
+                    </step>     
+		                <step id="1.1.1.1.1.3" name="IMApiTest" harness="STIF" enabled="true" passrate="100" significant="true">
+		                    <command>run-cases</command>
+		                    <params>
+		        							<param module="IMApiTest"/>  
+		        							<param filter="*"/>
+		        							<param timeout="300"/>
+		                    </params>
+		                </step>
+                    <step id="1.1.1.1.1.4" name="Fetch Test module Report" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>fetch-log</command>
+                        <params>
+				  							    <param type="text"/>
+				  							    <param delete="true"/>
+				  							    <param path="C:\Logs\TestFramework\*"/>
+                        </params>
+                    </step>  
+                    <step id="1.1.1.1.1.5" name="Save CTC data" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>execute</command>
+                        <params>
+                            <param parameters="writefile"/>
+                            <param file="z:\sys\bin\ctcman.exe"/>
+                        </params>
+                    </step>     
+                    <step id="1.1.1.1.1.6" name="Fetch and clean CTC data" harness="STIF" enabled="true" passrate="100" significant="false">
+                        <command>fetch-log</command>
+                        <params>
+                            <param delete="true"/>
+                            <param path="c:\data\ctc\ctcdata.txt"/>                        
+                        </params>
+                    </step>             
+                </case>
+            </set>
+        </session>
+    </plan>
+    <files>
+        <file>ATS3Drop/armv5_urel/IMApiTest.dll</file>
+        <file>ATS3Drop/TestFramework.ini</file>
+        <file>ATS3Drop/imapitest.ini</file>
+        <file>ATS3Drop/images/ariane_SriKumar_20071015_111305_rnd.fpsx</file>
+        <file>ATS3Drop/images/ariane_SriKumar_20071015_111305_rnd_udaerase.fpsx</file>
+    </files> 
+    <report media="email">
+        <type>ATS3_REPORT</type>
+        <to>Srivathsan.kumar@nokia.com</to>
+    </report>
+</test>

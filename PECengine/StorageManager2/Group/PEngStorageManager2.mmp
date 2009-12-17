@@ -1,0 +1,88 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Presence Storage Manager 2 project definition.
+*
+*/
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+#include "../../Group/PEngUIDs2.h"
+
+// DLL client
+TARGET           PEngStorMan2.DLL
+TARGETTYPE       DLL
+UID              KStaticInterfaceDllUid2 KPEngStorageManager2Uid3
+CAPABILITY       CAP_CLIENT_DLL
+VENDORID         VID_DEFAULT
+
+
+
+// =======================================================================
+// source files of the Storage Manager (client)
+// =======================================================================
+
+SOURCEPATH      ../ClientSrc
+
+// Storage Manager Interface
+SOURCE          CPEngStoreEntry.cpp
+SOURCE          CPEngStorageManager.cpp
+SOURCE          CPEngStorageManagerFactory.cpp
+SOURCE          CPEngStorageManagerWatcher.cpp
+SOURCE          PEngStorageManager.cpp // static interface, entry to storage manager
+
+// Notification Factory
+SOURCE          CPEngSIDChangeListener.cpp
+SOURCE          CPEngSIDContainer.cpp
+SOURCE          CPEngObserverContainer.cpp
+
+// Storage Server client
+SOURCE          RPEngStorageAdminClient.cpp
+SOURCE          RPEngStorageAdminSubClient.cpp
+SOURCE          RPEngStorageClient.cpp
+SOURCE          RPEngStorageSubFolderClient.cpp // sub session client
+
+
+// Presence Storage Manager includes
+USERINCLUDE     ../ClientInc
+USERINCLUDE     ../ClientSrc
+USERINCLUDE     ../Tools
+USERINCLUDE     ../../CoreUtilsLib2/Inc
+USERINCLUDE     ../../CoreUtilsLib2/SrvInc
+USERINCLUDE     ../../IncApi
+USERINCLUDE     ../../Group
+
+// Presence Storage Manager Server includes
+USERINCLUDE     ../ServerInc
+
+// System includes
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+//Relative system include for groupcommunications/inc
+
+SYSTEMINCLUDE   ../../../inc
+
+
+
+// Symbian dependences
+LIBRARY         euser.lib   // User classes
+LIBRARY         bafl.lib    // descriptor array
+LIBRARY         estor.lib   // Streaming library
+
+
+// Presence Engine dependences
+LIBRARY         PEngCoreUtilsLib2.lib   // General PEC Engine utils
+
+
+

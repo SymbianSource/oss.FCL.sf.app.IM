@@ -1,0 +1,58 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: Project specification file of Im Client.
+*
+*/
+
+#include <platform_paths.hrh>
+
+
+
+TARGET        imclient.dll
+CAPABILITY    CAP_ECOM_PLUGIN
+TARGETTYPE    PLUGIN
+
+// ECom Dll recognition UID followed by the unique UID for this dll
+UID 0x10009D8D 0x101FB0D0
+VENDORID VID_DEFAULT
+
+SOURCEPATH    ../src
+SOURCE        apiutils.cpp
+SOURCE        imconnectionimpl.cpp
+SOURCE        imclientimpl.cpp
+SOURCE        cntdbreader.cpp
+SOURCE        imapimain.cpp
+
+USERINCLUDE   . ../inc ../../inc
+
+SYSTEMINCLUDE   ../../../inc
+SYSTEMINCLUDE   ../../../im_pub/im_api/inc
+SYSTEMINCLUDE   ../../../im_pub/im_application_launch_api/inc
+SYSTEMINCLUDE   ../../../im_plat/wv_sap_settings_api/inc
+APP_LAYER_SYSTEMINCLUDE
+
+START RESOURCE 101FB0D0.rss
+TARGET imclient.rsc                                                                
+END
+
+
+LIBRARY       euser.lib
+LIBRARY       ecom.lib
+LIBRARY	      WVSapSettingsStore.lib
+LIBRARY       impsclient.lib
+LIBRARY       impsutils.lib
+LIBRARY       bafl.lib
+LIBRARY       cntmodel.lib
+LIBRARY       flogger.lib
+//LIBRARY	      centralrepository.lib

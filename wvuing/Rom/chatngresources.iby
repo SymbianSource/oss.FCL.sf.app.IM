@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*     This class is a part of the standard application framework.
+*     The application gets instantiated starting from this class.
+*     Provides a factory method for instantiating the document object.
+*
+*/
+#ifndef __CHATNGRESOURCES_IBY__
+#define __CHATNGRESOURCES_IBY__
+
+#ifdef __IM
+
+#ifdef __CHATNG 
+
+data=DATAZ_\RESOURCE_FILES_DIR\CAEngineNG.rsc    				RESOURCE_FILES_DIR\CAEngineNG.rsc
+
+// ChatNG UI Variation File
+data=DATAZ_\RESOURCE_FILES_DIR\CAVariationNG.rsc    				RESOURCE_FILES_DIR\CAVariationNG.rsc
+
+//IMPSConnectionUI Variation File
+data=DATAZ_\RESOURCE_FILES_DIR\IMConnectionUIVariationNG.rsc    				RESOURCE_FILES_DIR\IMConnectionUIVariationNG.rsc
+
+// Service Settings UI resource
+data=DATAZ_\RESOURCE_FILES_DIR\CWVSETTINGSUING.rsc              RESOURCE_FILES_DIR\CWVSETTINGSUING.rsc
+// Multi CSP Connection UI resource
+data=DATAZ_\RESOURCE_FILES_DIR\IMPSConnectionUiNG.rsc           RESOURCE_FILES_DIR\IMPSConnectionUiNG.rsc
+
+//Presence Always Onling plugin resource files
+data=DATAZ_\RESOURCE_FILES_DIR\PEngAOPluginNG.rsc               RESOURCE_FILES_DIR\PEngAOPluginNG.rsc 
+
+#ifdef __PEN_SUPPORT
+	// IM indicator plugin
+	data=DATAZ_\RESOURCE_FILES_DIR\imindicatorng.rsc           RESOURCE_FILES_DIR\imindicatorng.rsc 
+#endif
+
+S60_APP_CAPTION(ChatNG)
+S60_APP_RESOURCE(ChatNG)
+
+#endif // __CHATNG
+#endif // __IM
+
+#endif // __CHATNGRESOURCES_IBY__

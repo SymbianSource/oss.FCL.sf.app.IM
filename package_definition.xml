@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDefinition schema="3.0.0">
+  <package id="im" name="Instant Messaging Apps" levels="support prot engine apps">
+    <collection id="impsengine" name="IM and Presence Services Engine" level="prot">
+      <component id="impsengine_utils" filter="s60" name="Utilities" introduced="^1">
+        <!-- <unit bldFile="impsengine/utils/group"/> -->
+      </component>
+      <component id="datautils" filter="s60" name="IMPS Data Utils" introduced="^1">
+        <!-- <unit bldFile="impsengine/datautils/group"/> -->
+      </component>
+      <component id="impsengine_client" filter="s60" name="IMPS Client" introduced="^1">
+        <!-- <unit bldFile="impsengine/client/group"/> -->
+      </component>
+      <component id="imapi" filter="s60" name="IM API" introduced="^1">
+        <!-- <unit bldFile="impsengine/imapi/group"/> -->
+      </component>
+      <component id="imlauncher" filter="s60" name="IM Launcher" introduced="^1">
+        <!-- <unit bldFile="impsengine/imlauncher/group"/> -->
+      </component>
+      <component id="impsdatachannel" filter="s60" name="IMPS Data Channel" introduced="^1">
+        <!-- <unit bldFile="impsengine/impsdatachannel/group"/> -->
+      </component>
+      <component id="impsipcirwatcher" filter="s60" name="IMPS IP CIR Watcher" class="plugin" introduced="^1">
+        <!-- <unit bldFile="impsengine/impsipcirwatcher/group"/> -->
+      </component>
+      <component id="messageencoder" filter="s60" name="IMPS Message Encoder" introduced="^1">
+        <!-- <unit bldFile="impsengine/messageencoder/wbxml/group"/> -->
+      </component>
+      <component id="engsrv" filter="s60" name="IMPS Engine" introduced="^1">
+        <!-- <unit bldFile="impsengine/engsrv/group"/> -->
+      </component>
+      <component id="impswatcher" filter="s60" name="IMPS Watcher" class="plugin" introduced="^1">
+        <!-- <unit bldFile="impsengine/impswatcher/group"/> -->
+      </component>
+      <component id="wvotaparser" filter="s60" name="Wireless Village OTA Parser" introduced="^1">
+        <!-- <unit bldFile="impsengine/wvotaparser/group"/> -->
+      </component>
+      <component id="impsengine_test" filter="s60" purpose="development" name="IMPS Engine Test" introduced="^1">
+      	<!-- should these be uncommented?  -->
+        <!-- <unit bldFile="impsengine/tsrc/public/imlauncher_sdk_apis/basic/imlaunchertimerprocess/group"/> -->
+        <!-- <unit bldFile="impsengine/tsrc/public/advance/group"/> -->
+        <!-- <unit bldFile="impsengine/tsrc/public/imlauncher_sdk_apis/basic/imlaunchertest/group"/> -->
+        <!-- <unit bldFile="impsengine/tsrc/public/imlauncher_sdk_apis/basic/group"/> -->
+        <!-- <unit bldFile="impsengine/tsrc/public/imlauncher_sdk_apis/basic/imlaunchertestplugin/group"/> -->
+      </component>
+      <component id="impsengine_build" filter="s60" name="IMPS Engine Build" introduced="^1">
+      	<!-- this should be broken up into the above components, or they should be all collapsed into one component -->
+        <unit bldFile="impsengine/group"/>
+      </component>
+    </collection>
+    <collection id="pecengine" name="Presence Engine" level="engine">
+      <component id="coreutilslib2" filter="s60" name="Presence Core Utils Library" introduced="^1">
+        <!-- <unit bldFile="pecengine/coreutilslib2/group"/> -->
+      </component>
+      <component id="storagemanager2" filter="s60" name="Presence Storage Manager" introduced="^1">
+        <!-- <unit bldFile="pecengine/storagemanager2/group"/> -->
+      </component>
+      <component id="pecparser2" filter="s60" name="Presence Parser" introduced="^1">
+        <!-- <unit bldFile="pecengine/parser2/group"/> -->
+      </component>
+      <component id="attributelibrary2" filter="s60" name="Presence Attribute Library" introduced="^1">
+        <!-- <unit bldFile="pecengine/attributelibrary2/group"/> -->
+      </component>
+      <component id="listlibrary2" filter="s60" name="Presence List Library" introduced="^1">
+        <!-- <unit bldFile="pecengine/listlibrary2/group"/> -->
+      </component>
+      <component id="transferadapter2" filter="s60" name="Presence Transfer Adapter" introduced="^1">
+        <!-- <unit bldFile="pecengine/transferadapter2/group"/> -->
+      </component>
+      <component id="presenceserver2" filter="s60" name="Presence Server" introduced="^1">
+        <!-- <unit bldFile="pecengine/presenceserver2/group"/> -->
+      </component>
+      <component id="presencemanager2" filter="s60" name="Presence Manager" introduced="^1">
+        <!-- <unit bldFile="pecengine/presencemanager2/group"/> -->
+      </component>
+      <component id="janitorplugin2" filter="s60" name="Presence Janitor Plugin" class="plugin" introduced="^1">
+        <!-- <unit bldFile="pecengine/janitorplugin2/group"/> -->
+      </component>
+      <component id="pluginserver2" filter="s60" name="Presence Plugin Server" introduced="^1">
+        <!-- <unit bldFile="pecengine/pluginserver2/group"/> -->
+      </component>
+      <component id="pecengine_build" filter="s60" name="Presence Engine Build" introduced="^1">
+      	<!-- this should be broken up into the above components, or they should be all collapsed into one component -->
+        <unit bldFile="pecengine/group"/>
+      </component>
+    </collection>
+    <collection id="presadap12" name="Presence Adaptation" level="support">
+      <component id="presparser2" filter="s60" name="IMPS Adaptation Parser" introduced="^1">
+        <!-- <unit bldFile="presadap12/parser2/group"/> -->
+      </component>
+      <component id="impsplugin" filter="s60" name="IMPS 1.2 Adaptation Plugin" class="plugin" introduced="^1">
+        <!-- <unit bldFile="presadap12/impsplugin/group"/> -->
+      </component>
+      <component id="presadap12_build" filter="s60" name="Presence Adaptation Build" introduced="^1">
+      	<!-- is any of this built?  -->
+        <!-- <unit bldFile="presadap12/group"/> -->
+      </component>
+    </collection>
+    <collection id="wvsettings20" name="Wireless Village Settings Engine" level="support">
+      <component id="wvsapsettingsstore" name="WV SAP Settings Store" filter="s60" introduced="9.3">
+        <unit bldFile="wvsettings20/group"/>
+      </component>
+    </collection>
+    <collection id="wvuing" name="Instant Messaging UI" level="apps">
+      <component id="imindicatorplugin" filter="s60" name="IM Indicator Plugin" class="plugin" introduced="9.3">
+        <!-- <unit bldFile="wvuing/imindicatorplugin/group"/> -->
+      </component>
+      <component id="impsconnectionui" filter="s60" name="IMPS Connection UI" introduced="9.3">
+        <!-- <unit bldFile="wvuing/impsconnectionui/group"/> -->
+      </component>
+      <component id="impsservicesettingsui" filter="s60" name="IMPS Service Settings UI" introduced="9.3">
+        <!-- <unit bldFile="wvuing/impsservicesettingsui/group"/> -->
+      </component>
+      <component id="impsalwaysonlineplugin" filter="s60" name="IMPS Always Online Plugin" class="plugin" introduced="9.3">
+        <!-- <unit bldFile="wvuing/impsalwaysonlineplugin/group"/> -->
+      </component>
+      <component id="wvvariant" filter="s60" name="Wireless Village Variant" introduced="9.3">
+        <!-- <unit bldFile="wvuing/wvvariant/group"/> -->
+      </component>
+      <component id="wvuiada" filter="s60" name="Wireless Village UI Adapter" introduced="9.3">
+        <!-- <unit bldFile="wvuing/wvuiada/group"/> -->
+      </component>
+      <component id="wvuistorage" filter="s60" name="Wireless Village UI Storage" introduced="9.3">
+        <!-- <unit bldFile="wvuing/wvuistorage/group"/> -->
+      </component>
+      <component id="wvuipresence" filter="s60" name="Wireless Village UI Presence" introduced="9.3">
+        <!-- <unit bldFile="wvuing/wvuipresence/group"/> -->
+      </component>
+      <component id="wvlogger" filter="s60" name="Wireless Village Logger" introduced="9.3">
+        <!-- <unit bldFile="wvuing/wvlogger/group"/> -->
+      </component>
+      <component id="wvuieng" filter="s60" name="Wireless Village UI Enineg" introduced="9.3">
+        <!-- <unit bldFile="wvuing/wvuieng/group"/> -->
+      </component>
+      <component id="imutils" filter="s60" name="IM Utils" introduced="9.3">
+        <!-- <unit bldFile="wvuing/imutils/group"/> -->
+      </component>
+      <component id="wvuiprocess" filter="s60" name="Wireless Village UI Process" introduced="9.3">
+        <!-- <unit bldFile="wvuing/wvuiprocess/group"/> -->
+      </component>
+      <component id="wvcommandutils" filter="s60" name="Wireless Village Command Utils" introduced="9.3">
+        <!-- <unit bldFile="wvuing/wvcommandutils/group"/> -->
+      </component>
+      <component id="wvaudiomanager" filter="s60" name="Wireless Village Audio Manager" introduced="9.3">
+        <!-- <unit bldFile="wvuing/wvaudiomanager/group"/> -->
+      </component>
+      <component id="wvuiave" filter="s60" name="Wireless Village uiave" introduced="9.3">
+        <!-- <unit bldFile="wvuing/wvuiave/group"/> -->
+      </component>
+      <component id="wvimlauncher" filter="s60" name="IM Launcher" introduced="9.3">
+        <!-- <unit bldFile="wvuing/imlauncher/group"/> -->
+      </component>
+      <component id="wvuing_build" filter="s60" name="IM UI Build" introduced="9.3">
+      	<!-- this should be broken up into the above components, or they should be all collapsed into one component -->
+        <unit bldFile="wvuing/group"/>
+      </component>
+    </collection>
+    <collection id="im_info" name="Instant Messaging Apps Info" level="apps">
+      <component id="im_plat" filter="s60" name="Instant Messaging Apps Platform Interfaces" class="api">
+      	<!-- can only have one unit, need to #include the latter from the former -->
+        <unit bldFile="im_plat/group"/>
+        <unit bldFile="im_plat/wv_sap_settings_api/tsrc"/>
+      </component>
+      <component id="im_pub" filter="s60" name="Instant Messaging Apps Public Interfaces" class="api">
+        <unit bldFile="im_pub/group"/>
+        <!-- <unit bldFile="im_pub/im_api/tsrc/group"/> -->
+        <!-- <unit bldFile="im_pub/im_application_launch_api/tsrc/group"/> -->
+        <!-- <unit bldFile="im_pub/im_application_launch_api/tsrc/imlaunchertest/group"/> -->
+        <!-- <unit bldFile="im_pub/im_application_launch_api/tsrc/imlaunchertestplugin/group"/> -->
+        <!-- <unit bldFile="im_pub/im_application_launch_api/tsrc/imlaunchertimerprocess/group"/> -->
+      </component>
+      <component id="im_help" filter="s60" name="Instant Messaging Apps Help">
+        <unit bldFile="help/group"/>
+      </component>
+    </collection>
+  </package>
+</SystemDefinition>

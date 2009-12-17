@@ -1,0 +1,103 @@
+/*
+* Copyright (c) 2003-2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This is project specification file for the WV Engine client interface.
+*     
+*
+*/
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+TARGET impsclient.dll
+TARGETTYPE  dll
+UID  0x1000008d 0x101f4698 
+CAPABILITY CAP_CLIENT_DLL 
+VENDORID    VID_DEFAULT
+
+// ***********************
+// WV ENGINE CLIENT SOURCE 
+// ***********************
+
+// Client API
+SOURCEPATH ../src
+//SOURCE impsclientdll.cpp
+SOURCE impsclient.cpp
+SOURCE impsaccesscli.cpp
+SOURCE impsimcli.cpp
+SOURCE impsgroupcli.cpp
+SOURCE impsgroupprops.cpp
+SOURCE impsfundcli.cpp
+SOURCE impswatchcli.cpp
+SOURCE impspurecli.cpp
+
+// Observer handlers
+SOURCEPATH ../src
+SOURCE impshandler.cpp
+SOURCE impsimhandler.cpp
+SOURCE impsaccesshandler.cpp
+SOURCE impsgrouphandler.cpp
+SOURCE impsfundhandler.cpp
+SOURCE impspurehandler.cpp
+
+// Observer timer
+SOURCEPATH ../src
+SOURCE impshandlertimer.cpp
+
+// Active command handlers
+SOURCEPATH ../src
+SOURCE impsimcommand.cpp
+SOURCE impsaccesscommand.cpp
+SOURCE impsgroupcommand.cpp
+SOURCE impsfundcommand.cpp
+SOURCE impspurecommand.cpp
+
+// Data wrappers
+SOURCEPATH ../src
+SOURCE impscdatautils.cpp
+
+// *************************************
+// INCLUDE PATHS
+// *************************************
+USERINCLUDE ../inc ../../inc ../../utils/inc  ../../datautils/inc ../../enginc
+
+SYSTEMINCLUDE   ../../../inc
+
+SYSTEMINCLUDE   ../../../im_pub/im_api/inc
+SYSTEMINCLUDE   ../../../im_pub/im_application_launch_api/inc
+SYSTEMINCLUDE   ../../../im_plat/wv_sap_settings_api/inc
+
+APP_LAYER_SYSTEMINCLUDE
+
+// *************************************
+// LIBRARIES
+// *************************************
+LIBRARY bafl.lib
+LIBRARY euser.lib
+LIBRARY impsdatautils.lib
+LIBRARY impsutils.lib
+LIBRARY imut.lib
+// *************************************
+// OTHER STUFF
+// *************************************
+
+
+// Special OOM test in server thread. Changes def file!
+// MACRO _OOM_TEST
+ 
+#if defined( ARMCC )
+DEFFILE ../eabi/ 
+#else // WINSCW
+DEFFILE       ../def/winscw.def
+#endif
