@@ -29,7 +29,7 @@ VENDORID		VID_DEFAULT
 
 DEFFILE			WVSAPSettingsStore2.def
 
-USERINCLUDE             ../Group
+USERINCLUDE             ../group
 
 // Default system include paths for application layer modules.
 APP_LAYER_SYSTEMINCLUDE
