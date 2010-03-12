@@ -32,6 +32,6 @@
 void RIMPSReleaseArray::Close()
     {
     ResetAndDestroy();
-    RPointerArray::Close();
+    RPointerArray<HBufC>::Close();
     }
 
