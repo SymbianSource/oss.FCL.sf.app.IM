@@ -1,3 +1,0 @@
-EXPORTS
-	?NewL@CWVSettingsUIDialog@@SAPAV1@XZ @ 1 NONAME ; public: static class CWVSettingsUIDialog * __cdecl CWVSettingsUIDialog::NewL(void)
-

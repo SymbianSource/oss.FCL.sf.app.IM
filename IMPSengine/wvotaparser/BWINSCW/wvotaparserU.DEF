@@ -1,5 +1,0 @@
-EXPORTS
-	?NewL@CWVSettingsParser@@SAPAV1@XZ @ 1 NONAME ; class CWVSettingsParser * CWVSettingsParser::NewL(void)
-	?ParseL@CWVSettingsParser@@QAEHAAVTDesC8@@@Z @ 2 NONAME ; int CWVSettingsParser::ParseL(class TDesC8 &)
-	?Root@CWVSettingsParser@@QAEPAVCXmlElement@@XZ @ 3 NONAME ; class CXmlElement * CWVSettingsParser::Root(void)
-

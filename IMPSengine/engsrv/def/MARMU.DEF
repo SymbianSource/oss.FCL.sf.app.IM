@@ -1,3 +1,0 @@
-EXPORTS
-	ThreadStart__11CImpsServerR11TImpsSignal @ 1 NONAME R3UNUSED ; CImpsServer::ThreadStart(TImpsSignal &)
-

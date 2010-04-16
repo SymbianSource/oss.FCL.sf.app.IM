@@ -1,4 +1,0 @@
-EXPORTS
-	?NewDecoderL@@YAPAVMImpsDecoder@@XZ @ 1 NONAME ; class MImpsDecoder * __cdecl NewDecoderL(void)
-	?NewEncoderL@@YAPAVMImpsEncoder@@XZ @ 2 NONAME ; class MImpsEncoder * __cdecl NewEncoderL(void)
-

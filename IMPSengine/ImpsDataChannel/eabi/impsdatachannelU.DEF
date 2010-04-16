@@ -1,9 +1,0 @@
-EXPORTS
-	_Z14NewImpsSenderLR17MImpsDataReceiverR15MMsgConnManagerRK6TDesC8 @ 1 NONAME
-	_ZTI19CImpsTransportTimer @ 2 NONAME ; #<TI>#
-	_ZTI20CImpsHttpTransaction @ 3 NONAME ; #<TI>#
-	_ZTI21CHttpTransportAdapter @ 4 NONAME ; #<TI>#
-	_ZTV19CImpsTransportTimer @ 5 NONAME ; #<VT>#
-	_ZTV20CImpsHttpTransaction @ 6 NONAME ; #<VT>#
-	_ZTV21CHttpTransportAdapter @ 7 NONAME ; #<VT>#
-

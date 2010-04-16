@@ -1,8 +1,0 @@
-EXPORTS
-	?AttributeListsManagerL@PEngListLibraryFactory@@SAPAVMPEngAttributeListManager@@ABVCPEngSessionSlotId@@@Z @ 1 NONAME ; class MPEngAttributeListManager * PEngListLibraryFactory::AttributeListsManagerL(class CPEngSessionSlotId const &)
-	?AttributeListsTransactionManagerLC@PEngListLibraryFactory@@SAPAVMPEngTransactionFactory@@ABVCPEngSessionSlotId@@@Z @ 2 NONAME ; class MPEngTransactionFactory * PEngListLibraryFactory::AttributeListsTransactionManagerLC(class CPEngSessionSlotId const &)
-	?AuthorizationManagerL@PEngListLibraryFactory@@SAPAVMPEngAuthorizationManager@@ABVCPEngSessionSlotId@@@Z @ 3 NONAME ; class MPEngAuthorizationManager * PEngListLibraryFactory::AuthorizationManagerL(class CPEngSessionSlotId const &)
-	?AuthorizationTransactionManagerLC@PEngListLibraryFactory@@SAPAVMPEngTransactionFactory@@ABVCPEngSessionSlotId@@@Z @ 4 NONAME ; class MPEngTransactionFactory * PEngListLibraryFactory::AuthorizationTransactionManagerLC(class CPEngSessionSlotId const &)
-	?ContactListManagerL@PEngListLibraryFactory@@SAPAVMPEngContactListManager@@ABVCPEngSessionSlotId@@@Z @ 5 NONAME ; class MPEngContactListManager * PEngListLibraryFactory::ContactListManagerL(class CPEngSessionSlotId const &)
-	?ContactListTransactionManagerLC@PEngListLibraryFactory@@SAPAVMPEngTransactionFactory@@ABVCPEngSessionSlotId@@@Z @ 6 NONAME ; class MPEngTransactionFactory * PEngListLibraryFactory::ContactListTransactionManagerLC(class CPEngSessionSlotId const &)
-

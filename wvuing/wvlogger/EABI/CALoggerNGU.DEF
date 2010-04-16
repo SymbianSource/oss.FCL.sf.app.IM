@@ -1,9 +1,0 @@
-EXPORTS
-	_ZN22CALoggerManagerFactory13ReadInstanceLEP23MCALoggerMessageFactoryi @ 1 NONAME
-	_ZN22CALoggerManagerFactory14WriteInstanceLEP23MCALoggerMessageFactory @ 2 NONAME
-	_ZN22CALoggerManagerFactory16ReleaseInstanceLEv @ 3 NONAME
-	_ZTI15CCALoggerWriter @ 4 NONAME ; #<TI>#
-	_ZTI16CCALoggerManager @ 5 NONAME ; #<TI>#
-	_ZTV15CCALoggerWriter @ 6 NONAME ; #<VT>#
-	_ZTV16CCALoggerManager @ 7 NONAME ; #<VT>#
-

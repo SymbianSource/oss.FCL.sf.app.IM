@@ -1,4 +1,0 @@
-EXPORTS
-	?NewDecoderL@@YAPAVMImpsDecoder@@PAVMImpsCSPSession@@@Z @ 1 NONAME ; class MImpsDecoder * NewDecoderL(class MImpsCSPSession *)
-	?NewEncoderL@@YAPAVMImpsEncoder@@XZ @ 2 NONAME ; class MImpsEncoder * NewEncoderL(void)
-

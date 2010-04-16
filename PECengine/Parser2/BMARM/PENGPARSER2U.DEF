@@ -1,6 +1,0 @@
-EXPORTS
-	CreateXMLParserLC__Fv @ 1 NONAME R3UNUSED ; CreateXMLParserLC(void)
-	CreateXMLParserL__Fv @ 2 NONAME R3UNUSED ; CreateXMLParserL(void)
-	CreateXmlSerializerLC__FR5TDes8 @ 3 NONAME R3UNUSED ; CreateXmlSerializerLC(TDes8 &)
-	CreateXmlSerializerL__FR5TDes8 @ 4 NONAME R3UNUSED ; CreateXmlSerializerL(TDes8 &)
-
