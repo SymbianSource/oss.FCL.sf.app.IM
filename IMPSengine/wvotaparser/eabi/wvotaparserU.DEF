@@ -1,7 +1,0 @@
-EXPORTS
-	_ZN17CWVSettingsParser4NewLEv @ 1 NONAME
-	_ZN17CWVSettingsParser4RootEv @ 2 NONAME
-	_ZN17CWVSettingsParser6ParseLER6TDesC8 @ 3 NONAME
-	_ZTI17CWVSettingsParser @ 4 NONAME ; #<TI>#
-	_ZTV17CWVSettingsParser @ 5 NONAME ; #<VT>#
-

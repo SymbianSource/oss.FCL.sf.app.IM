@@ -1,3 +1,0 @@
-EXPORTS
-	NewL__19CWVSettingsUIDialog @ 1 NONAME R3UNUSED ; CWVSettingsUIDialog::NewL(void)
-

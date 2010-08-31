@@ -1,3 +1,0 @@
-EXPORTS
-	?NewImpsSenderL@@YAPAVMImpsSender@@AAVMImpsDataReceiver@@AAVMImpsConnectionManager@@ABVTDesC8@@@Z @ 1 NONAME ; class MImpsSender * __cdecl NewImpsSenderL(class MImpsDataReceiver &,class MImpsConnectionManager &,class TDesC8 const &)
-

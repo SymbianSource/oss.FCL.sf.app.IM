@@ -1,4 +1,0 @@
-EXPORTS
-	NewDecoderL__Fv @ 1 NONAME R3UNUSED ; NewDecoderL(void)
-	NewEncoderL__Fv @ 2 NONAME R3UNUSED ; NewEncoderL(void)
-

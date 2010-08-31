@@ -1,3 +1,0 @@
-EXPORTS
-	?WinsMain@@YAHPAVTPEngServerParams@@@Z @ 1 NONAME ; int __cdecl WinsMain(class TPEngServerParams *)
-

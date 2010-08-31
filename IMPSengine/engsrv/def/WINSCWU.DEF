@@ -1,4 +1,0 @@
-EXPORTS
-	?ThreadFunction@@YAHPAX@Z @ 1 NONAME ; int ThreadFunction(void *)
-	?ThreadStart@CImpsServer@@SAHAAVTImpsSignal@@@Z @ 2 NONAME ; int CImpsServer::ThreadStart(class TImpsSignal &)
-

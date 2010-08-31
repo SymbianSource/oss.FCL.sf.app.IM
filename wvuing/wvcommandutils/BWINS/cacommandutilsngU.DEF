@@ -1,6 +1,0 @@
-EXPORTS
-	?GetCommandManager@CCACommandManagerFactory@@QAEPAVCCACommandManager@@XZ @ 1 NONAME ; class CCACommandManager * CCACommandManagerFactory::GetCommandManager(void)
-	?InitializeSessionHandlerL@CCACommandManagerFactory@@QAEXAAVMCAProcessManager@@AAVMCAUiLoginCmdCB@@@Z @ 2 NONAME ; void CCACommandManagerFactory::InitializeSessionHandlerL(class MCAProcessManager &, class MCAUiLoginCmdCB &)
-	?InstanceL@CCACommandManagerFactory@@SAPAV1@XZ @ 3 NONAME ; class CCACommandManagerFactory * CCACommandManagerFactory::InstanceL(void)
-	?ReleaseResources@CCACommandManagerFactory@@SAXXZ @ 4 NONAME ; void CCACommandManagerFactory::ReleaseResources(void)
-

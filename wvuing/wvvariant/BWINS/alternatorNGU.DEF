@@ -1,5 +1,0 @@
-EXPORTS
-	?CreateAlternatorL@@YAPAVCAlternator@@ABVTDesC16@@@Z @ 1 NONAME ; class CAlternator * CreateAlternatorL(class TDesC16 const &)
-	?InstanceL@CAlternator@@SAPAV1@ABVTDesC16@@@Z @ 2 NONAME ; class CAlternator * CAlternator::InstanceL(class TDesC16 const &)
-	?Release@CAlternator@@SAXXZ @ 3 NONAME ; void CAlternator::Release(void)
-
