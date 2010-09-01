@@ -1,0 +1,2380 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Main resource file of chat application
+*
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    CHAT // 4 letter ID
+
+//  INCLUDES
+
+#include <eikon.rh>
+#include "chatngclient.hrh"
+#include <chatclientng.loc>
+#include "eikon.rsg"
+#include <avkon.loc>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.hrh>
+#include <avkon.mbg>
+#include <finditem.hrh>
+#include <appinfo.rh>
+#include <AknFep.rsg>
+#include <data_caging_paths_strings.hrh>
+
+#include "impsbuilddefinitions.h"
+#include <aiwcommon.rh>
+#include <aiwgenericparam.hrh>
+
+#include "orange_im.loc"
+// RESOURCE DEFINITIONS
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="ChatClient"; }
+
+RESOURCE EIK_APP_INFO { status_pane = r_chat_status_pane; }
+
+RESOURCE LOCALISABLE_APP_INFO r_im_localisable_app_info
+    {
+    short_caption = qtn_apps_instant_grid;
+    caption_and_icon = CAPTION_AND_ICON_INFO
+        {
+        caption = qtn_chat_applicationname;
+
+#ifdef __SCALABLE_ICONS
+        number_of_icons = 1;
+        icon_file = APP_BITMAP_DIR"\\chatNG_aif.mif";
+
+#else //__SCALABLE_ICONS
+        number_of_icons = 2;
+        icon_file = APP_BITMAP_DIR"\\chatNG_aif.mbm";
+
+#endif //__SCALABLE_ICONS
+        };
+    }
+
+/**
+ * TITLE_PANE
+ */
+RESOURCE TITLE_PANE r_chat_title_pane
+    {
+    txt = qtn_chat_applicationname;
+    }
+
+/**
+ * STATUS_PANE_APP_MODEL
+ */
+RESOURCE STATUS_PANE_APP_MODEL r_chat_status_pane
+    {
+    layout = R_AVKON_STATUS_PANE_LAYOUT_USUAL;
+    panes =
+        {
+        SPANE_PANE
+            {
+            id = EEikStatusPaneUidTitle;
+            type = EAknCtTitlePane;
+            resource = r_chat_title_pane;
+            }
+        };
+    }
+
+
+//----------------------------------------------------
+//
+//    r_chatclient_hotkeys
+//    ?description
+//
+//----------------------------------------------------
+//
+RESOURCE HOTKEYS r_chatclient_hotkeys
+{
+    control=
+    {
+        HOTKEY { command=EEikCmdExit; key='e'; }
+    };
+}
+
+
+//----------------------------------------------------
+//
+//    r_chatclient_general_menu
+//    Items for general menu
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_chatclient_general_menu
+{
+    items=
+    {
+        MENU_ITEM { command=EChatClientCmdHelp; txt = qtn_options_help; },
+        MENU_ITEM { command=EChatClientCmdExit; txt = qtn_options_exit; }
+    };
+}
+
+RESOURCE TBUF r_delete_access_prompt        { buf = qtn_chat_aclist_cquery_rmv; }
+RESOURCE TBUF r_delete_editingrights_prompt { buf = qtn_chat_group_banned_remove1; }
+RESOURCE TBUF r_delete_banned_prompt        { buf = qtn_chat_group_banned_remove; }
+
+RESOURCE TBUF r_qtn_chat_aclist_move_to_admin   { buf = qtn_chat_aclist_move_to_admin; }
+RESOURCE TBUF r_qtn_chat_aclist_move_to_access  { buf = qtn_chat_aclist_move_to_access; }
+RESOURCE TBUF r_qtn_chat_aclist_move_to_banned  { buf = qtn_chat_aclist_move_to_banned; }
+RESOURCE TBUF r_qtn_chat_contactlist_chats  { buf = qtn_chat_contactlist_chats; }
+RESOURCE TBUF r_qtn_chat_invitation_tab  { buf = qtn_chat_invitation_tab; }
+
+
+
+RESOURCE DIALOG r_delete_access_query
+    {
+    flags=EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_YES_NO__YES;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                    layout = EConfirmationQueryLayout;
+                };
+            }
+        };
+    }
+
+RESOURCE TBUF r_delete_all_access_prompt        { buf = qtn_chat_aclist_cquery_rmvall; }
+RESOURCE TBUF r_delete_all_editingrights_prompt { buf = qtn_chat_group_banned_remall1; }
+RESOURCE TBUF r_delete_all_banned_prompt        { buf = qtn_chat_group_banned_remall; }
+
+RESOURCE DIALOG r_delete_all_access_query
+    {
+    flags=EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_YES_NO__YES;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                    layout = EConfirmationQueryLayout;
+                };
+            }
+        };
+    }
+
+
+
+RESOURCE DIALOG r_chatclient_groupproperties_dlg
+    {
+    buttons = R_AVKON_SOFTKEYS_OPTIONS_BACK;
+    flags = EEikDialogFlagWait | EEikDialogFlagNoDrag
+            | EEikDialogFlagCbaButtons | EEikDialogFlagNoTitleBar
+            | EEikDialogFlagFillAppClientRect;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtSettingListBox;
+            id = EChatClientControlIdGroupSettings;
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys | EEikDlgItemCtlMinSizeOrLess;
+            control = LISTBOX
+                {
+                flags = EAknListBoxSelectionList;
+                };
+            }
+        };
+    }
+
+RESOURCE MENU_BAR r_chatclient_menubar_chat_properties_view
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane = r_chatclient_general_menu; },
+        MENU_TITLE { menu_pane = r_chatclient_chat_properties_options_menu; }
+        };
+    }
+
+RESOURCE MENU_PANE r_chatclient_chat_properties_options_menu
+    {
+    items=
+        {
+        MENU_ITEM { command = EChatClientChatPropertiesCmdChange; txt = qtn_chat_properties_change; }
+        };
+    }
+
+RESOURCE TBUF RSC_CHAT_GROUP_TITLE          { buf = qtn_chat_create_name;   }
+RESOURCE TBUF RSC_CHAT_TOPIC_TITLE          { buf = qtn_chat_create_topic;  }
+RESOURCE TBUF RSC_CHAT_WELCOME_TITLE        { buf = qtn_chat_create_welcome;    }
+RESOURCE TBUF RSC_CHAT_SIZE_TITLE           { buf = qtn_chat_create_limit;  }
+RESOURCE TBUF RSC_CHAT_ALLOW_SEARCH_TITLE   { buf = qtn_chat_create_searchable;}
+RESOURCE TBUF RSC_CHAT_ADMIN_TITLE          { buf = qtn_chat_create_admin;  }
+RESOURCE TBUF RSC_CHAT_ACCESS_TITLE         { buf = qtn_chat_create_members;    }
+RESOURCE TBUF RSC_CHAT_BANNED_TITLE         { buf = qtn_chat_banned_list;   }
+RESOURCE TBUF RSC_CHAT_WHISPERING_YES_TITLE { buf = qtn_chat_create_priva;  }
+RESOURCE TBUF RSC_CHAT_GROUP_ID_TITLE       { buf = qtn_chat_create_gid;    }
+
+RESOURCE TBUF RSC_CHAT_GROUP_DEFAULT            { buf = qtn_chat_create_def_title; }
+
+RESOURCE TBUF RSC_CHAT_GROUP_DEFAULT_LIST            { buf = qtn_chat_create_group_def_name; }
+RESOURCE TBUF r_qtn_chat_change_status_changed { buf = qtn_chat_change_status_changed; }
+RESOURCE TBUF r_qtn_chat_change_status_changing { buf = qtn_chat_change_status_changing; }
+RESOURCE TBUF r_qtn_chat_change_status_not_changed { buf = qtn_chat_change_status_not_changed; }
+RESOURCE TBUF r_qtn_chat_change_status_failed { buf = qtn_chat_change_status_failed; }
+
+RESOURCE TBUF r_qtn_chat_change_new_message { buf = qtn_chat_change_new_message; }
+RESOURCE TBUF r_qtn_chat_change_select_message { buf = qtn_chat_change_select_message; }
+
+
+//----------------------------------------------------
+//    CHAT GROUP NAME
+//----------------------------------------------------
+//
+//----------------------------------------------------
+//
+//    r_edit_chat_group_name_edwin
+//    Chat group name edwin
+//
+//----------------------------------------------------
+//
+RESOURCE EDWIN r_edit_chat_group_name_edwin
+    {
+    flags     = 0;
+    width     = 9;
+    lines     = 5;
+    maxlength = 50;
+    }
+//----------------------------------------------------
+//
+//    r_edit_chat_group_name
+//    Chat group name setting page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_edit_chat_group_name
+    {
+    label               = qtn_chat_create_name;
+    type                = EEikCtEdwin;
+    editor_resource_id  = r_edit_chat_group_name_edwin;
+    softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    }
+//----------------------------------------------------
+//    END OF CHAT GROUP NAME
+//----------------------------------------------------
+//
+
+//----------------------------------------------------
+//    CHAT GROUP TOPIC
+//----------------------------------------------------
+//
+//----------------------------------------------------
+//
+//    r_edit_chat_group_topic_edwin
+//    Chat group name edwin
+//
+//----------------------------------------------------
+//
+RESOURCE EDWIN r_edit_chat_group_topic_edwin
+    {
+    flags     = 0;
+    width     = 9;
+    lines     = 5;
+    maxlength = 50;
+    }
+//----------------------------------------------------
+//
+//    r_edit_chat_group_topic
+//    Chat group name setting page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_edit_chat_group_topic
+    {
+    label               = qtn_chat_create_topic;
+    type                = EEikCtEdwin;
+    editor_resource_id  = r_edit_chat_group_topic_edwin;
+    softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    }
+//----------------------------------------------------
+//    END OF CHAT GROUP TOPIC
+//----------------------------------------------------
+//
+
+//----------------------------------------------------
+//    CHAT GROUP WELCOME NOTE
+//----------------------------------------------------
+//
+//----------------------------------------------------
+//
+//    r_edit_chat_group_welcomenote_edwin
+//    Chat group name edwin
+//
+//----------------------------------------------------
+//
+RESOURCE EDWIN r_edit_chat_group_welcomenote_edwin
+    {
+    flags     = 0;
+    width     = 9;
+    lines     = 5;
+    maxlength = 100;
+    }
+//----------------------------------------------------
+//
+//    r_edit_chat_group_topic
+//    Chat group name setting page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_edit_chat_group_welcomenote
+    {
+    label               = qtn_chat_create_welcome;
+    type                = EEikCtEdwin;
+    editor_resource_id  = r_edit_chat_group_welcomenote_edwin;
+    softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    }
+//----------------------------------------------------
+//    END OF WELCOME NOTE
+//----------------------------------------------------
+//
+
+//----------------------------------------------------
+//    CHAT GROUP SIZE
+//----------------------------------------------------
+//
+//----------------------------------------------------
+//
+//    r_edit_chat_group_size_edwin
+//    Chat group name edwin
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_INTEGER_EDWIN r_edit_chat_group_size_edwin
+    {
+    //flags     = 0;
+    //width     = 9;
+    //lines     = 1;
+    //maxlength = 3;
+    maxlength = 3;
+    min = 1;
+    max = 100;
+    }
+//----------------------------------------------------
+//
+//    r_edit_chat_group_topic
+//    Chat group name setting page
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_SETTING_PAGE r_edit_chat_group_size
+    {
+    label                = qtn_chat_create_limit;
+    type                 = EAknCtIntegerEdwin;
+    editor_resource_id   = r_edit_chat_group_size_edwin;
+    softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    }
+//----------------------------------------------------
+//    END OF GROUP SIZE
+//----------------------------------------------------
+//
+
+//----------------------------------------------------
+//    CHAT GROUP SEARCH
+//----------------------------------------------------
+//
+//----------------------------------------------------
+//
+//    r_edit_chat_search_setting
+//    Chat search setting page
+//
+//----------------------------------------------------
+//
+
+RESOURCE AVKON_SETTING_PAGE r_edit_chat_search_setting
+    {
+    label = qtn_chat_create_searchable;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_edit_chat_search_control;
+    softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    }
+
+RESOURCE POPUP_SETTING_LIST r_edit_chat_search_control
+    {
+    }
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_edit_chat_search_texts
+    {
+    setting_texts_resource = r_edit_chat_search;
+    popped_up_texts_resource = r_edit_chat_search_popup;
+    }
+
+RESOURCE ARRAY r_edit_chat_search
+    {
+    items=
+        {
+        AVKON_ENUMERATED_TEXT { value = 1; text = qtn_chat_prop_asearch_yes; },
+        AVKON_ENUMERATED_TEXT { value = 0; text = qtn_chat_prop_asearch_no; }
+        };
+    }
+
+RESOURCE ARRAY r_edit_chat_search_popup
+    {
+    items=
+        {
+        LBUF { txt = qtn_chat_prop_asearch_yes; },
+        LBUF { txt = qtn_chat_prop_asearch_no; }
+        };
+    }
+
+//----------------------------------------------------
+//    END OF GROUP SEARCH
+//----------------------------------------------------
+//
+
+//----------------------------------------------------
+//    CHAT GROUP WHISPERING
+//----------------------------------------------------
+//
+//----------------------------------------------------
+//
+//    r_edit_chat_whisper_setting
+//    Chat group whisper setting page
+//
+//----------------------------------------------------
+//
+
+RESOURCE AVKON_SETTING_PAGE r_edit_chat_whisper_setting
+    {
+    label = qtn_chat_create_priva;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_edit_chat_whisper_control;
+    softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    }
+
+RESOURCE POPUP_SETTING_LIST r_edit_chat_whisper_control
+    {
+    }
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_edit_chat_whisper_texts
+    {
+    setting_texts_resource = r_edit_chat_whisper;
+    popped_up_texts_resource = r_edit_chat_whisper_popup;
+    }
+
+RESOURCE ARRAY r_edit_chat_whisper
+    {
+    items=
+        {
+        AVKON_ENUMERATED_TEXT { value = 1; text = qtn_chat_prop_awhisp_yes; },
+        AVKON_ENUMERATED_TEXT { value = 0; text = qtn_chat_prop_awhisp_no; }
+        };
+    }
+
+RESOURCE ARRAY r_edit_chat_whisper_popup
+    {
+    items=
+        {
+        LBUF { txt = qtn_chat_prop_awhisp_yes; },
+        LBUF { txt = qtn_chat_prop_awhisp_no; }
+        };
+    }
+
+//----------------------------------------------------
+//    END OF GROUP WHISPERING
+//----------------------------------------------------
+//
+
+//----------------------------------------------------
+//    CHAT GROUP ADMIN
+//----------------------------------------------------
+//
+
+//----------------------------------------------------
+//
+//    r_edit_chat_admin_setting
+//    Chat group admin setting page
+//
+//----------------------------------------------------
+//
+
+RESOURCE AVKON_SETTING_PAGE r_edit_chat_admin_setting
+    {
+    label = qtn_chat_create_admin;
+    //type = EAknCtPopupSettingList; // don't work with Touch support
+    type = EAknSetListBox;
+    editor_resource_id = r_edit_chat_access_control;
+    softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    }
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_edit_chat_admin_texts
+    {
+    setting_texts_resource = r_edit_admin_access;
+    popped_up_texts_resource = r_edit_chat_admin_popup;
+    }
+
+RESOURCE ARRAY r_edit_admin_access
+    {
+    items=
+        {
+        AVKON_ENUMERATED_TEXT { value = 0; text = qtn_chat_create_admin_cre; },
+        AVKON_ENUMERATED_TEXT { value = 1; text = qtn_chat_create_choice_sel; }
+        };
+    }
+
+RESOURCE ARRAY r_edit_chat_admin_popup
+    {
+    items=
+        {
+        LBUF { txt = qtn_chat_create_admin_cre; },
+        LBUF { txt = qtn_chat_create_choice_sel; }
+        };
+    }
+
+//--------------ACCESSLIST STARTS FROM HERE!-----------------------
+
+RESOURCE DIALOG r_chatclient_access_list_dlg
+    {
+    flags = EEikDialogFlagWait | EEikDialogFlagNoDrag
+            | EEikDialogFlagCbaButtons | EEikDialogFlagNoTitleBar
+            | EEikDialogFlagFillAppClientRect;
+    buttons = r_chat_softkeys_options_back__contextoptions;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtSingleListBox;
+            id = EChatClientControlIdAccessList;   
+            itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys | EEikDlgItemCtlMinSizeOrLess;
+            control = LISTBOX
+                {
+                flags = EAknListBoxSelectionList;
+                };
+            }
+        };
+    }
+
+//----------------------------------------------------
+//
+//    r_chatclient_menubar_accesslist_view
+//    Menubar definition for accesslist view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_chatclient_menubar_accesslist_dlg
+{
+    titles=
+    {
+        MENU_TITLE { menu_pane = r_chatclient_general_menu; },
+        MENU_TITLE { menu_pane = r_chatclient_accesslist_options_menu; }
+    };
+}
+
+//----------------------------------------------------
+//
+//    r_chatclient_accesslist_options_menu
+//    Items for menupane in accesslist view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_chatclient_accesslist_options_menu
+{
+    items=
+    {
+        MENU_ITEM { command = EChatClientAccessListAdd;
+                    cascade = r_chatclient_accesslist_add_menu;
+                    txt = qtn_chat_aclist_opt_add;
+                  },
+        MENU_ITEM { command = EChatClientAccessListRemove;
+                    txt = qtn_chat_aclist_opt_rmv;
+                   },
+        MENU_ITEM {
+                    command = EChatClientAccessListRemoveAll;
+                    txt = qtn_chat_aclist_opt_rmv_all;
+                  }
+
+
+    //MENU_ITEM { command=EChatClientChatPropertiesCmdHelp;   txt = qtn_options_help; },
+    //MENU_ITEM { command=EChatClientChatPropertiesCmdExit;   txt = qtn_chat_options_exit; }
+    };
+}
+
+//----------------------------------------------------
+//
+//    r_chatclient_accesslist_add_menu
+//    Items for menupane in accesslist view's add-menu (cascade)
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_chatclient_accesslist_add_menu
+{
+    items=
+    {
+        MENU_ITEM { command=EChatClientAccessListFriend; txt = qtn_chat_aclist_add_sm_frend; },
+        MENU_ITEM { command=EChatClientAccessListManual; txt = qtn_chat_aclist_add_sm_manual; }
+    };
+}
+
+
+
+
+
+//--------------SERVER CONTACTS DIALOG STARTS FROM HERE!-----------------------
+
+// qtn_chat_servcont_nowvid "no wvid" isn't necessary because server contacts always have wvid
+// qtn_chat_servcont_nowvids "no wvids" isn't necessary because server contacts always have wvid
+
+//----------------------------------------------------
+//
+//    definitions for editing rights view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_chatclient_menubar_editingrights_dlg
+{
+    titles=
+    {
+        MENU_TITLE { menu_pane = r_chatclient_general_menu; },
+        MENU_TITLE { menu_pane = r_chatclient_editingrights_options_menu; }
+    };
+}
+
+RESOURCE MENU_PANE r_chatclient_editingrights_options_menu
+{
+    items=
+    {
+        MENU_ITEM { command = EChatClientAccessListAdd;
+                    cascade = r_chatclient_editingrights_add_menu;
+                    txt = qtn_chat_group_editrights_add;
+                  },
+        MENU_ITEM { command = EChatClientAccessListRemove;
+                    txt = qtn_chat_aclist_opt_rmv;
+                   },
+        MENU_ITEM {
+                    command = EChatClientAccessListRemoveAll;
+                    txt = qtn_chat_aclist_opt_rmv_all;
+                  }
+    };
+}
+
+RESOURCE MENU_PANE r_chatclient_editingrights_add_menu
+{
+    items=
+    {
+        MENU_ITEM { command=EChatClientAccessListFriend; txt = qtn_chat_aclist_add_sm_frend1; },
+        MENU_ITEM { command=EChatClientAccessListManual; txt = qtn_chat_aclist_add_sm_manual1; }
+    };
+}
+
+//----------------------------------------------------
+//
+//    definitions for banned list view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_chatclient_menubar_bannedlist_dlg
+{
+    titles=
+    {
+        MENU_TITLE { menu_pane = r_chatclient_general_menu; },
+        MENU_TITLE { menu_pane = r_chatclient_bannedlist_options_menu; }
+    };
+}
+
+RESOURCE MENU_PANE r_chatclient_bannedlist_options_menu
+{
+    items=
+    {
+        MENU_ITEM { command = EChatClientAccessListAdd;
+                    cascade = r_chatclient_bannedlist_add_menu;
+                    txt = qtn_chat_group_banned_add;
+                  },
+        MENU_ITEM { command = EChatClientAccessListRemove;
+                    txt = qtn_chat_aclist_opt_rmv;
+                   },
+        MENU_ITEM {
+                    command = EChatClientAccessListRemoveAll;
+                    txt = qtn_chat_aclist_opt_rmv_all;
+                  }
+    };
+}
+
+RESOURCE MENU_PANE r_chatclient_bannedlist_add_menu
+{
+    items=
+    {
+        MENU_ITEM { command=EChatClientAccessListFriend; txt = qtn_chat_aclist_add_sm_frend2; },
+        MENU_ITEM { command=EChatClientAccessListManual; txt = qtn_chat_aclist_add_sm_manual2; }
+    };
+}
+
+
+
+
+
+
+
+
+
+RESOURCE AVKON_SETTING_PAGE r_edit_chat_access_setting
+    {
+    label = qtn_chat_create_members;
+    //type = EAknCtPopupSettingList; // don't work with Touch support
+    type = EAknSetListBox;
+    editor_resource_id = r_edit_chat_access_control;
+    softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    }
+
+RESOURCE LISTBOX r_edit_chat_access_control
+    {
+    flags = EEikListBoxMultipleSelection;
+    }
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_edit_chat_access_texts
+    {
+    setting_texts_resource = r_edit_chat_access;
+    popped_up_texts_resource = r_edit_chat_access_popup;
+    }
+
+RESOURCE ARRAY r_edit_chat_access
+    {
+    items=
+        {
+        AVKON_ENUMERATED_TEXT { value = 0; text = qtn_chat_create_choice_all; },
+        AVKON_ENUMERATED_TEXT { value = 1; text = qtn_chat_create_choice_sel; }
+        };
+    }
+
+RESOURCE ARRAY r_edit_chat_access_popup
+    {
+    items=
+        {
+        LBUF { txt = qtn_chat_create_choice_all; },
+        LBUF { txt = qtn_chat_create_choice_sel; }
+        };
+    }
+
+
+// ban setting item
+RESOURCE AVKON_SETTING_PAGE r_edit_chat_ban_setting
+    {
+    label = qtn_chat_banned_list;
+    // type = EAknCtPopupSettingList; // don't work with Touch support
+    type = EAknSetListBox;
+    editor_resource_id = r_edit_chat_access_control;
+    softkey_resource  = R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    }
+
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_edit_chat_ban_texts
+    {
+    setting_texts_resource = r_edit_chat_ban;
+    popped_up_texts_resource = r_edit_chat_ban_popup;
+    }
+
+RESOURCE ARRAY r_edit_chat_ban
+    {
+    items=
+        {
+        AVKON_ENUMERATED_TEXT { value = 0; text = qtn_chat_group_banned_empty; },
+        AVKON_ENUMERATED_TEXT { value = 1; text = qtn_chat_group_banned_selected; }
+        };
+    }
+
+RESOURCE ARRAY r_edit_chat_ban_popup
+    {
+    items=
+        {
+        LBUF { txt = qtn_chat_group_banned_empty; },
+        LBUF { txt = qtn_chat_group_banned_selected; }
+        };
+    }
+
+
+
+//Resource to manual enter prompt thing u know
+RESOURCE TBUF RSC_CHAT_ACCESSLIST_PROMPT            { buf = qtn_chat_aclist_manual_dquery;  }
+
+RESOURCE DIALOG r_chatclient_accesslist_manual_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            //itemflags=EEikDlgItemTakesEnterKey;
+            control= AVKON_DATA_QUERY
+                {
+                layout = EDataLayout;
+                label = qtn_chat_aclist_manual_dquery;
+                control=EDWIN
+                    {
+                    flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                    maxlength=50;
+                    width=16;
+                    lines=1;
+                    default_case = EAknEditorLowerCase;
+                    avkon_flags = EAknEditorFlagLatinInputModesOnly;
+                    };
+                };
+            }
+        };
+    }
+
+// numeric input for r_chatclient_accesslist_manual_query
+RESOURCE DIALOG r_chatclient_accesslist_manual_query2
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            //itemflags=EEikDlgItemTakesEnterKey;
+            control= AVKON_DATA_QUERY
+                {
+                layout = EDataLayout;
+                label = qtn_chat_aclist_manual_dquery;
+                control=EDWIN
+                    {
+                    flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                    maxlength=50;
+                    width=16;
+                    lines=1;
+                    default_case = EAknEditorLowerCase;
+                    avkon_flags = EAknEditorFlagLatinInputModesOnly;
+                    default_input_mode = EAknEditorNumericInputMode;
+                    };
+                };
+            }
+        };
+    }
+
+//----------------------------------------------------
+//
+//    r_chatclient_menubar_popup_menu
+//    Menubar definition for add friends menu
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_chatclient_accesslist_menubar_popup_menu
+{
+    titles=
+    {
+    MENU_TITLE { menu_pane=r_chatclient_accesslist_popup_menu; }
+    };
+}
+
+RESOURCE MENU_PANE r_chatclient_accesslist_popup_menu
+{
+    items =
+        {
+        MENU_ITEM   {
+                    command = EChatClientAccessListAdd;
+                    cascade = r_chatclient_accesslist_sm_popup_menu;
+                    txt = qtn_chat_aclist_opt_add;
+                    },
+
+        MENU_ITEM   {
+                    command = EChatClientAccessListRemove;
+                    txt = qtn_chat_aclist_opt_rmv;
+                    }
+
+        };
+}
+
+RESOURCE MENU_BAR r_chatclient_editingrights_menubar_popup_menu
+{
+    titles=
+    {
+    MENU_TITLE { menu_pane=r_chatclient_editingrights_popup_menu; }
+    };
+}
+
+RESOURCE MENU_PANE r_chatclient_editingrights_popup_menu
+{
+    items =
+        {
+        MENU_ITEM   {
+                    command = EChatClientAccessListAdd;
+                    cascade = r_chatclient_editingrights_sm_popup_menu;
+                    txt = qtn_chat_group_editrights_add;
+                    },
+
+        MENU_ITEM   {
+                    command = EChatClientAccessListRemove;
+                    txt = qtn_chat_aclist_opt_rmv;
+                    }
+
+        };
+}
+
+RESOURCE MENU_BAR r_chatclient_bannedlist_menubar_popup_menu
+{
+    titles=
+    {
+    MENU_TITLE { menu_pane=r_chatclient_bannedlist_popup_menu; }
+    };
+}
+
+RESOURCE MENU_PANE r_chatclient_bannedlist_popup_menu
+{
+    items =
+        {
+        MENU_ITEM   {
+                    command = EChatClientAccessListAdd;
+                    cascade = r_chatclient_bannedlist_sm_popup_menu;
+                    txt = qtn_chat_group_banned_add;
+                    },
+
+        MENU_ITEM   {
+                    command = EChatClientAccessListRemove;
+                    txt = qtn_chat_aclist_opt_rmv;
+                    }
+
+        };
+}
+
+//----------------------------------------------------
+//
+//    r_chatclient_addandreply_menu
+//    Items for menupane in add friends menu
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_chatclient_accesslist_sm_popup_menu
+{
+    items =
+        {
+        MENU_ITEM   {
+                    command = EChatClientAccessListFriend;
+                    txt = qtn_chat_aclist_add_sm_frend;
+                    },
+
+        MENU_ITEM   {
+                    command = EChatClientAccessListManual;
+                    txt = qtn_chat_aclist_add_sm_manual;
+                    }
+        };
+}
+
+RESOURCE MENU_PANE r_chatclient_editingrights_sm_popup_menu
+{
+    items =
+        {
+        MENU_ITEM   {
+                    command = EChatClientAccessListFriend;
+                    txt = qtn_chat_aclist_add_sm_frend1;
+                    },
+
+        MENU_ITEM   {
+                    command = EChatClientAccessListManual;
+                    txt = qtn_chat_aclist_add_sm_manual1;
+                    }
+        };
+}
+
+RESOURCE MENU_PANE r_chatclient_bannedlist_sm_popup_menu
+{
+    items =
+        {
+        MENU_ITEM   {
+                    command = EChatClientAccessListFriend;
+                    txt = qtn_chat_aclist_add_sm_frend2;
+                    },
+
+        MENU_ITEM   {
+                    command = EChatClientAccessListManual;
+                    txt = qtn_chat_aclist_add_sm_manual2;
+                    }
+        };
+}
+
+//ACCESSLIST ENDS
+
+
+RESOURCE DIALOG r_chatclient_cnote_block
+    {
+    flags = EAknConfirmationNoteFlags|EEikDialogFlagWait;
+    buttons=R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtNote;
+            id=EArCnoteOff;
+            control= AVKON_NOTE
+                {
+                    layout = EGeneralLayout;
+                    singular_label = qtn_chat_friend_block_note;
+                    animation = R_QGN_NOTE_OK_ANIM;
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_chatclient_cnote_unblock
+    {
+    flags = EAknConfirmationNoteFlags|EEikDialogFlagWait;
+    buttons=R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtNote;
+            id=EArCnoteOff;
+            control= AVKON_NOTE
+                {
+                    layout = EGeneralLayout;
+                    singular_label = qtn_chat_friend_unblock_note;
+                    animation = R_QGN_NOTE_OK_ANIM;
+                };
+            }
+        };
+    }
+
+
+
+//END OF SEARCH
+
+//Resource for Chat Log dialog
+RESOURCE TBUF RSC_CHAT_LOGDIALOG_PROMPT         { buf = qtn_chat_history_name;  }
+
+RESOURCE DIALOG r_chatclient_history_name_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            //itemflags=EEikDlgItemTakesEnterKey;
+            control= AVKON_DATA_QUERY
+                {
+                    layout = EDataLayout;
+                    label = qtn_chat_history_name;
+                    control=EDWIN
+                        {
+                        flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                        maxlength=30;
+                        width=16;
+                        lines=1;
+                        };
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_chatclient_inote_logsave
+    {
+    flags = EAknConfirmationNoteFlags|EEikDialogFlagWait;
+    buttons=R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtNote;
+            id=EArCnoteOff;
+            control= AVKON_NOTE
+                {
+                    layout = EGeneralLayout;
+                    singular_label = qtn_chat_rec_starts;
+                    animation = R_QGN_NOTE_OK_ANIM;
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_qtn_recording_ended
+    {
+    flags = EAknConfirmationNoteFlags|EEikDialogFlagWait;
+    buttons=R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtNote;
+            id=EArCnoteOff;
+            control= AVKON_NOTE
+                {
+                    layout = EGeneralLayout;
+                    singular_label = qtn_chat_recording_ended;
+                    animation = R_QGN_NOTE_OK_ANIM;
+                };
+            }
+        };
+    }
+
+RESOURCE TBUF r_qtn_gen_note_saving { buf = qtn_gen_note_saving; }
+
+RESOURCE TBUF r_qtn_chat_invite_sending { buf = qtn_chat_invite_sending; }
+
+RESOURCE TBUF r_qtn_chat_need_to_login { buf = qtn_chat_need_to_login; }
+
+RESOURCE TBUF r_qtn_chat_connection_needed_to { buf = qtn_chat_connection_needed_to; }
+
+RESOURCE TBUF r_qtn_offline_not_possible { buf = qtn_offline_not_possible; }
+
+RESOURCE TBUF r_qtn_chat_create_confq_ex_wvid { buf = qtn_chat_create_confq_ex_wvid; }
+
+RESOURCE TBUF r_qtn_chat_set_ao_on { buf = qtn_chat_set_ao_on; }
+
+RESOURCE DIALOG r_chat_info_note_template
+    {
+    flags = EAknInformationNoteFlags | EEikDialogFlagWait;
+    buttons=R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralNote;
+            control= AVKON_NOTE
+                {
+                    layout = EGeneralLayout;
+                    animation = R_QGN_NOTE_INFO_ANIM;
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_chat_error_note_template
+    {
+    flags = EAknErrorNoteFlags | EEikDialogFlagWait;
+    buttons=R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralNote;
+            control= AVKON_NOTE
+                {
+                    layout = EGeneralLayout;
+                    animation = R_QGN_NOTE_ERROR_ANIM;
+                };
+            }
+        };
+    }
+RESOURCE DIALOG r_chat_error_note_template_with_ok
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationQueryLayout;
+                animation = R_QGN_NOTE_ERROR_ANIM;
+                };
+            }
+        };
+    }
+    
+//Special note for disconnect error
+RESOURCE DIALOG r_chat_conerror_note
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                    layout = EConfirmationQueryLayout;
+                    label=qtn_chat_login_conerror_note;
+                    animation = R_QGN_NOTE_ERROR_ANIM;
+                };
+            }
+        };
+    }
+
+RESOURCE DIALOG r_chat_wait_note_template
+    {
+
+    flags = EAknWaitNoteFlags;
+    buttons=R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = ESearchWaitNote;
+            control= AVKON_NOTE
+                {
+                layout = EWaitLayout;
+                animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+    
+RESOURCE DIALOG r_chat_wait_note_template_with_cancel
+    {
+    flags = EAknWaitNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = ESearchWaitNote;
+            control = AVKON_NOTE
+                {
+                layout = EWaitLayout;
+                animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }    
+
+RESOURCE TBUF r_qtn_chat_fetching_lists_ongoing { buf = qtn_chat_fetching_lists_ongoing; }
+
+RESOURCE TBUF r_qtn_chat_contactlist_invitation { buf = qtn_chat_contactlist_invitation;}
+// Close connection Confirmation  on Exit
+RESOURCE TBUF r_qtn_dyc_query_exit_conn_close  { buf = qtn_dyc_query_exit_conn_close; }
+RESOURCE TBUF r_qtn_chat_close_conn_app_conv  { buf = qtn_chat_close_conn_app_conv; }
+//blocking
+RESOURCE TBUF r_chat_block_fetching { buf = qtn_chat_opening_blocked_list; }
+RESOURCE TBUF r_chat_block_adding { buf = qtn_chat_blocking; }
+RESOURCE TBUF r_chat_block_removing { buf = qtn_chat_unblocking; }
+RESOURCE TBUF r_chat_unblocking_query { buf = qtn_chat_unblocking_query; }
+
+// VIEWS' TITLES
+RESOURCE TBUF r_chatclient_main_view_title { buf=qtn_chat_applicationname; }
+RESOURCE TBUF r_chatclient_chatlist_view_title { buf=qtn_chat_clist_title; }
+RESOURCE TBUF r_chatclient_friendslist_view_title { buf=qtn_chat_friends_title; }
+RESOURCE TBUF r_chatclient_recordedchatlist_view_title { buf = qtn_chat_records_title; }
+RESOURCE TBUF r_chatclient_aclist_title { buf = qtn_chat_aclist_title; }
+RESOURCE TBUF r_chatclient_editright_title { buf = qtn_chat_group_admin_title; }
+RESOURCE TBUF r_chatclient_banlist_title { buf = qtn_chat_group_banned_title; }
+
+RESOURCE TBUF r_chatclient_search_results_title { buf = qtn_chat_search_results_title; }
+RESOURCE TBUF r_chatclient_search_navi { buf = qtn_chat_search_navi; }
+
+// Invite
+RESOURCE TBUF r_chat_ibox_friends_offline { buf = qtn_chat_ibox_friends_offline; }
+
+//Not supported function info note
+RESOURCE DIALOG r_chat_error_not_sup_functions
+    {
+    flags = EAknInformationNoteFlags | EEikDialogFlagWait;
+    buttons=R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralNote;
+            control= AVKON_NOTE
+                {
+                    layout = EGeneralLayout;
+                    singular_label = qtn_chat_error_not_sup_functions;
+                    animation = R_QGN_NOTE_INFO_ANIM;
+                };
+            }
+        };
+    }
+
+
+//----------------------------------------------------
+//
+// invitation dlg menu definition
+//
+//----------------------------------------------------
+RESOURCE MENU_BAR r_chatclient_menubar_invitation_view_dlg
+{
+    titles=
+    {
+        MENU_TITLE { menu_pane = r_chatclient_general_menu; },
+        MENU_TITLE { menu_pane = r_chatclient_invitations_view_options_menu; }
+    };
+}
+
+RESOURCE MENU_PANE r_chatclient_invitations_view_options_menu
+{
+    items=
+    {
+        MENU_ITEM { command = EChatInvitationDlgCmdJoin;
+                    txt = qtn_chat_invit_accept_join;
+                   },
+        MENU_ITEM { command = EChatInvitationDlgCmdReject;
+                    txt = qtn_chat_invite_reject;
+                  },
+        MENU_ITEM { command = EChatInvitationDlgCmdDelete;
+                    txt = qtn_chat_conv_list_delete;
+                  },
+        MENU_ITEM { command = EChatInvitationDlgCmdBlock;
+                    cascade = r_chatclient_friendslist_submenu;
+                    txt = qtn_chat_friend_om_imsg_set;
+                  }
+    };
+}
+
+RESOURCE TBUF r_qtn_chat_invitation_title { buf = qtn_chat_invitation_title; }
+RESOURCE TBUF r_qtn_chat_inv_from { buf = qtn_chat_inv_from; }
+RESOURCE TBUF r_qtn_chat_inv_togroup { buf = qtn_chat_inv_togroup; }
+RESOURCE TBUF r_qtn_chat_inv_date { buf = qtn_chat_inv_date; }
+RESOURCE TBUF r_qtn_chat_invite_date_time { buf = qtn_chat_invite_date_time; }
+RESOURCE TBUF r_qtn_chat_inv_message { buf = qtn_chat_inv_message; }
+
+RESOURCE TBUF r_qtn_chat_invit_reject_reason { buf = qtn_chat_invit_reject_reason; }
+RESOURCE DIALOG r_chatclient_reject_reason_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                    layout = EDataLayout;
+                    label = qtn_chat_invit_reject_reason;
+                    control=EDWIN
+                        {
+                        flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                        maxlength=50;
+                        width=16;
+                        lines=1;
+                        default_case = EAknEditorLowerCase;
+                        };
+                };
+            }
+        };
+    }
+
+RESOURCE TBUF r_qtn_chat_invite_response { buf = qtn_chat_invite_response; }
+RESOURCE TBUF r_qtn_chat_invite_accept { buf = qtn_chat_invite_accept; }
+RESOURCE TBUF r_qtn_chat_invite_rejected { buf = qtn_chat_invite_rejected; }
+RESOURCE TBUF r_qtn_chat_invite_group { buf = qtn_chat_invite_group; }
+RESOURCE TBUF r_qtn_chat_invite_message { buf = qtn_chat_invite_message; }
+RESOURCE TBUF r_qtn_chat_invite_remove_banned { buf = qtn_chat_invite_remove_banned; }
+
+//removed
+//RESOURCE TBUF r_qtn_chat_invite_remove_bann_unable { buf = qtn_chat_invite_remove_bann_unable; }
+
+RESOURCE TBUF r_qtn_chat_disconnect_note { buf = qtn_chat_disconnect_note; }
+
+RESOURCE TBUF r_qtn_chat_server_full { buf = qtn_chat_server_full; }
+
+RESOURCE DIALOG r_chatclient_invite_response_dialog
+    {
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+                {
+                label = qtn_chat_invite_response;
+                headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+                {
+                message = "";
+                };
+            }
+        };
+    }
+
+
+// open conversation resources
+
+RESOURCE CBA r_chat_softkeys_select_empty
+    {
+    buttons =
+            {
+            CBA_BUTTON { id = EAknSoftkeySelect; txt = text_softkey_select; },
+            CBA_BUTTON { txt = text_softkey_empty; }
+            };
+    }
+
+// alias stuff
+
+// "you need to define alias for yourself" conf. note
+RESOURCE DIALOG r_qtn_chat_no_alias_def
+    {
+    flags=EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                    layout = EConfirmationQueryLayout;
+                    label=qtn_chat_no_alias_def;
+                    animation = R_QGN_NOTE_INFO_ANIM;
+                };
+            }
+        };
+    }
+
+RESOURCE TBUF r_qtn_chat_alias_prompt { buf = qtn_chat_alias_prompt; }
+RESOURCE DIALOG r_chatclient_login_alias_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            //itemflags=EEikDlgItemTakesEnterKey;
+            control= AVKON_DATA_QUERY
+                {
+                    layout = EDataLayout;
+                    label = qtn_chat_alias_prompt;
+                    control=EDWIN
+                        {
+                        flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                        maxlength=50;
+                        width=16;
+                        lines=1;
+                        default_case = EAknEditorLowerCase;
+                        };
+                };
+            }
+        };
+    }
+
+RESOURCE TBUF r_qtn_chat_saving_alias { buf = qtn_chat_saving_alias; }
+RESOURCE TBUF r_qtn_chat_unable_modify_alias { buf = qtn_chat_unable_modify_alias; }
+
+// "alias name is too long" conf. note
+RESOURCE TBUF r_qtn_chat_too_long_alias_text { buf = qtn_chat_too_long_alias_error; }
+
+// 107-4713 Simplified UI - UI Empty Lists
+RESOURCE TBUF r_qtn_chat_empty_access_list_primary { buf = qtn_chat_empty_access_list_primary; }
+RESOURCE TBUF r_qtn_chat_empty_banned_list_primary { buf = qtn_chat_empty_banned_list_primary; }
+
+
+// ChatNG
+
+RESOURCE TBUF r_qtn_chat_empty_access_list { buf = qtn_chat_empty_access_list; }
+RESOURCE TBUF r_qtn_chat_empty_banned_list { buf = qtn_chat_empty_banned_list; }
+
+
+// multimedia content
+RESOURCE TBUF r_qtn_chat_send_file_to { buf = qtn_chat_send_file_to; }
+RESOURCE TBUF r_qtn_chat_send_file_to_all { buf = qtn_chat_send_file_to_all; }
+
+// submenu for send image
+RESOURCE MENU_PANE r_chatclient_send_image_submenu
+    {
+    items=
+        {
+        MENU_ITEM { command = EChatClientFromPhotos;
+                    txt = qtn_chat_insert_image_pic;
+                  },
+        MENU_ITEM { command = EChatClientNewImage;
+                    txt = qtn_chat_insert_image_new;
+                  }
+        };
+    }
+
+RESOURCE DIALOG r_chatclient_welcome_note_dialog
+    {
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow | EEikDialogFlagNoTitleBar;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+                {
+                label = "";
+                headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+                {
+                message = "";
+                };
+            }
+        };
+    }
+
+
+RESOURCE DIALOG r_chatclient_message_query_dialog
+    {
+    flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow | EEikDialogFlagNoTitleBar;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtPopupHeadingPane;
+            id = EAknMessageQueryHeaderId;
+            control = AVKON_HEADING
+                {
+                label = "";
+                headinglayout = R_AVKON_WML_SIGN_QUERY_HEADING_PANE;
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtMessageQuery;
+            id = EAknMessageQueryContentId;
+            control = AVKON_MESSAGE_QUERY
+                {
+                message = "";
+                };
+            }
+        };
+    }
+
+
+
+RESOURCE TBUF r_chat_welcome_note { buf = qtn_chat_welcome_note; }
+
+RESOURCE TBUF r_chat_welcome_note_heading { buf = qtn_chat_welcome_note_heading; }
+
+// Multiselection dialog
+RESOURCE TBUF r_qtn_chat_multiselection_amount { buf = qtn_chat_multiselection_amount; }
+
+RESOURCE TBUF r_qtn_chat_contacts_open_group_prompt { buf = qtn_chat_contacts_open_group_prompt; }
+// Unknown contact adding.
+RESOURCE TBUF r_qtn_chat_friend_add_unknown { buf = qtn_chat_friend_add_unknown; } 
+
+// for info note
+RESOURCE TBUF r_qtn_chat_maximum_message_length { buf = qtn_chat_maximum_message_length; }
+
+// for info note
+RESOURCE TBUF r_qtn_chat_no_contacts_available { buf = qtn_chat_no_contacts_available; }
+
+//for conversation preview pane
+RESOURCE TBUF r_qtn_chat_message_preview { buf = qtn_chat_message_preview; }
+// Generic error note with OK
+RESOURCE DIALOG r_generic_ok_error_note
+	{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+		{
+		DLG_LINE
+			{
+			type = EAknCtQuery;
+			id = EGeneralQuery;
+			control = AVKON_CONFIRMATION_QUERY 
+				{ 
+					layout = EConfirmationQueryLayout;
+                    animation = R_QGN_NOTE_ERROR_ANIM;
+				};
+			}
+		};
+	}
+
+RESOURCE DIALOG r_chat_confok_template
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationQueryLayout;
+                animation = R_QGN_NOTE_OK_ANIM;
+                };
+            }
+        };
+    }
+
+//RESOURCE DIALOG r_chat_conerror_note
+//    {
+//    flags = EGeneralQueryFlags;
+//    buttons=R_AVKON_SOFTKEYS_OK_EMPTY;
+//    items=
+//        {
+//        DLG_LINE
+//            {
+//            type = EAknCtQuery;
+//            id = EGeneralQuery;
+//            control= AVKON_CONFIRMATION_QUERY
+//                {
+//                    layout = EConfirmationQueryLayout;
+//                    label=qtn_chat_login_conerror_note;
+//                    animation = R_QGN_NOTE_ERROR_ANIM;
+//                };
+//            }
+//        };
+//    }
+
+RESOURCE DIALOG r_chat_mem_low_note
+    {
+    flags = EAknInformationNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralNote;
+            control = AVKON_NOTE
+                {
+                layout = EGeneralLayout;
+                singular_label = qtn_chat_memory_low_warning;
+                animation = R_QGN_NOTE_INFO_ANIM;
+                };
+            }
+        };
+    }
+
+// CBA resources
+
+//----------------------------------------------------
+//
+//    r_chat_softkeys_options_exit__open
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_exit__open
+    {
+    flags = 0;
+    buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyExit; txt = text_softkey_exit; },
+        CBA_BUTTON { id = EAknSoftkeyOpen; txt = qtn_msk_open; }
+        };   
+    }
+
+//----------------------------------------------------
+//
+//    r_chat_softkeys_options_back__open
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_back__open
+    {
+    flags = 0;
+    buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeyOpen; txt = qtn_msk_open; }
+        };   
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_back__send
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_back__send
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeySend; txt = qtn_msk_send; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_continue__open
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_continue__open
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EChatClientChatViewContinue; txt = qtn_chat_sk_continue; },
+        CBA_BUTTON { id = EAknSoftkeyOpen; txt = qtn_msk_open; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_continue__contextoptions
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_continue__contextoptions
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EChatClientChatViewContinue; txt = qtn_chat_sk_continue; },
+        CBA_BUTTON { id = EAknSoftkeyContextOptions; txt = text_softkey_option; }
+        };
+    }
+
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_continue
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_continue__empty
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EChatClientChatViewContinue; txt = qtn_chat_sk_continue; },
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_exit__changestatus
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_exit__changestatus
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyExit; txt = text_softkey_exit; },
+        CBA_BUTTON { id = EChatClientMainViewCmdChangeStatus; txt = qtn_msk_change_status; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_collapse_openinvitation
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_collapse__openinvitation
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_chat_softkey_collapse; },
+        CBA_BUTTON { id = EChatPrivateListCmdOpen; txt = qtn_chat_om_conv_open; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_back__collapse
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_exit__collapse
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyExit; txt = text_softkey_exit; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_msk_collapse; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_exit__expand
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_exit__expand
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyExit; txt = text_softkey_exit; },
+        CBA_BUTTON { id = EChatClientCmdExpandList; txt = qtn_msk_expand; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_collapse__chat
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_collapse__chat
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_chat_softkey_collapse; },
+        CBA_BUTTON { id = EChatClientFriendsListViewCmdChat; txt = qtn_msk_chat; }
+        };
+    }
+//
+//		r_chat_softkeys_options_collapse__Open
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_collapse__open
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_chat_softkey_collapse; },
+        CBA_BUTTON { id = EChatPrivateListCmdOpen; txt = qtn_msk_open; }
+        };
+    }
+
+
+//----------------------------------------------------------
+//
+//r_chat_softkeys_options_collapse__OpenGroup
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_collapse__OpenGroup
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_chat_softkey_collapse; },
+        CBA_BUTTON { id = EChatClientSingleListViewCmdGroupOpen; txt = qtn_msk_open; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//r_chat_softkeys_options_collapse__JoinGroup
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_collapse__JoinGroup
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_chat_softkey_collapse; },
+        CBA_BUTTON { id = EChatClientSingleListViewCmdGroupJoin; txt = qtn_msk_join; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_exit__fetch
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_exit__fetch
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyExit; txt = text_softkey_exit; },
+        CBA_BUTTON { id = EChatClientFriendsListViewCmdFetchFailed; txt = qtn_msk_fetch_im; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_ok_cancel__expand
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_ok_cancel__expand
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EChatClientCmdExpandList; txt = qtn_msk_expand; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_ok_cancel__collapse
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_ok_cancel__collapse
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_msk_collapse; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_ok_collapse__mark
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_ok_collapse__mark
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_msk_collapse; },
+        CBA_BUTTON { id = EAknSoftkeyMark; txt = qtn_msk_mark; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_ok_collapse__unmark
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_ok_collapse__unmark
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_msk_collapse; },
+        CBA_BUTTON { id = EAknSoftkeyUnmark; txt = qtn_msk_unmark; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_empty_cancel__expand
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_empty_cancel__expand
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EChatClientCmdExpandList; txt = qtn_msk_expand; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_empty_cancel__collapse
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_empty_cancel__collapse
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_msk_collapse; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_empty_collapse__unmark
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_empty_collapse__unmark
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_msk_collapse; },
+        CBA_BUTTON { id = EAknSoftkeyUnmark; txt = qtn_msk_unmark; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_empty_collapse__unmark
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_empty_collapse__mark
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_msk_collapse; },
+        CBA_BUTTON { id = EAknSoftkeyMark; txt = qtn_msk_mark; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_select_collapse__select
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_select_collapse__select
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeySelect; txt = text_softkey_select; },
+        CBA_BUTTON { id = EChatClientCmdCollapseList; txt = qtn_msk_collapse; },
+        CBA_BUTTON { id = EAknSoftkeySelect; txt = qtn_msk_select; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_back__contextoptions
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_back__contextoptions
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeyContextOptions; txt = text_softkey_option; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_back__join
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_back__join
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EChatClientChatListViewCmdJoin; txt = qtn_msk_join; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_back__change
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_back__change
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeyEdit; txt = qtn_msk_change; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_done__change
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_done__change
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyDone; txt = text_softkey_done; },
+        CBA_BUTTON { id = EAknSoftkeyEdit; txt = qtn_msk_change; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_exit__empty
+//
+//----------------------------------------------------------
+//
+
+RESOURCE CBA r_chat_softkeys_options_exit__empty
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyExit; txt = text_softkey_exit; },
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; }
+        };
+    }
+    
+    
+RESOURCE CBA r_chat_softkeys_options_back__empty
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyBack; txt = text_softkey_back; },
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_ok_cancel__empty
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_ok_cancel__empty
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; }
+        };
+    } 
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_empty_cancel__empty
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_empty_cancel__empty
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; }
+        };
+    }   
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_done_cancel__empty
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_done_cancel__empty
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyDone; txt = text_softkey_done; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_options_done__empty
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_options_done__empty
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOptions; txt = text_softkey_option; },
+        CBA_BUTTON { id = EAknSoftkeyDone; txt = text_softkey_done; },
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; }
+        };
+    }
+
+//----------------------------------------------------------
+//
+//		r_chat_softkeys_ok_details__ok
+//
+//----------------------------------------------------------
+//
+RESOURCE CBA r_chat_softkeys_ok_details__ok
+	{
+    flags = 0;
+	buttons = 
+        {
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; },
+        CBA_BUTTON { id = EAknSoftkeyDetails; txt = text_softkey_details; },
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; }
+        };
+    }
+
+//Resource for Chatng Conversation Log dialog    
+RESOURCE TBUF RSC_CHATNG_LOGDIALOG_PROMPT         { buf = qtn_chat_save_enter_name;  }
+
+RESOURCE DIALOG r_chatclient_log_name_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            //itemflags=EEikDlgItemTakesEnterKey;
+            control= AVKON_DATA_QUERY
+                {
+                    layout = EDataLayout;
+                    label = qtn_chat_save_enter_name;
+                    control=EDWIN
+                        {
+                        flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                        maxlength=30;
+                        width=16;
+                        lines=1;
+                        };
+                };
+            }
+        };
+    }
+    
+
+RESOURCE TBUF r_qtn_chat_saving_saved { buf = qtn_chat_saving_saved; }   
+
+// Starting recording disclaimer strings
+RESOURCE TBUF r_chat_record_warning { buf = qtn_chat_record_warning; }
+RESOURCE TBUF r_chat_record_warning_heading { buf = qtn_chat_record_warning_heading; }
+
+// Save password disclaimer strings
+RESOURCE TBUF r_chat_save_pw_warning { buf = qtn_chat_save_pw_warning; }
+RESOURCE TBUF r_chat_save_pw_warning_heading { buf = qtn_chat_save_pw_warning_heading; }
+//MultiDrive Mem Low Note
+RESOURCE TBUF r_chat_memlo_not_enough_memory { buf = qtn_memlo_not_enough_memory; }
+RESOURCE TBUF r_chat_memlo_mmc_not_enough_memory { buf = qtn_memlo_mmc_not_enough_memory; }
+     
+/*----------------------------------------------------
+//
+//    r_chatclient_textedit_menu
+//    Items for TextEdit menu
+//	  Added newly for the support of WritingLanguage & EditText Options
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_chatclient_textedit_menu
+{
+    items=
+    {
+        MENU_ITEM 
+        	{ 
+        	command = EChatClientEditText; 
+			txt = qtn_options_edit_text; 				  
+			cascade = R_AKNFEP_EDIT_SUBMENU;
+        	},				
+
+        MENU_ITEM 
+            { 
+            command = EAknCmdInputLanguage; 
+            txt = text_pup_option_input_language; 
+            }
+
+    };
+}*/
+
+// --------------------------------------------------------- 
+//   r_aiwselect_interest
+//   AIW menu for select server
+// ---------------------------------------------------------
+//
+RESOURCE AIW_INTEREST r_aiwselect_interest
+    {
+    items =
+        {
+        AIW_CRITERIA_ITEM 
+            {
+            id = EChatClientFriendsListViewCmdAddFromPb;
+            serviceCmd = KAiwCmdSelect;
+            contentType = EGenericParamContactLinkArrayStr;
+            // Here is a base class
+            serviceClass = KAiwClassBase;
+            }
+        };
+    }
+                           
+
+// Additional resource definitions
+#include "CAContactEditorNG.rss"
+#include "CAFriendsListNG.rss"
+#include "CAMainViewNG.rss"
+#include "CASettingsNG.rss"
+#include "CAChatViewNG.rss"
+#include "CAChatListViewNG.rss"
+#include "CAIBoxViewNG.rss"
+#include "CASearchViewNG.rss"
+#include "CAPrivateChatListNG.rss"
+#include "CAErrorNotesNG.rss"
+#include "CARecordedChatsListViewNG.rss"
+#include "CARecordedChatsViewNG.rss"
+#include "IMSmileUtilityNG.rss"
+#include "CARefreshViewNG.rss"
+#include "CAUISessionManagerNG.rss"
+#include "CAReactiveAuthorizationNG.rss"
+#include "CABlockingNG.rss"
+#include "cainvitationview.rss"
+#include "IMToneNG.rss"
+#include "IMColorsNG.rss"
+#include "IMOrangeTemplates.rss"
+
+// End of File

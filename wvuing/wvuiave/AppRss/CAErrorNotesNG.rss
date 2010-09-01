@@ -1,0 +1,39 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource file of error notes
+*
+*/
+
+
+RESOURCE TBUF r_chat_error_service_err 	            { buf = qtn_chat_error_service_err; }
+RESOURCE TBUF r_chat_login_passer_note 	            { buf = qtn_chat_login_passer_note; }
+RESOURCE TBUF r_chat_invite_send_error 	            { buf = qtn_chat_invite_send_error; }
+RESOURCE TBUF r_chat_error_not_reach   	            { buf = qtn_chat_error_not_reach; }
+RESOURCE TBUF r_chat_error_serv_busy   	            { buf = qtn_chat_error_serv_busy; }
+RESOURCE TBUF r_chat_error_gen_error   	            { buf = qtn_chat_error_gen_error; }
+RESOURCE TBUF r_chat_error_wrong_wvid               { buf = qtn_chat_error_wrong_wvid; }
+RESOURCE TBUF r_chat_error_search_fail              { buf = qtn_chat_error_search_fail; }
+RESOURCE TBUF r_chat_inote_too_many_hits            { buf = qtn_chat_inote_too_many_hits; }
+RESOURCE TBUF r_chat_error_no_group   	            { buf = qtn_chat_error_no_group; }
+RESOURCE TBUF r_chat_inote_kicked                   { buf = qtn_chat_inote_kicked; }
+RESOURCE TBUF r_chat_join_same_n                    { buf = qtn_chat_join_same_n; }
+RESOURCE TBUF r_chat_inote_group_full               { buf = qtn_chat_inote_group_full; }
+RESOURCE TBUF r_chat_join_note_error                { buf = qtn_chat_join_note_error; }
+RESOURCE TBUF r_chat_inote_chat_full                { buf = qtn_chat_inote_chat_full; }
+RESOURCE TBUF r_chat_servercont_ids_exist_server    { buf = qtn_chat_servercont_ids_exist_server; }
+RESOURCE TBUF r_chat_recipient_blocked_messages     { buf = qtn_chat_recipient_blocked_messages; }
+RESOURCE TBUF r_chat_inote_name_notfound            { buf = qtn_chat_note_name_notfound; }
+RESOURCE TBUF r_chat_inote_cnotfound                { buf = qtn_chat_info_cnotfound; }
+RESOURCE TBUF r_chat_saved_not_available            { buf = qtn_chat_saved_not_available; }
+// End of File

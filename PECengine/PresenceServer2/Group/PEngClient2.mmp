@@ -1,0 +1,61 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Presence Client of the Presence Server
+*
+*/
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+#include "../../Group/PEngUIDs2.h"
+
+// DLL client
+TARGET          PEngClient2.dll
+TARGETTYPE      DLL
+UID             KStaticInterfaceDllUid2 KPEngTransactionClient2Uid3
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_CLIENT_DLL
+
+
+// source files of the client
+SOURCEPATH      ../ClientSrc
+SOURCE          RPEngManagerClient.cpp
+SOURCE          RPEngSessionHolder.cpp
+SOURCE          RPEngTransferClient.cpp
+
+
+
+// Presence Engine includes
+USERINCLUDE         ../ClientInc
+USERINCLUDE         ../ServerInc
+USERINCLUDE         ../../CoreUtilsLib2/Inc
+USERINCLUDE         ../../CoreUtilsLib2/SrvInc
+USERINCLUDE         ../../IncApi
+USERINCLUDE     ../../IncPresenceModel
+USERINCLUDE         ../../Group
+
+
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+//Relative system include for groupcommunications/inc
+SYSTEMINCLUDE       ../../../inc
+
+
+
+// Symbian dependences
+LIBRARY         euser.lib       // User classes
+
+// Presence Engine dependences
+LIBRARY         PEngCoreUtilsLib2.lib   // General PEC Engine utils

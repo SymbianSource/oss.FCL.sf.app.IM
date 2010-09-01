@@ -1,0 +1,54 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  resource.
+*
+*/
+
+#include "orange_im.loc"
+
+// Note for WAP registration dilaog
+RESOURCE TBUF r_qtn_note_wap_orange           		{ buf = qtn_note_wap_orange; }
+
+// Left softkey for WAP registration dialog
+RESOURCE TBUF r_qtn_lsk_wap_reg_orange        		{ buf = qtn_lsk_wap_reg_orange; }
+
+// Right softkey for WAP registration dialog
+RESOURCE TBUF r_qtn_rsk_wap_ignore_orange     		{ buf = qtn_rsk_wap_ignore_orange; }
+
+// Title for WAP registration dialog
+RESOURCE TBUF r_qtn_note_title_wap_orange		    { buf = qtn_note_title_wap_orange; }
+
+// Right softkey Terms and conditions dialog
+RESOURCE TBUF r_qtn_im_refuse_rsk_register		    { buf = qtn_im_refuse_rsk_register; }
+
+// Left softkey for Terms and conditions dialog
+RESOURCE TBUF r_qtn_im_agree_lsk_register		    { buf = qtn_im_agree_lsk_register; }
+
+// Left softkey for Terms and conditions dialog
+RESOURCE TBUF r_qtn_note_terms_wap_orange		    { buf = qtn_note_terms_wap_orange; }
+
+// Note for Terms and conditions dialog
+RESOURCE TBUF r_qtn_note_title_terms_wap_orange	    { buf = qtn_note_title_terms_wap_orange; }
+
+// Sign-on in Options menu on Login page
+RESOURCE TBUF r_qtn_im_register_sign_option		    { buf = qtn_im_register_sign_option; }
+
+// register in Options menu on Login page
+RESOURCE TBUF r_qtn_im_register_login_option	    { buf = qtn_im_register_login_option; }
+
+// Note to be shown when  is detected
+RESOURCE TBUF r_qtn_note_roaming_orange       		{ buf = qtn_note_roaming_orange; }
+
+// Title for  query dialog
+RESOURCE TBUF r_qtn_note_title_roaming_orange	    { buf = qtn_note_title_roaming_orange; }

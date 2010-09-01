@@ -1,0 +1,73 @@
+EXPORTS
+	??0CImpsCommonGroupProps@@IAE@XZ @ 1 NONAME ; CImpsCommonGroupProps::CImpsCommonGroupProps(void)
+	??0CImpsDetailed@@QAE@H@Z @ 2 NONAME ; CImpsDetailed::CImpsDetailed(int)
+	??0CImpsGroupProps@@IAE@XZ @ 3 NONAME ; CImpsGroupProps::CImpsGroupProps(void)
+	??0CImpsPrivateGroupProps@@IAE@XZ @ 4 NONAME ; CImpsPrivateGroupProps::CImpsPrivateGroupProps(void)
+	??0TImpsCspIdentifier@@QAE@ABVTDesC16@@0@Z @ 5 NONAME ; TImpsCspIdentifier::TImpsCspIdentifier(class TDesC16 const &, class TDesC16 const &)
+	??0TImpsCspIdentifier@@QAE@XZ @ 6 NONAME ; TImpsCspIdentifier::TImpsCspIdentifier(void)
+	??0TImpsServices@@QAE@XZ @ 7 NONAME ; TImpsServices::TImpsServices(void)
+	??1CImpsCommonGroupProps@@UAE@XZ @ 8 NONAME ; CImpsCommonGroupProps::~CImpsCommonGroupProps(void)
+	??1CImpsDetailed@@UAE@XZ @ 9 NONAME ; CImpsDetailed::~CImpsDetailed(void)
+	??1CImpsDetailedResult@@UAE@XZ @ 10 NONAME ; CImpsDetailedResult::~CImpsDetailedResult(void)
+	??1CImpsGroupProps@@UAE@XZ @ 11 NONAME ; CImpsGroupProps::~CImpsGroupProps(void)
+	??1CImpsPrivateGroupProps@@UAE@XZ @ 12 NONAME ; CImpsPrivateGroupProps::~CImpsPrivateGroupProps(void)
+	?AddL@CImpsGroupProps@@QAEXABVCImpsGroupProp@@@Z @ 13 NONAME ; void CImpsGroupProps::AddL(class CImpsGroupProp const &)
+	?Code@CImpsDetailedResult@@QBEHXZ @ 14 NONAME ; int CImpsDetailedResult::Code(void) const
+	?Copy@TImpsFeature@@QAEXAAV1@@Z @ 15 NONAME ; void TImpsFeature::Copy(class TImpsFeature &)
+	?Copy@TImpsServices@@QAEXAAV1@@Z @ 16 NONAME ; void TImpsServices::Copy(class TImpsServices &)
+	?Count@CImpsGroupProps@@QAEHXZ @ 17 NONAME ; int CImpsGroupProps::Count(void)
+	?Descriptor@CImpsDetailedResult@@QBE?AVTPtrC16@@XZ @ 18 NONAME ; class TPtrC16 CImpsDetailedResult::Descriptor(void) const
+	?Feature@TImpsServices@@QAEPAVTImpsFeature@@W4TImpsFeatures@@@Z @ 19 NONAME ; class TImpsFeature * TImpsServices::Feature(enum TImpsFeatures)
+	?FirstL@CImpsGroupProps@@QAEABVCImpsGroupProp@@XZ @ 20 NONAME ; class CImpsGroupProp const & CImpsGroupProps::FirstL(void)
+	?GroupIds@CImpsDetailedResult@@QAEPAVCPtrC16Array@@XZ @ 21 NONAME ; class CPtrC16Array * CImpsDetailedResult::GroupIds(void)
+	?GroupIds@CImpsDetailedResult@@QBEPBVCPtrC16Array@@XZ @ 22 NONAME ; class CPtrC16Array const * CImpsDetailedResult::GroupIds(void) const
+	?GroupName@CImpsCommonGroupProps@@QBE?AVTPtrC16@@XZ @ 23 NONAME ; class TPtrC16 CImpsCommonGroupProps::GroupName(void) const
+	?IsMember@CImpsPrivateGroupProps@@QBE?AW4TImpsPropertyBool@@XZ @ 24 NONAME ; enum TImpsPropertyBool CImpsPrivateGroupProps::IsMember(void) const
+	?IsOpen@CImpsCommonGroupProps@@QBE?AW4TImpsPropertyBool@@XZ @ 25 NONAME ; enum TImpsPropertyBool CImpsCommonGroupProps::IsOpen(void) const
+	?IsPrivateAllowed@CImpsCommonGroupProps@@QBE?AW4TImpsPropertyBool@@XZ @ 26 NONAME ; enum TImpsPropertyBool CImpsCommonGroupProps::IsPrivateAllowed(void) const
+	?IsPrivateAllowed@CImpsPrivateGroupProps@@QBE?AW4TImpsPropertyBool@@XZ @ 27 NONAME ; enum TImpsPropertyBool CImpsPrivateGroupProps::IsPrivateAllowed(void) const
+	?IsPublic@CImpsCommonGroupProps@@QBE?AW4TImpsPropertyBool@@XZ @ 28 NONAME ; enum TImpsPropertyBool CImpsCommonGroupProps::IsPublic(void) const
+	?IsSearchable@CImpsCommonGroupProps@@QBE?AW4TImpsPropertyBool@@XZ @ 29 NONAME ; enum TImpsPropertyBool CImpsCommonGroupProps::IsSearchable(void) const
+	?Key@CImpsGroupProp@@QBE?AVTPtrC16@@XZ @ 30 NONAME ; class TPtrC16 CImpsGroupProp::Key(void) const
+	?MaxNbrOfUsers@CImpsCommonGroupProps@@QBEHXZ @ 31 NONAME ; int CImpsCommonGroupProps::MaxNbrOfUsers(void) const
+	?MessageIds@CImpsDetailedResult@@QAEPAVCPtrC16Array@@XZ @ 32 NONAME ; class CPtrC16Array * CImpsDetailedResult::MessageIds(void)
+	?MessageIds@CImpsDetailedResult@@QBEPBVCPtrC16Array@@XZ @ 33 NONAME ; class CPtrC16Array const * CImpsDetailedResult::MessageIds(void) const
+	?NbrOfUsers@CImpsCommonGroupProps@@QBEHXZ @ 34 NONAME ; int CImpsCommonGroupProps::NbrOfUsers(void) const
+	?NewL@CImpsCommonGroupProps@@SAPAV1@XZ @ 35 NONAME ; class CImpsCommonGroupProps * CImpsCommonGroupProps::NewL(void)
+	?NewL@CImpsDetailedResult@@SAPAV1@XZ @ 36 NONAME ; class CImpsDetailedResult * CImpsDetailedResult::NewL(void)
+	?NewL@CImpsGroupProp@@SAPAV1@ABVTDesC16@@0@Z @ 37 NONAME ; class CImpsGroupProp * CImpsGroupProp::NewL(class TDesC16 const &, class TDesC16 const &)
+	?NewL@CImpsPrivateGroupProps@@SAPAV1@XZ @ 38 NONAME ; class CImpsPrivateGroupProps * CImpsPrivateGroupProps::NewL(void)
+	?NewL@CImpsSearchRequest@@SAPAV1@XZ @ 39 NONAME ; class CImpsSearchRequest * CImpsSearchRequest::NewL(void)
+	?NextL@CImpsGroupProps@@QAEABVCImpsGroupProp@@XZ @ 40 NONAME ; class CImpsGroupProp const & CImpsGroupProps::NextL(void)
+	?Privileges@CImpsPrivateGroupProps@@QBE?AW4TImpsGroupUsers@@XZ @ 41 NONAME ; enum TImpsGroupUsers CImpsPrivateGroupProps::Privileges(void) const
+	?Reset@CImpsCommonGroupProps@@UAEXXZ @ 42 NONAME ; void CImpsCommonGroupProps::Reset(void)
+	?Reset@CImpsDetailedResult@@QAEXXZ @ 43 NONAME ; void CImpsDetailedResult::Reset(void)
+	?Reset@CImpsGroupProps@@UAEXXZ @ 44 NONAME ; void CImpsGroupProps::Reset(void)
+	?Reset@CImpsPrivateGroupProps@@UAEXXZ @ 45 NONAME ; void CImpsPrivateGroupProps::Reset(void)
+	?Reset@TImpsFeature@@QAEXH@Z @ 46 NONAME ; void TImpsFeature::Reset(int)
+	?Reset@TImpsServices@@QAEXH@Z @ 47 NONAME ; void TImpsServices::Reset(int)
+	?SNameGroups@CImpsDetailedResult@@QAEPAVCPtrC16Array@@XZ @ 48 NONAME ; class CPtrC16Array * CImpsDetailedResult::SNameGroups(void)
+	?SNameGroups@CImpsDetailedResult@@QBEPBVCPtrC16Array@@XZ @ 49 NONAME ; class CPtrC16Array const * CImpsDetailedResult::SNameGroups(void) const
+	?SNames@CImpsDetailedResult@@QAEPAVCPtrC16Array@@XZ @ 50 NONAME ; class CPtrC16Array * CImpsDetailedResult::SNames(void)
+	?SNames@CImpsDetailedResult@@QBEPBVCPtrC16Array@@XZ @ 51 NONAME ; class CPtrC16Array const * CImpsDetailedResult::SNames(void) const
+	?SetCode@CImpsDetailedResult@@QAEXH@Z @ 52 NONAME ; void CImpsDetailedResult::SetCode(int)
+	?SetDescriptorL@CImpsDetailedResult@@QAEXAAVTDesC16@@@Z @ 53 NONAME ; void CImpsDetailedResult::SetDescriptorL(class TDesC16 &)
+	?SetGroupNameL@CImpsCommonGroupProps@@QAEXABVTDesC16@@@Z @ 54 NONAME ; void CImpsCommonGroupProps::SetGroupNameL(class TDesC16 const &)
+	?SetMaxNbrOfUsers@CImpsCommonGroupProps@@QAEXH@Z @ 55 NONAME ; void CImpsCommonGroupProps::SetMaxNbrOfUsers(int)
+	?SetOpen@CImpsCommonGroupProps@@QAEXW4TImpsPropertyBool@@@Z @ 56 NONAME ; void CImpsCommonGroupProps::SetOpen(enum TImpsPropertyBool)
+	?SetPrivateAllowed@CImpsCommonGroupProps@@QAEXW4TImpsPropertyBool@@@Z @ 57 NONAME ; void CImpsCommonGroupProps::SetPrivateAllowed(enum TImpsPropertyBool)
+	?SetPrivateAllowed@CImpsPrivateGroupProps@@QAEXW4TImpsPropertyBool@@@Z @ 58 NONAME ; void CImpsPrivateGroupProps::SetPrivateAllowed(enum TImpsPropertyBool)
+	?SetRequestL@CImpsSearchRequest@@QAEXW4TImpsSearchElement@@ABVTDesC16@@@Z @ 59 NONAME ; void CImpsSearchRequest::SetRequestL(enum TImpsSearchElement, class TDesC16 const &)
+	?SetSearchable@CImpsCommonGroupProps@@QAEXW4TImpsPropertyBool@@@Z @ 60 NONAME ; void CImpsCommonGroupProps::SetSearchable(enum TImpsPropertyBool)
+	?SetTopicL@CImpsCommonGroupProps@@QAEXABVTDesC16@@@Z @ 61 NONAME ; void CImpsCommonGroupProps::SetTopicL(class TDesC16 const &)
+	?SetWelcomeL@CImpsCommonGroupProps@@QAEXABVTDesC16@@@Z @ 62 NONAME ; void CImpsCommonGroupProps::SetWelcomeL(class TDesC16 const &)
+	?Topic@CImpsCommonGroupProps@@QBE?AVTPtrC16@@XZ @ 63 NONAME ; class TPtrC16 CImpsCommonGroupProps::Topic(void) const
+	?Type@CImpsCommonGroupProps@@UBE?AW4TImpsPropertyType@@XZ @ 64 NONAME ; enum TImpsPropertyType CImpsCommonGroupProps::Type(void) const
+	?Type@CImpsPrivateGroupProps@@UBE?AW4TImpsPropertyType@@XZ @ 65 NONAME ; enum TImpsPropertyType CImpsPrivateGroupProps::Type(void) const
+	?UserIds@CImpsDetailedResult@@QAEPAVCPtrC16Array@@XZ @ 66 NONAME ; class CPtrC16Array * CImpsDetailedResult::UserIds(void)
+	?UserIds@CImpsDetailedResult@@QBEPAVCPtrC16Array@@XZ @ 67 NONAME ; class CPtrC16Array * CImpsDetailedResult::UserIds(void) const
+	?Value@CImpsGroupProp@@QBE?AVTPtrC16@@XZ @ 68 NONAME ; class TPtrC16 CImpsGroupProp::Value(void) const
+	?Welcome@CImpsCommonGroupProps@@QBE?AVTPtrC16@@XZ @ 69 NONAME ; class TPtrC16 CImpsCommonGroupProps::Welcome(void) const
+	?AutoDelete@CImpsCommonGroupProps@@QBE?AW4TImpsPropertyBool@@XZ @ 70 NONAME ; enum TImpsPropertyBool CImpsCommonGroupProps::AutoDelete(void) const
+	?SetAutoDelete@CImpsCommonGroupProps@@QAEXW4TImpsPropertyBool@@@Z @ 71 NONAME ; void CImpsCommonGroupProps::SetAutoDelete(enum TImpsPropertyBool)
+

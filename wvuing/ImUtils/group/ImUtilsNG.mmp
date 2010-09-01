@@ -1,0 +1,138 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for ImUtilsNG .
+*
+*/
+
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include "../../inc/ChatNGCommonUIDs.h"
+#include <data_caging_paths.hrh>
+
+CAPABILITY CAP_GENERAL_DLL
+TARGET			imutilsng.dll
+TARGETTYPE		dll
+UID				KIMUTILSDLLUID1 KIMUTILSDLLUID2
+VENDORID		VID_DEFAULT
+START RESOURCE	../../wvuiave/AppRss/ChatNG.rss
+DEPENDS aknfep.rsg
+HEADER
+TARGETPATH APP_RESOURCE_DIR
+LANGUAGE_IDS
+END
+
+START RESOURCE  CAVariationNG.rss
+DEPENDS aknfep.rsg
+HEADER
+TARGETPATH RESOURCE_FILES_DIR
+LANGUAGE_IDS
+END
+
+SOURCEPATH		../Src
+
+SOURCE			IMNoteMapper.cpp
+SOURCE 			IMUtils.cpp
+SOURCE			IMDialogUtils.cpp
+SOURCE			CAArrayUtils.cpp
+SOURCE          CCATextQueryDialog.cpp
+SOURCE          CCAWaitNote.cpp
+
+USERINCLUDE		../Inc
+USERINCLUDE		.
+
+USERINCLUDE		../../Group
+USERINCLUDE     ../../wvuiave/AppInc
+
+USERINCLUDE     ../../Inc
+
+USERINCLUDE     ../../cenrep
+USERINCLUDE     ../../wvuieng/EngInc 
+USERINCLUDE     ../../wvuistorage/inc
+USERINCLUDE     ../../Utils
+USERINCLUDE 	../../loc
+
+
+SOURCEPATH      ../../Utils
+SOURCE          CAUtils.cpp
+
+SYSTEMINCLUDE   ../../../inc	//ADO-specific include directory
+SYSTEMINCLUDE   ../../../im_pub/im_api/inc
+SYSTEMINCLUDE   ../../../im_pub/im_application_launch_api/inc
+SYSTEMINCLUDE   ../../../im_plat/wv_sap_settings_api/inc
+
+
+APP_LAYER_SYSTEMINCLUDE
+
+#include		"../../Inc/ImpsBuildDefinitions.h"
+#ifdef _ENABLE_DEBUG_PRINT
+    MACRO   CHAT_ENABLE_DEBUG_PRINT         
+    #ifdef _ENABLE_FILE_DEBUG
+        MACRO   CHAT_DEBUG_OUTPUT_TO_FILE     
+	LIBRARY			flogger.lib
+    #endif // _ENABLE_FILE_DEBUG
+#endif // _ENABLE_DEBUG_PRINT
+
+
+// BASIC TYPES
+LIBRARY 	euser.lib
+LIBRARY 	centralrepository.lib
+LIBRARY 	CenRepNotifHandler.lib
+
+LIBRARY     hlplch.lib 
+LIBRARY     apparc.lib 
+LIBRARY     cone.lib 
+LIBRARY     eikcore.lib //CEikMenuPane
+LIBRARY     fbscli.lib 
+LIBRARY     eikcoctl.lib 
+LIBRARY     eikdlg.lib 
+LIBRARY     avkon.lib 
+LIBRARY     bafl.lib 
+LIBRARY     eikctl.lib 
+LIBRARY     egul.lib 
+LIBRARY     uiklaf.lib
+LIBRARY     aknlayout.lib
+LIBRARY     aknnotify.lib
+//LIBRARY     caengineng.lib 
+LIBRARY     gdi.lib 
+LIBRARY     estor.lib 
+LIBRARY     ws32.lib
+LIBRARY     form.lib // CTextView
+LIBRARY     etext.lib // CRichText
+LIBRARY     inetprotutil.lib 
+LIBRARY     caf.lib
+
+LIBRARY 	apgrfx.lib // for CCAAudioManager
+LIBRARY 	mediaclientaudio.lib // for CCAAudioManager
+LIBRARY 	apmime.lib // for CCAAudioManager
+LIBRARY 	filelist.lib //filelist dialog, needed for tone setting item
+
+LIBRARY     PlatformEnv.lib
+
+LIBRARY     wvsapsettingsstore.lib
+LIBRARY     Impsutils.lib
+LIBRARY     IMPSClient.lib
+LIBRARY     castorageng.lib
+LIBRARY     ProfileEng.lib
+LIBRARY     featmgr.lib
+LIBRARY     sendui.lib  
+LIBRARY		efsrv.lib
+LIBRARY 	HWRMVibraClient.lib
+
+LIBRARY     wvservicesettingsuing.lib
+LIBRARY     alwaysonlinemanagerclient.lib // RAlwaysOnlineClientSession
+
+LIBRARY     commonengine.lib    // stringloader
+
+LIBRARY     sysutil.lib

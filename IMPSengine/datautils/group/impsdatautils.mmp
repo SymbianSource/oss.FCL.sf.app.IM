@@ -1,0 +1,107 @@
+/*
+* Copyright (c) 2004 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     This is project specification file for the WV Engine data utils.
+*     
+*
+*/
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+#include "../../inc/impsvariant.h"
+
+TARGET impsdatautils.dll
+TARGETTYPE  dll
+UID  0x1000008d 0x101f469a 
+CAPABILITY CAP_GENERAL_DLL 
+VENDORID    VID_DEFAULT
+
+SYSTEMINCLUDE   ../../../im_pub/im_api/inc
+SYSTEMINCLUDE   ../../../im_pub/im_application_launch_api/inc
+// ***********************
+// WV ENGINE UTILS SOURCE 
+// ***********************
+SOURCEPATH ../src
+
+// Common data structures
+SOURCE impsdata.cpp
+SOURCE impsdataaccessor.cpp
+SOURCE impstdataaccessor.cpp
+SOURCE impsdatautils.cpp
+//SOURCE impsdatautilsdll.cpp
+SOURCE impsfields.cpp
+SOURCE impsgrouppropsint.cpp
+SOURCE impskey.cpp
+SOURCE impspacked.cpp
+SOURCE impsutils.cpp
+SOURCE impsvariant.cpp
+SOURCE impssessionident.cpp
+
+// *************************************
+// INCLUDE PATHS
+// *************************************
+USERINCLUDE ../inc ../../inc ../../utils/inc ../../enginc
+
+SYSTEMINCLUDE   ../../../inc
+
+
+APP_LAYER_SYSTEMINCLUDE
+
+// *************************************
+// LIBRARIES
+// *************************************
+LIBRARY bafl.lib
+LIBRARY euser.lib
+LIBRARY estor.lib         // RReadStream
+LIBRARY impsutils.lib
+LIBRARY featmgr.lib
+LIBRARY CommonEngine.lib
+LIBRARY centralrepository.lib
+LIBRARY imut.lib
+LIBRARY charconv.lib
+
+DEBUGLIBRARY efsrv.lib
+DEBUGLIBRARY flogger.lib
+
+// *************************************
+// OTHER STUFF
+// *************************************
+
+
+#ifdef LOCAL_IMPS
+MACRO _FAKE_RESPONSE
+#endif
+
+#ifdef USEDYNAMICPHONEBOOK
+MACRO _USEDYNAMICPHONEBOOK
+#endif
+
+#ifdef STANDALONE_IP_CIR
+MACRO _STANDALONE_IP_CIR
+#endif
+
+#ifdef WAPUDP_CIR
+MACRO _WAPUDP_CIR
+#endif
+
+#ifdef OPENAPI
+MACRO _OPENAPI
+#endif
+ 
+#if defined( ARMCC )
+DEFFILE ../eabi/ 
+#else // WINSCW 
+DEFFILE ../def/winscw.def
+#endif

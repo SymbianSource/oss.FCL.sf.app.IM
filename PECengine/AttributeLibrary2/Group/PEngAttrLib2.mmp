@@ -1,0 +1,132 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Presence Attribute Library 2 project definition.
+*
+*/
+
+// To get the APP_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+#include        "../../Group/PEngUIDs2.h"
+
+TARGET              PEngAttrLib2.dll
+TARGETTYPE          dll
+UID                 KStaticInterfaceDllUid2 KPEngAttributeLibrary2Uid3
+CAPABILITY          CAP_GENERAL_DLL
+VENDORID            VID_DEFAULT
+
+
+SOURCEPATH          ../Src
+
+SOURCE              CPEngSessionSlotObject.cpp
+SOURCE              CPEngSessionSlotObjectCon.cpp
+SOURCE              CPEngAttrLibObjectHolder.cpp
+SOURCE              PEngAttrLibFactory.cpp
+SOURCE              CPEngAttrConstructorCon.cpp
+SOURCE              CPEngPresenceAttrManager.cpp
+SOURCE              PEngAttributeStoreIDCodec.cpp
+SOURCE              PEngAttributeRequestCodec.cpp
+
+
+
+SOURCEPATH          ../SrcAttributeBase
+SOURCE              CPEngPresenceAttrConstructor.cpp
+SOURCE              CPEngPresenceAttrModel.cpp
+SOURCE              CPEngAttrModelAsyncDataSetHook.cpp
+SOURCE              CPEngPresenceAttrModelStorageProxy.cpp
+SOURCE              CPEngModelStoreEntryAdapter.cpp
+SOURCE              PEngAttrModelHelper.cpp
+
+
+
+SOURCEPATH          ../SrcWVAttributes
+SOURCE              CPEngWVAttributeConstructBase.cpp
+SOURCE              CPEngWVAttributeModelBase.cpp
+SOURCE              PEngWVAttributeConstructorFactory.cpp
+SOURCE              CPEngWVOnlineStatusConstruct.cpp
+SOURCE              CPEngWVUserAvailabilityConstruct.cpp
+SOURCE              CPEngWVStatusTextConstruct.cpp
+SOURCE              CPEngWVClientInfoConstruct.cpp
+SOURCE              CPEngWVCommCapConstruct.cpp
+SOURCE              CPEngWVThumbnailConstruct.cpp
+SOURCE              CPEngWVStatusContentConstruct.cpp
+SOURCE              CPEngWVStatusContentModel.cpp
+SOURCE              CPEngMyLogoConverter.cpp
+SOURCE              CAsync2Sync.cpp
+SOURCE              CPEngWVAliasConstruct.cpp
+SOURCE              CPEngWVInfoLinkConstruct.cpp
+SOURCE              PEngInfoLinkSupport.cpp
+
+
+SOURCEPATH          ../SrcTransactions
+SOURCE              CPEngPresenceAttrTransactionEnv.cpp
+SOURCE              CPEngSubscribedUser.cpp
+SOURCE              CPEngSubscribedUsers.cpp
+SOURCE              CPEngAttributeTransactionFactory.cpp
+SOURCE              CPEngPresenceNotificationHandler.cpp
+SOURCE              CPEngAttributePublishHandler.cpp
+SOURCE              CPEngAttributeFetchHandler.cpp
+SOURCE              CPEngFetchProcessor.cpp
+SOURCE              PEngAddressUtils.cpp
+SOURCE              CPEngAttributeTypeStack.cpp
+SOURCE              CPEngOrphanNotificationQue.cpp
+SOURCE              PEngWVCspVersion.cpp
+
+
+
+
+USERINCLUDE         ../Inc
+USERINCLUDE         ../Src
+USERINCLUDE         ../SrcAttributeBase
+USERINCLUDE         ../SrcWVAttributes
+USERINCLUDE         ../SrcTransactions
+
+USERINCLUDE         ../../AttributeFramework2/Inc
+USERINCLUDE         ../../CoreUtilsLib2/Inc
+USERINCLUDE         ../../Parser2/Inc
+USERINCLUDE         ../../TransactionFramework2/Inc
+USERINCLUDE         ../../StorageManager2/ClientInc
+USERINCLUDE         ../../Group
+
+
+// Default system include paths for application layer modules.
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE       ../../IncPresenceModel
+SYSTEMINCLUDE       ../../IncApi
+//Relative system include for groupcommunications/inc
+SYSTEMINCLUDE       ../../../inc
+
+
+
+LIBRARY             euser.lib
+LIBRARY             bafl.lib
+LIBRARY             estor.lib
+LIBRARY             PEngParser2.lib
+LIBRARY             PEngStorMan2.lib
+LIBRARY             PEngCoreUtilsLib2.lib
+
+LIBRARY             efsrv.lib               // For MyLogo file handling
+LIBRARY             imut.lib                // For MyLogo parsing
+LIBRARY             ImageConversion.lib     // Image converting and info tools
+LIBRARY             BitmapTransforms.lib    // Image converting and info tools
+LIBRARY             fbscli.lib              // Image converting and info tools
+
+
+LIBRARY         centralrepository.lib
+
+//End of file
+
+
+
+

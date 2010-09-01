@@ -1,0 +1,48 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Main resource file of chat application
+*
+*/
+
+
+
+//----------------------------------------------------
+// VARIATION
+// You can do resource-file based variation by setting the following number
+// resources as you wish.
+//
+
+// RSC_CHAT_DEFAULT_MESSAGE_COLORS
+// RSC_CHAT_COLOR_WHOLE_MESSAGE
+// RSC_CHAT_MESSAGE_COLOR
+// RSC_CHAT_OWN_MESSAGE_COLOR
+// ----------------------------------------
+// If RSC_CHAT_DEFAULT_MESSAGE_COLORS is disabled (0),
+// own messages are colored with RSC_CHAT_OWN_MESSAGE_COLOR
+// and other messages are colored with RSC_CHAT_MESSAGE_COLOR.
+// If RSC_CHAT_COLOR_WHOLE_MESSAGE is enabled, coloring is
+// applied to whole message, otherwise coloring is applied only to
+// nickname-part of messages.
+// The default value for RSC_CHAT_DEFAULT_MESSAGE_COLORS is enabled (1).
+// The default value for RSC_CHAT_COLOR_WHOLE_MESSAGE is disabled (0).
+//----------------------------------------------------
+//
+RESOURCE NUMBER_INT32 RSC_CHAT_DEFAULT_MESSAGE_COLORS { value = 1; }
+RESOURCE NUMBER_INT32 RSC_CHAT_COLOR_WHOLE_MESSAGE { value = 1; }
+RESOURCE COLOR RSC_CHAT_MESSAGE_COLOR     { red = 255; green =   0; blue =   0; }
+RESOURCE COLOR RSC_CHAT_OWN_MESSAGE_COLOR { red =   0; green =   0; blue = 255; }
+
+
+//end of file
+

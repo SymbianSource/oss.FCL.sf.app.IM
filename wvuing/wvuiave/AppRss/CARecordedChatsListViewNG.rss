@@ -1,0 +1,217 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource file of chat list view
+*
+*/
+
+
+//----------------------------------------------------
+//
+//    r_chatclient_recordedchatslist_view
+//    View-resource definition for recordedChats-view
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_chatclient_recordedchatslist_view
+    {
+    hotkeys=r_chatclient_hotkeys;
+    menubar=r_chatclient_menubar_recordedchatslist_view;
+    cba=R_AVKON_SOFTKEYS_SELECTION_LIST;
+    }
+
+//----------------------------------------------------
+//
+//    r_chatclient_menubar_chatlist_view
+//    Menubar definition for chatlist-view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_chatclient_menubar_recordedchatslist_view
+{
+    titles=
+    {
+        MENU_TITLE { menu_pane=r_chatclient_general_menu; },
+        MENU_TITLE { menu_pane=r_chatclient_recordedchatslist_view_menu; }
+    };
+}
+
+
+//----------------------------------------------------
+//
+//    r_chatclient_recordedchatslist_contextmenubar
+//    Menubar definition for recorded chats list view context menu
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_chatclient_recordedchatslist_contextmenubar
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane = r_chatclient_recordedchatslist_contextmenu; }
+        };
+    }
+
+//----------------------------------------------------
+//
+//    r_chatclient_chatlist_view_menu
+//    Items for menupane in chatlist-view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_chatclient_recordedchatslist_view_menu
+{
+
+    items=
+    {
+        MENU_ITEM { command = EChatClientSavedListViewCmdOpen;
+                    txt = qtn_chat_recchat_om_open;
+                  },
+        MENU_ITEM { command = EChatClientSavedListViewCmdDelete;
+                    txt = qtn_chat_recchat_om_del;
+                  },
+
+        MENU_ITEM { command = EChatClientSavedListViewCmdSendOpt;
+                    txt = qtn_options_send_via;
+                  },
+
+        MENU_ITEM { command = EChatClientSavedListViewCmdMarkOpt;
+                    cascade = r_chatclient_recordedchatslist_mark_sub_menu;
+                    txt = qtn_options_list;
+                  },
+		MENU_ITEM { command=EChatClientMainViewCmdLogin; txt = qtn_chat_main_om_login; },
+        MENU_ITEM { command=EChatClientMainViewCmdLogout; txt = qtn_chat_main_om_logout; },
+
+        MENU_ITEM { command=EChatClientMainViewSettings; txt = qtn_chat_settings; }
+    };
+}
+
+//----------------------------------------------------
+//
+//    r_chatclient_recordedchatslist_contextmenu
+//    Items for context menupane in recorded chats list view
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_chatclient_recordedchatslist_contextmenu
+    {
+    items=
+        {
+        MENU_ITEM
+            {
+            command = EChatClientSavedListViewCmdDelete;
+            txt = qtn_chat_recchat_om_del;
+            },
+        MENU_ITEM
+            {
+            command = EChatClientSavedListViewCmdSendOpt;
+            txt = qtn_options_send_via;
+            },
+        MENU_ITEM
+            {
+            command = EChatClientSavedListViewCmdMarkOpt;
+            cascade = r_chatclient_recordedchatslist_mark_sub_menu;
+            txt = qtn_options_list;
+            }
+        };
+    }
+
+RESOURCE MENU_PANE r_chatclient_recordedchatslist_send_sub_menu
+{
+
+    items=
+    {
+        MENU_ITEM { command = EChatClientSavedListViewCmdSendSMS;
+                    txt = qtn_options_send_via_sms;
+                  },
+        MENU_ITEM { command = EChatClientSavedListViewCmdSendMultimedia;
+                    txt = qtn_options_send_via_mms;
+                  },
+        MENU_ITEM { command = EChatClientSavedListViewCmdSendInfrared;
+                    txt = qtn_options_send_via_ir;
+                  },
+        MENU_ITEM { command = EChatClientSavedListViewCmdSendBluetooth;
+                    txt = qtn_options_send_via_bt;
+                  }
+    };
+}
+
+RESOURCE MENU_PANE r_chatclient_recordedchatslist_mark_sub_menu
+{
+    items=
+    {
+        MENU_ITEM { command = EChatClientSavedListViewCmdMark;
+                    txt = qtn_options_list_mark_one;
+                  },
+        MENU_ITEM { command = EChatClientSavedListViewCmdUnmark;
+                    txt = qtn_options_list_unmark_one;
+                  },
+        MENU_ITEM { command = EChatClientSavedListViewCmdMarkAll;
+                    txt = qtn_options_list_mark_all;
+                  },
+        MENU_ITEM { command = EChatClientSavedListViewCmdUnmarkAll;
+                    txt = qtn_options_list_unmark_all;
+                  }
+    };
+}
+
+RESOURCE TBUF r_qtn_chat_record_end { buf = qtn_chat_record_end; }
+RESOURCE TBUF r_qtn_chat_record_end_navi { buf = qtn_chat_record_end_navi; }
+RESOURCE TBUF r_chatclient_history_start_date   { buf = qtn_chat_log_start_date; }
+RESOURCE TBUF r_chatclient_history_end_time     { buf = qtn_chat_log_endtime; }
+RESOURCE TBUF r_chatclient_history_imessages    { buf = qtn_chat_log_imessages; }
+RESOURCE TBUF r_chatclient_history_group_name   { buf = qtn_chat_log_chatname; }
+
+RESOURCE TBUF r_qtn_chat_rec_delete { buf = qtn_chat_rec_delete; }
+RESOURCE TBUF r_qtn_chat_rec_delete_many { buf = qtn_chat_rec_delete_many; }
+RESOURCE TBUF r_qtn_chat_rec_del_chat { buf = qtn_chat_rec_del_chat; }
+RESOURCE TBUF r_qtn_chat_rec_del_chat_many { buf = qtn_chat_rec_del_chat_many; }
+
+
+//----------------------------------------------------
+//
+//    r_chat_progress_note_template
+//    Items in chatlist-view´s listbox
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_chat_progress_note_template
+    {
+
+    flags = EAknProgressNoteFlags;
+    buttons=R_AVKON_SOFTKEYS_EMPTY;
+    items=
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EProgressNote;
+            control= AVKON_NOTE
+                {
+                layout = EProgressLayout;
+                animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+
+RESOURCE TBUF r_qtn_chat_empty_saved_chat { buf = qtn_chat_empty_saved_chat; }
+//----------------------------------------------------
+//
+//    r_qtn_chat_empty_saved_chat_primary
+//    Added for recorded chats list view
+//    Primary text to be shown when recorded chat list is empty
+//----------------------------------------------------
+//
+RESOURCE TBUF r_qtn_chat_empty_saved_chat_primary { buf = qtn_chat_empty_saved_chat_primary; }
+

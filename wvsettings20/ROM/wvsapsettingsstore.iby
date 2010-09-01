@@ -1,0 +1,29 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Image description file for SAP Settings Store
+*
+*/
+
+
+#ifndef __WVSAPSettingsStore_IBY__
+#define __WVSAPSettingsStore_IBY__
+
+#include <bldvariant.hrh>
+
+#ifdef __PRESENCE
+// WV server settings storage DLL
+file=ABI_DIR\BUILD_DIR\WVSAPSettingsStore.dll       SHARED_LIB_DIR\WVSAPSettingsStore.dll
+#endif // #ifdef __PRESENCE
+
+#endif

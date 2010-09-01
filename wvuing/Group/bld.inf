@@ -1,0 +1,159 @@
+/*
+* Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Base class for applications views
+*
+*/
+
+
+PRJ_PLATFORMS
+DEFAULT
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+//#include "../inc/impsbuilddefinitions.h"
+
+PRJ_EXPORTS
+
+
+../wvuiave/group/backup_registration.xml 			z:/private/101F4673/backup_registration.xml
+// central repository
+
+../conf/s60impscommonui_ng.confml                        APP_LAYER_CONFML(s60impscommonui_ng.confml)
+../conf/s60impscommonui_ng_101F879B.crml		 		 APP_LAYER_CRML(s60impscommonui_ng_101F879B.crml)
+../conf/s60impscommonui_ng_101F879C.crml		 		 APP_LAYER_CRML(s60impscommonui_ng_101F879C.crml)
+
+../conf/s60instant_messaging_ui_ng.confml                        APP_LAYER_CONFML(s60instant_messaging_ui_ng.confml)
+../conf/s60instant_messaging_ui_ng_1028289C.crml		 		 APP_LAYER_CRML(s60instant_messaging_ui_ng_1028289C.crml)
+../conf/s60instant_messaging_ui_ng_1028289D.crml		 		 APP_LAYER_CRML(s60instant_messaging_ui_ng_1028289D.crml)
+qgn_graf_im_splash_screen.svg	/epoc32/s60/icons/qgn_graf_im_splash_screen.svg
+qgn_graf_im_signin_screen.svg	/epoc32/s60/icons/qgn_graf_im_signin_screen.svg 
+
+// All ImpsCommonUi related export stuffs
+// Headers exported to source tree
+
+// Service Settings UI
+../impsservicesettingsui/inc/cwvsettingsuingdialog.h  |../../inc/cwvsettingsuingdialog.h
+../impsservicesettingsui/inc/mwvsettingsobserverng.h  |../../inc/mwvsettingsobserverng.h
+../impsservicesettingsui/inc/mwvsettingscasettingsng.h    |../../inc/mwvsettingscasettingsng.h
+../impsservicesettingsui/group/impsservicesettingsuinginternalcrkeys.h    |../../inc/impsservicesettingsuinginternalcrkeys.h
+../impsservicesettingsui/group/wvsettingsshareddatang.h   |../../inc/wvsettingsshareddatang.h
+
+// MultiCSP Connection API
+../impsconnectionui/inc/cimpspresenceconnectionuing.h |../../inc/cimpspresenceconnectionuing.h
+../impsconnectionui/inc/cimpspresenceaaconnectionng.h |../../inc/cimpspresenceaaconnectionng.h
+../impsconnectionui/inc/mimpsconnprocessobserverng.h  |../../inc/mimpsconnprocessobserverng.h
+../impsconnectionui/inc/impspresenceconnectionuiconstsng.h    |../../inc/impspresenceconnectionuiconstsng.h
+../impsconnectionui/inc/cimpsconnectionuingagent.h    |../../inc/cimpsconnectionuingagent.h
+
+// MultiCSP Notifier API
+../impsconnectionui/inc/mimpsconnuipresenceeventobserverng.h  |../../inc/mimpsconnuipresenceeventobserverng.h
+../impsconnectionui/inc/cimpsconnuipreseventnotifierng.h  |../../inc/cimpsconnuipreseventnotifierng.h
+../impsconnectionui/inc/cimpsconnuiclntfilteredpreseventnotifierng.h  |../../inc/cimpsconnuiclntfilteredpreseventnotifierng.h
+../impsconnectionui/inc/cimpsconnuiconnectionmodenotifierng.h |../../inc/cimpsconnuiconnectionmodenotifierng.h
+../impsconnectionui/inc/mimpsconnuiconnectionmodeobserverng.h |../../inc/mimpsconnuiconnectionmodeobserverng.h
+
+
+// Other exports
+../IMPSServiceSettingsUI/group/backup_registration.xml                   z:/private/10282E14/backup_registration.xml
+
+
+
+
+
+IMVersion.txt	/epoc32/release/winscw/UDEB/z/private/101F4673/IMVersion.txt
+IMVersion.txt	Z:/private/101F4673/IMVersion.txt
+
+
+// ROM SIS stubs
+IMNGResourceVersion.sis	/epoc32/data/Z/System/Install/IMNGResourceVersion.sis
+ChatStubNG.sis		/epoc32/data/Z/System/Install/ChatStubNG.sis
+
+// component has to export its .iby files( only for 5.0 )
+// exporting the chatNG s iby files 
+../Rom/chatng.iby        CORE_APP_LAYER_IBY_EXPORT_PATH(chatng.iby)
+
+../Rom/chatngresources.iby LANGUAGE_APP_LAYER_IBY_EXPORT_PATH(chatngresources.iby)
+
+// export localisation files
+../loc/chatclientng.loc    APP_LAYER_LOC_EXPORT_PATH(chatclientng.loc) 
+../loc/impscommonuing.loc  APP_LAYER_LOC_EXPORT_PATH(impscommonuing.loc) 
+
+//adding for Raptor build
+PRJ_EXTENSIONS
+START EXTENSION s60/mifconv
+  OPTION TARGETFILE chatNG.mif
+  OPTION HEADERFILE chatNG.mbg
+  OPTION SOURCES \
+     -c8 qgn_stat_im_uni\
+     -c8,8 qgn_menu_im_on -c8,8 qgn_menu_im_off -c8,8 qgn_menu_im_away -c8,8 qgn_menu_im_invisible -c8,8 qgn_menu_im_busy\
+     -c8,8 qgn_prop_im_friends -c8,8 qgn_prop_im_ibox -c8,8 qgn_prop_im_ibox_new -c8,8 qgn_prop_im_saved\
+     -c8,8 qgn_prop_im_user_created_active -c8,8 qgn_prop_im_user_created_active_unread -c8,8 qgn_prop_im_nonuser_created_saved_active\
+     -c8,8 qgn_prop_im_nonuser_created_saved_active_unread -c8,8 qgn_prop_im_nonuser_created_saved_inactive\
+     -c8,8 qgn_prop_im_joined_not_saved -c8,8 qgn_prop_im_joined_not_saved_unread -c8,8 qgn_prop_im_list -c8,8 qgn_prop_im_list_unread\
+     -c8,1 qgn_prop_im_imsg_new -c8,1 qgn_indi_im_watch_add -c8,1 qgn_indi_phone_add -c8,1 qgn_prop_im_friend_off\
+     -c8,1 qgn_prop_im_friend_on -c8,1 qgn_prop_im_on_mobile_title -c8,1 qgn_prop_im_friend_away -c8,1 qgn_prop_im_friend_busy\
+     -c8,1 qgn_prop_im_friend_invisible -c8,1 qgn_prop_im_from -c8,1 qgn_prop_im_saved_chat_tab3 -c8,1 qgn_prop_im_saved_chat_tab4\
+     -c8,1 qgn_prop_im_friend_tab3 -c8,1 qgn_prop_im_friend_tab4 -c8,1 qgn_prop_im_ibox_tab3 -c8,1 qgn_prop_im_ibox_tab4\
+     -c8,1 qgn_prop_im_list_tab4 -c8,1 qgn_prop_im_saved_conv -c8,1 qgn_prop_im_saved_chat -c8,1 qgn_indi_marked_add\
+     -c8,1 qgn_prop_im_user_created_inactive -c8,1 qgn_prop_im_chats_collapsed -c8,1 qgn_prop_im_chats_expanded\
+     -c8,1 qgn_prop_im_friends_collapsed -c8,1 qgn_prop_im_friends_expanded -c8,1 qgn_prop_im_new_invit -c8,1 qgn_prop_im_user_blocked\
+     -c8,1 qgn_prop_im_imsg -c8,1 qgn_prop_im_many -c8,1 qgn_prop_im_tome -c8,1 qgn_indi_sett_protected_add -c8,1 qgn_prop_image_corrupted\
+     -c8,1 qgn_prop_unknown -c8,8 qgn_prop_im_on_title -c8,8 qgn_prop_im_off_title -c8,8 qgn_prop_im_away_title -c8,8 qgn_prop_im_invisible_title\
+     -c8,8 qgn_prop_im_busy_title -c8,1 qgn_prop_im_smileys_angry -c8,1 qgn_prop_im_smileys_bored -c8,1 qgn_prop_im_smileys_crying\
+     -c8,1 qgn_prop_im_smileys_glasses -c8,1 qgn_prop_im_smileys_happy -c8,1 qgn_prop_im_smileys_indif -c8,1 qgn_prop_im_smileys_kiss\
+     -c8,1 qgn_prop_im_smileys_laugh -c8,1 qgn_prop_im_smileys_robot -c8,1 qgn_prop_im_smileys_sad -c8,1 qgn_prop_im_smileys_shock\
+     -c8,1 qgn_prop_im_smileys_skeptical -c8,1 qgn_prop_im_smileys_sleepy -c8,1 qgn_prop_im_smileys_sunglasses -c8,1 qgn_prop_im_smileys_surprise\
+     -c8,1 qgn_prop_im_smileys_tired -c8,1 qgn_prop_im_smileys_veryhappy -c8,1 qgn_prop_im_smileys_verysad -c8,1 qgn_prop_im_smileys_wickedsmile\
+     -c8,1 qgn_prop_im_smileys_wink -c8,1 qgn_graf_im_splash_screen -c8,1 qgn_graf_im_signin_screen
+END
+
+// For AIFs
+START EXTENSION s60/mifconv
+  OPTION TARGETFILE chatNG_aif.mif
+  OPTION SOURCES -c8,8 qgn_menu_im
+END
+
+PRJ_MMPFILES
+
+
+// icons (bitmap icons must have some different names than scalable icons)
+/*#if defined(__SCALABLE_ICONS)
+    gnumakefile ../wvuiave/Group/icons_scalableng.mk
+#else	// !__SCALABLE_ICONS
+    gnumakefile ../wvuiave/Group/icons_bitmapsng.mk
+#endif	// __SCALABLE_ICONS
+*/
+
+
+#ifndef RD_30_DISABLE_TOUCH
+../imindicatorplugin/group/imindicatorpluginng.mmp
+#endif
+
+../IMPSConnectionUI/Group/IMPSConnectionUiNG.mmp
+../IMPSServiceSettingsUI/Group/CWVSettingsUING.mmp
+../IMPSAlwaysOnlinePlugin/Group/IMPSAOPluginNG.mmp
+../wvvariant/Group/alternatorNG.mmp
+../wvuiada/Group/CAAdapterNG.mmp
+../wvuistorage/Group/StorageNG.mmp
+../wvuipresence/Group/CAPresenceNG.mmp
+../wvlogger/Group/CALoggerNG.mmp
+../wvuieng/Group/CAEngineNG.mmp
+../ImUtils/Group/ImUtilsNG.mmp
+../wvuiprocess/group/wvuiprocessng.mmp
+../wvcommandutils/Group/CACommandUtilsNG.mmp
+../wvaudiomanager/group/CCAAudioManagerNG.mmp
+../wvuiave/Group/ChatNG.mmp
+../IMLauncher/Group/imlauncherpluginng.mmp
+
+
+

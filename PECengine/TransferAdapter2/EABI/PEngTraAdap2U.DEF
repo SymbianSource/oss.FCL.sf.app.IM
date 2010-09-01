@@ -1,0 +1,6 @@
+EXPORTS
+	_ZN18PEngLoginDataCodec14PackLoginDataLERK16CIMPSSAPSettings @ 1 NONAME
+	_ZN18PEngLoginDataCodec16UnPackLoginDataLERK6TDesC8R16CIMPSSAPSettings @ 2 NONAME
+	_ZN19PEngTransferAdapter14AccessHandlerLERK18CPEngSessionSlotId @ 3 NONAME
+	_ZN19PEngTransferAdapter16PureDataHandlerLERK18CPEngSessionSlotId @ 4 NONAME
+

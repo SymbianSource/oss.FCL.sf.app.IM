@@ -1,0 +1,35 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description: 
+*     Online methods.
+*
+*
+*/
+
+
+inline TInt CImpsKey::operator==(const CImpsKey &aKey) const
+    {
+    TInt ret = !(iBuffer->Compare( *aKey.iBuffer ) ) && iCount == aKey.iCount;
+    return ret;
+    }
+
+inline TInt CImpsKey::Count( ) const
+    {
+    return iCount;
+    }
+
+//-------------------------------------------------------
+   
+
+// End of File

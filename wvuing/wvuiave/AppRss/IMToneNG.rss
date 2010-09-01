@@ -1,0 +1,205 @@
+/*
+* Copyright (c) 2002-2007 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Main resource file of chat application
+*
+*/
+
+
+// Included to get RD_30_COMPATIBILITY_MODE flag
+#include "impsbuilddefinitions.h"
+
+
+#ifndef RD_30_COMPATIBILITY_MODE
+// These cannot be compiled in backported 3.0 environment
+
+// RSS_RSC_CHAT_VARIATION_BRANDED_TONES
+// ----------------------------------------------------
+// Use branded tone list or not.
+// If this flag is set on (1) brandable tones are used
+// and tone list is configured by customer,
+// see r_audio_clf_list_model and r_audio_fldirectories.
+// If this flag is disabled (0) brandable tones are
+// not defined and default tone list is used.
+//
+// Default value is (0)
+//
+// NOTE! If feature EIMFeatBrandableTones is variated off with
+// cenrep variation (see IMVariant.hrh and
+// keys_s60instant_messaging_ui.xls) don't use these variation
+// flags. Set this to (0).
+// ----------------------------------------------------
+//
+RESOURCE NUMBER_INT32 RSC_CHAT_BRANDED_TONES { value = 0; }
+
+
+#endif  // RD_30_COMPATIBILITY_MODE 
+
+
+
+RESOURCE TBUF r_default_tone { buf = ""; }
+
+
+RESOURCE DIALOG r_chatclient_send_text_query
+    {
+    flags = EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_DATA_QUERY
+                {
+                    layout = EDataLayout;
+                    label = qtn_chat_opt_new_conv_message;
+                    control=EDWIN
+                        {
+                        flags= EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                        maxlength=400;	// this has to be the same as RSS_RSC_CHAT_VARIATION_MESSAGE_MAX_LENGTH
+                        width=16;
+                        lines=1;
+                        default_case = EAknEditorLowerCase;
+                        };
+                };
+            }
+        };
+    }
+
+#ifndef RD_30_COMPATIBILITY_MODE
+
+
+// r_audio_clf_list_model
+// ----------------------------------------------------
+// If customer specific tones are specifed,
+// this resource structure must be filled.
+//
+// Example (see more from clfcontentlisting.rh):
+//
+// RESOURCE CLF_LIST_MODEL r_list_model
+//     {
+//     mime_type_array = CLF_MIME_TYPE_ARRAY
+//         {
+//         mime_types =
+//             {
+//             LBUF { txt = "application/vnd.nokia.ringing-tone"; },
+//             LBUF { txt = "audio/*"; }
+//             };
+//         };
+//     media_type_array = CLF_MEDIA_TYPE_ARRAY
+//         {
+//         media_types =
+//             {
+//             CLF_MEDIA_TYPE { media_type = ECLFMediaTypeSound; }
+//             };
+//         };
+//     sorting_style = CLF_SORTING_STYLE
+//         {
+//         ordering = ECLFOrderingAscending;
+//         data_type = ECLFItemDataTypeDesC;
+//         fields =
+//             {
+//             CLF_FIELD_ID { field_id = ECLFFieldIdFileName; }
+//             };
+//         };
+//     }
+//
+// ----------------------------------------------------
+//
+
+#include <clfcontentlisting.rh>
+#include <filelistmodel.rh>
+#include <pathconfiguration.hrh>
+RESOURCE CLF_LIST_MODEL r_audio_clf_list_model
+    {
+    mime_type_array = CLF_MIME_TYPE_ARRAY
+         {
+         mime_types =
+             {
+             LBUF { txt = "audio/*"; },
+             LBUF { txt = "application/vnd.nokia.ringing-tone"; }
+             };
+         };
+     media_type_array = CLF_MEDIA_TYPE_ARRAY
+         {
+         media_types =
+             {
+             CLF_MEDIA_TYPE { media_type = ECLFMediaTypeSound; }
+             };
+         };
+     sorting_style = CLF_SORTING_STYLE
+         {
+         ordering = ECLFOrderingAscending;
+         data_type = ECLFItemDataTypeDesC;
+         fields =
+             {
+             CLF_FIELD_ID { field_id = ECLFFieldIdFileName; }
+             };
+         };
+    }
+
+// r_audio_fldirectories
+// ----------------------------------------------------
+// If customer specific tones are specifed,
+// this resource structure must be filled.
+//
+// Example (see more from filelistmodel.rh):
+//
+// RESOURCE FILELISTDIRECTORIES r_audio_fldirectories
+//    {
+//    // Scan these ROM directories
+//    // Can be left empty -> only tones from PhoneDirectories are shown
+//    RomDirectories =
+//        {
+//        LBUF { txt = text_rom_root_path text_sounds_path; },
+//        LBUF { txt = text_rom_root_path text_digital_sounds_path; },
+//        LBUF { txt = text_rom_root_path text_simple_sounds_path; }
+//        };
+//    // Show only these phone directories
+//    // NOTE! These locations must be
+//    // inside C:\\data and E: folders (including subdirectories)
+//    PhoneDirectories =
+//        {
+//        LBUF { txt = "c:\\data\\sounds\\IMSounds\\"; },
+//        LBUF { txt = "c:\\data\\sounds\\digital\\IMSounds\\"; }
+//        };
+// ----------------------------------------------------
+//
+RESOURCE FILELISTDIRECTORIES r_audio_fldirectories
+    {
+    // Scan these ROM directories
+    RomDirectories =
+        {
+        LBUF { txt = text_rom_root_path text_sounds_path; },
+        LBUF { txt = text_rom_root_path text_digital_sounds_path; },
+        LBUF { txt = text_rom_root_path text_simple_sounds_path; }
+        };
+    // Show only these these phone directories
+    // NOTE! These locations must be
+    // inside C:\\data and E: folders (including subdirectories)
+    PhoneDirectories =
+        {
+        LBUF { txt = "c:\\data\\sounds\\imsounds\\"; }
+        };
+    }
+#endif  // RD_30_COMPATIBILITY_MODE 
+
+
+//----------------------------------------------------
+// S60 v3.0 Compatibility resources
+//----------------------------------------------------
+//
+#ifdef RD_30_COMPATIBILITY_MODE
+#include "CAVariation30.rss"
+#endif //RD_30_COMPATIBILITY_MODE   

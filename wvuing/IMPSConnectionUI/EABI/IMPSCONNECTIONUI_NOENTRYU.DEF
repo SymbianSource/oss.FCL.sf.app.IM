@@ -1,0 +1,106 @@
+EXPORTS
+	_Z10Reserved_1v @ 1 NONAME
+	_ZN19CIMPSResourceReader25IsRoamingWarningRequiredLEv @ 2 NONAME
+	_ZN19CIMPSResourceReader4NewLEv @ 3 NONAME
+	_ZN19CIMPSResourceReader5NewLCEv @ 4 NONAME
+	_ZN19CIMPSResourceReaderD0Ev @ 5 NONAME
+	_ZN19CIMPSResourceReaderD1Ev @ 6 NONAME
+	_ZN19CIMPSResourceReaderD2Ev @ 7 NONAME
+	_ZN22CIMPSConnectionUiAgent11StopServiceE29TIMPSConnectionUiAgentService @ 8 NONAME
+	_ZN22CIMPSConnectionUiAgent13StartServiceLE29TIMPSConnectionUiAgentService @ 9 NONAME
+	_ZN22CIMPSConnectionUiAgent15StopAllServicesEv @ 10 NONAME
+	_ZN22CIMPSConnectionUiAgent16UseResourceFileLERK7TDesC16 @ 11 NONAME
+	_ZN22CIMPSConnectionUiAgent4NewLE21TIMPSConnectionClient @ 12 NONAME
+	_ZN22CIMPSConnectionUiAgentD0Ev @ 13 NONAME
+	_ZN22CIMPSConnectionUiAgentD1Ev @ 14 NONAME
+	_ZN22CIMPSConnectionUiAgentD2Ev @ 15 NONAME
+	_ZN24MIMPSConnProcessObserver23ReservedObservMethod_1LEv @ 16 NONAME
+	_ZN24MIMPSConnProcessObserver23ReservedObservMethod_2LEv @ 17 NONAME
+	_ZN24MIMPSConnProcessObserver23ReservedObservMethod_3LEv @ 18 NONAME
+	_ZN24MIMPSConnProcessObserver26HandleSapAccessEventEventLERK7TDesC16S2_P18MIMPSConnProcessUi @ 19 NONAME
+	_ZN25CIMPSPresenceAAConnection18DefaultServerNameLE21TIMPSConnectionClient @ 20 NONAME
+	_ZN25CIMPSPresenceAAConnection18PureServiceStatusLERK21CPEngNWSessionSlotID2 @ 21 NONAME
+	_ZN25CIMPSPresenceAAConnection25GetActiveNWSessionSlotIDLE21TIMPSConnectionClient @ 22 NONAME
+	_ZN25CIMPSPresenceAAConnection4NewLE21TIMPSConnectionClientP21CIMPSSAPSettingsStore @ 23 NONAME
+	_ZN25CIMPSPresenceAAConnection5NewLCE21TIMPSConnectionClientP21CIMPSSAPSettingsStore @ 24 NONAME
+	_ZN25CIMPSPresenceAAConnection6LoginLE21TIMPSConnectionClienti @ 25 NONAME
+	_ZN25CIMPSPresenceAAConnection7LogoutLE21TIMPSConnectionClienti @ 26 NONAME
+	_ZN25CIMPSPresenceAAConnection9LoggedInLE21TIMPSConnectionClient @ 27 NONAME
+	_ZN25CIMPSPresenceAAConnectionD0Ev @ 28 NONAME
+	_ZN25CIMPSPresenceAAConnectionD1Ev @ 29 NONAME
+	_ZN25CIMPSPresenceAAConnectionD2Ev @ 30 NONAME
+	_ZN25CIMPSPresenceConnectionUi15GetLoggedInSapLERK21CPEngNWSessionSlotID2R16CIMPSSAPSettings @ 31 NONAME
+	_ZN25CIMPSPresenceConnectionUi18PureServiceStatusLERK21CPEngNWSessionSlotID2 @ 32 NONAME
+	_ZN25CIMPSPresenceConnectionUi22HandleApplicationExitLE21TIMPSConnectionClient13TIMPSExitTypeRK21CPEngNWSessionSlotID2P24MIMPSConnProcessObserver @ 33 NONAME
+	_ZN25CIMPSPresenceConnectionUi25GetActiveNWSessionSlotIDLE21TIMPSConnectionClient @ 34 NONAME
+	_ZN25CIMPSPresenceConnectionUi27CurrentConnectionOperationLERP7HBufC16 @ 35 NONAME
+	_ZN25CIMPSPresenceConnectionUi28DisplayDomainSelectionQueryLER6TDes16P16CIMPSSAPSettings @ 36 NONAME
+	_ZN25CIMPSPresenceConnectionUi4NewLE21TIMPSConnectionClientP21CIMPSSAPSettingsStore @ 37 NONAME
+	_ZN25CIMPSPresenceConnectionUi5NewLCE21TIMPSConnectionClientP21CIMPSSAPSettingsStore @ 38 NONAME
+	_ZN25CIMPSPresenceConnectionUi6LoginLE21TIMPSConnectionClient14TIMPSLoginTypeR21CPEngNWSessionSlotID2P24MIMPSConnProcessObserverP16CIMPSSAPSettingsi @ 39 NONAME
+	_ZN25CIMPSPresenceConnectionUi7LogoutLERK21CPEngNWSessionSlotID2P24MIMPSConnProcessObserver @ 40 NONAME
+	_ZN25CIMPSPresenceConnectionUi9LoggedInLE21TIMPSConnectionClient @ 41 NONAME
+	_ZN25CIMPSPresenceConnectionUiD0Ev @ 42 NONAME
+	_ZN25CIMPSPresenceConnectionUiD1Ev @ 43 NONAME
+	_ZN25CIMPSPresenceConnectionUiD2Ev @ 44 NONAME
+	_ZN28CIMPSConnUiPresEventNotifier12AddObserverLEP32MIMPSConnUiPresenceEventObserver @ 45 NONAME
+	_ZN28CIMPSConnUiPresEventNotifier14RemoveObserverEP32MIMPSConnUiPresenceEventObserver @ 46 NONAME
+	_ZN28CIMPSConnUiPresEventNotifier17AppServiceStatusLE21TIMPSConnectionClient @ 47 NONAME
+	_ZN28CIMPSConnUiPresEventNotifier4NewLEv @ 48 NONAME
+	_ZN28CIMPSConnUiPresEventNotifier4StopEv @ 49 NONAME
+	_ZN28CIMPSConnUiPresEventNotifier5NewLCEv @ 50 NONAME
+	_ZN28CIMPSConnUiPresEventNotifier6StartLEv @ 51 NONAME
+	_ZN28CIMPSConnUiPresEventNotifierD0Ev @ 52 NONAME
+	_ZN28CIMPSConnUiPresEventNotifierD1Ev @ 53 NONAME
+	_ZN28CIMPSConnUiPresEventNotifierD2Ev @ 54 NONAME
+	_ZN32IMPSPresenceLoginDetailValidator15ValidWVLoginIdLERK7TDesC16 @ 55 NONAME
+	_ZN32IMPSPresenceLoginDetailValidator16ValidWVLoginIAPLEm @ 56 NONAME
+	_ZN33CIMPSConnUiConnectionModeNotifier12AddObserverLEP33MIMPSConnUiConnectionModeObserver @ 57 NONAME
+	_ZN33CIMPSConnUiConnectionModeNotifier14RemoveObserverEP33MIMPSConnUiConnectionModeObserver @ 58 NONAME
+	_ZN33CIMPSConnUiConnectionModeNotifier15ConnectionModeLEv @ 59 NONAME
+	_ZN33CIMPSConnUiConnectionModeNotifier25ConnectionModeByCategoryLE24TIMPSConnectionModeEvent @ 60 NONAME
+	_ZN33CIMPSConnUiConnectionModeNotifier4NewLE21TIMPSConnectionClient @ 61 NONAME
+	_ZN33CIMPSConnUiConnectionModeNotifier4StopEv @ 62 NONAME
+	_ZN33CIMPSConnUiConnectionModeNotifier5NewLCE21TIMPSConnectionClient @ 63 NONAME
+	_ZN33CIMPSConnUiConnectionModeNotifier6StartLEv @ 64 NONAME
+	_ZN33CIMPSConnUiConnectionModeNotifierD0Ev @ 65 NONAME
+	_ZN33CIMPSConnUiConnectionModeNotifierD1Ev @ 66 NONAME
+	_ZN33CIMPSConnUiConnectionModeNotifierD2Ev @ 67 NONAME
+	_ZN37CIMPSConnUiConnectionSettingsNotifier12AddObserverLEP37MIMPSConnUiConnectionSettingsObserver @ 68 NONAME
+	_ZN37CIMPSConnUiConnectionSettingsNotifier14RemoveObserverEP37MIMPSConnUiConnectionSettingsObserver @ 69 NONAME
+	_ZN37CIMPSConnUiConnectionSettingsNotifier28ConnectionSettingByCategoryLE28TIMPSConnectionSettingsEvent @ 70 NONAME
+	_ZN37CIMPSConnUiConnectionSettingsNotifier4NewLE21TIMPSConnectionClient @ 71 NONAME
+	_ZN37CIMPSConnUiConnectionSettingsNotifier4StopEv @ 72 NONAME
+	_ZN37CIMPSConnUiConnectionSettingsNotifier5NewLCE21TIMPSConnectionClient @ 73 NONAME
+	_ZN37CIMPSConnUiConnectionSettingsNotifier6StartLEv @ 74 NONAME
+	_ZN37CIMPSConnUiConnectionSettingsNotifierD0Ev @ 75 NONAME
+	_ZN37CIMPSConnUiConnectionSettingsNotifierD1Ev @ 76 NONAME
+	_ZN37CIMPSConnUiConnectionSettingsNotifierD2Ev @ 77 NONAME
+	_ZN40CIMPSConnUiClntFilteredPresEventNotifier4NewLE21TIMPSConnectionClient @ 78 NONAME
+	_ZN40CIMPSConnUiClntFilteredPresEventNotifier5NewLCE21TIMPSConnectionClient @ 79 NONAME
+	_ZN40CIMPSConnUiClntFilteredPresEventNotifierD0Ev @ 80 NONAME
+	_ZN40CIMPSConnUiClntFilteredPresEventNotifierD1Ev @ 81 NONAME
+	_ZN40CIMPSConnUiClntFilteredPresEventNotifierD2Ev @ 82 NONAME
+	_ZTI18CCnUiSignInControl @ 83 NONAME ; #<TI>#
+	_ZTI21TProcessObserverProxy @ 84 NONAME ; #<TI>#
+	_ZTI22CIMPSConnectionUiAgent @ 85 NONAME ; #<TI>#
+	_ZTI24MIMPSConnProcessObserver @ 86 NONAME ; #<TI>#
+	_ZTI25CIMPSPresenceAAConnection @ 87 NONAME ; #<TI>#
+	_ZTI25CIMPSPresenceConnectionUi @ 88 NONAME ; #<TI>#
+	_ZTI28CIMPSConnUiPresEventNotifier @ 89 NONAME ; #<TI>#
+	_ZTI31CCnUiDomainSelectionQueryDialog @ 90 NONAME ; #<TI>#
+	_ZTI33CIMPSConnUiConnectionModeNotifier @ 91 NONAME ; #<TI>#
+	_ZTI37CIMPSConnUiConnectionSettingsNotifier @ 92 NONAME ; #<TI>#
+	_ZTI40CIMPSConnUiClntFilteredPresEventNotifier @ 93 NONAME ; #<TI>#
+	_ZTV18CCnUiSignInControl @ 94 NONAME ; #<VT>#
+	_ZTV21TProcessObserverProxy @ 95 NONAME ; #<VT>#
+	_ZTV22CIMPSConnectionUiAgent @ 96 NONAME ; #<VT>#
+	_ZTV24MIMPSConnProcessObserver @ 97 NONAME ; #<VT>#
+	_ZTV25CIMPSPresenceAAConnection @ 98 NONAME ; #<VT>#
+	_ZTV25CIMPSPresenceConnectionUi @ 99 NONAME ; #<VT>#
+	_ZTV28CIMPSConnUiPresEventNotifier @ 100 NONAME ; #<VT>#
+	_ZTV31CCnUiDomainSelectionQueryDialog @ 101 NONAME ; #<VT>#
+	_ZTV33CIMPSConnUiConnectionModeNotifier @ 102 NONAME ; #<VT>#
+	_ZTV37CIMPSConnUiConnectionSettingsNotifier @ 103 NONAME ; #<VT>#
+	_ZTV40CIMPSConnUiClntFilteredPresEventNotifier @ 104 NONAME ; #<VT>#
+

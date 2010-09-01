@@ -1,0 +1,40 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: package file
+;
+;
+; To create SIS stub: makesis -s IMApiTest.pkg IMApiTest.sis
+;
+
+;Language
+&EN
+
+;Header
+#{"IMApiTest"}, (0x2000BF18), 1, 0, 0, TYPE=SA
+
+
+;Localised VendorID
+%{"Nokia"}
+
+;VendorID
+:"Nokia"
+
+(0x101F7961), 3, *, *, {"Series60ProductID"}
+
+
+;binaries
+"\epoc32\release\armv5\urel\IMApiTest.dll"-"!:\sys\bin\IMApiTest.dll"
+"..\data\im_c.bat"-"!:\im.bat"
+"..\init\imapitest.ini"-"!:\testframework\imapitest.ini"
+"..\init\TestFramework.ini"-"C:\TestFramework\TestFramework_im.ini"

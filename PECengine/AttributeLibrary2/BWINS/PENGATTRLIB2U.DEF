@@ -1,0 +1,17 @@
+EXPORTS
+	?AttributeManagerInstanceL@PEngAttrLibFactory@@SAPAVMPEngPresenceAttrManager@@ABVCPEngSessionSlotId@@@Z @ 1 NONAME ; public: static class MPEngPresenceAttrManager * __cdecl PEngAttrLibFactory::AttributeManagerInstanceL(class CPEngSessionSlotId const &)
+	?AttributeManagerInstanceLC@PEngAttrLibFactory@@SAPAVMPEngPresenceAttrManager@@ABVCPEngSessionSlotId@@@Z @ 2 NONAME ; public: static class MPEngPresenceAttrManager * __cdecl PEngAttrLibFactory::AttributeManagerInstanceLC(class CPEngSessionSlotId const &)
+	?AttributeTransEnvInstanceL@PEngAttrLibFactory@@SAPAVMPEngPresenceAttrTransactionEnv@@ABVCPEngSessionSlotId@@@Z @ 3 NONAME ; public: static class MPEngPresenceAttrTransactionEnv * __cdecl PEngAttrLibFactory::AttributeTransEnvInstanceL(class CPEngSessionSlotId const &)
+	?AttributeTransEnvInstanceLC@PEngAttrLibFactory@@SAPAVMPEngPresenceAttrTransactionEnv@@ABVCPEngSessionSlotId@@@Z @ 4 NONAME ; public: static class MPEngPresenceAttrTransactionEnv * __cdecl PEngAttrLibFactory::AttributeTransEnvInstanceLC(class CPEngSessionSlotId const &)
+	?AttributeTransFactoryInstanceL@PEngAttrLibFactory@@SAPAVMPEngTransactionFactory@@ABVCPEngSessionSlotId@@@Z @ 5 NONAME ; public: static class MPEngTransactionFactory * __cdecl PEngAttrLibFactory::AttributeTransFactoryInstanceL(class CPEngSessionSlotId const &)
+	?AttributeTransFactoryInstanceLC@PEngAttrLibFactory@@SAPAVMPEngTransactionFactory@@ABVCPEngSessionSlotId@@@Z @ 6 NONAME ; public: static class MPEngTransactionFactory * __cdecl PEngAttrLibFactory::AttributeTransFactoryInstanceLC(class CPEngSessionSlotId const &)
+	?CreateAttrFetchProcessorL@@YAPAVMPEngAttrFetchProcessor@@AAVMPEngPresenceAttrManager@@ABVMDesC16Array@@V?$TArray@K@@ABVTDesC16@@HW4TPEngWVCspVersion@@@Z @ 7 NONAME ; class MPEngAttrFetchProcessor * __cdecl CreateAttrFetchProcessorL(class MPEngPresenceAttrManager &,class MDesC16Array const &,class TArray<unsigned long>,class TDesC16 const &,int,enum TPEngWVCspVersion)
+	?SelectVersionL@PEngWVCspVersion@@SA?AW4TPEngWVCspVersion@@XZ @ 8 NONAME ; public: static enum TPEngWVCspVersion __cdecl PEngWVCspVersion::SelectVersionL(void)
+	?__DbgAttrManRefCount@PEngAttrLibFactory@@SAXABVCPEngSessionSlotId@@AAH@Z @ 9 NONAME ; public: static void __cdecl PEngAttrLibFactory::__DbgAttrManRefCount(class CPEngSessionSlotId const &,int &)
+	?__DbgObjectCounts@PEngAttrLibFactory@@SAXAAH000@Z @ 10 NONAME ; public: static void __cdecl PEngAttrLibFactory::__DbgObjectCounts(int &,int &,int &,int &)
+	?__DbgTransEnvRefCount@PEngAttrLibFactory@@SAXABVCPEngSessionSlotId@@AAH@Z @ 11 NONAME ; public: static void __cdecl PEngAttrLibFactory::__DbgTransEnvRefCount(class CPEngSessionSlotId const &,int &)
+	?__DbgTransFactRefCount@PEngAttrLibFactory@@SAXABVCPEngSessionSlotId@@AAH@Z @ 12 NONAME ; public: static void __cdecl PEngAttrLibFactory::__DbgTransFactRefCount(class CPEngSessionSlotId const &,int &)
+	?SetVersionL@PEngWVCspVersion@@SAXW4TPEngWVCspVersion@@@Z @ 13 NONAME ; void PEngWVCspVersion::SetVersionL(enum TPEngWVCspVersion)
+	?InfoLinkSupportedL@PEngInfoLinkSupport@@SAHXZ @ 14 NONAME ; int PEngInfoLinkSupport::InfoLinkSupportedL(void)
+	?SetInfoLinkSupportedL@PEngInfoLinkSupport@@SAXH@Z @ 15 NONAME ; void PEngInfoLinkSupport::SetInfoLinkSupportedL(int)
+

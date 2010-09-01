@@ -1,0 +1,63 @@
+;
+; Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+; All rights reserved.
+; This component and the accompanying materials are made available
+; under the terms of "Eclipse Public License v1.0"
+; which accompanies this distribution, and is available
+; at the URL "http://www.eclipse.org/legal/epl-v10.html".
+;
+; Initial Contributors:
+; Nokia Corporation - initial contribution.
+;
+; Contributors:
+;
+; Description: Package file
+;
+; Package file for ChatNG SIS stub in ROM.
+; Including the stub in ROM enables components
+; defined in stub to be updated by SIS installer.
+; When adding or removing components from Chat
+; please update this pkg file also.
+;
+; To create SIS stub: makesis -s chatNG.pkg ChatStubNG.sis
+; Copy ChatStubNG.sis to z:\system\install\ChatStubNG.sis
+; or use abld export to export it automatically.
+;
+
+; Languages
+&EN
+
+; Package header (one name for each supported language)
+#{"CHATNG"}, (0x101F4673), 1, 0, 0, TYPE=SA
+
+; Localised Vendor name
+%{"Nokia"}
+
+; Unique Vendor name
+:"Nokia"
+
+; Binaries
+""-"z:\sys\bin\CAEngineng.dll"
+""-"z:\sys\bin\CAAdapterng.dll"
+""-"z:\sys\bin\CASTORAGEng.dll"
+""-"z:\sys\bin\CAPRESENCEng.dll"
+""-"z:\sys\bin\alternatorng.dll"
+""-"z:\sys\bin\CALOGGERng.dll"
+""-"z:\sys\bin\ImLauncherng.dll"
+""-"z:\sys\bin\imutilsng.dll"
+""-"z:\sys\bin\wvuiprocessng.dll"
+""-"z:\sys\bin\cacommandutilsng.dll"
+""-"z:\sys\bin\caaudioManagerng.dll"
+""-"z:\resource\plugins\ImLauncherng.r*"
+""-"z:\resource\WVUIPresenceVariationng.r*"
+""-"z:\resource\CAEngineng.r*"
+""-"z:\resource\apps\Chatng.r*"
+""-"z:\sys\bin\Chatng.exe"
+""-"z:\private\10003a3f\import\apps\Chatng_reg.r*"
+""-"z:\resource\apps\Chatng.mif"
+""-"z:\resource\apps\Chatng_aif.mif"
+""-"z:\sys\bin\WVSERVICESETTINGSUIng.dll"
+""-"z:\sys\bin\IMPSConnectionUing.Dll"
+""-"z:\resource\CWVSETTINGSUIng.r*"
+""-"z:\resource\IMPSConnectionUing.r*"
+""-"z:\sys\bin\WVSAPSettingsStore.dll"

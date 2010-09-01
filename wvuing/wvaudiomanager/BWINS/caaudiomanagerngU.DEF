@@ -1,0 +1,12 @@
+EXPORTS
+	?AddObserverL@CCAAudioManager@@UAEXPBVMCAAudioManagerObserver@@@Z @ 1 NONAME ; void CCAAudioManager::AddObserverL(class MCAAudioManagerObserver const *)
+	?CreateNotifierL@CANotifierFactory@@SAPAVMCANotifierInterface@@PAVMCANotifierKeyObserver@@VTUid@@@Z @ 2 NONAME ; class MCANotifierInterface * CANotifierFactory::CreateNotifierL(class MCANotifierKeyObserver *, class TUid)
+	?DoPlayL@CCAAudioManager@@AAEXXZ @ 3 NONAME ; void CCAAudioManager::DoPlayL(void)
+	?NewL@CCAAudioManager@@SAPAV1@AAVCIMPSPresenceConnectionUi@@H@Z @ 4 NONAME ; class CCAAudioManager * CCAAudioManager::NewL(class CIMPSPresenceConnectionUi &, int)
+	?PlayL@CCAAudioManager@@UAEXXZ @ 5 NONAME ; void CCAAudioManager::PlayL(void)
+	?RemoveObserver@CCAAudioManager@@UAEXPBVMCAAudioManagerObserver@@@Z @ 6 NONAME ; void CCAAudioManager::RemoveObserver(class MCAAudioManagerObserver const *)
+	?SetRingingType@CCAAudioManager@@UAEXW4TProfileRingingType@@@Z @ 7 NONAME ; void CCAAudioManager::SetRingingType(enum TProfileRingingType)
+	?SetVibra@CCAAudioManager@@UAEXH@Z @ 8 NONAME ; void CCAAudioManager::SetVibra(int)
+	?SetVolume@CCAAudioManager@@UAEXH@Z @ 9 NONAME ; void CCAAudioManager::SetVolume(int)
+	?Stop@CCAAudioManager@@UAEXXZ @ 10 NONAME ; void CCAAudioManager::Stop(void)
+

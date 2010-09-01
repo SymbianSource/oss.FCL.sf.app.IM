@@ -1,0 +1,94 @@
+EXPORTS
+	??1CIMPSSAPSettings@@UAE@XZ @ 1 NONAME ; CIMPSSAPSettings::~CIMPSSAPSettings(void)
+	??1CIMPSSAPSettingsList@@UAE@XZ @ 2 NONAME ; CIMPSSAPSettingsList::~CIMPSSAPSettingsList(void)
+	??1CIMPSSAPSettingsListItem@@UAE@XZ @ 3 NONAME ; CIMPSSAPSettingsListItem::~CIMPSSAPSettingsListItem(void)
+	??1CIMPSSAPSettingsStore@@UAE@XZ @ 4 NONAME ; CIMPSSAPSettingsStore::~CIMPSSAPSettingsStore(void)
+	?AccessGroup@CIMPSSAPSettings@@QBE?AW4TIMPSAccessGroup@@XZ @ 5 NONAME ; enum TIMPSAccessGroup CIMPSSAPSettings::AccessGroup(void) const
+	?AccessGroup@CIMPSSAPSettingsListItem@@QBE?AW4TIMPSAccessGroup@@XZ @ 6 NONAME ; enum TIMPSAccessGroup CIMPSSAPSettingsListItem::AccessGroup(void) const
+	?AccessPoint@CIMPSSAPSettings@@QBEKXZ @ 7 NONAME ; unsigned long CIMPSSAPSettings::AccessPoint(void) const
+	?AddObserverL@CIMPSSAPSettingsStore@@QAEXPAVMIMPSSAPObserver@@W4TIMPSAccessGroup@@@Z @ 8 NONAME ; void CIMPSSAPSettingsStore::AddObserverL(class MIMPSSAPObserver *, enum TIMPSAccessGroup)
+	?AuthorizationMode@CIMPSSAPSettings@@QBEKXZ @ 9 NONAME ; unsigned long CIMPSSAPSettings::AuthorizationMode(void) const
+	?ClientId@CIMPSSAPSettings@@QBEABVTDesC16@@XZ @ 10 NONAME ; class TDesC16 const & CIMPSSAPSettings::ClientId(void) const
+	?CopyL@CIMPSSAPSettings@@QAEXABV1@@Z @ 11 NONAME ; void CIMPSSAPSettings::CopyL(class CIMPSSAPSettings const &)
+	?DataSize@CIMPSSAPSettings@@QBEHXZ @ 12 NONAME ; int CIMPSSAPSettings::DataSize(void) const
+	?Delete@CIMPSSAPSettingsList@@QAEXH@Z @ 13 NONAME ; void CIMPSSAPSettingsList::Delete(int)
+	?Delete@CIMPSSAPSettingsList@@QAEXHH@Z @ 14 NONAME ; void CIMPSSAPSettingsList::Delete(int, int)
+	?DeleteOpaque@CIMPSSAPSettings@@QAEHABVTDesC16@@@Z @ 15 NONAME ; int CIMPSSAPSettings::DeleteOpaque(class TDesC16 const &)
+	?DeleteSAPL@CIMPSSAPSettingsStore@@QAEXK@Z @ 16 NONAME ; void CIMPSSAPSettingsStore::DeleteSAPL(unsigned long)
+	?EqualConnectionSettings@CIMPSSAPSettings@@QBEHABV1@@Z @ 17 NONAME ; int CIMPSSAPSettings::EqualConnectionSettings(class CIMPSSAPSettings const &) const
+	?EqualUserSettings@CIMPSSAPSettings@@QBEHABV1@@Z @ 18 NONAME ; int CIMPSSAPSettings::EqualUserSettings(class CIMPSSAPSettings const &) const
+	?ExternalizeL@CIMPSSAPSettings@@QBEXAAVRWriteStream@@@Z @ 19 NONAME ; void CIMPSSAPSettings::ExternalizeL(class RWriteStream &) const
+	?FindNameL@CIMPSSAPSettingsList@@QBEHABVTDesC16@@AAH@Z @ 20 NONAME ; int CIMPSSAPSettingsList::FindNameL(class TDesC16 const &, int &) const
+	?GetDefaultL@CIMPSSAPSettingsStore@@QAEXAAKW4TIMPSAccessGroup@@@Z @ 21 NONAME ; void CIMPSSAPSettingsStore::GetDefaultL(unsigned long &, enum TIMPSAccessGroup)
+	?GetDefaultL@CIMPSSAPSettingsStore@@QAEXPAVCIMPSSAPSettings@@W4TIMPSAccessGroup@@@Z @ 22 NONAME ; void CIMPSSAPSettingsStore::GetDefaultL(class CIMPSSAPSettings *, enum TIMPSAccessGroup)
+	?GetOpaqueDesC16@CIMPSSAPSettings@@QBEHABVTDesC16@@AAVTPtrC16@@@Z @ 23 NONAME ; int CIMPSSAPSettings::GetOpaqueDesC16(class TDesC16 const &, class TPtrC16 &) const
+	?GetOpaqueDesC8@CIMPSSAPSettings@@QBEHABVTDesC16@@AAVTPtrC8@@@Z @ 24 NONAME ; int CIMPSSAPSettings::GetOpaqueDesC8(class TDesC16 const &, class TPtrC8 &) const
+	?GetOpaqueInt@CIMPSSAPSettings@@QBEHABVTDesC16@@AAH@Z @ 25 NONAME ; int CIMPSSAPSettings::GetOpaqueInt(class TDesC16 const &, int &) const
+	?GetSAPL@CIMPSSAPSettingsStore@@QAEXKPAVCIMPSSAPSettings@@@Z @ 26 NONAME ; void CIMPSSAPSettingsStore::GetSAPL(unsigned long, class CIMPSSAPSettings *)
+	?HTTPProxyAddress@CIMPSSAPSettings@@QBEABVTDesC16@@XZ @ 27 NONAME ; class TDesC16 const & CIMPSSAPSettings::HTTPProxyAddress(void) const
+	?HTTPProxyPort@CIMPSSAPSettings@@QBEJXZ @ 28 NONAME ; long CIMPSSAPSettings::HTTPProxyPort(void) const
+	?HTTPProxyUserId@CIMPSSAPSettings@@QBEABVTDesC16@@XZ @ 29 NONAME ; class TDesC16 const & CIMPSSAPSettings::HTTPProxyUserId(void) const
+	?HTTPProxyUserPassword@CIMPSSAPSettings@@QBEABVTDesC16@@XZ @ 30 NONAME ; class TDesC16 const & CIMPSSAPSettings::HTTPProxyUserPassword(void) const
+	?HighLevelServices@CIMPSSAPSettings@@QBEKXZ @ 31 NONAME ; unsigned long CIMPSSAPSettings::HighLevelServices(void) const
+	?IncreaseLoginCount@CIMPSSAPSettings@@QAEXXZ @ 32 NONAME ; void CIMPSSAPSettings::IncreaseLoginCount(void)
+	?IndexForUid@CIMPSSAPSettingsList@@QBEHK@Z @ 33 NONAME ; int CIMPSSAPSettingsList::IndexForUid(unsigned long) const
+	?InternalizeL@CIMPSSAPSettings@@QAEXAAVRReadStream@@@Z @ 34 NONAME ; void CIMPSSAPSettings::InternalizeL(class RReadStream &)
+	?ListItemForUid@CIMPSSAPSettingsList@@QBEPBVCIMPSSAPSettingsListItem@@K@Z @ 35 NONAME ; class CIMPSSAPSettingsListItem const * CIMPSSAPSettingsList::ListItemForUid(unsigned long) const
+	?LoginCount@CIMPSSAPSettings@@QBEKXZ @ 36 NONAME ; unsigned long CIMPSSAPSettings::LoginCount(void) const
+	?MdcaCount@CIMPSSAPSettingsList@@UBEHXZ @ 37 NONAME ; int CIMPSSAPSettingsList::MdcaCount(void) const
+	?MdcaPoint@CIMPSSAPSettingsList@@UBE?AVTPtrC16@@H@Z @ 38 NONAME ; class TPtrC16 CIMPSSAPSettingsList::MdcaPoint(int) const
+	?Name@CIMPSSAPSettingsListItem@@QBEABVTDesC16@@XZ @ 39 NONAME ; class TDesC16 const & CIMPSSAPSettingsListItem::Name(void) const
+	?NewL@CIMPSSAPSettings@@SAPAV1@XZ @ 40 NONAME ; class CIMPSSAPSettings * CIMPSSAPSettings::NewL(void)
+	?NewL@CIMPSSAPSettingsList@@SAPAV1@XZ @ 41 NONAME ; class CIMPSSAPSettingsList * CIMPSSAPSettingsList::NewL(void)
+	?NewL@CIMPSSAPSettingsStore@@SAPAV1@H@Z @ 42 NONAME ; class CIMPSSAPSettingsStore * CIMPSSAPSettingsStore::NewL(int)
+	?NewLC@CIMPSSAPSettings@@SAPAV1@XZ @ 43 NONAME ; class CIMPSSAPSettings * CIMPSSAPSettings::NewLC(void)
+	?NewLC@CIMPSSAPSettingsList@@SAPAV1@XZ @ 44 NONAME ; class CIMPSSAPSettingsList * CIMPSSAPSettingsList::NewLC(void)
+	?NewLC@CIMPSSAPSettingsListItem@@SAPAV1@ABVTDesC16@@K@Z @ 45 NONAME ; class CIMPSSAPSettingsListItem * CIMPSSAPSettingsListItem::NewLC(class TDesC16 const &, unsigned long)
+	?NewLC@CIMPSSAPSettingsListItem@@SAPAV1@ABVTDesC16@@KW4TIMPSAccessGroup@@@Z @ 46 NONAME ; class CIMPSSAPSettingsListItem * CIMPSSAPSettingsListItem::NewLC(class TDesC16 const &, unsigned long, enum TIMPSAccessGroup)
+	?NewLC@CIMPSSAPSettingsListItem@@SAPAV1@ABVTDesC16@@KW4TIMPSAccessGroup@@W4TIMPSSAPProtection@@@Z @ 47 NONAME ; class CIMPSSAPSettingsListItem * CIMPSSAPSettingsListItem::NewLC(class TDesC16 const &, unsigned long, enum TIMPSAccessGroup, enum TIMPSSAPProtection)
+	?NewLC@CIMPSSAPSettingsListItem@@SAPAV1@ABVTDesC16@@KW4TIMPSSAPProtection@@@Z @ 48 NONAME ; class CIMPSSAPSettingsListItem * CIMPSSAPSettingsListItem::NewLC(class TDesC16 const &, unsigned long, enum TIMPSSAPProtection)
+	?NewLC@CIMPSSAPSettingsStore@@SAPAV1@H@Z @ 49 NONAME ; class CIMPSSAPSettingsStore * CIMPSSAPSettingsStore::NewLC(int)
+	?PopulateSAPSettingsListL@CIMPSSAPSettingsStore@@QAEXAAVCIMPSSAPSettingsList@@W4TIMPSAccessGroup@@H@Z @ 50 NONAME ; void CIMPSSAPSettingsStore::PopulateSAPSettingsListL(class CIMPSSAPSettingsList &, enum TIMPSAccessGroup, int)
+	?ProtectL@CIMPSSAPSettings@@QAEXW4TIMPSSAPProtection@@@Z @ 51 NONAME ; void CIMPSSAPSettings::ProtectL(enum TIMPSSAPProtection)
+	?Protection@CIMPSSAPSettings@@QBE?AW4TIMPSSAPProtection@@XZ @ 52 NONAME ; enum TIMPSSAPProtection CIMPSSAPSettings::Protection(void) const
+	?Protection@CIMPSSAPSettingsListItem@@QBE?AW4TIMPSSAPProtection@@XZ @ 53 NONAME ; enum TIMPSSAPProtection CIMPSSAPSettingsListItem::Protection(void) const
+	?RemoveObserver@CIMPSSAPSettingsStore@@QAEXPAVMIMPSSAPObserver@@@Z @ 54 NONAME ; void CIMPSSAPSettingsStore::RemoveObserver(class MIMPSSAPObserver *)
+	?Reset@CIMPSSAPSettings@@QAEXXZ @ 55 NONAME ; void CIMPSSAPSettings::Reset(void)
+	?SAPAddress@CIMPSSAPSettings@@QBEABVTDesC16@@XZ @ 56 NONAME ; class TDesC16 const & CIMPSSAPSettings::SAPAddress(void) const
+	?SAPCountL@CIMPSSAPSettingsStore@@QAEHW4TIMPSAccessGroup@@@Z @ 57 NONAME ; int CIMPSSAPSettingsStore::SAPCountL(enum TIMPSAccessGroup)
+	?SAPName@CIMPSSAPSettings@@QBEABVTDesC16@@XZ @ 58 NONAME ; class TDesC16 const & CIMPSSAPSettings::SAPName(void) const
+	?SAPPort@CIMPSSAPSettings@@QBEJXZ @ 59 NONAME ; long CIMPSSAPSettings::SAPPort(void) const
+	?SAPUserId@CIMPSSAPSettings@@QBEABVTDesC16@@XZ @ 60 NONAME ; class TDesC16 const & CIMPSSAPSettings::SAPUserId(void) const
+	?SAPUserPassword@CIMPSSAPSettings@@QBEABVTDesC16@@XZ @ 61 NONAME ; class TDesC16 const & CIMPSSAPSettings::SAPUserPassword(void) const
+	?ServerAcceptedContentType@CIMPSSAPSettings@@QBEABVTDesC16@@XZ @ 62 NONAME ; class TDesC16 const & CIMPSSAPSettings::ServerAcceptedContentType(void) const
+	?ServerAuthenticationName@CIMPSSAPSettings@@QBEABVTDesC16@@XZ @ 63 NONAME ; class TDesC16 const & CIMPSSAPSettings::ServerAuthenticationName(void) const
+	?ServerAuthenticationPassword@CIMPSSAPSettings@@QBEABVTDesC16@@XZ @ 64 NONAME ; class TDesC16 const & CIMPSSAPSettings::ServerAuthenticationPassword(void) const
+	?SetAccessGroup@CIMPSSAPSettings@@QAEXW4TIMPSAccessGroup@@@Z @ 65 NONAME ; void CIMPSSAPSettings::SetAccessGroup(enum TIMPSAccessGroup)
+	?SetAccessPoint@CIMPSSAPSettings@@QAEHK@Z @ 66 NONAME ; int CIMPSSAPSettings::SetAccessPoint(unsigned long)
+	?SetAuthorizationMode@CIMPSSAPSettings@@QAEHK@Z @ 67 NONAME ; int CIMPSSAPSettings::SetAuthorizationMode(unsigned long)
+	?SetClientIdL@CIMPSSAPSettings@@QAEXABVTDesC16@@@Z @ 68 NONAME ; void CIMPSSAPSettings::SetClientIdL(class TDesC16 const &)
+	?SetHTTPProxyAddressL@CIMPSSAPSettings@@QAEXABVTDesC16@@@Z @ 69 NONAME ; void CIMPSSAPSettings::SetHTTPProxyAddressL(class TDesC16 const &)
+	?SetHTTPProxyPort@CIMPSSAPSettings@@QAEHJ@Z @ 70 NONAME ; int CIMPSSAPSettings::SetHTTPProxyPort(long)
+	?SetHTTPProxyUserIdL@CIMPSSAPSettings@@QAEXABVTDesC16@@@Z @ 71 NONAME ; void CIMPSSAPSettings::SetHTTPProxyUserIdL(class TDesC16 const &)
+	?SetHTTPProxyUserPasswordL@CIMPSSAPSettings@@QAEXABVTDesC16@@@Z @ 72 NONAME ; void CIMPSSAPSettings::SetHTTPProxyUserPasswordL(class TDesC16 const &)
+	?SetHighLevelServices@CIMPSSAPSettings@@QAEHK@Z @ 73 NONAME ; int CIMPSSAPSettings::SetHighLevelServices(unsigned long)
+	?SetOpaqueDesC16@CIMPSSAPSettings@@QAEHABVTDesC16@@0@Z @ 74 NONAME ; int CIMPSSAPSettings::SetOpaqueDesC16(class TDesC16 const &, class TDesC16 const &)
+	?SetOpaqueDesC8@CIMPSSAPSettings@@QAEHABVTDesC16@@ABVTDesC8@@@Z @ 75 NONAME ; int CIMPSSAPSettings::SetOpaqueDesC8(class TDesC16 const &, class TDesC8 const &)
+	?SetOpaqueInt@CIMPSSAPSettings@@QAEHABVTDesC16@@H@Z @ 76 NONAME ; int CIMPSSAPSettings::SetOpaqueInt(class TDesC16 const &, int)
+	?SetSAPAddressL@CIMPSSAPSettings@@QAEXABVTDesC16@@@Z @ 77 NONAME ; void CIMPSSAPSettings::SetSAPAddressL(class TDesC16 const &)
+	?SetSAPNameL@CIMPSSAPSettings@@QAEXABVTDesC16@@@Z @ 78 NONAME ; void CIMPSSAPSettings::SetSAPNameL(class TDesC16 const &)
+	?SetSAPPort@CIMPSSAPSettings@@QAEHJ@Z @ 79 NONAME ; int CIMPSSAPSettings::SetSAPPort(long)
+	?SetSAPUserIdL@CIMPSSAPSettings@@QAEXABVTDesC16@@@Z @ 80 NONAME ; void CIMPSSAPSettings::SetSAPUserIdL(class TDesC16 const &)
+	?SetSAPUserPasswordL@CIMPSSAPSettings@@QAEXABVTDesC16@@@Z @ 81 NONAME ; void CIMPSSAPSettings::SetSAPUserPasswordL(class TDesC16 const &)
+	?SetServerAcceptedContentTypeL@CIMPSSAPSettings@@QAEXABVTDesC16@@@Z @ 82 NONAME ; void CIMPSSAPSettings::SetServerAcceptedContentTypeL(class TDesC16 const &)
+	?SetServerAuthenticationNameL@CIMPSSAPSettings@@QAEXABVTDesC16@@@Z @ 83 NONAME ; void CIMPSSAPSettings::SetServerAuthenticationNameL(class TDesC16 const &)
+	?SetServerAuthenticationPasswordL@CIMPSSAPSettings@@QAEXABVTDesC16@@@Z @ 84 NONAME ; void CIMPSSAPSettings::SetServerAuthenticationPasswordL(class TDesC16 const &)
+	?SetToDefaultL@CIMPSSAPSettingsStore@@QAEXKW4TIMPSAccessGroup@@@Z @ 85 NONAME ; void CIMPSSAPSettingsStore::SetToDefaultL(unsigned long, enum TIMPSAccessGroup)
+	?StoreNewSAPL@CIMPSSAPSettingsStore@@QAEKPAVCIMPSSAPSettings@@W4TIMPSAccessGroup@@@Z @ 86 NONAME ; unsigned long CIMPSSAPSettingsStore::StoreNewSAPL(class CIMPSSAPSettings *, enum TIMPSAccessGroup)
+	?Uid@CIMPSSAPSettings@@QBEKXZ @ 87 NONAME ; unsigned long CIMPSSAPSettings::Uid(void) const
+	?Uid@CIMPSSAPSettingsListItem@@QBEKXZ @ 88 NONAME ; unsigned long CIMPSSAPSettingsListItem::Uid(void) const
+	?UidForIndex@CIMPSSAPSettingsList@@QBEKH@Z @ 89 NONAME ; unsigned long CIMPSSAPSettingsList::UidForIndex(int) const
+	?UpdateOldSAPL@CIMPSSAPSettingsStore@@QAEXPAVCIMPSSAPSettings@@K@Z @ 90 NONAME ; void CIMPSSAPSettingsStore::UpdateOldSAPL(class CIMPSSAPSettings *, unsigned long)
+	?PackLC@CIMPSSAPSettings@@QBEPAVHBufC8@@XZ @ 91 NONAME ; class HBufC8 * CIMPSSAPSettings::PackLC(void) const
+	?UnPackL@CIMPSSAPSettings@@QAEXABVTDesC8@@@Z @ 92 NONAME ; void CIMPSSAPSettings::UnPackL(class TDesC8 const &)
+

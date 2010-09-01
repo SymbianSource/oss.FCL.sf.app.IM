@@ -1,0 +1,3 @@
+EXPORTS
+	NewImpsSenderL__FR17MImpsDataReceiverR22MImpsConnectionManagerRC6TDesC8 @ 1 NONAME R3UNUSED ; NewImpsSenderL(MImpsDataReceiver &, MImpsConnectionManager &, TDesC8 const &)
+

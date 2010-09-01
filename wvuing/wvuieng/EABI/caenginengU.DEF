@@ -1,0 +1,154 @@
+EXPORTS
+	_ZN16CCASearchManager10EndSearchLEv @ 1 NONAME
+	_ZN16CCASearchManager11SearchNextLEiP26MCASearchObserverInterface @ 2 NONAME
+	_ZN16CCASearchManager12StartSearchLERK13CArrayPtrFlatI18CImpsSearchRequestEiP26MCASearchObserverInterface @ 3 NONAME
+	_ZN17CCAContentMessage16SetThumbnailSizeE5TSize @ 4 NONAME
+	_ZN18CCABlockingManager4NewLEP14MCAImpsFactoryP16CCARequestMapperP11MCASettings @ 5 NONAME
+	_ZN18CCABlockingManagerD0Ev @ 6 NONAME
+	_ZN18CCABlockingManagerD1Ev @ 7 NONAME
+	_ZN18CCABlockingManagerD2Ev @ 8 NONAME
+	_ZN20CCAInvitationRequest4NewLERK12CDesC16ArrayRK7TDesC16S5_i @ 9 NONAME
+	_ZN20CCAInvitationRequestD0Ev @ 10 NONAME
+	_ZN20CCAInvitationRequestD1Ev @ 11 NONAME
+	_ZN20CCAInvitationRequestD2Ev @ 12 NONAME
+	_ZN9CCAEngine11IsFinalizedEv @ 13 NONAME
+	_ZN9CCAEngine12ResetLoggersEv @ 14 NONAME
+	_ZN9CCAEngine16ReadyForShutdownEv @ 15 NONAME
+	_ZN9CCAEngine17CancelAllRequestsEv @ 16 NONAME
+	_ZN9CCAEngine23IsBackgroundTaskPendingEv @ 17 NONAME
+	_ZN9CCAEngine25GetLoggerHeadersInterfaceEv @ 18 NONAME
+	_ZN9CCAEngine25HandleNetworkStateChangeLE13TNetworkStateP23TPEngWVCspServicesTree2RK14SServerPrefersP21CPEngNWSessionSlotID2 @ 19 NONAME
+	_ZN9CCAEngine27FinalizeEngineConstructionLEv @ 20 NONAME
+	_ZN9CCAEngine30RegisterBackGroundTaskObserverEP25MCABackGroundTaskObserver @ 21 NONAME
+	_ZN9CCAEngine32UnRegisterBackGroundTaskObserverEP25MCABackGroundTaskObserver @ 22 NONAME
+	_ZN9CCAEngine4NewLE4TUid @ 23 NONAME
+	_ZN9CCAEngineD0Ev @ 24 NONAME
+	_ZN9CCAEngineD1Ev @ 25 NONAME
+	_ZN9CCAEngineD2Ev @ 26 NONAME
+	_ZNK12CCAErrorData10MessageIDsEv @ 27 NONAME
+	_ZNK12CCAErrorData11DescriptionEv @ 28 NONAME
+	_ZNK12CCAErrorData11ScreenNamesEv @ 29 NONAME
+	_ZNK12CCAErrorData15ScreenNameGroupEv @ 30 NONAME
+	_ZNK12CCAErrorData4CodeEv @ 31 NONAME
+	_ZNK12CCAErrorData7UserIDsEv @ 32 NONAME
+	_ZNK12CCAErrorData8GroupIDsEv @ 33 NONAME
+	_ZNK13CCASearchData10SearchDataEi @ 34 NONAME
+	_ZNK13CCASearchData15SearchDataCountEv @ 35 NONAME
+	_ZNK13CCASearchData16SearchResultTypeEv @ 36 NONAME
+	_ZNK13CCASearchData22NoMoreResultsAvailableEv @ 37 NONAME
+	_ZNK13CCASearchData23HowManyResultsAvailableEv @ 38 NONAME
+	_ZNK16CCASearchManager19SearchDataInterfaceEv @ 39 NONAME
+	_ZNK17CCAContentMessage9ThumbnailEv @ 40 NONAME
+	_ZNK20CCAInvitationRequest7GroupIDEv @ 41 NONAME
+	_ZNK20CCAInvitationRequest7MessageEv @ 42 NONAME
+	_ZNK20CCAInvitationRequest7TimeoutEv @ 43 NONAME
+	_ZNK20CCAInvitationRequest8InviteesEv @ 44 NONAME
+	_ZNK9CCAEngine12MessageUtilsEv @ 45 NONAME
+	_ZNK9CCAEngine13ChatInterfaceEv @ 46 NONAME
+	_ZNK9CCAEngine16ContactListModelEv @ 47 NONAME
+	_ZNK9CCAEngine17GetGroupInterfaceEv @ 48 NONAME
+	_ZNK9CCAEngine18GetAccessInterfaceEv @ 49 NONAME
+	_ZNK9CCAEngine18GetSearchInterfaceEv @ 50 NONAME
+	_ZNK9CCAEngine18PartialSuccessDataEv @ 51 NONAME
+	_ZNK9CCAEngine19BackgroundInterfaceEv @ 52 NONAME
+	_ZNK9CCAEngine20GetBlockingInterfaceEv @ 53 NONAME
+	_ZNK9CCAEngine22GetFundClientInterfaceEv @ 54 NONAME
+	_ZNK9CCAEngine22GetInvitationInterfaceEv @ 55 NONAME
+	_ZNK9CCAEngine28GetInternalSettingsInterfaceEv @ 56 NONAME
+	_ZTI10CCARequest @ 57 NONAME ; #<TI>#
+	_ZTI12CCAErrorData @ 58 NONAME ; #<TI>#
+	_ZTI13CCAInvitation @ 59 NONAME ; #<TI>#
+	_ZTI13CCASearchData @ 60 NONAME ; #<TI>#
+	_ZTI14CCAImageLoader @ 61 NONAME ; #<TI>#
+	_ZTI14CCAMessageBase @ 62 NONAME ; #<TI>#
+	_ZTI14CCATextMessage @ 63 NONAME ; #<TI>#
+	_ZTI15CCAGroupManager @ 64 NONAME ; #<TI>#
+	_ZTI15CCAGroupWrapper @ 65 NONAME ; #<TI>#
+	_ZTI15CCASDCRVariator @ 66 NONAME ; #<TI>#
+	_ZTI16CCAAccessManager @ 67 NONAME ; #<TI>#
+	_ZTI16CCAChatContainer @ 68 NONAME ; #<TI>#
+	_ZTI16CCAInviteManager @ 69 NONAME ; #<TI>#
+	_ZTI16CCAInviteTracker @ 70 NONAME ; #<TI>#
+	_ZTI16CCARequestMapper @ 71 NONAME ; #<TI>#
+	_ZTI16CCASearchManager @ 72 NONAME ; #<TI>#
+	_ZTI17CCABackgroundTask @ 73 NONAME ; #<TI>#
+	_ZTI17CCAContentMessage @ 74 NONAME ; #<TI>#
+	_ZTI17CCAMessageCreator @ 75 NONAME ; #<TI>#
+	_ZTI17CCAMessageHandler @ 76 NONAME ; #<TI>#
+	_ZTI18CCABlockingManager @ 77 NONAME ; #<TI>#
+	_ZTI18CCASettingsManager @ 78 NONAME ; #<TI>#
+	_ZTI18CCAStorageObserver @ 79 NONAME ; #<TI>#
+	_ZTI19CCAContactListModel @ 80 NONAME ; #<TI>#
+	_ZTI19CCAMessageContainer @ 81 NONAME ; #<TI>#
+	_ZTI20CCAInvitationRequest @ 82 NONAME ; #<TI>#
+	_ZTI21CCAPartialSuccessData @ 83 NONAME ; #<TI>#
+	_ZTI22CCALoggerMessageHeader @ 84 NONAME ; #<TI>#
+	_ZTI23TCALoggerMessageFactory @ 85 NONAME ; #<TI>#
+	_ZTI25CCALoggerHeadersInterface @ 86 NONAME ; #<TI>#
+	_ZTI9CCAEngine @ 87 NONAME ; #<TI>#
+	_ZTV10CCARequest @ 88 NONAME ; #<VT>#
+	_ZTV12CCAErrorData @ 89 NONAME ; #<VT>#
+	_ZTV13CCAInvitation @ 90 NONAME ; #<VT>#
+	_ZTV13CCASearchData @ 91 NONAME ; #<VT>#
+	_ZTV14CCAImageLoader @ 92 NONAME ; #<VT>#
+	_ZTV14CCAMessageBase @ 93 NONAME ; #<VT>#
+	_ZTV14CCATextMessage @ 94 NONAME ; #<VT>#
+	_ZTV15CCAGroupManager @ 95 NONAME ; #<VT>#
+	_ZTV15CCAGroupWrapper @ 96 NONAME ; #<VT>#
+	_ZTV15CCASDCRVariator @ 97 NONAME ; #<VT>#
+	_ZTV16CCAAccessManager @ 98 NONAME ; #<VT>#
+	_ZTV16CCAChatContainer @ 99 NONAME ; #<VT>#
+	_ZTV16CCAInviteManager @ 100 NONAME ; #<VT>#
+	_ZTV16CCAInviteTracker @ 101 NONAME ; #<VT>#
+	_ZTV16CCARequestMapper @ 102 NONAME ; #<VT>#
+	_ZTV16CCASearchManager @ 103 NONAME ; #<VT>#
+	_ZTV17CCABackgroundTask @ 104 NONAME ; #<VT>#
+	_ZTV17CCAContentMessage @ 105 NONAME ; #<VT>#
+	_ZTV17CCAMessageCreator @ 106 NONAME ; #<VT>#
+	_ZTV17CCAMessageHandler @ 107 NONAME ; #<VT>#
+	_ZTV18CCABlockingManager @ 108 NONAME ; #<VT>#
+	_ZTV18CCASettingsManager @ 109 NONAME ; #<VT>#
+	_ZTV18CCAStorageObserver @ 110 NONAME ; #<VT>#
+	_ZTV19CCAContactListModel @ 111 NONAME ; #<VT>#
+	_ZTV19CCAMessageContainer @ 112 NONAME ; #<VT>#
+	_ZTV20CCAInvitationRequest @ 113 NONAME ; #<VT>#
+	_ZTV21CCAPartialSuccessData @ 114 NONAME ; #<VT>#
+	_ZTV22CCALoggerMessageHeader @ 115 NONAME ; #<VT>#
+	_ZTV23TCALoggerMessageFactory @ 116 NONAME ; #<VT>#
+	_ZTV25CCALoggerHeadersInterface @ 117 NONAME ; #<VT>#
+	_ZTV9CCAEngine @ 118 NONAME ; #<VT>#
+	_ZThn12_N18CCABlockingManagerD0Ev @ 119 NONAME ; #<thunk>#
+	_ZThn12_N18CCABlockingManagerD1Ev @ 120 NONAME ; #<thunk>#
+	_ZThn12_N9CCAEngineD0Ev @ 121 NONAME ; #<thunk>#
+	_ZThn12_N9CCAEngineD1Ev @ 122 NONAME ; #<thunk>#
+	_ZThn16_N18CCABlockingManagerD0Ev @ 123 NONAME ; #<thunk>#
+	_ZThn16_N18CCABlockingManagerD1Ev @ 124 NONAME ; #<thunk>#
+	_ZThn20_N18CCABlockingManagerD0Ev @ 125 NONAME ; #<thunk>#
+	_ZThn20_N18CCABlockingManagerD1Ev @ 126 NONAME ; #<thunk>#
+	_ZThn20_N9CCAEngineD0Ev @ 127 NONAME ; #<thunk>#
+	_ZThn20_N9CCAEngineD1Ev @ 128 NONAME ; #<thunk>#
+	_ZThn24_N9CCAEngineD0Ev @ 129 NONAME ; #<thunk>#
+	_ZThn24_N9CCAEngineD1Ev @ 130 NONAME ; #<thunk>#
+	_ZThn4_N16CCASearchManager10EndSearchLEv @ 131 NONAME ; #<thunk>#
+	_ZThn4_N16CCASearchManager11SearchNextLEiP26MCASearchObserverInterface @ 132 NONAME ; #<thunk>#
+	_ZThn4_N16CCASearchManager12StartSearchLERK13CArrayPtrFlatI18CImpsSearchRequestEiP26MCASearchObserverInterface @ 133 NONAME ; #<thunk>#
+	_ZThn4_N9CCAEngineD0Ev @ 134 NONAME ; #<thunk>#
+	_ZThn4_N9CCAEngineD1Ev @ 135 NONAME ; #<thunk>#
+	_ZThn4_NK12CCAErrorData10MessageIDsEv @ 136 NONAME ; #<thunk>#
+	_ZThn4_NK12CCAErrorData11DescriptionEv @ 137 NONAME ; #<thunk>#
+	_ZThn4_NK12CCAErrorData11ScreenNamesEv @ 138 NONAME ; #<thunk>#
+	_ZThn4_NK12CCAErrorData15ScreenNameGroupEv @ 139 NONAME ; #<thunk>#
+	_ZThn4_NK12CCAErrorData4CodeEv @ 140 NONAME ; #<thunk>#
+	_ZThn4_NK12CCAErrorData7UserIDsEv @ 141 NONAME ; #<thunk>#
+	_ZThn4_NK12CCAErrorData8GroupIDsEv @ 142 NONAME ; #<thunk>#
+	_ZThn4_NK13CCASearchData10SearchDataEi @ 143 NONAME ; #<thunk>#
+	_ZThn4_NK13CCASearchData15SearchDataCountEv @ 144 NONAME ; #<thunk>#
+	_ZThn4_NK13CCASearchData16SearchResultTypeEv @ 145 NONAME ; #<thunk>#
+	_ZThn4_NK13CCASearchData22NoMoreResultsAvailableEv @ 146 NONAME ; #<thunk>#
+	_ZThn4_NK13CCASearchData23HowManyResultsAvailableEv @ 147 NONAME ; #<thunk>#
+	_ZThn4_NK16CCASearchManager19SearchDataInterfaceEv @ 148 NONAME ; #<thunk>#
+	_ZThn8_N18CCABlockingManagerD0Ev @ 149 NONAME ; #<thunk>#
+	_ZThn8_N18CCABlockingManagerD1Ev @ 150 NONAME ; #<thunk>#
+	_ZThn8_N9CCAEngineD0Ev @ 151 NONAME ; #<thunk>#
+	_ZThn8_N9CCAEngineD1Ev @ 152 NONAME ; #<thunk>#
+

@@ -1,0 +1,189 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource variation file for PAppConnectionUi
+ *
+*/
+
+
+//  RESOURCE IDENTIFIER
+NAME    CAPR // 4 letter ID
+
+//  INCLUDES
+#include <eikon.rh>
+#include "WVUIPresenceVariationNG.rh"
+#include "WVUIPresenceVariationNG.hrh"
+
+RESOURCE RSS_SIGNATURE { }
+
+//----------------------------------------------------
+// VARIATION
+// You can do resource-file based variation by setting the following
+// resources as you wish.
+//----------------------------------------------------
+
+
+// RSC_CHAT_VARIATION_OWN_PRESENCE_STATES:
+// -------------------------------------------------
+// Defines own attributes that are published on certain state.
+// i.e. Client => Server mapping.
+// Check structure definitions from WVUIPresenceVariation.rh
+// and possible values from WVUIPresenceVariation.hrh
+// -------------------------------------------------
+//
+RESOURCE IM_STATE_ARRAY RSC_CHAT_VARIATION_OWN_PRESENCE_STATES
+	{
+	states =
+		{
+		IM_ATTRIBUTE_ARRAY
+		    {
+		    state = EIMStateAvailable;
+            attributes =
+                {
+               	IM_ATTRIBUTE
+                    {
+                    attribute = EIMUserAvailabilityAttr;
+                    qualifier = EIMQualifierTrue;
+                    value     = EIMUserAvailabilityAvailable;
+                    },
+                IM_ATTRIBUTE
+                    {
+                    attribute = EIMStatusTextAttr;
+                    qualifier = EIMQualifierTrue;
+                    value     = EIMStatusTextNoChange;	// status text value is controlled by UI
+                    }
+                };
+		    },
+		IM_ATTRIBUTE_ARRAY
+		    {
+		    state = EIMStateAway;
+            attributes =
+                {
+                IM_ATTRIBUTE
+                    {
+                    attribute = EIMUserAvailabilityAttr;
+                    qualifier = EIMQualifierTrue;
+                    value     = EIMUserAvailabilityDiscreet;
+                    },
+                IM_ATTRIBUTE
+                    {
+                    attribute = EIMStatusTextAttr;
+                    qualifier = EIMQualifierTrue;
+                    value     = EIMStatusTextNoChange;	// status text value is controlled by UI
+                    }
+                };
+            },
+        IM_ATTRIBUTE_ARRAY
+            {
+            // Note that busy mapping is used only if
+            // RSC_CHAT_VARIATION_BUSY_STATUS is enabled
+            state = EIMStateBusy;
+            attributes =
+                {
+                IM_ATTRIBUTE
+                    {
+                    attribute = EIMUserAvailabilityAttr;
+                    qualifier = EIMQualifierTrue;
+                    value     = EIMUserAvailabilityDiscreet;
+                    },
+                IM_ATTRIBUTE
+                    {
+                    attribute = EIMStatusTextAttr;
+                    qualifier = EIMQualifierTrue;
+                    value     = EIMStatusTextNoChange;  // status text value is controlled by UI
+                    }
+                };
+            },
+        IM_ATTRIBUTE_ARRAY
+            {
+            state = EIMStateInvisible;
+            attributes =
+                {
+                IM_ATTRIBUTE
+                    {
+                    attribute = EIMUserAvailabilityAttr;
+                    qualifier = EIMQualifierTrue;
+                    value     = EIMUserAvailabilityNotAvailable;
+                    },
+                IM_ATTRIBUTE
+                    {
+                    attribute = EIMStatusTextAttr;
+                    qualifier = EIMQualifierFalse;
+                    value     = EIMStatusTextNoChange;	// status text value is controlled by UI
+                    }
+                };
+		    }
+		};
+	}
+
+// RSC_CHAT_VARIATION_PRESENCE_STATES:
+// -------------------------------------------------
+// Defines incoming attribute combinations that are mapped to certain state.
+// i.e. Server => Client mapping.
+// Check structure definitions from WVUIPresenceVariation.rh
+// and possible values from WVUIPresenceVariation.hrh
+// -------------------------------------------------
+//
+RESOURCE IM_STATE_ARRAY RSC_CHAT_VARIATION_PRESENCE_STATES
+	{
+	states =
+		{
+		IM_ATTRIBUTE_ARRAY
+		    {
+		    state = EIMStateOffline;
+            attributes = 
+                {
+                // no attributes => defines the default state
+                };
+		    },
+		IM_ATTRIBUTE_ARRAY
+		    {
+		    state = EIMStateAvailable;
+            attributes =
+                {
+                IM_ATTRIBUTE
+                    {
+                    attribute = EIMUserAvailabilityAttr;
+                    qualifier = EIMQualifierTrue;
+                    value     = EIMUserAvailabilityAvailable;
+                    },
+                IM_ATTRIBUTE
+                    {
+                    attribute = EIMOnlineAttr;
+                    qualifier = EIMQualifierTrue;
+                    value     = EIMOnlineTrue;
+                    }
+                };
+		    },
+		IM_ATTRIBUTE_ARRAY
+		    {
+            state = EIMStateAway;
+            attributes =
+                {
+                IM_ATTRIBUTE
+                    {
+                    attribute = EIMUserAvailabilityAttr;
+                    qualifier = EIMQualifierTrue;
+                    value     = EIMUserAvailabilityDiscreet;
+                    },
+                IM_ATTRIBUTE
+                    {
+                    attribute = EIMOnlineAttr;
+                    qualifier = EIMQualifierTrue;
+                    value     = EIMOnlineTrue;
+                    }
+                };
+		    }
+		};
+	}
+// End of file

@@ -1,0 +1,340 @@
+/*
+* Copyright (c) 2002 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Resource header of chat application
+*
+*/
+
+
+#ifndef CHATCLIENT_HRH
+#define CHATCLIENT_HRH
+
+#include <avkon.hrh>    // For EAknCmdHelp
+
+// While updating the contact in phone book from saved conversation
+// it is opening the popup menu with the available connection services
+ 
+// Define start value for command ids
+// to prevent clashes with platform
+// command ids
+#define KCOMMANDRANGESTART 0x06000
+enum TChatClientMenuCommands
+    {
+    EChatClientCmdHelp = EAknCmdHelp,
+    EChatClientCmdAppTest = KCOMMANDRANGESTART,
+	EChatClientMainViewCmdChangeStatus,
+    EChatClientMainViewCmdOpen,
+	EChatClientMainViewCmdLogin,
+	EChatClientMainViewCmdLogout,
+	EChatClientMainViewCmdSearch,
+	EChatClientMainViewSettings,
+//	EChatClientCmdHelp,
+	EChatClientCmdExit,
+	EChatClientCmdContextMenu,
+	EChatClientChatListViewCmdJoin,
+    EChatClientInviteFriend,
+	// Friends list
+	EChatClientFriendsListViewCmdIMessage,
+	EChatClientFriendsListViewCmdReadIMsg,
+	EChatClientFriendsListViewCmdOpen,
+	EChatClientFriendsListViewCmdCrNew,
+    EChatClientFriendsListViewCmdAddManually,
+    EChatClientFriendsListViewCmdAddFromPb,
+    EChatClientFriendsListViewCmdAddFromSrv,
+    EChatClientFriendsListViewCmdMoveFromSrv,
+
+	EChatClientFriendsListViewCmdEdit,
+	EChatClientFriendsListViewCmdDelete,
+//	EChatClientFriendsListViewCmdSearch,
+	EChatClientFriendsListViewCmdRefresh,
+	EChatClientFriendsListViewCmdFetchFailed,
+	EChatClientFriendsListViewCmdFetchMSK,
+	EChatClientFriendsListViewCmdBlockOptions,
+	EChatClientFriendsListViewCmdBlockEnter,
+	EChatClientFriendsListViewCmdBlock,
+	EChatClientFriendsListViewShowBlockedList,
+	EChatClientFriendsListViewUnblock,
+	EChatClientCmdBack,
+    EChatClientFriendsListViewCmdAddWatch,
+    EChatClientFriendsListViewCmdRemoveWatch,
+	EChatClientFriendsListViewCmdFindJoinedChats,
+
+    EChatClientFriendsListViewCmdMove,
+    EChatClientFriendsListViewCmdChangeList,
+    EChatClientFriendsListViewCmdChat,
+//    EChatClientFriendsListViewCmdServer,
+    //EChatClientFriendsListViewCmdImport,
+    //EChatClientFriendsListViewCmdExport,
+
+    //Server contacts view
+    EChatClientServerContactsCmdImport,
+    EChatClientServerContactsCmdAddNew,
+    EChatClientServerContactsCmdDelete,
+    EChatClientServerContactsCmdList,
+    EChatClientServerContactsCmdMark,
+    EChatClientServerContactsCmdUnmark,
+    EChatClientServerContactsCmdMarkAll,
+    EChatClientServerContactsCmdUnmarkall,
+    
+	//Chat list view
+	EChatClientChatListViewCmdChat,
+	EChatClientChatListEnterChatGroup,
+	EChatClientChatViewCreateNewChat,
+	EChatClientChatListOptions,
+	EChatClientChatListSearch,
+	EChatClientChatListSettings,
+	EChatClientChatListFavor,
+	EChatClientChatListRmv,
+	EChatClientChatListPart,
+	EChatClientChatListLeave,
+	EChatClientChatListInfo,
+	EChatClientChatListEdit,
+	EChatClientChatViewContinue,
+	EChatClientChatViewStop,
+	EChatClientChatViewCmdSend,
+	EChatClientMainViewCmdKillServer,
+	//Chat view
+	EChatClientChatViewCmdRecipientList,
+	EChatClientChatViewCmdSetRecipient,
+	EChatClientChatViewCmdWhisper,
+	EChatClientChatViewCmdReply,
+	EChatClientChatViewCmdLeave,
+	EChatClientChatViewCmdParticip,
+	EChatClientChatViewCmdGroupInfo,
+	EChatClientChatViewCmdEdit,
+    EChatClientChatViewCmdForward,
+	EChatClientChatViewIBox,
+	EChatClientChatViewFavor,
+	EChatClientChatViewRmv,
+	EChatClientChatViewEdit,
+	ECACmdEditItemLabel,
+	EChatClientChatViewLogOn,
+	EChatClientChatViewLogOff,
+	EChatClientChatViewInsertSmiley,
+	//IBox view
+	EChatClientIboxViewSend,
+	EChatClientIboxSelResip,
+	EChatClientIboxReply,
+	EChatClientIboxRecip,
+	EChatClientIboxRepeat,
+	EChatClientIboxAddToFriends,
+    EChatClientIboxForward,
+    EChatClientIboxForwardToGroup,
+    EChatClientIboxForwardToContact,
+
+	EChatClientIboxBlockOpt,
+	EChatClientIboxRecord,
+	EChatClientIboxSelectRecip,
+	EChatClientIboxWriteRecip,
+	EChatClientIboxBlockEnter,
+	EChatClientIboxBlockShow,
+	EChatClientIboxBlock,
+	EChatClientIboxUnblock,
+	EChatClientIboxClose,
+	
+	// Chat properties
+	EChatClientChatPropertiesCmdChange,
+	EChatClientChatPropertiesCmdHelp,
+	EChatClientChatPropertiesCmdExit,
+
+	// Access list
+	EChatClientAccessListAdd,
+	EChatClientAccessListFriend,
+	EChatClientAccessListManual,
+	EChatClientAccessListRemove,
+	EChatClientAccessListRemoveAll,
+	//Settings view
+	EChatClientSettingsOpen,
+	EChatClientAppSetChange,
+	EChatClientServSetChange,
+	EChatClientServSetOpen,
+	//Serverlist
+	EChatClientServerlistEdit,
+	EChatClientServerlistNew,
+	EChatClientServerlistDelete,
+	EChatClientDefNewServerChange,
+	//Search
+	EChatClientSearchNew,
+	EChatClientSearchMore,
+	EChatClientSearchPrev,
+    EChatClientSearchStartConversation,
+	EChatClientSearchAddFriends,
+    EChatClientSearchInvite,
+	EChatClientSearchBlockOpt,
+	EChatClientSearchBlock,
+	EChatClientSearchBlockEnter,
+	EChatClientSearchBlockShow,
+	EChatClientSearchUnblock,
+	EChatClientSearchJoin,
+	EChatClientSearchFavor,
+	EChatClientSearchEdit,
+	ESearchWaitNote,
+    EInviteWaitNote,
+	//Private chatList view
+	EChatPrivateListCmdOpen,
+    EChatPrivateListCmdDelete,
+	EChatPrivateListCmdAddToFriends,
+	EChatPrivateListCmdNewConvers,
+	EChatPrivateListWriteNewConvers,
+	EChatPrivateListCmdBlockOpt,
+	EChatPrivateListCmdCloseConvers,
+	EChatPrivateListCmdSettings,
+	EChatPrivateListBlock,
+	EChatPrivateListBlockEnter,
+	EChatPrivateListBlockShow,
+	EChatPrivateListUnblock,
+	EChatPrivateListCmdSelectRecipient,
+
+    //invitation view dialog
+    EChatInvitationDlgCmdJoin,
+    EChatInvitationDlgCmdReject,
+    EChatInvitationDlgCmdDelete,
+    EChatInvitationDlgCmdBlock,
+
+	//recorded chat view
+	EChatClientSavedListViewCmdOpen,
+	EChatClientSavedListViewCmdDelete,
+	EChatClientSavedListViewCmdMarkOpt,
+	EChatClientSavedListViewCmdMark,
+	EChatClientSavedListViewCmdUnmark,
+	EChatClientSavedListViewCmdMarkAll,
+	EChatClientSavedListViewCmdUnmarkAll,
+	EChatClientSavedListViewCmdSendOpt,
+	EChatClientSavedListViewCmdSendSMS,
+	EChatClientSavedListViewCmdSendMultimedia,
+	EChatClientSavedListViewCmdSendInfrared,
+	EChatClientSavedListViewCmdSendBluetooth,
+	
+	// new contact list items
+	EChatClientCmdExpandList,
+	EChatClientCmdCollapseList,
+	EChatClientCmdNewList,
+	EChatClientCmdRenameList,
+	EChatClientCmdStatusMessage,
+	EChatClientCmdOpenGroupConv,
+	
+	// multimedia items
+	EChatClientOpenObject,
+	EChatClientSendImage,
+	EChatClientSendImageCascade,
+	EChatClientFromPhotos,
+	EChatClientNewImage,
+	
+	EChatClientSaveObject,
+	EChatClientFindMenuPlaceHolder,
+
+	//BlockingDialog
+	EChatClientBlockingBlock,
+	EChatClientBlockingSubmenu,
+	EChatClientBlockingBlockEnter,
+	EChatClientBlockingUnblock,
+
+    // Contact details dialog
+    EChatClientDetailsEdit,
+    EChatClientDetailsDelete,
+    // Application settings dialog
+    EChatClientApplicationSettings,
+    // Call cmd from send key
+    EChatClientCall,
+    
+    //single list view options menu items
+    EChatClientSingleListViewCmdChangeMessage,
+    EChatClientSingleListViewCmdDetails,
+    EChatClientSingleListViewCmdEdit,
+    EChatClientSingleListViewCmdDelete,
+    EChatClientSingleListViewCmdMove,
+    EChatClientSingleListViewCmdSavedConversations,
+    EChatClientSingleListViewCmdSearchContact,
+    EChatClientSingleListViewCmdCreateGrp,
+    EChatClientSingleListViewCmdSearchGrp,
+    EChatClientSingleListViewCmdEnterGrpID,
+    EChatClientSingleListViewCmdGroupOpen,
+    EChatClientSingleListViewCmdGroupJoin,
+    EChatClientSingleListViewCmdGroupEdit,
+    EChatClientSingleListViewCmdGroupFavor,
+    EChatClientSingleListViewCmdGroupRmv,
+    EChatClientSingleListViewCmdGroupPart,
+    EChatClientSingleListViewCmdGroupInfo,
+    EChatClientSingleListViewCmdGroupLeave,
+    EChatClientSingleListViewCmdOwnEdit,
+    //added newly for the EditText in Chat&GroupView
+   // EChatClientEditText
+    
+    EChatClientIboxInsertTemplate
+	};
+
+enum TChatClientTabViewId
+    {
+    EChatClientFriendsListTab= 1,
+    EChatClientChatListTab
+    };
+
+enum TChatClientControlIds
+	{
+	EChatEditDummy = 1, // used for "no focus"
+	EChatEditNick,
+	EChatEditReal,
+	EChatEditWV,
+	EChatEditAlias,
+	EChatListEditChatName,
+	EChatListEditTopic,
+	EChatListEditSearchable,
+    EChatClientControlIdAppSettings,
+	EChatClientControlIdServSettings,
+	EChatClientControlIdServerList,
+	EChatClientControlIdDefNewServer,
+	EChatClientControlIdAccessList,
+	EChatClientControlIdGroupSettings,
+    EChatClientControlIdDetails,
+    EChatClientControlIdContactListbox
+	};
+
+enum TChatPropertiesIDs
+    {
+    EChatPropertiesGroupNameID = 1,
+    EChatPropertiesTopicID,
+    EChatPropertiesWelcomeNoteID,
+    EChatPropertiesAllowSearchID,
+    EChatPropertiesAdministratorRightsID
+    };
+
+enum TChatDlgCtl
+	{
+	// Friends-list
+	ENotesFriendsGeneralNote,
+	// contact editor
+	ENotesContactEditorErrorSameId,
+	ENotesContactEditorErrorGeneral,
+	ESavingWaitNote,
+	EJoinWaitNote,
+	EArCnoteOff,
+	EJoinInfoNote,
+	EAddToFriends,
+    EFriendsRefreshWait,
+    ESavingSettingsWaitNote,
+    EProgressNote,
+    EContactSelectionControl
+	};
+
+enum TChatCbaIDs
+	{
+	EChatClientJoin = 1,
+    EChatInviteJoin
+	};
+
+enum TChatNotes
+    {
+    EAutoLoginNote = 1
+    };
+
+#endif      //  CHATCLIENT

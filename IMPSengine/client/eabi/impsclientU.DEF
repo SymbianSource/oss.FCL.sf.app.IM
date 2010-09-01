@@ -1,0 +1,160 @@
+EXPORTS
+	_ZN12RImpsClient210WVVersionLEv @ 1 NONAME
+	_ZN12RImpsClient212GetServicesLER13TImpsServices @ 2 NONAME
+	_ZN12RImpsClient213SetExpiryTimeEi @ 3 NONAME
+	_ZN12RImpsClient214CspIdentifierLEv @ 4 NONAME
+	_ZN12RImpsClient217CancelTransactionEi @ 5 NONAME
+	_ZN12RImpsClient222RegisterErrorObserverLER18MImpsErrorHandler2 @ 6 NONAME
+	_ZN12RImpsClient223RegisterStatusObserverLEP19MImpsStatusHandler2 @ 7 NONAME
+	_ZN12RImpsClient224UnregisterErrorObserverLEv @ 8 NONAME
+	_ZN12RImpsClient225UnregisterStatusObserverLEv @ 9 NONAME
+	_ZN12RImpsClient228MaxTransactionContentLengthLEv @ 10 NONAME
+	_ZN12RImpsClient2C2Ev @ 11 NONAME
+	_ZN14RImpsImClient210UnregisterEv @ 12 NONAME
+	_ZN14RImpsImClient216SendTextMessageLEPK7TDesC16PK12MDesC16ArrayS2_S5_RS1_i @ 13 NONAME
+	_ZN14RImpsImClient219BlockEntityRequestLEPK12MDesC16ArrayS2_iS2_S2_i @ 14 NONAME
+	_ZN14RImpsImClient219SendContentMessageLEPK7TDesC16PK12MDesC16ArrayS2_S5_RS1_RK6TDesC8i @ 15 NONAME
+	_ZN14RImpsImClient222GetBlockedListRequestLEv @ 16 NONAME
+	_ZN14RImpsImClient29RegisterLER8RImpsEngP15MImpsImHandler2P21MImpsBlockingHandler2RK7TDesC16ii @ 17 NONAME
+	_ZN14RImpsImClient2C1Ev @ 18 NONAME
+	_ZN14RImpsImClient2C2Ev @ 19 NONAME
+	_ZN15CImpsGroupProps4AddLERK14CImpsGroupProp @ 20 NONAME
+	_ZN15CImpsGroupProps5CountEv @ 21 NONAME
+	_ZN15CImpsGroupProps5NextLEv @ 22 NONAME
+	_ZN15CImpsGroupProps6FirstLEv @ 23 NONAME
+	_ZN16RImpsFundClient210UnregisterEv @ 24 NONAME
+	_ZN16RImpsFundClient211SearchNextLEii @ 25 NONAME
+	_ZN16RImpsFundClient211StopSearchLEi @ 26 NONAME
+	_ZN16RImpsFundClient212GroupInviteLERK7TDesC16PK12MDesC16ArrayS5_S5_S2_S2_S2_S2_i @ 27 NONAME
+	_ZN16RImpsFundClient212SearchFirstLERK13CArrayPtrFlatI18CImpsSearchRequestEi @ 28 NONAME
+	_ZN16RImpsFundClient213CancelInviteLERK7TDesC16PK12MDesC16ArrayS5_S5_S2_S2_S2_ @ 29 NONAME
+	_ZN16RImpsFundClient215InviteResponseLERK7TDesC16iS2_S2_S2_ @ 30 NONAME
+	_ZN16RImpsFundClient29ImInviteLERK7TDesC16S2_S2_i @ 31 NONAME
+	_ZN16RImpsFundClient29RegisterLER8RImpsEngP19MImpsSearchHandler2P19MImpsInviteHandler2RK7TDesC16ii @ 32 NONAME
+	_ZN16RImpsFundClient2C1Ev @ 33 NONAME
+	_ZN16RImpsFundClient2C2Ev @ 34 NONAME
+	_ZN16RImpsPureClient210UnregisterEv @ 35 NONAME
+	_ZN16RImpsPureClient213SendPureDataLERK6TDesC8 @ 36 NONAME
+	_ZN16RImpsPureClient29RegisterLER8RImpsEngP17MImpsPureHandler216TImpsServiceTypeii @ 37 NONAME
+	_ZN16RImpsPureClient2C1Ev @ 38 NONAME
+	_ZN16RImpsPureClient2C2Ev @ 39 NONAME
+	_ZN16RImpsWatchClient10UnRegisterEv @ 40 NONAME
+	_ZN16RImpsWatchClient7SendCIRERK6TDesC8 @ 41 NONAME
+	_ZN16RImpsWatchClient8RegisterEv @ 42 NONAME
+	_ZN16RImpsWatchClientC1Ev @ 43 NONAME
+	_ZN16RImpsWatchClientC2Ev @ 44 NONAME
+	_ZN17RImpsGroupClient210JoinGroupLERK7TDesC16S2_ii @ 45 NONAME
+	_ZN17RImpsGroupClient210SubscribeLERK7TDesC16 @ 46 NONAME
+	_ZN17RImpsGroupClient210UnregisterEv @ 47 NONAME
+	_ZN17RImpsGroupClient211AddMembersLERK7TDesC16RK12MDesC16ArrayS5_ @ 48 NONAME
+	_ZN17RImpsGroupClient211LeaveGroupLERK7TDesC16 @ 49 NONAME
+	_ZN17RImpsGroupClient212CreateGroupLERK7TDesC16PK21CImpsCommonGroupPropsS2_ii @ 50 NONAME
+	_ZN17RImpsGroupClient212DeleteGroupLERK7TDesC16 @ 51 NONAME
+	_ZN17RImpsGroupClient212UnsubscribeLERK7TDesC16 @ 52 NONAME
+	_ZN17RImpsGroupClient213GroupMembersLERK7TDesC16 @ 53 NONAME
+	_ZN17RImpsGroupClient214RemoveMembersLERK7TDesC16RK12MDesC16Array @ 54 NONAME
+	_ZN17RImpsGroupClient214SetRejectListLERK7TDesC16PK12MDesC16ArrayS5_ @ 55 NONAME
+	_ZN17RImpsGroupClient216GroupPropertiesLERK7TDesC16 @ 56 NONAME
+	_ZN17RImpsGroupClient218CheckSubscriptionLERK7TDesC16 @ 57 NONAME
+	_ZN17RImpsGroupClient219SetGroupPropertiesLERK7TDesC16PK21CImpsCommonGroupPropsPK22CImpsPrivateGroupProps @ 58 NONAME
+	_ZN17RImpsGroupClient220ModifyMembersAccessLERK7TDesC16PK12MDesC16ArrayS5_S5_ @ 59 NONAME
+	_ZN17RImpsGroupClient29RegisterLER8RImpsEngP18MImpsGroupHandler2RK7TDesC16ii @ 60 NONAME
+	_ZN17RImpsGroupClient2C1Ev @ 61 NONAME
+	_ZN17RImpsGroupClient2C2Ev @ 62 NONAME
+	_ZN18RImpsAccessClient210UnregisterEv @ 63 NONAME
+	_ZN18RImpsAccessClient212CancelLoginLEi @ 64 NONAME
+	_ZN18RImpsAccessClient214ReactiveLoginLE18TImpsCspIdentifierRK7TDesC16S3_mPS2_S4_ @ 65 NONAME
+	_ZN18RImpsAccessClient217CloseCspSessionsLEv @ 66 NONAME
+	_ZN18RImpsAccessClient217NumberOfSessionsLER18TImpsCspIdentifier @ 67 NONAME
+	_ZN18RImpsAccessClient26LoginLE18TImpsCspIdentifierRK7TDesC16S3_mPS2_S4_ @ 68 NONAME
+	_ZN18RImpsAccessClient27LogoutLEv @ 69 NONAME
+	_ZN18RImpsAccessClient29RegisterLER8RImpsEngP19MImpsAccessHandler2i @ 70 NONAME
+	_ZN18RImpsAccessClient2C1Ev @ 71 NONAME
+	_ZN18RImpsAccessClient2C2Ev @ 72 NONAME
+	_ZN21CImpsCommonGroupProps11SetWelcomeLERK7TDesC16 @ 73 NONAME
+	_ZN21CImpsCommonGroupProps13SetGroupNameLERK7TDesC16 @ 74 NONAME
+	_ZN21CImpsCommonGroupProps13SetSearchableE17TImpsPropertyBool @ 75 NONAME
+	_ZN21CImpsCommonGroupProps16SetMaxNbrOfUsersEi @ 76 NONAME
+	_ZN21CImpsCommonGroupProps17SetPrivateAllowedE17TImpsPropertyBool @ 77 NONAME
+	_ZN21CImpsCommonGroupProps4NewLEv @ 78 NONAME
+	_ZN21CImpsCommonGroupProps5ResetEv @ 79 NONAME
+	_ZN21CImpsCommonGroupProps7SetOpenE17TImpsPropertyBool @ 80 NONAME
+	_ZN21CImpsCommonGroupProps9SetTopicLERK7TDesC16 @ 81 NONAME
+	_ZN22CImpsPrivateGroupProps17SetPrivateAllowedE17TImpsPropertyBool @ 82 NONAME
+	_ZN22CImpsPrivateGroupProps4NewLEv @ 83 NONAME
+	_ZN22CImpsPrivateGroupProps5ResetEv @ 84 NONAME
+	_ZN24CImpsCommonGroupPropsInt13SetNbrOfUsersEi @ 85 NONAME
+	_ZN24CImpsCommonGroupPropsInt4NewLEv @ 86 NONAME
+	_ZN24CImpsCommonGroupPropsInt5ResetEv @ 87 NONAME
+	_ZN24CImpsCommonGroupPropsInt9SetPublicE17TImpsPropertyBool @ 88 NONAME
+	_ZN25CImpsPrivateGroupPropsInt13SetPrivilegesE15TImpsGroupUsers @ 89 NONAME
+	_ZN25CImpsPrivateGroupPropsInt4NewLEv @ 90 NONAME
+	_ZN25CImpsPrivateGroupPropsInt5ResetEv @ 91 NONAME
+	_ZN25CImpsPrivateGroupPropsInt9SetMemberE17TImpsPropertyBool @ 92 NONAME
+	_ZN8RImpsEng5CloseEv @ 93 NONAME
+	_ZN8RImpsEng7ConnectEi @ 94 NONAME
+	_ZN8RImpsEngC1Ev @ 95 NONAME
+	_ZN8RImpsEngC2Ev @ 96 NONAME
+	_ZNK21CImpsCommonGroupProps10NbrOfUsersEv @ 97 NONAME
+	_ZNK21CImpsCommonGroupProps12IsSearchableEv @ 98 NONAME
+	_ZNK21CImpsCommonGroupProps13MaxNbrOfUsersEv @ 99 NONAME
+	_ZNK21CImpsCommonGroupProps16IsPrivateAllowedEv @ 100 NONAME
+	_ZNK21CImpsCommonGroupProps4TypeEv @ 101 NONAME
+	_ZNK21CImpsCommonGroupProps5TopicEv @ 102 NONAME
+	_ZNK21CImpsCommonGroupProps6IsOpenEv @ 103 NONAME
+	_ZNK21CImpsCommonGroupProps7WelcomeEv @ 104 NONAME
+	_ZNK21CImpsCommonGroupProps8IsPublicEv @ 105 NONAME
+	_ZNK21CImpsCommonGroupProps9GroupNameEv @ 106 NONAME
+	_ZNK22CImpsPrivateGroupProps10PrivilegesEv @ 107 NONAME
+	_ZNK22CImpsPrivateGroupProps16IsPrivateAllowedEv @ 108 NONAME
+	_ZNK22CImpsPrivateGroupProps4TypeEv @ 109 NONAME
+	_ZNK22CImpsPrivateGroupProps8IsMemberEv @ 110 NONAME
+	_ZTI13CImpsHandler2 @ 111 NONAME ; #<TI>#
+	_ZTI14CImpsGroupProp @ 112 NONAME ; #<TI>#
+	_ZTI14RImpsImClient2 @ 113 NONAME ; #<TI>#
+	_ZTI15CImpsGroupProps @ 114 NONAME ; #<TI>#
+	_ZTI15CImpsImCommand2 @ 115 NONAME ; #<TI>#
+	_ZTI15CImpsImHandler2 @ 116 NONAME ; #<TI>#
+	_ZTI16RImpsFundClient2 @ 117 NONAME ; #<TI>#
+	_ZTI16RImpsPureClient2 @ 118 NONAME ; #<TI>#
+	_ZTI17CImpsFundCommand2 @ 119 NONAME ; #<TI>#
+	_ZTI17CImpsFundHandler2 @ 120 NONAME ; #<TI>#
+	_ZTI17CImpsHandlerTimer @ 121 NONAME ; #<TI>#
+	_ZTI17CImpsPureCommand2 @ 122 NONAME ; #<TI>#
+	_ZTI17CImpsPureHandler2 @ 123 NONAME ; #<TI>#
+	_ZTI17RImpsGroupClient2 @ 124 NONAME ; #<TI>#
+	_ZTI18CImpsGroupCommand2 @ 125 NONAME ; #<TI>#
+	_ZTI18CImpsGroupHandler2 @ 126 NONAME ; #<TI>#
+	_ZTI18RImpsAccessClient2 @ 127 NONAME ; #<TI>#
+	_ZTI19CImpsAccessCommand2 @ 128 NONAME ; #<TI>#
+	_ZTI19CImpsAccessHandler2 @ 129 NONAME ; #<TI>#
+	_ZTI21CImpsCommonGroupProps @ 130 NONAME ; #<TI>#
+	_ZTI22CImpsPrivateGroupProps @ 131 NONAME ; #<TI>#
+	_ZTI24CImpsCommonGroupPropsInt @ 132 NONAME ; #<TI>#
+	_ZTI25CImpsPrivateGroupPropsInt @ 133 NONAME ; #<TI>#
+	_ZTV13CImpsHandler2 @ 134 NONAME ; #<VT>#
+	_ZTV14CImpsGroupProp @ 135 NONAME ; #<VT>#
+	_ZTV14RImpsImClient2 @ 136 NONAME ; #<VT>#
+	_ZTV15CImpsGroupProps @ 137 NONAME ; #<VT>#
+	_ZTV15CImpsImCommand2 @ 138 NONAME ; #<VT>#
+	_ZTV15CImpsImHandler2 @ 139 NONAME ; #<VT>#
+	_ZTV16RImpsFundClient2 @ 140 NONAME ; #<VT>#
+	_ZTV16RImpsPureClient2 @ 141 NONAME ; #<VT>#
+	_ZTV17CImpsFundCommand2 @ 142 NONAME ; #<VT>#
+	_ZTV17CImpsFundHandler2 @ 143 NONAME ; #<VT>#
+	_ZTV17CImpsHandlerTimer @ 144 NONAME ; #<VT>#
+	_ZTV17CImpsPureCommand2 @ 145 NONAME ; #<VT>#
+	_ZTV17CImpsPureHandler2 @ 146 NONAME ; #<VT>#
+	_ZTV17RImpsGroupClient2 @ 147 NONAME ; #<VT>#
+	_ZTV18CImpsGroupCommand2 @ 148 NONAME ; #<VT>#
+	_ZTV18CImpsGroupHandler2 @ 149 NONAME ; #<VT>#
+	_ZTV18RImpsAccessClient2 @ 150 NONAME ; #<VT>#
+	_ZTV19CImpsAccessCommand2 @ 151 NONAME ; #<VT>#
+	_ZTV19CImpsAccessHandler2 @ 152 NONAME ; #<VT>#
+	_ZTV21CImpsCommonGroupProps @ 153 NONAME ; #<VT>#
+	_ZTV22CImpsPrivateGroupProps @ 154 NONAME ; #<VT>#
+	_ZTV24CImpsCommonGroupPropsInt @ 155 NONAME ; #<VT>#
+	_ZTV25CImpsPrivateGroupPropsInt @ 156 NONAME ; #<VT>#
+	_ZN21CImpsCommonGroupProps13SetAutoDeleteE17TImpsPropertyBool @ 157 NONAME
+	_ZNK21CImpsCommonGroupProps10AutoDeleteEv @ 158 NONAME
+

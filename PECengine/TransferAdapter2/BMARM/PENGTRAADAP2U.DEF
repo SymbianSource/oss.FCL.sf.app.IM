@@ -1,0 +1,6 @@
+EXPORTS
+	AccessHandlerL__19PEngTransferAdapterRC18CPEngSessionSlotId @ 1 NONAME R3UNUSED ; PEngTransferAdapter::AccessHandlerL(CPEngSessionSlotId const &)
+	PackLoginDataL__18PEngLoginDataCodecRC14CWVSAPSettings @ 2 NONAME R3UNUSED ; PEngLoginDataCodec::PackLoginDataL(CWVSAPSettings const &)
+	PureDataHandlerL__19PEngTransferAdapterRC18CPEngSessionSlotId @ 3 NONAME R3UNUSED ; PEngTransferAdapter::PureDataHandlerL(CPEngSessionSlotId const &)
+	UnPackLoginDataL__18PEngLoginDataCodecRC6TDesC8R14CWVSAPSettings @ 4 NONAME R3UNUSED ; PEngLoginDataCodec::UnPackLoginDataL(TDesC8 const &, CWVSAPSettings &)
+

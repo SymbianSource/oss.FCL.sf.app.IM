@@ -1,0 +1,622 @@
+/*
+* Copyright (c) 2005 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  IMPSConnectionUI resource.
+*
+*/
+
+//  RESOURCE IDENTIFIER
+NAME    PECO
+
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.rh>
+#include <avkon.rsg>
+#include <Avkon.mbg>
+#include <avkon.loc>
+#include <AvkonIcons.hrh>
+#include <IMPSCommonUiNG.loc>
+#include "CnUiCommon.hrh"
+#include "impscommonuibuilddefinitions.h"
+
+
+//  DEFINES
+#define login_data_editor_max_length 50
+
+
+//  RESOURCE DEFINITIONS
+// ---------------------------------------------------------
+//
+//    Signature definition, a must-be in an external resource file.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+
+// ---------------------------------------------------------
+//
+//    Presence ConnectionManager Ui texts
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_qtn_pec_con_to_server           { buf = qtn_pec_con_to_server; }
+RESOURCE TBUF r_qtn_chat_con_to_server          { buf = qtn_chat_con_to_server; }
+RESOURCE TBUF r_qtn_chat_login_ok               { buf = qtn_chat_login_ok; }
+RESOURCE TBUF r_qtn_chat_loging_canceled        { buf = qtn_chat_loging_canceled; }
+RESOURCE TBUF r_qtn_chat_fetching_contact_lists { buf = qtn_chat_fetching_contact_lists; }
+
+RESOURCE TBUF r_qtn_chat_wait_disconnect        { buf = qtn_chat_wait_disconnect; }
+RESOURCE TBUF r_qtn_dyc_disconnected_conf       { buf = qtn_dyc_disconnected_conf; }
+RESOURCE TBUF r_qtn_chat_disconnected_conf      { buf = qtn_chat_disconnected_conf; }
+RESOURCE TBUF r_qtn_chat_automatic_conn_on      { buf = qtn_chat_automatic_conn_on; }
+
+
+RESOURCE TBUF r_qtn_dyc_query_exit_conn_close      { buf = qtn_dyc_query_exit_conn_close; }
+
+
+//drop the old connection query & reconnect notes
+RESOURCE TBUF r_qtn_chat_setting_con_to_pec     { buf = qtn_chat_setting_con_to_pec; }
+RESOURCE TBUF r_qtn_chat_setting_con_to_chat    { buf = qtn_chat_setting_con_to_chat; }
+RESOURCE TBUF r_qtn_chat_setting_con_to_pec2    { buf = qtn_chat_setting_con_to_pec2; }
+RESOURCE TBUF r_qtn_chat_setting_con_to_chat2   { buf = qtn_chat_setting_con_to_chat2; }
+
+
+
+RESOURCE TBUF r_qtn_chat_login_account_lost       { buf = qtn_chat_login_account_lost; }
+RESOURCE TBUF r_qtn_chat_error_service_err        { buf = qtn_chat_error_service_err; }
+RESOURCE TBUF r_qtn_chat_login_passer_note        { buf = qtn_chat_login_passer_note; }
+RESOURCE TBUF r_qtn_chat_error_serv_busy          { buf = qtn_chat_error_serv_busy; }
+RESOURCE TBUF r_qtn_chat_error_gen_error          { buf = qtn_chat_error_gen_error; }
+RESOURCE TBUF r_qtn_chat_login_conerror_note      { buf = qtn_chat_login_conerror_note; }
+RESOURCE TBUF r_qtn_chat_info_not_sup_con         { buf = qtn_chat_info_not_sup_con; }
+RESOURCE TBUF r_qtn_chat_sett_comp_miss           { buf = qtn_chat_sett_comp_miss; }
+RESOURCE TBUF r_qtn_chat_login_ongoing_note          { buf = qtn_chat_login_ongoing_note; }
+RESOURCE TBUF r_qtn_chat_server_disconnected_client  { buf = qtn_chat_server_disconnected_client; }
+RESOURCE TBUF r_qtn_chat_error_wrong_wvid            { buf = qtn_chat_error_wrong_wvid; }
+RESOURCE TBUF r_qtn_offline_not_possible             { buf = qtn_offline_not_possible; } //from offline spec
+
+//remote notifications
+RESOURCE TBUF r_qtn_chat_scheduled_to_be_closed      { buf = qtn_chat_scheduled_to_be_closed; }
+RESOURCE TBUF r_qtn_chat_discon_other_because_scheduling { buf = qtn_chat_discon_other_because_scheduling; }
+
+
+
+//AA Error - dynamic global note, information note icon
+RESOURCE TBUF r_qtn_chat_autom_con_failed       { buf = qtn_chat_autom_con_failed; }
+RESOURCE TBUF r_qtn_chat_incor_usernames_nocon  { buf = qtn_chat_incor_usernames_nocon; }
+
+// Terms of Use
+RESOURCE TBUF r_qtn_chat_login_tou_query    { buf = qtn_chat_login_tou_query; }
+RESOURCE TBUF r_qtn_chat_cancel_termsofuse  { buf = qtn_chat_cancel_termsofuse; }
+//RESOURCE TBUF r_qtn_chat_login_tou_accept   { buf = qtn_chat_login_tou_accept; }
+//RESOURCE TBUF r_qtn_chat_login_tou_decline  { buf = qtn_chat_login_tou_decline; }
+RESOURCE TBUF r_qtn_chat_login_tou_message  { buf = qtn_chat_login_tou_message; }
+RESOURCE TBUF r_qtn_chat_tou_title          { buf = qtn_chat_tou_title; }
+    
+    
+
+
+
+// ---------------------------------------------------------
+//
+//    r_wait_note_with_cancel
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_wait_note_with_cancel
+    {
+    flags = EAknProgressNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralWaitNoteId;
+            control = AVKON_NOTE
+                {
+                layout = EWaitLayout;
+                imagefile = AVKON_ICON_FILE;
+                imageid   = EMbmAvkonQgn_note_progress;
+                imagemask = EMbmAvkonQgn_note_progress_mask;
+                animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+
+
+
+
+// ---------------------------------------------------------
+//
+//    r_wait_note_blank
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_wait_note_blank
+    {
+    flags = EAknProgressNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_EMPTY;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = EGeneralWaitNoteId;
+            control = AVKON_NOTE
+                {
+                layout = EWaitLayout;
+                imagefile = AVKON_ICON_FILE;
+                imageid   = EMbmAvkonQgn_note_progress;
+                imagemask = EMbmAvkonQgn_note_progress_mask;
+                animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+
+
+
+// ---------------------------------------------------------
+//
+//    r_general_query
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_general_query
+    {
+    flags=EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_YES_NO__YES;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationLayout;
+                };
+            }
+        };
+    }
+
+
+
+// ---------------------------------------------------------
+//
+//    r_confirmed_error_note
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_confirmed_error_note
+    {
+    flags=EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationLayout;
+                animation = R_QGN_NOTE_ERROR_ANIM;
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//
+//    r_confirmed_error_note_msk
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_confirmed_error_note_msk
+    {
+    flags=EGeneralQueryFlags;
+    buttons=R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationLayout;
+                animation = R_QGN_NOTE_ERROR_ANIM;
+                };
+            }
+        };
+    }
+
+
+
+// ---------------------------------------------------------
+//
+//    r_login_data_query
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_login_data_query
+        {
+        flags=EGeneralQueryFlags;
+        buttons=R_AVKON_SOFTKEYS_OK_CANCEL__OK;
+        items=
+            {
+            DLG_LINE
+                {
+                type=EAknCtMultilineQuery;
+                id=EMultilineFirstLine;
+                control = AVKON_DATA_QUERY
+                        {
+                        layout = EMultiDataFirstEdwin;
+                        label = qtn_chat_login_data_prompt;
+                        control = EDWIN
+                                {
+                                flags=0;
+                                width=5;
+                                lines=1;
+                                maxlength = login_data_editor_max_length;
+                                default_case=EAknEditorLowerCase;
+                                allowed_case_modes=EAknEditorAllCaseModes;
+                                //numeric_keymap=EAknEditorStandardNumberModeKeymap;
+                                // allowed_input_modes=EAknEditorTextInputMode;
+                                allowed_input_modes=EAknEditorTextInputMode|EAknEditorNumericInputMode;
+                                default_input_mode=EAknEditorTextInputMode;
+                                //special_character_table=-1;
+                                avkon_flags = EAknEditorFlagLatinInputModesOnly;
+                                //max_view_height_in_lines=0;
+                                //base_line_delta=0;
+                                //spare=0;
+                                };
+                        };
+                },
+            DLG_LINE
+                {
+                type=EAknCtMultilineQuery;
+                id=EMultilineSecondLine;
+                control= AVKON_DATA_QUERY
+                        {
+                        layout = EMultiDataSecondSecEd;
+                        label = qtn_chat_login_code_prompt;
+                        control = SECRETED
+                                {
+                                num_letters = login_data_editor_max_length;
+                                };
+                        };
+                }
+            };
+        }
+
+
+
+
+// ---------------------------------------------------------
+//
+//    r_server_to_login_listquery
+//
+// ---------------------------------------------------------
+//
+RESOURCE AVKON_LIST_QUERY r_server_to_login_listquery
+    {
+    flags = EGeneralQueryFlags;
+    softkeys = R_AVKON_SOFTKEYS_SELECT_CANCEL__SELECT;
+    items =
+        {
+        AVKON_LIST_QUERY_DLG_LINE
+            {
+            control = AVKON_LIST_QUERY_CONTROL
+                {
+                listtype = EAknCtSinglePopupMenuListBox;
+                listbox = AVKON_LIST_QUERY_LIST
+                    {
+                    };
+                heading = qtn_chat_log_selectservice;
+                };
+            }
+        };
+    }
+
+
+
+
+// ---------------------------------------------------------
+//
+//    r_non_waiting_confirmation_query
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_non_waiting_confirmation_query
+    {
+    flags= EEikDialogFlagNoDrag | EEikDialogFlagNoTitleBar | EEikDialogFlagCbaButtons;
+    buttons=R_AVKON_SOFTKEYS_YES_NO__YES;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationLayout;
+                };
+            }
+        };
+    }
+
+
+// ---------------------------------------------------------
+//
+//    r_non_waiting_confirmed_error_note
+//
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_non_waiting_confirmed_error_note
+    {
+    flags= EEikDialogFlagNoDrag | EEikDialogFlagNoTitleBar | EEikDialogFlagCbaButtons;
+    buttons=R_AVKON_SOFTKEYS_OK_EMPTY__OK;
+    items=
+        {
+        DLG_LINE
+            {
+            type=EAknCtQuery;
+            id=EGeneralQuery;
+            control= AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationLayout;
+                animation = R_QGN_NOTE_ERROR_ANIM;
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//
+//    r_server_to_login_listquery_graphic
+//
+// ---------------------------------------------------------
+//
+RESOURCE AVKON_LIST_QUERY r_server_to_login_listquery_graphic
+    {
+    flags = EGeneralQueryFlags;
+    softkeys = R_AVKON_SOFTKEYS_SELECT_CANCEL__SELECT;
+    items =
+        {
+        AVKON_LIST_QUERY_DLG_LINE
+            {
+            control = AVKON_LIST_QUERY_CONTROL
+                {
+                listtype = EAknCtSingleGraphicPopupMenuListBox;
+                listbox = AVKON_LIST_QUERY_LIST
+                    {
+                    };
+                heading = qtn_chat_log_selectservice;
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//
+//    r_cnui_terms_of_use_dialog_cba
+//
+// ---------------------------------------------------------
+//
+RESOURCE CBA r_cnui_terms_of_use_dialog_cba
+    {
+    buttons =
+        {
+        CBA_BUTTON { id = EIMPSCommonUITOUContinue; txt = qtn_chat_sk_continue; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EAknSoftkeyEmpty; txt = text_softkey_empty; }
+        };
+    }
+
+// ---------------------------------------------------------
+//
+//    r_cnui_terms_of_use_dialog
+//
+// ---------------------------------------------------------
+//    
+RESOURCE DIALOG r_cnui_terms_of_use_dialog
+	{
+	flags=EEikDialogFlagNoDrag | EEikDialogFlagFillAppClientRect | 
+	      EEikDialogFlagCbaButtons | EEikDialogFlagNotifyEsc | EEikDialogFlagWait;
+	buttons=r_cnui_terms_of_use_dialog_cba;
+	title= qtn_chat_tou_title;
+    items=
+		{
+		DLG_LINE
+			{
+			type=EEikCtRichTextEditor;
+			id=	ETOURichEditorId;
+			control= RTXTED
+					{
+					//width=200;
+					//height=200;
+					//textlimit=200;
+					flags= KMultiLineExpandingEditorFlags |
+					       EEikEdwinReadOnly | EEikEdwinAvkonDisableCursor |
+					       EEikEdwinNoAutoSelection;
+					//max_view_height_in_lines=3;
+                    avkon_flags = EAknEditorFlagEnableScrollBars;
+					};
+			}
+		};
+	}    
+
+// ---------------------------------------------------------
+//
+//    r_accept_terms_of_use_listquery_array
+//
+// ---------------------------------------------------------
+//
+RESOURCE ARRAY r_cnui_accept_terms_of_use_listquery_array
+    {
+    items=
+        {
+        LBUF{ txt = qtn_chat_login_tou_decline;},
+        LBUF{ txt = qtn_chat_login_tou_accept;}        
+        };
+    }
+
+// ---------------------------------------------------------
+//
+//    r_accept_terms_of_use_listquery
+//
+// ---------------------------------------------------------
+//
+RESOURCE AVKON_LIST_QUERY r_cnui_accept_terms_of_use_listquery
+    {
+    flags = EGeneralQueryFlags;
+    softkeys = R_AVKON_SOFTKEYS_SELECT_CANCEL__SELECT;
+    items =
+        {
+        AVKON_LIST_QUERY_DLG_LINE
+            {
+            control = AVKON_LIST_QUERY_CONTROL
+                {
+                listtype = EAknCtSinglePopupMenuListBox;
+                listbox = AVKON_LIST_QUERY_LIST
+                    {                
+                    };
+                heading = qtn_chat_login_tou_query;
+                };
+            }
+        };
+    }
+
+//----------------------------------------------------
+//
+// Terms of Use dialog menu definition
+//
+//----------------------------------------------------
+RESOURCE MENU_BAR r_cnui_terms_of_use_menubar
+{
+    titles=
+    {
+        MENU_TITLE { menu_pane = r_cnui_terms_of_use_menu; }
+    };
+}
+
+//----------------------------------------------------
+//
+// Terms of Use dialog menu definition
+//
+//----------------------------------------------------
+RESOURCE MENU_PANE r_cnui_terms_of_use_menu
+{
+    items = 
+    {
+        MENU_ITEM { command = EIMPSCommonUIFindMenuPlaceHolder; txt = ""; }    
+    };
+}
+
+//----------------------------------------------------
+//
+// Terms of Use richtext editor
+//
+//----------------------------------------------------
+RESOURCE RTXTED r_cnui_terms_of_use_editor
+    {
+    flags = EEikEdwinReadOnly | EEikEdwinAvkonDisableCursor;
+    avkon_flags = EAknEditorFlagDefault;
+    }
+
+//----------------------------------------------------
+//
+// r_cnui_softkeys_ok_details__ok
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_cnui_softkeys_ok_details__ok
+    {
+    flags = 0;
+    buttons =
+        {
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; },
+        CBA_BUTTON { id = EAknSoftkeyDetails; txt = text_softkey_details; },
+        CBA_BUTTON { id = EAknSoftkeyOk; txt = text_softkey_ok; }
+        };
+    }
+
+// ---------------------------------------------------------
+//
+//    r_cnui_softkeys_continue_cancel__contextoptions
+//
+// ---------------------------------------------------------
+//
+RESOURCE CBA r_cnui_softkeys_continue_cancel__contextoptions
+    {
+    buttons =
+        {
+        CBA_BUTTON { id = EIMPSCommonUITOUContinue; txt = qtn_chat_sk_continue; },
+        CBA_BUTTON { id = EAknSoftkeyCancel; txt = text_softkey_cancel; },
+        CBA_BUTTON { id = EAknSoftkeyContextOptions; txt = text_softkey_option; }
+        };
+    }
+    
+
+
+
+
+
+// ---------------------------------------------------------
+//
+//    r_message_query
+//
+// ---------------------------------------------------------
+//
+
+RESOURCE DIALOG r_message_query
+	{
+	flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+		{
+		DLG_LINE
+			{
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING
+				{
+				label = KNullDesC;
+				headinglayout=R_AVKON_LIST_HEADING_PANE_POPUPS;
+				};
+			},
+		DLG_LINE
+			{
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY
+				{
+				};
+			}
+		};
+	} 
+
+
+#include "orange_wap.rss"
+// resource variation things
+#include "PAppVariationNG.rss"
+
+//  End of File
+

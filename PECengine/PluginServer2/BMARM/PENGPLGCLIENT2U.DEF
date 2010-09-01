@@ -1,0 +1,41 @@
+EXPORTS
+	__17RPEngPluginClient @ 1 NONAME R3UNUSED ; RPEngPluginClient::RPEngPluginClient(void)
+	Close__17RPEngPluginClient @ 2 NONAME R3UNUSED ; RPEngPluginClient::Close(void)
+	ConnectL__17RPEngPluginClientRC7TDesC16i @ 3 NONAME R3UNUSED ; RPEngPluginClient::ConnectL(TDesC16 const &, int)
+	Connect__17RPEngPluginClientRC7TDesC16i @ 4 NONAME R3UNUSED ; RPEngPluginClient::Connect(TDesC16 const &, int)
+	Connected__C17RPEngPluginClient @ 5 NONAME R3UNUSED ; RPEngPluginClient::Connected(void) const
+	Deaths__C17CPEngPluginClient @ 6 NONAME R3UNUSED ; CPEngPluginClient::Deaths(void) const
+	LastError__17CPEngPluginClient @ 7 NONAME R3UNUSED ; CPEngPluginClient::LastError(void)
+	LoadAllPluginsL__17RPEngPluginClient @ 8 NONAME R3UNUSED ; RPEngPluginClient::LoadAllPluginsL(void)
+	LoadAllPluginsL__17RPEngPluginClientRCt6RArray1Z4TUid @ 9 NONAME R3UNUSED ; RPEngPluginClient::LoadAllPluginsL(RArray<TUid> const &)
+	LoadPluginL__17RPEngPluginClientG4TUid @ 10 NONAME R3UNUSED ; RPEngPluginClient::LoadPluginL(TUid)
+	NewL__17CPEngPluginClienti @ 11 NONAME R3UNUSED ; CPEngPluginClient::NewL(int)
+	NewL__19CPEngPluginObserverR17RPEngPluginClient @ 12 NONAME R3UNUSED ; CPEngPluginObserver::NewL(RPEngPluginClient &)
+	PluginCountL__17RPEngPluginClient @ 13 NONAME R3UNUSED ; RPEngPluginClient::PluginCountL(void)
+	PluginRunningL__17RPEngPluginClientG4TUid @ 14 NONAME R3UNUSED ; RPEngPluginClient::PluginRunningL(TUid)
+	PluginsRunningL__17RPEngPluginClientRt6RArray1Z4TUid @ 15 NONAME R3UNUSED ; RPEngPluginClient::PluginsRunningL(RArray<TUid> &)
+	RClient__17CPEngPluginClient @ 16 NONAME R3UNUSED ; CPEngPluginClient::RClient(void)
+	RClient__C19CPEngPluginObserver @ 17 NONAME R3UNUSED ; CPEngPluginObserver::RClient(void) const
+	RefreshListOfPluginsL__17CPEngPluginClient @ 18 NONAME R3UNUSED ; CPEngPluginClient::RefreshListOfPluginsL(void)
+	ResetDeaths__17CPEngPluginClient @ 19 NONAME R3UNUSED ; CPEngPluginClient::ResetDeaths(void)
+	RestartListenerL__17CPEngPluginClient @ 20 NONAME R3UNUSED ; CPEngPluginClient::RestartListenerL(void)
+	RestartObservingLC__17RPEngPluginClientR14TRequestStatus @ 21 NONAME R3UNUSED ; RPEngPluginClient::RestartObservingLC(TRequestStatus &)
+	RestartServerL__17CPEngPluginClienti @ 22 NONAME R3UNUSED ; CPEngPluginClient::RestartServerL(int)
+	RestartServerL__17RPEngPluginClient @ 23 NONAME R3UNUSED ; RPEngPluginClient::RestartServerL(void)
+	ServerName__C17CPEngPluginClient @ 24 NONAME R3UNUSED ; CPEngPluginClient::ServerName(void) const
+	ServerThreadIdL__17RPEngPluginClient @ 25 NONAME R3UNUSED ; RPEngPluginClient::ServerThreadIdL(void)
+	SetAutomaticRestart__17CPEngPluginClientUi @ 26 NONAME R3UNUSED ; CPEngPluginClient::SetAutomaticRestart(unsigned int)
+	ShutdownServerL__17CPEngPluginClient @ 27 NONAME R3UNUSED ; CPEngPluginClient::ShutdownServerL(void)
+	ShutdownServerL__17RPEngPluginClient @ 28 NONAME R3UNUSED ; RPEngPluginClient::ShutdownServerL(void)
+	StartL__19CPEngPluginObserverR26MPEngPluginObserverHandler @ 29 NONAME R3UNUSED ; CPEngPluginObserver::StartL(MPEngPluginObserverHandler &)
+	StartObservingL__17RPEngPluginClientR14TRequestStatus @ 30 NONAME R3UNUSED ; RPEngPluginClient::StartObservingL(TRequestStatus &)
+	StartServerL__17CPEngPluginClientP31MPEngPluginServerRestartHandlerRC7TDesC16 @ 31 NONAME R3UNUSED ; CPEngPluginClient::StartServerL(MPEngPluginServerRestartHandler *, TDesC16 const &)
+	Stop__19CPEngPluginObserver @ 32 NONAME R3UNUSED ; CPEngPluginObserver::Stop(void)
+	TimeBetweenFirstAndLastDeath__C17CPEngPluginClient @ 33 NONAME R3UNUSED ; CPEngPluginClient::TimeBetweenFirstAndLastDeath(void) const
+	UnloadAllPluginsL__17RPEngPluginClient @ 34 NONAME R3UNUSED ; RPEngPluginClient::UnloadAllPluginsL(void)
+	UnloadPluginL__17RPEngPluginClientG4TUid @ 35 NONAME R3UNUSED ; RPEngPluginClient::UnloadPluginL(TUid)
+	"_._17CPEngPluginClient" @ 36 NONAME R3UNUSED ; CPEngPluginClient::~CPEngPluginClient(void)
+	"_._17RPEngPluginClient" @ 37 NONAME R3UNUSED ; RPEngPluginClient::~RPEngPluginClient(void)
+	"_._19CPEngPluginObserver" @ 38 NONAME R3UNUSED ; CPEngPluginObserver::~CPEngPluginObserver(void)
+	CancelObserving__17RPEngPluginClient @ 39 NONAME R3UNUSED ; RPEngPluginClient::CancelObserving(void)
+
